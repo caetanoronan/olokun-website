@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Olokun - Gestão Ambiental Inteligente</title>
     <meta name="description" content="Transforme sua empresa com soluções sustentáveis. PGRS, consultoria ambiental e treinamentos especializados.">
+        <!-- Redirect to tabs homepage -->
+        <meta http-equiv="refresh" content="0; url=index-tabs.html">
+        <script>
+            // JS redirect fallback for environments that ignore meta refresh
+            (function(){
+                var target = 'index-tabs.html';
+                if (!location.pathname.endsWith(target)) {
+                    window.location.replace(target);
+                }
+            })();
+        </script>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,6 +29,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <noscript>
+        <div style="padding:1rem; text-align:center; background:#fff3cd; color:#664d03;">
+            Redirecionando para a versão principal do site. Caso não redirecione automaticamente, <a href="index-tabs.html">clique aqui</a>.
+        </div>
+    </noscript>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
@@ -113,6 +129,32 @@
         <div class="hero-scroll">
             <span>Role para descobrir</span>
             <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Video Section - Nossa Essência -->
+    <section class="video-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Nossa Essência</span>
+                <h2 class="section-title">Transformação em Ação</h2>
+                <p class="section-description">
+                    Conheça a Olokun através da nossa mensagem institucional
+                </p>
+            </div>
+            
+            <div class="video-container" data-aos="fade-up">
+                <iframe 
+                    width="853" 
+                    height="480" 
+                    src="https://www.youtube.com/embed/L8asaDiAbR8" 
+                    title="Transformação - Olokun Gestão Ambiental" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
         </div>
     </section>
 
@@ -521,8 +563,71 @@
         </div>
     </footer>
 
+    <!-- Floating Video Button -->
+    <button class="floating-video-btn" id="floatingVideoBtn" title="Ver Jingle Olokun">
+        <i class="fas fa-play"></i>
+        <span>Ver Jingle</span>
+    </button>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal">
+        <div class="video-modal-overlay" id="modalOverlay"></div>
+        <div class="video-modal-content">
+            <button class="video-modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="video-modal-wrapper">
+                <iframe 
+                    id="modalVideo"
+                    width="853" 
+                    height="480" 
+                    src="https://www.youtube.com/embed/L8asaDiAbR8" 
+                    title="Transformação - Olokun Gestão Ambiental" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
+    
+    <script>
+        // Video Modal Functionality
+        const floatingBtn = document.getElementById('floatingVideoBtn');
+        const videoModal = document.getElementById('videoModal');
+        const modalOverlay = document.getElementById('modalOverlay');
+        const modalClose = document.getElementById('modalClose');
+        const modalVideo = document.getElementById('modalVideo');
+        
+        function openModal() {
+            videoModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal() {
+            videoModal.classList.remove('active');
+            document.body.style.overflow = '';
+            // Pause video when closing modal
+            const videoSrc = modalVideo.src;
+            modalVideo.src = '';
+            modalVideo.src = videoSrc;
+        }
+        
+        floatingBtn.addEventListener('click', openModal);
+        modalOverlay.addEventListener('click', closeModal);
+        modalClose.addEventListener('click', closeModal);
+        
+        // Close modal with ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && videoModal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    </script>
 </body>
 </html>
