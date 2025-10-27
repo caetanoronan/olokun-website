@@ -400,10 +400,8 @@
     // Filter matrix by pilar (tabs version)
     const filterBtnsTabs = document.querySelectorAll('.filter-btn-tabs');
     const matrizRowsTabs = document.querySelectorAll('#matrizBodyTabs tr');
-    
     filterBtnsTabs.forEach(btn => {
       btn.addEventListener('click', () => {
-        // Update active state
         filterBtnsTabs.forEach(b => {
           b.classList.remove('active');
           b.classList.remove('bg-blue-600', 'text-white');
@@ -412,53 +410,45 @@
         btn.classList.add('active');
         btn.classList.remove('bg-white', 'dark:bg-slate-800', 'text-blue-600', 'dark:text-blue-300');
         btn.classList.add('bg-blue-600', 'text-white');
-        
-        // Filter rows
         const filter = btn.dataset.filter;
         matrizRowsTabs.forEach(row => {
-          if (filter === 'all' || row.dataset.pilar === filter) {
-            row.style.display = '';
-          } else {
-            row.style.display = 'none';
-          }
+          row.style.display = (filter === 'all' || row.dataset.pilar === filter) ? '' : 'none';
         });
       });
     });
-    
+
     // Download matrix as CSV (tabs version)
-    document.getElementById('downloadMatrizTabs').addEventListener('click', () => {
-      const csvContent = [
-        ['Objetivo Estratégico', 'Ação Olokun', 'KPIs e Métricas', 'Horizonte e Owner'],
-        ['Redução de Custos Operacionais', 'Otimização de fluxos e contratos; economia circular', 'Custo/ton; % desvio de aterro; receita recicláveis', 'T0–T6 • Operações/Compras'],
-        ['Fortalecimento da Marca', 'Narrativa ESG, reporte e certificações', 'Score ESG; alcance/engajamento; nº de selos', 'T3–T12 • Mkt/RI/ESG'],
-        ['Mitigação de Riscos', 'Compliance, matriz de riscos e contingência', 'Nº de não‑conformidades; SLA; score de controles', 'T0–T6 • Jurídico/ESG'],
-        ['Acesso a Novos Mercados', 'Adequação a critérios ESG de clientes/edital e reporte GRI', '% requisitos ESG atendidos; nº de RFPs/licit. habilitadas; receita ESG‑linked', 'T6–T12 • Comercial'],
-        ['Inovação e Novas Receitas', 'Modelos circulares, P&D com parceiros e simbiose industrial', 'Nº pilotos; % conversão em rollout; receita com subprodutos; payback médio', 'T3–T18 • P&D/Operações'],
-        ['Engajamento de Stakeholders', 'Programas de engajamento e governança (comitê, ritos, KPIs)', 'Participação em ritos (%); índice de adesão a campanhas; score de cultura', 'T0–T9 • RH/ESG']
-      ].map(row => row.map(cell => `"${cell}"`).join(',')).join('\n');
-      
-      const blob = new Blob(['\uFEFF' + csvContent], { type: 'text/csv;charset=utf-8;' });
-      const link = document.createElement('a');
-      link.href = URL.createObjectURL(blob);
-      link.download = 'Matriz_Alinhamento_Estrategico_Olokun.csv';
-      link.click();
-    });
+    const dlBtn = document.getElementById('downloadMatrizTabs');
+    if (dlBtn) {
+      dlBtn.addEventListener('click', () => {
+        const csvContent = [
+          ['Objetivo Estratégico', 'Ação Olokun', 'KPIs e Métricas', 'Horizonte e Owner'],
+          ['Redução de Custos Operacionais', 'Otimização de fluxos e contratos; economia circular', 'Custo/ton; % desvio de aterro; receita recicláveis', 'T0–T6 • Operações/Compras'],
+          ['Fortalecimento da Marca', 'Narrativa ESG, reporte e certificações', 'Score ESG; alcance/engajamento; nº de selos', 'T3–T12 • Mkt/RI/ESG'],
+          ['Mitigação de Riscos', 'Compliance, matriz de riscos e contingência', 'Nº de não‑conformidades; SLA; score de controles', 'T0–T6 • Jurídico/ESG'],
+          ['Acesso a Novos Mercados', 'Adequação a critérios ESG de clientes/edital e reporte GRI', '% requisitos ESG atendidos; nº de RFPs/licit. habilitadas; receita ESG‑linked', 'T6–T12 • Comercial'],
+          ['Inovação e Novas Receitas', 'Modelos circulares, P&D com parceiros e simbiose industrial', 'Nº pilotos; % conversão em rollout; receita com subprodutos; payback médio', 'T3–T18 • P&D/Operações'],
+          ['Engajamento de Stakeholders', 'Programas de engajamento e governança (comitê, ritos, KPIs)', 'Participação em ritos (%); índice de adesão a campanhas; score de cultura', 'T0–T9 • RH/ESG']
+        ].map(row => row.map(cell => '"' + cell + '"').join(',')).join('\n');
+        const blob = new Blob(['\uFEFF' + csvContent], { type: 'text/csv;charset=utf-8;' });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = 'Matriz_Alinhamento_Estrategico_Olokun.csv';
+        link.click();
+      });
+    }
 
     // Script de abas
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabContents = document.querySelectorAll('.tab-content');
-
     tabButtons.forEach(button => {
       button.addEventListener('click', () => {
         const tabId = button.dataset.tab;
         const tabToActivate = document.getElementById(tabId);
-
         tabButtons.forEach(btn => btn.classList.remove('active'));
         tabContents.forEach(content => content.classList.remove('active'));
-
         button.classList.add('active');
         if (tabToActivate) tabToActivate.classList.add('active');
-        // rolar para o topo do container em telas pequenas
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     });
@@ -475,6 +465,7 @@
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 
   <!-- Floating Video Button -->
   <button class="floating-video-btn" id="floatingVideoBtn" title="Ver Jingle Olokun">
@@ -512,12 +503,10 @@
     const modalOverlay = document.getElementById('modalOverlay');
     const modalClose = document.getElementById('modalClose');
     const modalVideo = document.getElementById('modalVideo');
-    
     function openModal() {
       videoModal.classList.add('active');
       document.body.style.overflow = 'hidden';
     }
-    
     function closeModal() {
       videoModal.classList.remove('active');
       document.body.style.overflow = '';
@@ -525,17 +514,14 @@
       modalVideo.src = '';
       modalVideo.src = videoSrc;
     }
-    
     floatingBtn.addEventListener('click', openModal);
     modalOverlay.addEventListener('click', closeModal);
     modalClose.addEventListener('click', closeModal);
-    
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && videoModal.classList.contains('active')) {
         closeModal();
       }
     });
-  </script>
   </script>
 </body>
 </html>
