@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PGRS Inteligente - Olokun Gestão Ambiental</title>
+    <meta name="description" content="Plano de Gerenciamento de Resíduos Sólidos elaborado com tecnologia avançada e conformidade garantida.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Specific styles for PGRS page */
+        .hero-pgrs {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+            padding: 8rem 0 4rem;
+            color: white;
+        }
+        
+        .process-timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+        
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #3b82f6, #06b6d4);
+            transform: translateX(-50%);
+        }
+        
+        .process-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+        
+        .process-step:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .process-step:nth-child(even) .step-content {
+            text-align: right;
+        }
+        
+        .step-number {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #06b6d4);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+            z-index: 2;
+        }
+        
+        .step-content {
+            flex: 1;
+            max-width: 45%;
+            padding: 2rem;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .step-content:hover {
+            transform: translateY(-5px);
+        }
+        
+        .compliance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .compliance-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .compliance-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .compliance-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #06b6d4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .process-timeline::before {
+                left: 30px;
+            }
+            
+            .process-step {
+                flex-direction: row !important;
+                padding-left: 4rem;
+            }
+            
+            .process-step:nth-child(even) .step-content {
+                text-align: left;
+            }
+            
+            .step-number {
+                left: 30px;
+                transform: translateX(-50%);
+            }
+            
+            .step-content {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.75rem;">
+                    <img src="Olokun logo.jpg" alt="Olokun Logo" style="height: 50px; width: auto;">
+                    <div>
+                        <h2>Olokun</h2>
+                        <span class="nav-subtitle">Gestão Ambiental</span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="index.html#servicos" class="nav-link">Serviços</a>
+                <a href="consultoria.html" class="nav-link">Consultoria</a>
+                <a href="capacitacao.html" class="nav-link">Capacitação</a>
+                <a href="index.html#contato" class="nav-link">Contato</a>
+                <a href="index.html#contato" class="nav-cta">Solicitar Orçamento</a>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-pgrs">
+        <div class="container">
+            <div class="hero-content" style="grid-template-columns: 1fr; text-align: center; gap: 2rem;">
+                <div class="hero-text">
+                    <span class="section-subtitle" style="color: #fbbf24;">PGRS Inteligente</span>
+                    <h1 class="hero-title" style="margin-bottom: 1.5rem;">
+                        Plano de Gerenciamento de Resíduos Sólidos
+                        <span class="hero-gradient">com Metodologia Científica</span>
+                    </h1>
+                    <p class="hero-description" style="max-width: 700px; margin: 0 auto 2rem;">
+                        Elaboramos seu PGRS com rigor técnico e metodologia fundamentada em normas ABNT, garantindo 
+                        100% de conformidade com a Lei 12.305/2010 (PNRS) e transformando a gestão ambiental em 
+                        vantagem competitiva e oportunidade de negócio.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#processo" class="btn btn-primary btn-large">
+                            <i class="fas fa-play"></i>
+                            Ver Processo
+                        </a>
+                        <a href="#contato" class="btn btn-secondary btn-large">
+                            <i class="fas fa-calculator"></i>
+                            Calcular Investimento
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is PGRS Section -->
+    <section class="about" style="padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">O que é PGRS?</span>
+                <h2 class="section-title">Plano de Gerenciamento de Resíduos Sólidos</h2>
+                <p class="section-description">
+                    Documento técnico obrigatório estabelecido pela Lei 12.305/2010 (PNRS) que identifica, 
+                    quantifica e define estratégias para o manejo correto de todos os resíduos gerados. 
+                    Mais do que conformidade legal, é uma ferramenta estratégica de gestão que reduz custos, 
+                    otimiza processos e transforma passivos ambientais em oportunidades de negócio.
+                </p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Quem precisa do PGRS?</h3>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-industry"></i>
+                            <div>
+                                <h4>Indústrias</h4>
+                                <p>Todas as empresas industriais que geram resíduos sólidos</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <i class="fas fa-hospital"></i>
+                            <div>
+                                <h4>Serviços de Saúde</h4>
+                                <p>Hospitais, clínicas, laboratórios e similares</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <i class="fas fa-hammer"></i>
+                            <div>
+                                <h4>Construção Civil</h4>
+                                <p>Obras e atividades de construção e demolição</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <i class="fas fa-store"></i>
+                            <div>
+                                <h4>Comércio e Serviços</h4>
+                                <p>Que geram resíduos perigosos ou em grande quantidade</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual" data-aos="fade-left">
+                    <div class="compliance-grid">
+                        <div class="compliance-item">
+                            <div class="compliance-icon">
+                                <i class="fas fa-gavel"></i>
+                            </div>
+                            <h4>Conformidade Legal</h4>
+                            <p>100% em conformidade com a Lei 12.305/2010</p>
+                        </div>
+                        
+                        <div class="compliance-item">
+                            <div class="compliance-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4>Proteção Jurídica</h4>
+                            <p>Evite multas de até R$ 50 milhões</p>
+                        </div>
+                        
+                        <div class="compliance-item">
+                            <div class="compliance-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4>Redução de Custos</h4>
+                            <p>Economize até 40% em destinação de resíduos</p>
+                        </div>
+                        
+                        <div class="compliance-item">
+                            <div class="compliance-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <h4>Sustentabilidade</h4>
+                            <p>Melhore seu rating ESG e imagem corporativa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="processo" class="services" style="background: #f8fafc;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Nosso Processo</span>
+                <h2 class="section-title">Metodologia Científica e Comprovada</h2>
+                <p class="section-description">
+                    Seguimos uma metodologia rigorosa, baseada em normas técnicas e melhores práticas internacionais.
+                </p>
+            </div>
+            
+            <div class="process-timeline">
+                <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-content">
+                        <h3>Diagnóstico Inicial</h3>
+                        <p>Visita técnica completa para mapeamento de todos os processos geradores de resíduos, incluindo caracterização gravimétrica e análise de fluxos.</p>
+                        <ul>
+                            <li>Análise de processos produtivos</li>
+                            <li>Identificação de pontos de geração</li>
+                            <li>Caracterização e quantificação</li>
+                            <li>Avaliação da infraestrutura atual</li>
+                        </ul>
+                    </div>
+                    <div class="step-number">1</div>
+                </div>
+                
+                <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-content">
+                        <h3>Classificação e Análise</h3>
+                        <p>Classificação técnica de todos os resíduos conforme NBR 10.004 e análise de viabilidade de tratamento, reutilização e reciclagem.</p>
+                        <ul>
+                            <li>Classificação segundo normas técnicas</li>
+                            <li>Análise de periculosidade</li>
+                            <li>Estudo de alternativas de destinação</li>
+                            <li>Mapeamento de fornecedores licenciados</li>
+                        </ul>
+                    </div>
+                    <div class="step-number">2</div>
+                </div>
+                
+                <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-content">
+                        <h3>Elaboração do PGRS</h3>
+                        <p>Desenvolvimento do documento técnico completo, com procedimentos operacionais, metas de redução e cronograma de implementação.</p>
+                        <ul>
+                            <li>Documento técnico completo</li>
+                            <li>Procedimentos operacionais detalhados</li>
+                            <li>Definição de metas e indicadores</li>
+                            <li>Cronograma de implementação</li>
+                        </ul>
+                    </div>
+                    <div class="step-number">3</div>
+                </div>
+                
+                <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+                    <div class="step-content">
+                        <h3>Implementação e Treinamento</h3>
+                        <p>Suporte na implementação das melhorias propostas e capacitação das equipes para gestão autônoma do plano.</p>
+                        <ul>
+                            <li>Adequação da infraestrutura</li>
+                            <li>Treinamento de equipes</li>
+                            <li>Implantação de controles</li>
+                            <li>Acompanhamento inicial</li>
+                        </ul>
+                    </div>
+                    <div class="step-number">4</div>
+                </div>
+                
+                <div class="process-step" data-aos="fade-up" data-aos-delay="500">
+                    <div class="step-content">
+                        <h3>Monitoramento e Auditoria</h3>
+                        <p>Acompanhamento contínuo dos resultados, auditorias periódicas e ajustes no plano para garantir eficiência e conformidade.</p>
+                        <ul>
+                            <li>Monitoramento de indicadores</li>
+                            <li>Auditorias internas</li>
+                            <li>Relatórios de desempenho</li>
+                            <li>Melhoria contínua</li>
+                        </ul>
+                    </div>
+                    <div class="step-number">5</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Requirements Section -->
+    <section class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Conteúdo do PGRS</span>
+                <h2 class="section-title">Documento Técnico Completo</h2>
+                <p class="section-description">
+                    Nosso PGRS atende a todos os requisitos legais e técnicos estabelecidos pela PNRS.
+                </p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="benefit-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Diagnóstico Detalhado</h3>
+                    <p>Caracterização completa dos resíduos gerados, incluindo origem, composição, volume e classificação técnica.</p>
+                </div>
+                
+                <div class="benefit-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3>Responsabilidades</h3>
+                    <p>Definição clara de responsáveis por cada etapa do gerenciamento, desde a geração até a destinação final.</p>
+                </div>
+                
+                <div class="benefit-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="benefit-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Procedimentos Operacionais</h3>
+                    <p>Instruções detalhadas para coleta, acondicionamento, armazenamento e transporte interno de resíduos.</p>
+                </div>
+                
+                <div class="benefit-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="benefit-icon">
+                        <i class="fas fa-target"></i>
+                    </div>
+                    <h3>Metas e Indicadores</h3>
+                    <p>Estabelecimento de metas quantitativas para redução, reutilização e reciclagem com indicadores de acompanhamento.</p>
+                </div>
+                
+                <div class="benefit-card" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="benefit-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Educação Ambiental</h3>
+                    <p>Programa de educação ambiental para conscientização e engajamento de colaboradores e stakeholders.</p>
+                </div>
+                
+                <div class="benefit-card" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="benefit-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>Destinação Final</h3>
+                    <p>Identificação e contratação de empresas licenciadas para destinação ambientalmente adequada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="cta" style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Invista na Conformidade Legal da sua Empresa</h2>
+                <p>Nosso PGRS Inteligente oferece o melhor custo-benefício do mercado, com resultados garantidos e suporte contínuo.</p>
+                
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 1rem; margin: 2rem 0; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    <h3 style="color: #fbbf24; margin-bottom: 1rem;">Investimento PGRS Essencial</h3>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 1rem;">
+                        <span style="font-size: 3rem; font-weight: 800;">R$ 6.800</span>
+                        <div style="text-align: left;">
+                            <div style="text-decoration: line-through; opacity: 0.7;">R$ 8.500</div>
+                            <div style="color: #fbbf24; font-weight: 600;">20% de desconto</div>
+                        </div>
+                    </div>
+                    <p style="margin-bottom: 1.5rem;">Inclui: Diagnóstico + Documento técnico + Implementação + Suporte 6 meses</p>
+                    <div style="font-size: 0.9rem; opacity: 0.9;">
+                        <p>✓ Conformidade legal garantida</p>
+                        <p>✓ Suporte técnico especializado</p>
+                        <p>✓ Documentação completa</p>
+                    </div>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="#contato" class="btn btn-primary btn-large">
+                        <i class="fas fa-rocket"></i>
+                        Solicitar Proposta
+                    </a>
+                    <a href="tel:+5548999999999" class="btn btn-secondary btn-large">
+                        <i class="fas fa-phone"></i>
+                        Falar com Especialista
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <span class="section-subtitle">Solicite seu PGRS</span>
+                    <h2 class="section-title">Comece Hoje Mesmo</h2>
+                    <p>Preencha o formulário ao lado e receba em até 24h uma proposta personalizada para seu PGRS.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Prazo de Entrega</h4>
+                                <span>15 a 30 dias úteis</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fas fa-certificate"></i>
+                            <div>
+                                <h4>Garantia</h4>
+                                <span>Conformidade legal 100% garantida</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fas fa-headset"></i>
+                            <div>
+                                <h4>Suporte</h4>
+                                <span>6 meses de suporte técnico incluído</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="pgrsForm">
+                        <div class="form-group">
+                            <label for="nome">Nome Completo *</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="empresa">Empresa *</label>
+                            <input type="text" id="empresa" name="empresa" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">E-mail *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="telefone">Telefone</label>
+                                <input type="tel" id="telefone" name="telefone">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="setor">Setor de Atividade *</label>
+                            <select id="setor" name="setor" required>
+                                <option value="">Selecione seu setor</option>
+                                <option value="industria">Indústria</option>
+                                <option value="saude">Serviços de Saúde</option>
+                                <option value="construcao">Construção Civil</option>
+                                <option value="comercio">Comércio</option>
+                                <option value="servicos">Serviços</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="funcionarios">Número de Funcionários</label>
+                            <select id="funcionarios" name="funcionarios">
+                                <option value="">Selecione</option>
+                                <option value="1-10">1 a 10</option>
+                                <option value="11-50">11 a 50</option>
+                                <option value="51-200">51 a 200</option>
+                                <option value="201-500">201 a 500</option>
+                                <option value="500+">Mais de 500</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="prazo">Prazo Desejado</label>
+                            <select id="prazo" name="prazo">
+                                <option value="">Selecione</option>
+                                <option value="urgente">Urgente (até 15 dias)</option>
+                                <option value="normal">Normal (15-30 dias)</option>
+                                <option value="flexivel">Flexível (mais de 30 dias)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="observacoes">Observações</label>
+                            <textarea id="observacoes" name="observacoes" rows="3" placeholder="Conte-nos sobre os principais resíduos gerados pela sua empresa..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i>
+                            Solicitar Proposta de PGRS
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Olokun</h3>
+                    <p>Gestão Ambiental Inteligente</p>
+                    <p class="footer-tagline">Transformando desafios ambientais em oportunidades de negócio.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Serviços</h4>
+                    <a href="pgrs.html">PGRS Inteligente</a>
+                    <a href="capacitacao.html">Capacitação</a>
+                    <a href="consultoria.html">Consultoria</a>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Empresa</h4>
+                    <a href="index.html#sobre">Sobre Nós</a>
+                    <a href="index.html#beneficios">Benefícios</a>
+                    <a href="index.html#contato">Contato</a>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <a href="mailto:olokun.ambiental@gmail.com">olokun.ambiental@gmail.com</a>
+                    <a href="https://olokun.webnode.com/" target="_blank">olokun.webnode.com</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Olokun Gestão Ambiental. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+        // Initialize PGRS form with specific handling
+        document.getElementById('pgrsForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Create specific mailto for PGRS
+            const subject = encodeURIComponent(`Solicitação PGRS - ${data.empresa}`);
+            const body = encodeURIComponent(`
+SOLICITAÇÃO DE PROPOSTA - PGRS INTELIGENTE
+
+Dados da Empresa:
+Nome: ${data.nome}
+Empresa: ${data.empresa}
+E-mail: ${data.email}
+Telefone: ${data.telefone || 'Não informado'}
+
+Detalhes:
+Setor: ${data.setor}
+Número de funcionários: ${data.funcionarios || 'Não informado'}
+Prazo desejado: ${data.prazo || 'Não especificado'}
+
+Observações:
+${data.observacoes || 'Nenhuma observação adicional.'}
+
+---
+Solicitação enviada através do site - Página PGRS
+            `);
+            
+            const mailtoLink = `mailto:olokun.ambiental@gmail.com?subject=${subject}&body=${body}`;
+            window.open(mailtoLink);
+            
+            // Show success message
+            showNotification('Solicitação enviada com sucesso! Entraremos em contato em até 24h com sua proposta personalizada.', 'success');
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>

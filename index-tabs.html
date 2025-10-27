@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Olokun - Site em Abas</title>
+  <meta name="description" content="Olokun Gestão Ambiental — PGRS, Consultoria e Capacitação, agora em uma navegação por abas simples e moderna." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Config do Tailwind via CDN
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font-family: 'Inter', sans-serif; }
+    /* Glassmorphism util */
+    .glass { background: rgba(255,255,255,0.7); backdrop-filter: saturate(140%) blur(10px); -webkit-backdrop-filter: saturate(140%) blur(10px); }
+    .dark .glass { background: rgba(2,6,23,0.55); }
+    /* Abas */
+    .tab-button { transition: all .2s ease; }
+    .tab-button.active { border-color: rgb(59 130 246); color: rgb(29 78 216); background: linear-gradient(180deg, rgba(59,130,246,.08), rgba(59,130,246,.02)); box-shadow: 0 8px 24px rgba(29,78,216,.15), inset 0 1px 0 rgba(255,255,255,.2); }
+    .dark .tab-button.active { color: rgb(191 219 254); border-color: rgb(147 197 253); background: linear-gradient(180deg, rgba(29,78,216,.25), rgba(2,6,23,.2)); box-shadow: 0 8px 24px rgba(29,78,216,.25), inset 0 1px 0 rgba(255,255,255,.05); }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    /* Reveal on scroll */
+    .reveal { opacity: 0; transform: translateY(6px); transition: opacity .5s ease, transform .5s ease; }
+    .reveal.show { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="min-h-screen text-slate-800 dark:text-slate-200 bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-black">
+  <div class="container mx-auto p-4 md:p-8 max-w-6xl">
+    <!-- Ornamentos de fundo -->
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
+      <div class="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-blue-400/20 blur-3xl dark:bg-blue-600/20"></div>
+      <div class="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-emerald-300/20 blur-3xl dark:bg-emerald-500/20"></div>
+    </div>
+
+    <!-- Cabeçalho -->
+    <header class="flex items-center justify-between mb-8">
+      <div class="flex items-center gap-4">
+        <img src="Olokun logo.jpg" alt="Olokun Logo" class="h-16 md:h-20 w-auto">
+        <div class="text-center md:text-left">
+          <h1 class="text-2xl md:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-blue-700 via-sky-500 to-emerald-500 bg-clip-text text-transparent">Olokun Gestão Ambiental</h1>
+          <p class="mt-1 text-sm md:text-base text-slate-600 dark:text-slate-300">Transformando desafios ambientais em oportunidades de negócio.</p>
+        </div>
+      </div>
+      <div class="hidden md:flex items-center gap-3">
+        <button id="themeToggle" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-slate-300/60 dark:border-slate-700/60 hover:bg-slate-50 dark:hover:bg-slate-800 transition">
+          <svg class="w-5 h-5 dark:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 3v1m0 16v1m8-9h1M3 12H2m15.364-6.364l.707.707M5.929 18.071l-.707.707m12.142 0l.707-.707M5.929 5.929l-.707-.707M12 7a5 5 0 100 10 5 5 0 000-10z"/></svg>
+          <svg class="w-5 h-5 hidden dark:block" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M21.752 15.002A9.718 9.718 0 0112 21.75C6.615 21.75 2.25 17.385 2.25 12c0-4.105 2.52-7.62 6.111-9.047a.75.75 0 01.977.966A8.25 8.25 0 0013.5 12c0 3.298-1.897 6.147-4.656 7.512a.75.75 0 00.243 1.44A9.72 9.72 0 0021.75 15a.75.75 0 00-.001-0z"/></svg>
+          <span class="text-sm">Tema</span>
+        </button>
+        <a href="index.html" class="inline-block px-4 py-2 rounded-lg border border-blue-600 text-blue-700 hover:bg-blue-50 dark:text-blue-300 dark:border-blue-500/60 dark:hover:bg-blue-500/10 transition">Versão multi‑páginas</a>
+        <a href="#contato" class="inline-block px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition">Solicitar Orçamento</a>
+      </div>
+    </header>
+
+    <!-- Abas -->
+    <div class="glass rounded-2xl shadow-xl ring-1 ring-white/10 p-4 md:p-6 reveal">
+      <!-- Botões das Abas -->
+      <div class="border-b border-slate-200/60 dark:border-slate-700/60 mb-6 overflow-x-auto">
+        <nav class="flex flex-nowrap -mb-px gap-2 md:gap-3" aria-label="Tabs">
+          <button class="tab-button active whitespace-nowrap py-2.5 px-3 md:px-4 border-b-2 font-medium text-sm md:text-base rounded-t-lg" data-tab="sobre">Sobre Nós</button>
+          <button class="tab-button whitespace-nowrap py-2.5 px-3 md:px-4 border-b-2 font-medium text-sm md:text-base rounded-t-lg" data-tab="pgrs">PGRS</button>
+          <button class="tab-button whitespace-nowrap py-2.5 px-3 md:px-4 border-b-2 font-medium text-sm md:text-base rounded-t-lg" data-tab="consultoria">Consultoria</button>
+          <button class="tab-button whitespace-nowrap py-2.5 px-3 md:px-4 border-b-2 font-medium text-sm md:text-base rounded-t-lg" data-tab="capacitacao">Capacitação</button>
+          <button class="tab-button whitespace-nowrap py-2.5 px-3 md:px-4 border-b-2 font-medium text-sm md:text-base rounded-t-lg" data-tab="beneficios">Benefícios</button>
+          <button class="tab-button whitespace-nowrap py-2.5 px-3 md:px-4 border-b-2 font-medium text-sm md:text-base rounded-t-lg" data-tab="estrategia">Alinhamento Estratégico</button>
+          <button class="tab-button whitespace-nowrap py-2.5 px-3 md:px-4 border-b-2 font-medium text-sm md:text-base rounded-t-lg" data-tab="contato">Contato</button>
+        </nav>
+      </div>
+
+      <!-- Conteúdos -->
+      <div>
+        <!-- Sobre -->
+        <div id="sobre" class="tab-content active">
+          <h2 class="text-2xl font-bold text-slate-800 dark:text-slate-100 mb-4">Quem Somos</h2>
+          <p class="mb-3 text-slate-700 dark:text-slate-300"><strong>Olokun</strong> significa "Deus da profundeza do mar" em Iorubá — uma metáfora perfeita para nossa missão: ir além da superfície dos problemas ambientais e mergulhar nas soluções estratégicas que geram resultados reais.</p>
+          <p class="mb-6 text-slate-700 dark:text-slate-300">Somos especialistas em <strong>transformar a gestão de resíduos em vantagem competitiva</strong>. Combinamos rigor técnico, metodologia científica e visão de negócios para criar soluções sustentáveis que reduzem custos, garantem conformidade legal e fortalecem a imagem corporativa de nossos clientes.</p>
+          <div class="grid md:grid-cols-3 gap-4 mt-6">
+            <div class="p-4 rounded-xl border border-blue-200/50 dark:border-blue-400/20 bg-blue-50/60 dark:bg-blue-950/20">
+              <h3 class="font-semibold text-blue-800 dark:text-blue-300">Base Acadêmica</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-300">Metodologia fundamentada em pesquisa aplicada e normas técnicas.</p>
+            </div>
+            <div class="p-4 rounded-xl border border-emerald-200/50 dark:border-emerald-400/20 bg-emerald-50/60 dark:bg-emerald-950/20">
+              <h3 class="font-semibold text-emerald-800 dark:text-emerald-300">Conformidade</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-300">Alinhada à PNRS (Lei 12.305/2010) e ABNT NBRs aplicáveis.</p>
+            </div>
+            <div class="p-4 rounded-xl border border-amber-200/50 dark:border-amber-400/20 bg-amber-50/60 dark:bg-amber-950/20">
+              <h3 class="font-semibold text-amber-800 dark:text-amber-300">Resultados</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-300">Redução de custos, melhora ESG e engajamento de equipes.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- PGRS -->
+        <div id="pgrs" class="tab-content">
+          <h2 class="text-2xl font-bold text-slate-800 dark:text-slate-100 mb-4">Plano de Gerenciamento de Resíduos Sólidos (PGRS)</h2>
+          <p class="mb-3 text-slate-700 dark:text-slate-300">O PGRS é um <strong>documento técnico obrigatório</strong> estabelecido pela Lei 12.305/2010 (Política Nacional de Resíduos Sólidos) que define estratégias para o manejo adequado de todos os resíduos gerados pela sua empresa, desde a geração até a destinação final ambientalmente correta.</p>
+          <p class="mb-4 text-slate-700 dark:text-slate-300">Mais do que conformidade legal, nosso PGRS é uma <strong>ferramenta estratégica de gestão</strong> que identifica oportunidades de redução de custos, otimização de processos e valorização de resíduos, transformando passivos ambientais em ativos econômicos.</p>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="glass border rounded-lg p-4 ring-1 ring-white/10">
+              <h3 class="font-semibold text-blue-700 dark:text-blue-300">Conteúdo Mínimo</h3>
+              <ul class="list-disc list-inside space-y-1 text-slate-700 dark:text-slate-300 mt-2 text-sm">
+                <li>Diagnóstico e caracterização</li>
+                <li>Responsáveis e procedimentos</li>
+                <li>Metas de 3Rs e indicadores</li>
+                <li>Educação ambiental</li>
+                <li>Destinação e cronograma</li>
+              </ul>
+            </div>
+            <div class="glass border rounded-lg p-4 ring-1 ring-white/10">
+              <h3 class="font-semibold text-blue-700 dark:text-blue-300">Etapas</h3>
+              <ol class="list-decimal list-inside space-y-1 text-slate-700 dark:text-slate-300 mt-2 text-sm">
+                <li>Diagnóstico in loco</li>
+                <li>Classificação técnica</li>
+                <li>Documento técnico PGRS</li>
+                <li>Implementação e treinamento</li>
+                <li>Monitoramento e auditoria</li>
+              </ol>
+            </div>
+          </div>
+          <div class="text-right mt-4">
+            <a href="pgrs.html" class="text-blue-700 dark:text-blue-300 hover:underline text-sm">Ver página completa de PGRS →</a>
+          </div>
+        </div>
+
+        <!-- Consultoria -->
+        <div id="consultoria" class="tab-content">
+          <h2 class="text-2xl font-bold text-slate-800 dark:text-slate-100 mb-4">Consultoria Estratégica</h2>
+          <p class="mb-3 text-slate-700 dark:text-slate-300">Consultoria especializada que <strong>integra gestão ambiental à estratégia corporativa</strong>, convertendo compliance em diferencial competitivo. Desenvolvemos soluções fundamentadas em análise de ciclo de vida (ACV), economia circular e métricas ESG para reduzir custos operacionais e desbloquear novas fontes de receita.</p>
+          <p class="mb-4 text-slate-700 dark:text-slate-300">Nossa metodologia proprietária <strong>ESG-ROI</strong> utiliza modelagem financeira de cenários, análise de materialidade e benchmarking setorial para garantir impacto direto no EBITDA e na valoração da empresa. Cada projeto inclui business case detalhado com métricas de VPL, TIR e payback.</p>
+          <div class="grid md:grid-cols-3 gap-4">
+            <div class="p-4 rounded-lg border border-purple-200/50 dark:border-purple-400/20 bg-purple-50/60 dark:bg-purple-950/20">
+          <h3 class="font-semibold text-purple-700 dark:text-purple-300">Integração Estratégica</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300">Alinhamento entre objetivos ESG e drivers de valor com métricas integradas ao BSC.</p>
+            </div>
+            <div class="p-4 rounded-lg border border-purple-200/50 dark:border-purple-400/20 bg-purple-50/60 dark:bg-purple-950/20">
+          <h3 class="font-semibold text-purple-700 dark:text-purple-300">Modelagem Financeira</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300">Business case com análise de payback, VPL e TIR para cada iniciativa.</p>
+            </div>
+            <div class="p-4 rounded-lg border border-purple-200/50 dark:border-purple-400/20 bg-purple-50/60 dark:bg-purple-950/20">
+          <h3 class="font-semibold text-purple-700 dark:text-purple-300">Gestão de Riscos ESG</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300">Matriz de riscos ambientais integrada ao ERM corporativo.</p>
+            </div>
+          </div>
+          <div class="text-right mt-4">
+            <a href="consultoria.html" class="text-purple-400 hover:underline text-sm">Ver página completa de Consultoria →</a>
+          </div>
+        </div>
+
+        <!-- Capacitação -->
+        <div id="capacitacao" class="tab-content">
+          <h2 class="text-2xl font-bold text-slate-800 dark:text-slate-100 mb-4">Programa de Capacitação</h2>
+          <p class="mb-2 text-slate-700 dark:text-slate-300">Capacitação profissional baseada em andragogia e no modelo 70‑20‑10, com prática supervisionada e avaliação por evidências.</p>
+          <p class="mb-4 text-slate-700 dark:text-slate-300">Alinhada à PNRS e às normas ABNT, a trilha prepara sua equipe para operar o PGRS com segurança, indicadores e autonomia. Certificação mediante participação e entrega de projeto aplicado.</p>
+          <div class="overflow-x-auto">
+            <table class="min-w-full glass border border-slate-200/60 dark:border-slate-700/60 rounded-lg">
+              <thead class="bg-slate-100/60 dark:bg-slate-800/60">
+                <tr>
+                  <th class="py-3 px-4 text-left text-xs font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider">Módulo</th>
+                  <th class="py-3 px-4 text-left text-xs font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider">Tópicos</th>
+                  <th class="py-3 px-4 text-left text-xs font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider">Objetivo</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200/60 dark:divide-slate-700/60">
+                <tr>
+                  <td class="py-3 px-4 font-medium text-blue-800 dark:text-blue-300 whitespace-nowrap">1. Fundamentos e Legislação</td>
+                  <td class="py-3 px-4 text-slate-700 dark:text-slate-300">PNRS, ABNT NBRs, classificação e requisitos de PGRS.</td>
+                  <td class="py-3 px-4 text-slate-700 dark:text-slate-300">Compreender o arcabouço legal e requisitos de auditoria.</td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-4 font-medium text-blue-800 dark:text-blue-300 whitespace-nowrap">2. Diagnóstico e Planejamento</td>
+                  <td class="py-3 px-4 text-slate-700 dark:text-slate-300">Caracterização gravimétrica, sazonalidade e KPIs.</td>
+                  <td class="py-3 px-4 text-slate-700 dark:text-slate-300">Estruturar o diagnóstico, metas e indicadores.</td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-4 font-medium text-blue-800 dark:text-blue-300 whitespace-nowrap">3. Gestão Compartilhada</td>
+                  <td class="py-3 px-4 text-slate-700 dark:text-slate-300">Comitê de Resíduos, ritos, KPIs e comunicação.</td>
+                  <td class="py-3 px-4 text-slate-700 dark:text-slate-300">Governança e engajamento para mudança cultural.</td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-4 font-medium text-blue-800 dark:text-blue-300 whitespace-nowrap">4. Recicláveis</td>
+                  <td class="py-3 px-4 text-slate-700 dark:text-slate-300">Segregação, acondicionamento, contratos e rastreio.</td>
+                  <td class="py-3 px-4 text-slate-700 dark:text-slate-300">Operacionalizar a coleta seletiva com qualidade.</td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-4 font-medium text-blue-800 dark:text-blue-300 whitespace-nowrap">5. Orgânicos (Opcional)</td>
+                  <td class="py-3 px-4 text-slate-700 dark:text-slate-300">Compostagem, horta e aproveitamento seguro.</td>
+                  <td class="py-3 px-4 text-slate-700 dark:text-slate-300">Tratar orgânicos in loco com segurança.</td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-4 font-medium text-blue-800 dark:text-blue-300 whitespace-nowrap">6. Implementação e Avaliação</td>
+                  <td class="py-3 px-4 text-slate-700 dark:text-slate-300">Metas, KPIs, PDCA e reporte.</td>
+                  <td class="py-3 px-4 text-slate-700 dark:text-slate-300">Encerrar PGRS e garantir evolução sustentável.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="text-right mt-4">
+            <a href="capacitacao.html" class="text-blue-700 dark:text-blue-300 hover:underline text-sm">Ver página completa de Capacitação →</a>
+          </div>
+        </div>
+
+        <!-- Benefícios -->
+        <div id="beneficios" class="tab-content">
+          <h2 class="text-2xl font-bold text-slate-800 dark:text-slate-100 mb-2">Benefícios</h2>
+          <p class="text-slate-700 dark:text-slate-300 mb-4 text-sm">Quatro pilares de valor: Financeiros, Operacionais, ESG & Marca e Riscos & Compliance.</p>
+          <div class="grid md:grid-cols-2 gap-6 mt-4">
+            <div class="bg-green-50/70 dark:bg-green-950/20 p-4 rounded-lg border border-green-200/60 dark:border-green-400/20">
+              <div class="flex items-start">
+                <svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <div>
+                  <h3 class="font-semibold text-slate-800 dark:text-slate-200">Conformidade Legal</h3>
+                  <p class="text-slate-600 dark:text-slate-300 text-sm">Adequação à PNRS e ABNT, revisão documental e rotinas de auditoria para segurança jurídica.</p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-green-50/70 dark:bg-green-950/20 p-4 rounded-lg border border-green-200/60 dark:border-green-400/20">
+              <div class="flex items-start">
+                <svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path></svg>
+                <div>
+                  <h3 class="font-semibold text-slate-800 dark:text-slate-200">Redução de Custos</h3>
+                  <p class="text-slate-600 dark:text-slate-300 text-sm">Economia média de 25–45% com otimização de fluxos e valorização de recicláveis.</p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-green-50/70 dark:bg-green-950/20 p-4 rounded-lg border border-green-200/60 dark:border-green-400/20">
+              <div class="flex items-start">
+                <svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7.014A8.003 8.003 0 0112 3c2.392 0 4.544.97 6.142 2.572C20.5 7.46 21 9.61 21 12c0 3.314-2.686 6-6 6h-1.343z"></path></svg>
+                <div>
+                  <h3 class="font-semibold text-slate-800 dark:text-slate-200">Fortalecimento da Marca</h3>
+                  <p class="text-slate-600 dark:text-slate-300 text-sm">Evolução de rating ESG e diferenciação competitiva com resultados verificáveis.</p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-green-50/70 dark:bg-green-950/20 p-4 rounded-lg border border-green-200/60 dark:border-green-400/20">
+              <div class="flex items-start">
+                <svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M15 21v-1a6 6 0 00-1.781-4.121M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 0c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z"></path></svg>
+                <div>
+                  <h3 class="font-semibold text-slate-800 dark:text-slate-200">Engajamento</h3>
+                  <p class="text-slate-600 dark:text-slate-300 text-sm">Governança (comitê, ritos e KPIs) e trilhas de capacitação consolidando cultura.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="text-slate-500 dark:text-slate-400 text-xs mt-3">Métricas indicativas; variam por setor, maturidade e escopo.</p>
+        </div>
+
+        <!-- Estratégia -->
+        <div id="estrategia" class="tab-content">
+          <h2 class="text-2xl font-bold text-slate-800 dark:text-slate-100 mb-2">Alinhamento Estratégico</h2>
+          <p class="mb-4 text-slate-700 dark:text-slate-300">Matriz que conecta iniciativas ESG a objetivos do negócio com KPIs e horizonte de entrega claros.</p>
+          
+          <div class="flex justify-between items-center mb-4 flex-wrap gap-3">
+            <div class="flex gap-2">
+              <button class="filter-btn-tabs active px-3 py-2 rounded-lg border border-blue-600 bg-blue-600 text-white text-sm cursor-pointer transition-all" data-filter="all">Todos</button>
+              <button class="filter-btn-tabs px-3 py-2 rounded-lg border border-blue-600 bg-white dark:bg-slate-800 text-blue-600 dark:text-blue-300 text-sm cursor-pointer transition-all" data-filter="financeiro">Financeiro</button>
+              <button class="filter-btn-tabs px-3 py-2 rounded-lg border border-blue-600 bg-white dark:bg-slate-800 text-blue-600 dark:text-blue-300 text-sm cursor-pointer transition-all" data-filter="esg">ESG</button>
+              <button class="filter-btn-tabs px-3 py-2 rounded-lg border border-blue-600 bg-white dark:bg-slate-800 text-blue-600 dark:text-blue-300 text-sm cursor-pointer transition-all" data-filter="risco">Riscos</button>
+            </div>
+            <button id="downloadMatrizTabs" class="px-3 py-2 rounded-lg border border-green-600 bg-green-600 text-white text-sm cursor-pointer flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+              Baixar CSV
+            </button>
+          </div>
+          
+          <div class="overflow-x-auto">
+            <table class="min-w-full glass border border-slate-200/60 dark:border-slate-700/60 rounded-lg">
+              <thead class="bg-slate-100/60 dark:bg-slate-800/60">
+                <tr>
+                  <th class="py-3 px-4 text-left text-xs font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider">Objetivo</th>
+                  <th class="py-3 px-4 text-left text-xs font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider">Ação Olokun</th>
+                  <th class="py-3 px-4 text-left text-xs font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider">KPIs</th>
+                  <th class="py-3 px-4 text-left text-xs font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider">Horizonte/Owner</th>
+                </tr>
+              </thead>
+              <tbody id="matrizBodyTabs" class="divide-y divide-slate-200/60 dark:divide-slate-700/60">
+                <tr data-pilar="financeiro">
+                  <td class="py-4 px-4 font-medium text-slate-800 dark:text-slate-200">Redução de Custos Operacionais</td>
+                  <td class="py-4 px-4 text-slate-700 dark:text-slate-300">Otimização de fluxos e contratos; economia circular</td>
+                  <td class="py-4 px-4 text-slate-700 dark:text-slate-300">Custo/ton; % desvio de aterro; receita recicláveis</td>
+                  <td class="py-4 px-4 text-slate-700 dark:text-slate-300">T0–T6 • Operações/Compras</td>
+                </tr>
+                <tr data-pilar="esg">
+                  <td class="py-4 px-4 font-medium text-slate-800 dark:text-slate-200">Fortalecimento da Marca</td>
+                  <td class="py-4 px-4 text-slate-700 dark:text-slate-300">Narrativa ESG, reporte e certificações</td>
+                  <td class="py-4 px-4 text-slate-700 dark:text-slate-300">Score ESG; alcance/engajamento; nº de selos</td>
+                  <td class="py-4 px-4 text-slate-700 dark:text-slate-300">T3–T12 • Mkt/RI/ESG</td>
+                </tr>
+                <tr data-pilar="risco">
+                  <td class="py-4 px-4 font-medium text-slate-800 dark:text-slate-200">Mitigação de Riscos</td>
+                  <td class="py-4 px-4 text-slate-700 dark:text-slate-300">Compliance, matriz de riscos e contingência</td>
+                  <td class="py-4 px-4 text-slate-700 dark:text-slate-300">Nº de não‑conformidades; SLA; score de controles</td>
+                  <td class="py-4 px-4 text-slate-700 dark:text-slate-300">T0–T6 • Jurídico/ESG</td>
+                </tr>
+                <tr data-pilar="esg">
+                  <td class="py-4 px-4 font-medium text-slate-800 dark:text-slate-200">Acesso a Novos Mercados</td>
+                  <td class="py-4 px-4 text-slate-700 dark:text-slate-300">Adequação a critérios ESG de clientes/edital e reporte GRI</td>
+                  <td class="py-4 px-4 text-slate-700 dark:text-slate-300">% requisitos ESG atendidos; nº de RFPs/licit. habilitadas; receita ESG‑linked</td>
+                  <td class="py-4 px-4 text-slate-700 dark:text-slate-300">T6–T12 • Comercial</td>
+                </tr>
+                <tr data-pilar="financeiro">
+                  <td class="py-4 px-4 font-medium text-slate-800 dark:text-slate-200">Inovação e Novas Receitas</td>
+                  <td class="py-4 px-4 text-slate-700 dark:text-slate-300">Modelos circulares, P&D com parceiros e simbiose industrial</td>
+                  <td class="py-4 px-4 text-slate-700 dark:text-slate-300">Nº pilotos; % conversão em rollout; receita com subprodutos; payback médio</td>
+                  <td class="py-4 px-4 text-slate-700 dark:text-slate-300">T3–T18 • P&D/Operações</td>
+                </tr>
+                <tr data-pilar="esg">
+                  <td class="py-4 px-4 font-medium text-slate-800 dark:text-slate-200">Engajamento de Stakeholders</td>
+                  <td class="py-4 px-4 text-slate-700 dark:text-slate-300">Programas de engajamento e governança (comitê, ritos, KPIs)</td>
+                  <td class="py-4 px-4 text-slate-700 dark:text-slate-300">Participação em ritos (%); índice de adesão a campanhas; score de cultura</td>
+                  <td class="py-4 px-4 text-slate-700 dark:text-slate-300">T0–T9 • RH/ESG</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-slate-500 dark:text-slate-400 text-xs mt-3">KPIs e prazos são definidos no diagnóstico e desenho estratégico conforme o contexto da empresa.</p>
+        </div>
+
+        <!-- Contato -->
+        <div id="contato" class="tab-content">
+          <h2 class="text-2xl font-bold text-slate-800 dark:text-slate-100 mb-4">Vamos conversar?</h2>
+          <p class="text-slate-700 dark:text-slate-300 mb-6">Solicite um orçamento personalizado ou tire suas dúvidas.</p>
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <svg class="w-6 h-6 text-blue-700 dark:text-blue-300 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              <a href="mailto:olokun.ambiental@gmail.com" class="text-blue-600 dark:text-blue-300 hover:underline">olokun.ambiental@gmail.com</a>
+            </div>
+            <div class="flex items-center">
+              <svg class="w-6 h-6 text-blue-700 dark:text-blue-300 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9V3m0 9a9 9 0 019-9"></path></svg>
+              <a href="https://olokun.webnode.com/" target="_blank" class="text-blue-600 dark:text-blue-300 hover:underline">olokun.webnode.com</a>
+            </div>
+            <a href="mailto:olokun.ambiental@gmail.com" class="mt-4 inline-block bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors">Solicitar Orçamento</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rodapé simples -->
+    <footer class="text-center text-gray-500 text-sm mt-8">
+      <p>&copy; 2025 Olokun Gestão Ambiental. Todos os direitos reservados.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Inicializa tema respeitando preferências
+    (function initTheme() {
+      const stored = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (stored === 'dark' || (!stored && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+
+    // Filter matrix by pilar (tabs version)
+    const filterBtnsTabs = document.querySelectorAll('.filter-btn-tabs');
+    const matrizRowsTabs = document.querySelectorAll('#matrizBodyTabs tr');
+    
+    filterBtnsTabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Update active state
+        filterBtnsTabs.forEach(b => {
+          b.classList.remove('active');
+          b.classList.remove('bg-blue-600', 'text-white');
+          b.classList.add('bg-white', 'dark:bg-slate-800', 'text-blue-600', 'dark:text-blue-300');
+        });
+        btn.classList.add('active');
+        btn.classList.remove('bg-white', 'dark:bg-slate-800', 'text-blue-600', 'dark:text-blue-300');
+        btn.classList.add('bg-blue-600', 'text-white');
+        
+        // Filter rows
+        const filter = btn.dataset.filter;
+        matrizRowsTabs.forEach(row => {
+          if (filter === 'all' || row.dataset.pilar === filter) {
+            row.style.display = '';
+          } else {
+            row.style.display = 'none';
+          }
+        });
+      });
+    });
+    
+    // Download matrix as CSV (tabs version)
+    document.getElementById('downloadMatrizTabs').addEventListener('click', () => {
+      const csvContent = [
+        ['Objetivo Estratégico', 'Ação Olokun', 'KPIs e Métricas', 'Horizonte e Owner'],
+        ['Redução de Custos Operacionais', 'Otimização de fluxos e contratos; economia circular', 'Custo/ton; % desvio de aterro; receita recicláveis', 'T0–T6 • Operações/Compras'],
+        ['Fortalecimento da Marca', 'Narrativa ESG, reporte e certificações', 'Score ESG; alcance/engajamento; nº de selos', 'T3–T12 • Mkt/RI/ESG'],
+        ['Mitigação de Riscos', 'Compliance, matriz de riscos e contingência', 'Nº de não‑conformidades; SLA; score de controles', 'T0–T6 • Jurídico/ESG'],
+        ['Acesso a Novos Mercados', 'Adequação a critérios ESG de clientes/edital e reporte GRI', '% requisitos ESG atendidos; nº de RFPs/licit. habilitadas; receita ESG‑linked', 'T6–T12 • Comercial'],
+        ['Inovação e Novas Receitas', 'Modelos circulares, P&D com parceiros e simbiose industrial', 'Nº pilotos; % conversão em rollout; receita com subprodutos; payback médio', 'T3–T18 • P&D/Operações'],
+        ['Engajamento de Stakeholders', 'Programas de engajamento e governança (comitê, ritos, KPIs)', 'Participação em ritos (%); índice de adesão a campanhas; score de cultura', 'T0–T9 • RH/ESG']
+      ].map(row => row.map(cell => `"${cell}"`).join(',')).join('\n');
+      
+      const blob = new Blob(['\uFEFF' + csvContent], { type: 'text/csv;charset=utf-8;' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'Matriz_Alinhamento_Estrategico_Olokun.csv';
+      link.click();
+    });
+
+    // Script de abas
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const tabId = button.dataset.tab;
+        const tabToActivate = document.getElementById(tabId);
+
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+
+        button.classList.add('active');
+        if (tabToActivate) tabToActivate.classList.add('active');
+        // rolar para o topo do container em telas pequenas
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+
+    // Dark mode toggle
+    const themeBtn = document.getElementById('themeToggle');
+    themeBtn?.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+
+    // Reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacitação em Gestão de Resíduos - Olokun</title>
+    <meta name="description" content="Programa intensivo de capacitação para formar equipes autônomas na gestão de resíduos sólidos.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Specific styles for capacitacao page */
+        .hero-capacitacao {
+            background: linear-gradient(135deg, #059669 0%, #10b981 50%, #34d399 100%);
+            padding: 8rem 0 4rem;
+            color: white;
+        }
+        
+        .module-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .module-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .module-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #059669, #10b981);
+        }
+        
+        .module-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .module-header {
+            padding: 2rem 2rem 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        
+        .module-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #059669, #10b981);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .module-info {
+            flex: 1;
+        }
+        
+        .module-title {
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .module-duration {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .module-content {
+            padding: 0 2rem 2rem;
+        }
+        
+        .module-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .module-topics {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .module-topics li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .module-topics li::before {
+            content: '✓';
+            color: #10b981;
+            font-weight: bold;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: rgba(16, 185, 129, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+        }
+        
+        .package-comparison {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            margin-top: 3rem;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .comparison-table th {
+            background: #f9fafb;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .comparison-table .featured-column {
+            background: rgba(16, 185, 129, 0.05);
+            border-left: 3px solid #10b981;
+        }
+        
+        .price-highlight {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #10b981;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 4rem;
+            color: #10b981;
+            opacity: 0.3;
+            font-family: serif;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #059669, #10b981);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .author-info h5 {
+            margin: 0;
+            color: var(--text-primary);
+        }
+        
+        .author-info span {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .module-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+            
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.75rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.75rem;">
+                    <img src="Olokun logo.jpg" alt="Olokun Logo" style="height: 50px; width: auto;">
+                    <div>
+                        <h2>Olokun</h2>
+                        <span class="nav-subtitle">Gestão Ambiental</span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="index.html#servicos" class="nav-link">Serviços</a>
+                <a href="pgrs.html" class="nav-link">PGRS</a>
+                <a href="consultoria.html" class="nav-link">Consultoria</a>
+                <a href="index.html#contato" class="nav-link">Contato</a>
+                <a href="index.html#contato" class="nav-cta">Solicitar Orçamento</a>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-capacitacao">
+        <div class="container">
+            <div class="hero-content" style="grid-template-columns: 1fr; text-align: center; gap: 2rem;">
+                <div class="hero-text">
+                    <span class="section-subtitle" style="color: #fbbf24;">Capacitação Especializada</span>
+                    <h1 class="hero-title" style="margin-bottom: 1.5rem;">
+                        Programa Intensivo para
+                        <span class="hero-gradient">Gestão de Resíduos Sólidos</span>
+                    </h1>
+                    <p class="hero-description" style="max-width: 700px; margin: 0 auto 2rem;">
+                        Capacitação profissional que integra fundamentos técnicos, prática supervisionada e avaliação por evidências. 
+                        Sua equipe aprende a operar a gestão de resíduos com segurança, conformidade (PNRS e normas ABNT) e foco em 
+                        resultados operacionais e ESG.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#modulos" class="btn btn-primary btn-large">
+                            <i class="fas fa-play"></i>
+                            Ver Módulos
+                        </a>
+                        <a href="#investimento" class="btn btn-secondary btn-large">
+                            <i class="fas fa-calculator"></i>
+                            Calcular Investimento
+                        </a>
+                    </div>
+                    
+                    <div class="hero-stats" style="margin-top: 3rem;">
+                        <div class="stat">
+                            <span class="stat-number">6</span>
+                            <span class="stat-label">Módulos Especializados</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">24h</span>
+                            <span class="stat-label">Carga Horária Total</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Metodologia Prática</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certification & Delivery Section -->
+    <section class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Certificação e Formatos</span>
+                <h2 class="section-title">Avaliação por Evidências e Entrega Flexível</h2>
+                <p class="section-description">
+                    Certificação baseada em critérios objetivos e formatos de entrega adaptáveis à realidade da sua operação.
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                <div style="background: white; border-radius: 0.75rem; padding: 1.25rem; box-shadow: 0 6px 18px rgba(0,0,0,0.08);">
+                    <h4 style="color: #059669; margin-bottom: 0.5rem;">Critérios de Certificação</h4>
+                    <ul style="list-style: disc; margin-left: 1.25rem; color: var(--text-secondary);">
+                        <li>Participação mínima de 75%</li>
+                        <li>Entrega de projeto prático aplicado</li>
+                        <li>Avaliação técnica por rubrica</li>
+                        <li>Checklists e evidências documentais</li>
+                    </ul>
+                </div>
+
+                <div style="background: white; border-radius: 0.75rem; padding: 1.25rem; box-shadow: 0 6px 18px rgba(0,0,0,0.08);">
+                    <h4 style="color: #059669; margin-bottom: 0.5rem;">Formatos de Entrega</h4>
+                    <ul style="list-style: disc; margin-left: 1.25rem; color: var(--text-secondary);">
+                        <li>In‑company (presencial) com prática in loco</li>
+                        <li>Online ao vivo (aulas síncronas)</li>
+                        <li>Híbrido com atividades assíncronas</li>
+                        <li>Customização por setor (saúde, indústria, varejo)</li>
+                    </ul>
+                </div>
+
+                <div style="background: white; border-radius: 0.75rem; padding: 1.25rem; box-shadow: 0 6px 18px rgba(0,0,0,0.08);">
+                    <h4 style="color: #059669; margin-bottom: 0.5rem;">Resultados Esperados</h4>
+                    <ul style="list-style: disc; margin-left: 1.25rem; color: var(--text-secondary);">
+                        <li>Equipe autônoma e indicadores de performance</li>
+                        <li>Conformidade com PNRS e ABNT NBRs</li>
+                        <li>Redução de erros operacionais</li>
+                        <li>Base para melhoria contínua (PDCA)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Overview Section -->
+    <section class="about" style="padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Sobre o Programa</span>
+                <h2 class="section-title">Capacitação que Transforma</h2>
+                <p class="section-description">
+                    Programa estruturado com base em andragogia e no modelo 70-20-10 (experiência, mentoria e teoria). Aplicamos 
+                    Aprendizagem Baseada em Projetos (ABP), checklists operacionais e rubricas de desempenho para garantir domínio 
+                    prático, conformidade regulatória e autonomia da equipe.
+                </p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <h3 style="color: var(--success-color); margin-bottom: 1rem;">Metodologia Profissional de Aprendizagem</h3>
+                    <p>Combina teoria aplicada (PNRS, ABNT NBRs), prática supervisionada in loco e mentoria. Cada turma executa um mini‑projeto 
+                    ligado ao PGRS da organização, com métricas, evidências e devolutiva técnica ao final do ciclo.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <h4>Governança e Comitê</h4>
+                                <p>Estrutura de papéis, ritos e KPIs para o Comitê de Resíduos</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <i class="fas fa-tools"></i>
+                            <div>
+                                <h4>Aprendizagem por Projetos</h4>
+                                <p>ABP com entregas aplicadas ao PGRS e indicadores de impacto</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <i class="fas fa-certificate"></i>
+                            <div>
+                                <h4>Certificação e Evidências</h4>
+                                <p>Certificação baseada em participação, prática e avaliação técnica</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <i class="fas fa-headset"></i>
+                            <div>
+                                <h4>Mentoria e Suporte</h4>
+                                <p>Acompanhamento por 6 meses com trilha de dúvidas e templates</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual" data-aos="fade-left">
+                    <div class="about-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #059669, #10b981);">
+                            <i class="fas fa-graduation-cap"></i>
+                            <p>Capacitação Especializada</p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-metrics">
+                        <div class="metric">
+                            <span class="metric-value">200+</span>
+                            <span class="metric-label">Profissionais Capacitados</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">95%</span>
+                            <span class="metric-label">Taxa de Aprovação</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modules Section -->
+    <section id="modulos" class="services" style="background: #f8fafc;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Estrutura do Programa</span>
+                <h2 class="section-title">6 Módulos Especializados</h2>
+                <p class="section-description">
+                    Cada módulo desenvolve competências específicas e complementares com objetivos de aprendizagem claros, 
+                    atividades práticas e materiais de apoio (checklists, modelos e guias) para aplicação imediata no PGRS.
+                </p>
+            </div>
+            
+            <div class="module-grid">
+                <div class="module-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="module-header">
+                        <div class="module-number">1</div>
+                        <div class="module-info">
+                            <h3 class="module-title">Fundamentos e Legislação</h3>
+                            <div class="module-duration">
+                                <i class="fas fa-clock"></i>
+                                <span>4 horas</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="module-content">
+                        <p class="module-description">
+                            Base legal e normativa para gestão de resíduos sólidos, incluindo PNRS e normas técnicas aplicáveis.
+                        </p>
+                        <ul class="module-topics">
+                            <li>Política Nacional de Resíduos Sólidos (Lei 12.305/2010)</li>
+                            <li>Normas técnicas ABNT relevantes</li>
+                            <li>Classificação de resíduos sólidos</li>
+                            <li>Responsabilidades legais dos geradores</li>
+                            <li>Penalidades e infrações ambientais</li>
+                            <li>Requisitos mínimos de PGRS e auditoria documental</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="module-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="module-header">
+                        <div class="module-number">2</div>
+                        <div class="module-info">
+                            <h3 class="module-title">Diagnóstico e Planejamento</h3>
+                            <div class="module-duration">
+                                <i class="fas fa-clock"></i>
+                                <span>4 horas</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="module-content">
+                        <p class="module-description">
+                            Metodologias para caracterização de resíduos e estruturação do PGRS organizacional.
+                        </p>
+                        <ul class="module-topics">
+                            <li>Caracterização gravimétrica de resíduos</li>
+                            <li>Identificação de pontos de geração</li>
+                            <li>Quantificação e sazonalidade</li>
+                            <li>Estrutura do PGRS</li>
+                            <li>Definição de metas e indicadores (KPIs)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="module-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="module-header">
+                        <div class="module-number">3</div>
+                        <div class="module-info">
+                            <h3 class="module-title">Gestão Compartilhada</h3>
+                            <div class="module-duration">
+                                <i class="fas fa-clock"></i>
+                                <span>4 horas</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="module-content">
+                        <p class="module-description">
+                            Criação de estruturas de governança interna e engajamento de stakeholders.
+                        </p>
+                        <ul class="module-topics">
+                            <li>Os "Rs" da sustentabilidade</li>
+                            <li>Formação do Comitê de Resíduos</li>
+                            <li>Comunicação interna efetiva</li>
+                            <li>Mudança cultural organizacional</li>
+                            <li>Engajamento de colaboradores (campanhas e ritos)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="module-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="module-header">
+                        <div class="module-number">4</div>
+                        <div class="module-info">
+                            <h3 class="module-title">Gestão de Recicláveis</h3>
+                            <div class="module-duration">
+                                <i class="fas fa-clock"></i>
+                                <span>4 horas</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="module-content">
+                        <p class="module-description">
+                            Operacionalização da coleta seletiva e parcerias com cooperativas de reciclagem.
+                        </p>
+                        <ul class="module-topics">
+                            <li>Técnicas de segregação na fonte</li>
+                            <li>Acondicionamento adequado</li>
+                            <li>Layout de contentores</li>
+                            <li>Parcerias com cooperativas e contratos</li>
+                            <li>Logística reversa e rastreabilidade</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="module-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="module-header">
+                        <div class="module-number">5</div>
+                        <div class="module-info">
+                            <h3 class="module-title">Gestão de Orgânicos</h3>
+                            <div class="module-duration">
+                                <i class="fas fa-clock"></i>
+                                <span>8 horas (2 módulos)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="module-content">
+                        <p class="module-description">
+                            Soluções para tratamento in loco de resíduos orgânicos através de compostagem e agricultura urbana.
+                        </p>
+                        <ul class="module-topics">
+                            <li>Projeto e construção de composteiras</li>
+                            <li>Oficina prática de compostagem</li>
+                            <li>Criação de hortas corporativas</li>
+                            <li>Qualificação alimentar</li>
+                            <li>Aproveitamento de subprodutos e segurança</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="module-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="module-header">
+                        <div class="module-number">6</div>
+                        <div class="module-info">
+                            <h3 class="module-title">Implementação e Avaliação</h3>
+                            <div class="module-duration">
+                                <i class="fas fa-clock"></i>
+                                <span>4 horas</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="module-content">
+                        <p class="module-description">
+                            Finalização do PGRS, definição de cronograma e estabelecimento de sistema de melhoria contínua.
+                        </p>
+                        <ul class="module-topics">
+                            <li>Simulação de preenchimento do PGRS</li>
+                            <li>Cronograma de implementação</li>
+                            <li>Sistema de melhoria contínua (PDCA)</li>
+                            <li>Indicadores de desempenho e reporte</li>
+                            <li>Plano de monitoramento e governança</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Section -->
+    <section id="investimento" class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Modalidades de Investimento</span>
+                <h2 class="section-title">Escolha o Pacote Ideal para sua Empresa</h2>
+                <p class="section-description">
+                    Oferecemos flexibilidade total para atender às necessidades específicas da sua organização.
+                </p>
+            </div>
+            
+            <div class="package-comparison">
+                <div class="overflow-x-auto">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Modalidade</th>
+                                <th>Conteúdo</th>
+                                <th>Carga Horária</th>
+                                <th class="featured-column">Investimento</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>Palestra de Sensibilização</strong><br>
+                                    <small>Introdução ao tema</small>
+                                </td>
+                                <td>Palestra sobre um tema específico: Recicláveis, Orgânicos ou Especiais</td>
+                                <td>2 horas</td>
+                                <td class="featured-column">
+                                    <span class="price-highlight">R$ 850</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Módulo Avulso</strong><br>
+                                    <small>Treinamento específico</small>
+                                </td>
+                                <td>Contratação de um módulo específico do programa</td>
+                                <td>4 horas</td>
+                                <td class="featured-column">
+                                    <span class="price-highlight">R$ 1.500</span>
+                                </td>
+                            </tr>
+                            <tr style="background: rgba(16, 185, 129, 0.05);">
+                                <td>
+                                    <strong>Pacote PGRS Essencial</strong><br>
+                                    <small>🏆 Mais popular</small>
+                                </td>
+                                <td>Módulos 1, 2, 3, 4 e 6 - Capacitação completa para PGRS</td>
+                                <td>20 horas</td>
+                                <td class="featured-column">
+                                    <span class="price-highlight">R$ 6.800</span><br>
+                                    <small>Economia de R$ 1.700</small>
+                                </td>
+                            </tr>
+                            <tr style="background: rgba(16, 185, 129, 0.1); border: 2px solid #10b981;">
+                                <td>
+                                    <strong>Pacote Sustentabilidade Integral</strong><br>
+                                    <small>⭐ Recomendado</small>
+                                </td>
+                                <td>Todos os 6 módulos - A solução mais completa para sustentabilidade</td>
+                                <td>24 horas</td>
+                                <td class="featured-column">
+                                    <span class="price-highlight">R$ 8.000</span><br>
+                                    <small>Economia de R$ 2.500</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Oficina Prática Orgânicos</strong><br>
+                                    <small>Complemento especializado</small>
+                                </td>
+                                <td>Módulo 5 avulso - Oficina de compostagem e horta (materiais não inclusos)</td>
+                                <td>4 horas</td>
+                                <td class="featured-column">
+                                    <span class="price-highlight">R$ 1.800</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(16, 185, 129, 0.05); border-radius: 0.5rem; border-left: 4px solid #10b981;">
+                    <h4 style="color: #059669; margin-bottom: 1rem;">✨ Benefícios Inclusos em Todos os Pacotes:</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <div>✓ Material didático completo</div>
+                        <div>✓ Certificado de conclusão</div>
+                        <div>✓ Suporte técnico por 6 meses</div>
+                        <div>✓ Acesso a templates e ferramentas</div>
+                        <div>✓ Acompanhamento de implementação</div>
+                        <div>✓ Comunidade exclusiva de alunos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="services" style="background: #f8fafc;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Depoimentos</span>
+                <h2 class="section-title">O que Nossos Clientes Dizem</h2>
+                <p class="section-description">
+                    Empresas que transformaram sua gestão ambiental através da nossa capacitação.
+                </p>
+            </div>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <p class="testimonial-text">
+                        "A capacitação da Olokun transformou completamente nossa visão sobre resíduos. 
+                        Hoje somos referência em sustentabilidade no nosso setor e reduzimos 45% dos custos com destinação."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MR</div>
+                        <div class="author-info">
+                            <h5>Maria Rodrigues</h5>
+                            <span>Gerente Ambiental - Indústria XYZ</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <p class="testimonial-text">
+                        "O programa é muito prático e aplicável. Nossa equipe saiu capacitada para gerir 
+                        tudo internamente. O retorno do investimento veio em menos de 6 meses."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JS</div>
+                        <div class="author-info">
+                            <h5>João Silva</h5>
+                            <span>Diretor Operacional - Empresa ABC</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <p class="testimonial-text">
+                        "Excelente metodologia! Os módulos são bem estruturados e o suporte pós-capacitação 
+                        foi fundamental para implementarmos todas as melhorias propostas."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AF</div>
+                        <div class="author-info">
+                            <h5>Ana Ferreira</h5>
+                            <span>Coordenadora de Qualidade - Hospital DEF</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%);">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Transforme sua Equipe em Especialistas</h2>
+                <p>Invista na capacitação da sua equipe e crie uma cultura sustentável que gera resultados reais e duradouros.</p>
+                
+                <div class="cta-buttons">
+                    <a href="#contato" class="btn btn-primary btn-large">
+                        <i class="fas fa-graduation-cap"></i>
+                        Inscrever Equipe
+                    </a>
+                    <a href="mailto:olokun.ambiental@gmail.com" class="btn btn-secondary btn-large">
+                        <i class="fas fa-phone"></i>
+                        Conversar com Especialista
+                    </a>
+                </div>
+                
+                <div style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.9;">
+                    <p>🎯 Próximas turmas: <strong>Março e Maio de 2025</strong></p>
+                    <p>👥 Vagas limitadas: <strong>Máximo 20 participantes por turma</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <span class="section-subtitle">Inscrições Abertas</span>
+                    <h2 class="section-title">Capacite sua Equipe</h2>
+                    <p>Preencha o formulário ao lado e receba informações detalhadas sobre o programa de capacitação mais adequado para sua empresa.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-calendar"></i>
+                            <div>
+                                <h4>Próximas Turmas</h4>
+                                <span>Março e Maio de 2025</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <h4>Turmas</h4>
+                                <span>Máximo 20 participantes</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Modalidade</h4>
+                                <span>Presencial ou Online</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="capacitacaoForm">
+                        <div class="form-group">
+                            <label for="nome">Nome do Responsável *</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="empresa">Empresa *</label>
+                            <input type="text" id="empresa" name="empresa" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">E-mail *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="telefone">Telefone</label>
+                                <input type="tel" id="telefone" name="telefone">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pacote">Pacote de Interesse *</label>
+                            <select id="pacote" name="pacote" required>
+                                <option value="">Selecione um pacote</option>
+                                <option value="palestra">Palestra de Sensibilização (R$ 850)</option>
+                                <option value="modulo">Módulo Avulso (R$ 1.500)</option>
+                                <option value="essencial">Pacote PGRS Essencial (R$ 6.800)</option>
+                                <option value="integral">Pacote Sustentabilidade Integral (R$ 8.000)</option>
+                                <option value="oficina">Oficina Prática Orgânicos (R$ 1.800)</option>
+                                <option value="personalizado">Programa Personalizado</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="participantes">Número de Participantes</label>
+                                <select id="participantes" name="participantes">
+                                    <option value="">Selecione</option>
+                                    <option value="1-5">1 a 5 pessoas</option>
+                                    <option value="6-10">6 a 10 pessoas</option>
+                                    <option value="11-20">11 a 20 pessoas</option>
+                                    <option value="20+">Mais de 20 pessoas</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="modalidade">Modalidade Preferida</label>
+                                <select id="modalidade" name="modalidade">
+                                    <option value="">Selecione</option>
+                                    <option value="presencial">Presencial</option>
+                                    <option value="online">Online</option>
+                                    <option value="hibrido">Híbrido</option>
+                                    <option value="in-company">In-company</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="urgencia">Urgência</label>
+                            <select id="urgencia" name="urgencia">
+                                <option value="">Selecione</option>
+                                <option value="imediata">Imediata (próxima turma)</option>
+                                <option value="programada">Programada (próximos 3 meses)</option>
+                                <option value="flexivel">Flexível (próximos 6 meses)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="observacoes">Necessidades Específicas</label>
+                            <textarea id="observacoes" name="observacoes" rows="3" placeholder="Conte-nos sobre as necessidades específicas da sua equipe..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-graduation-cap"></i>
+                            Solicitar Informações da Capacitação
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Olokun</h3>
+                    <p>Gestão Ambiental Inteligente</p>
+                    <p class="footer-tagline">Transformando desafios ambientais em oportunidades de negócio.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Serviços</h4>
+                    <a href="pgrs.html">PGRS Inteligente</a>
+                    <a href="capacitacao.html">Capacitação</a>
+                    <a href="consultoria.html">Consultoria</a>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Empresa</h4>
+                    <a href="index.html#sobre">Sobre Nós</a>
+                    <a href="index.html#beneficios">Benefícios</a>
+                    <a href="index.html#contato">Contato</a>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <a href="mailto:olokun.ambiental@gmail.com">olokun.ambiental@gmail.com</a>
+                    <a href="https://olokun.webnode.com/" target="_blank">olokun.webnode.com</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Olokun Gestão Ambiental. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+        // Initialize capacitacao form with specific handling
+        document.getElementById('capacitacaoForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Create specific mailto for capacitacao
+            const subject = encodeURIComponent(`Solicitação Capacitação - ${data.empresa}`);
+            const body = encodeURIComponent(`
+SOLICITAÇÃO DE INFORMAÇÕES - PROGRAMA DE CAPACITAÇÃO
+
+Dados do Solicitante:
+Nome: ${data.nome}
+Empresa: ${data.empresa}
+E-mail: ${data.email}
+Telefone: ${data.telefone || 'Não informado'}
+
+Detalhes da Capacitação:
+Pacote de interesse: ${data.pacote}
+Número de participantes: ${data.participantes || 'Não especificado'}
+Modalidade preferida: ${data.modalidade || 'Não especificada'}
+Urgência: ${data.urgencia || 'Não especificada'}
+
+Necessidades Específicas:
+${data.observacoes || 'Nenhuma necessidade específica mencionada.'}
+
+---
+Solicitação enviada através do site - Página Capacitação
+            `);
+            
+            const mailtoLink = `mailto:olokun.ambiental@gmail.com?subject=${subject}&body=${body}`;
+            window.open(mailtoLink);
+            
+            // Show success message
+            showNotification('Solicitação enviada com sucesso! Entraremos em contato em até 24h com informações detalhadas sobre o programa.', 'success');
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>

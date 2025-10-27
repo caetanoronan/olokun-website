@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultoria Estratégica - Olokun Gestão Ambiental</title>
+    <meta name="description" content="Consultoria especializada para transformar gestão ambiental em vantagem competitiva sustentável.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Specific styles for consultoria page */
+        .hero-consultoria {
+            background: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #c084fc 100%);
+            padding: 8rem 0 4rem;
+            color: white;
+        }
+        
+        .strategy-matrix {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            margin-top: 3rem;
+        }
+        
+        .matrix-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+        }
+        
+        .matrix-table th,
+        .matrix-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+            vertical-align: top;
+        }
+        
+        .matrix-table th {
+            background: linear-gradient(135deg, #7c3aed, #a855f7);
+            color: white;
+            font-weight: 600;
+        }
+        
+        .matrix-table tr:hover {
+            background: rgba(124, 58, 237, 0.05);
+        }
+        
+        .strategy-objective {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .strategy-action {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        
+        .strategy-result {
+            color: #059669;
+            font-size: 0.95rem;
+        }
+        
+        .roi-calculator {
+            background: linear-gradient(135deg, #7c3aed, #a855f7);
+            color: white;
+            padding: 3rem;
+            border-radius: 1rem;
+            margin: 3rem 0;
+        }
+        
+        .roi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .roi-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            text-align: center;
+        }
+        
+        .roi-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: #fbbf24;
+        }
+        
+        .roi-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .roi-description {
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            opacity: 0.8;
+        }
+        
+        .consulting-process {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .process-phase {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .process-phase:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .process-phase::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #7c3aed, #a855f7);
+            border-radius: 1rem 1rem 0 0;
+        }
+        
+        .phase-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #7c3aed, #a855f7);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .phase-title {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .phase-deliverables {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        
+        .phase-deliverables li {
+            padding: 0.3rem 0;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .phase-deliverables li::before {
+            content: '📋';
+            font-size: 0.9rem;
+        }
+        
+        .case-study {
+            background: #f8fafc;
+            padding: 3rem;
+            border-radius: 1rem;
+            margin: 3rem 0;
+        }
+        
+        .case-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .case-metric {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .case-metric-value {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #7c3aed;
+            margin-bottom: 0.5rem;
+        }
+        
+        .case-metric-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .matrix-table {
+                font-size: 0.85rem;
+            }
+            
+            .matrix-table th,
+            .matrix-table td {
+                padding: 0.75rem 0.5rem;
+            }
+            
+            .roi-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.75rem;">
+                    <img src="Olokun logo.jpg" alt="Olokun Logo" style="height: 50px; width: auto;">
+                    <div>
+                        <h2>Olokun</h2>
+                        <span class="nav-subtitle">Gestão Ambiental</span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="index.html#servicos" class="nav-link">Serviços</a>
+                <a href="pgrs.html" class="nav-link">PGRS</a>
+                <a href="capacitacao.html" class="nav-link">Capacitação</a>
+                <a href="index.html#contato" class="nav-link">Contato</a>
+                <a href="index.html#contato" class="nav-cta">Solicitar Orçamento</a>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-consultoria">
+        <div class="container">
+            <div class="hero-content" style="grid-template-columns: 1fr; text-align: center; gap: 2rem;">
+                <div class="hero-text">
+                    <span class="section-subtitle" style="color: #fbbf24;">Consultoria Estratégica</span>
+                    <h1 class="hero-title" style="margin-bottom: 1.5rem;">
+                        Transforme Gestão Ambiental em
+                        <span class="hero-gradient">Vantagem Competitiva</span>
+                    </h1>
+                    <p class="hero-description" style="max-width: 700px; margin: 0 auto 2rem;">
+                        Consultoria especializada que integra gestão ambiental à estratégia corporativa, convertendo compliance em 
+                        diferencial competitivo. Desenvolvemos soluções que reduzem custos operacionais, fortalecem governança ESG 
+                        e desbloqueiam novas fontes de receita através da economia circular.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#estrategia" class="btn btn-primary btn-large">
+                            <i class="fas fa-chart-line"></i>
+                            Ver Estratégias
+                        </a>
+                        <a href="#roi" class="btn btn-secondary btn-large">
+                            <i class="fas fa-calculator"></i>
+                            Calcular ROI
+                        </a>
+                    </div>
+                    
+                    <div class="hero-stats" style="margin-top: 3rem;">
+                        <div class="stat">
+                            <span class="stat-number">40%</span>
+                            <span class="stat-label">Redução de Custos</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">ROI</span>
+                            <span class="stat-label">Retorno em 12 meses</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">360°</span>
+                            <span class="stat-label">Visão Estratégica</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategic Approach Section -->
+    <section class="about" style="padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Nossa Abordagem</span>
+                <h2 class="section-title">Consultoria que Gera Resultados Mensuráveis</h2>
+                <p class="section-description">
+                    Nossa metodologia vai além da conformidade regulatória, integrando princípios de economia circular, 
+                    análise de ciclo de vida (ACV) e métricas ESG aos processos decisórios. Cada recomendação é fundamentada 
+                    em análise técnico-financeira que demonstra impacto direto no EBITDA e na valoração da empresa.
+                </p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <h3 style="color: #7c3aed; margin-bottom: 1rem;">Metodologia Proprietária ESG-ROI</h3>
+                    <p>Framework estratégico que conecta gestão de resíduos a resultados financeiros tangíveis. Utilizamos análise de materialidade, 
+                    modelagem financeira de cenários e benchmarking setorial para identificar oportunidades de otimização com maior potencial de ROI. 
+                    Cada projeto é estruturado com business case detalhado, KPIs mensuráveis e roadmap de implementação alinhado às prioridades 
+                    do negócio.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-target" style="color: #7c3aed;"></i>
+                            <div>
+                                <h4>Integração Estratégica ao Core Business</h4>
+                                <p>Alinhamento entre objetivos ESG e drivers de valor corporativo com métricas integradas ao BSC</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <i class="fas fa-chart-line" style="color: #7c3aed;"></i>
+                            <div>
+                                <h4>Modelagem Financeira de Impacto</h4>
+                                <p>Business case com análise de payback, VPL e TIR para cada iniciativa proposta</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <i class="fas fa-lightbulb" style="color: #7c3aed;"></i>
+                            <div>
+                                <h4>Inovação em Economia Circular</h4>
+                                <p>Desenvolvimento de modelos de negócio circulares que transformam resíduos em ativos econômicos</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <i class="fas fa-shield-alt" style="color: #7c3aed;"></i>
+                            <div>
+                                <h4>Gestão Preventiva de Riscos ESG</h4>
+                                <p>Matriz de riscos ambientais integrada ao enterprise risk management (ERM) corporativo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual" data-aos="fade-left">
+                    <div class="about-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #7c3aed, #a855f7);">
+                            <i class="fas fa-brain"></i>
+                            <p>Inteligência Estratégica</p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-metrics">
+                        <div class="metric">
+                            <span class="metric-value" style="color: #7c3aed;">50+</span>
+                            <span class="metric-label">Empresas Consultadas</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value" style="color: #7c3aed;">300%</span>
+                            <span class="metric-label">ROI Médio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategic Matrix Section -->
+    <section id="estrategia" class="services" style="background: #f8fafc;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Alinhamento Estratégico</span>
+                <h2 class="section-title">Framework de Criação de Valor via ESG</h2>
+                <p class="section-description">
+                    Conectamos iniciativas de gestão ambiental aos objetivos de negócio por meio de uma matriz de valor com 
+                    ações, KPIs e horizonte de entrega claros. A priorização considera esforço x impacto e riscos associados.
+                </p>
+            </div>
+            
+            <div class="strategy-matrix" data-aos="fade-up">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+                    <h3 style="color: #7c3aed; margin: 0;">
+                        Matriz de Alinhamento Estratégico
+                    </h3>
+                    <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                        <div style="display: flex; gap: 0.5rem;">
+                            <button class="filter-btn active" data-filter="all" style="padding: 0.5rem 1rem; border: 1px solid #7c3aed; background: #7c3aed; color: white; border-radius: 0.5rem; cursor: pointer; font-size: 0.9rem; transition: all 0.3s;">Todos</button>
+                            <button class="filter-btn" data-filter="financeiro" style="padding: 0.5rem 1rem; border: 1px solid #7c3aed; background: white; color: #7c3aed; border-radius: 0.5rem; cursor: pointer; font-size: 0.9rem; transition: all 0.3s;">Financeiro</button>
+                            <button class="filter-btn" data-filter="esg" style="padding: 0.5rem 1rem; border: 1px solid #7c3aed; background: white; color: #7c3aed; border-radius: 0.5rem; cursor: pointer; font-size: 0.9rem; transition: all 0.3s;">ESG</button>
+                            <button class="filter-btn" data-filter="risco" style="padding: 0.5rem 1rem; border: 1px solid #7c3aed; background: white; color: #7c3aed; border-radius: 0.5rem; cursor: pointer; font-size: 0.9rem; transition: all 0.3s;">Riscos</button>
+                        </div>
+                        <button id="downloadMatriz" style="padding: 0.5rem 1rem; border: 1px solid #059669; background: #059669; color: white; border-radius: 0.5rem; cursor: pointer; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-download"></i> Baixar CSV
+                        </button>
+                    </div>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="matrix-table">
+                        <thead>
+                            <tr>
+                                <th>Objetivo Estratégico</th>
+                                <th>Ação Olokun</th>
+                                <th>KPIs e Métricas</th>
+                                <th>Horizonte e Owner</th>
+                            </tr>
+                        </thead>
+                        <tbody id="matrizBody">
+                            <tr data-pilar="financeiro">
+                                <td class="strategy-objective">Redução de Custos Operacionais</td>
+                                <td class="strategy-action">Otimização de fluxos, contratos com performance, economia circular</td>
+                                <td class="strategy-result">
+                                    • Custo/ton (baseline → target)
+                                    <br>• % Desvio de aterro (landfill diversion)
+                                    <br>• Receita com recicláveis/mês
+                                </td>
+                                <td class="strategy-result">T0–T6 meses • Owner: Operações/Compras</td>
+                            </tr>
+                            <tr data-pilar="esg">
+                                <td class="strategy-objective">Fortalecimento da Marca</td>
+                                <td class="strategy-action">Narrativa ESG, reporte de performance, certificações e selos</td>
+                                <td class="strategy-result">
+                                    • Score ESG (baseline → target)
+                                    <br>• Alcance/engajamento de comunicação ESG
+                                    <br>• Nº de certificações/selo obtidos
+                                </td>
+                                <td class="strategy-result">T3–T12 meses • Owner: Mkt/RI/ESG</td>
+                            </tr>
+                            <tr data-pilar="risco">
+                                <td class="strategy-objective">Mitigação de Riscos</td>
+                                <td class="strategy-action">Compliance, matriz de riscos ESG, planos de contingência</td>
+                                <td class="strategy-result">
+                                    • Nº de não-conformidades/multas
+                                    <br>• SLA de resposta a incidentes
+                                    <br>• Score de maturidade de controles
+                                </td>
+                                <td class="strategy-result">T0–T6 meses • Owner: Jurídico/ESG</td>
+                            </tr>
+                            <tr data-pilar="esg">
+                                <td class="strategy-objective">Acesso a Novos Mercados</td>
+                                <td class="strategy-action">Adequação a critérios ESG de clientes/edital e reporte GRI</td>
+                                <td class="strategy-result">
+                                    • % requisitos ESG atendidos
+                                    <br>• Nº de RFPs/licit. habilitadas
+                                    <br>• Volume de receita ESG‑linked
+                                </td>
+                                <td class="strategy-result">T6–T12 meses • Owner: Comercial</td>
+                            </tr>
+                            <tr data-pilar="financeiro">
+                                <td class="strategy-objective">Inovação e Novas Receitas</td>
+                                <td class="strategy-action">Modelos circulares, P&D com parceiros e simbiose industrial</td>
+                                <td class="strategy-result">
+                                    • Nº pilotos • % conversão em rollout
+                                    <br>• Receita com subprodutos
+                                    <br>• Payback médio (meses)
+                                </td>
+                                <td class="strategy-result">T3–T18 meses • Owner: P&D/Operações</td>
+                            </tr>
+                            <tr data-pilar="esg">
+                                <td class="strategy-objective">Engajamento de Stakeholders</td>
+                                <td class="strategy-action">Programas de engajamento e governança (comitê, ritos, KPIs)</td>
+                                <td class="strategy-result">
+                                    • Participação em ritos (%)
+                                    <br>• Índice de adesão a campanhas
+                                    <br>• Score de cultura sustentável
+                                </td>
+                                <td class="strategy-result">T0–T9 meses • Owner: RH/ESG</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="margin-top: .75rem; color: var(--text-muted); font-size: .9rem;">
+                    Observação: KPIs e horizontes podem variar por setor, maturidade e escopo. A matriz final é coconstruída com as áreas
+                    de negócio durante as fases 1 e 2 (Diagnóstico e Desenho Estratégico).
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Calculator Section -->
+    <section id="roi" class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Retorno do Investimento</span>
+                <h2 class="section-title">Indicadores de Performance Financeira</h2>
+                <p class="section-description">
+                    Resultados médios baseados em métricas verificáveis de 50+ projetos implementados. Todos os valores 
+                    consideram investimento total (CAPEX + OPEX) e são auditados anualmente através de metodologia 
+                    padronizada de mensuração de impacto.
+                </p>
+            </div>
+            
+            <div class="roi-calculator" data-aos="fade-up">
+                <h3 style="text-align: center; margin-bottom: 1rem;">
+                    Performance Consolidada de Projetos ESG
+                </h3>
+                <p style="text-align: center; opacity: 0.9; margin-bottom: 2rem;">
+                    Média ponderada de resultados verificados (baseline 2022-2024) com margem de confiança de 95%
+                </p>
+                
+                <div class="roi-grid">
+                    <div class="roi-item">
+                        <div class="roi-value">40%</div>
+                        <div class="roi-label">Redução de Custos</div>
+                        <div class="roi-description">Economia média em destinação e operação</div>
+                    </div>
+                    
+                    <div class="roi-item">
+                        <div class="roi-value">R$ 250k</div>
+                        <div class="roi-label">Economia Anual Média</div>
+                        <div class="roi-description">Para empresas de médio porte</div>
+                    </div>
+                    
+                    <div class="roi-item">
+                        <div class="roi-value">12x</div>
+                        <div class="roi-label">Multiplicador de ROI</div>
+                        <div class="roi-description">Retorno em 18 meses</div>
+                    </div>
+                    
+                    <div class="roi-item">
+                        <div class="roi-value">85%</div>
+                        <div class="roi-label">Melhoria ESG</div>
+                        <div class="roi-description">Rating de sustentabilidade</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consulting Process Section -->
+    <section class="services" style="background: #f8fafc;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Nosso Processo</span>
+                <h2 class="section-title">Framework de Implementação Estratégica</h2>
+                <p class="section-description">
+                    Metodologia estruturada em 4 fases interdependentes, baseada em frameworks reconhecidos (ISO 14001, GRI, TCFD) 
+                    e customizada para gerar quick wins enquanto constrói capacidade organizacional de longo prazo.
+                </p>
+            </div>
+            
+            <div class="consulting-process">
+                <div class="process-phase" data-aos="fade-up" data-aos-delay="100">
+                    <div class="phase-number">1</div>
+                    <h3 class="phase-title">Due Diligence ESG & Diagnóstico</h3>
+                    <p>Assessment multidimensional da maturidade em gestão ambiental, análise de gap regulatório, benchmarking setorial e identificação 
+                    de oportunidades de otimização. Utiliza metodologia proprietária de scoring ESG alinhada a frameworks internacionais (GRI, SASB, CDP).</p>
+                    <ul class="phase-deliverables">
+                        <li>Assessment 360° com scoring de maturidade ESG</li>
+                        <li>Análise de gap vs. regulamentação vigente e futura</li>
+                        <li>Benchmarking competitivo setorial</li>
+                        <li>Mapeamento de stakeholders críticos</li>
+                        <li>Matriz de materialidade com análise de dupla relevância</li>
+                        <li>Portfólio de quick wins com business case preliminar</li>
+                    </ul>
+                </div>
+                
+                <div class="process-phase" data-aos="fade-up" data-aos-delay="200">
+                    <div class="phase-number">2</div>
+                    <h3 class="phase-title">Desenho Estratégico & Business Case</h3>
+                    <p>Desenvolvimento de estratégia de sustentabilidade integrada ao planejamento estratégico corporativo. Inclui modelagem financeira 
+                    completa (VPL, TIR, payback) para cada iniciativa, definição de arquitetura de governança ESG e construção de roadmap faseado 
+                    com priorização baseada em matriz esforço vs. impacto.</p>
+                    <ul class="phase-deliverables">
+                        <li>Plano estratégico ESG alinhado ao planejamento corporativo</li>
+                        <li>Business case detalhado com análise VPL/TIR/payback</li>
+                        <li>Roadmap de implementação com marcos e dependências</li>
+                        <li>Arquitetura de governança (papéis, estrutura, processos)</li>
+                        <li>Sistema de indicadores ESG integrados ao BSC</li>
+                        <li>Estratégia de comunicação para stakeholders</li>
+                    </ul>
+                </div>
+                
+                <div class="process-phase" data-aos="fade-up" data-aos-delay="300">
+                    <div class="phase-number">3</div>
+                    <h3 class="phase-title">Execução & Change Management</h3>
+                    <p>Implementação hands-on com PMO dedicado, transferência estruturada de conhecimento e gestão da mudança organizacional. 
+                    Acompanhamento semanal de KPIs, resolução de blockers e ajustes de rota baseados em análise de performance vs. baseline.</p>
+                    <ul class="phase-deliverables">
+                        <li>PMO dedicado com reuniões de steering committee</li>
+                        <li>Programa de capacitação técnica e liderança</li>
+                        <li>Redesenho de processos com mapeamento SIPOC</li>
+                        <li>Plano de gestão da mudança (ADKAR)</li>
+                        <li>Sistema de monitoramento em tempo real de KPIs</li>
+                        <li>Documentação técnica e procedimentos operacionais</li>
+                    </ul>
+                </div>
+                
+                <div class="process-phase" data-aos="fade-up" data-aos-delay="400">
+                    <div class="phase-number">4</div>
+                    <h3 class="phase-title">Monitoramento & Melhoria Contínua</h3>
+                    <p>Acompanhamento sistemático de performance com revisões trimestrais de resultados vs. targets. Utiliza metodologia Lean Six Sigma 
+                    para identificação de oportunidades de otimização e framework de inovação aberta para captura de tendências emergentes em ESG.</p>
+                    <ul class="phase-deliverables">
+                        <li>Dashboards executivos com indicadores de performance</li>
+                        <li>Auditorias técnicas de conformidade e eficiência</li>
+                        <li>Ciclos PDCA com análise de causa raiz</li>
+                        <li>Benchmarking contínuo vs. best-in-class</li>
+                        <li>Radar de inovação ESG e tendências regulatórias</li>
+                        <li>Roadmap evolutivo de próximas iniciativas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Section -->
+    <section class="benefits">
+        <div class="container">
+            <div class="case-study" data-aos="fade-up">
+                <div class="section-header" style="margin-bottom: 2rem;">
+                    <span class="section-subtitle">Caso de Sucesso</span>
+                <h2 class="section-title">Case: Indústria Alimentícia de Médio Porte</h2>
+                <p class="section-description">
+                    Projeto de transformação ESG que resultou em reconhecimento nacional e prêmio setorial de sustentabilidade. 
+                    Implementação de modelo de economia circular com ROI de 320% em 18 meses.
+                </p>
+                </div>
+                
+                <div style="background: white; padding: 2rem; border-radius: 1rem; margin-bottom: 2rem;">
+                <h4 style="color: #7c3aed; margin-bottom: 1rem;">🎯 Contexto & Desafio</h4>
+                <p>Empresa com 350 colaboradores e faturamento de R$ 85M/ano enfrentava custo anual de R$ 580k em destinação de resíduos, 
+                índice de recirculação de apenas 12% e exposição regulatória (2 notificações ambientais em 2022). Objetivos: compliance total, 
+                redução de custos operacionais e melhoria de rating ESG para acesso a linhas de crédito sustentável.</p>
+                </div>
+                
+                <div style="background: white; padding: 2rem; border-radius: 1rem; margin-bottom: 2rem;">
+                <h4 style="color: #059669; margin-bottom: 1rem;">🚀 Solução Estratégica</h4>
+                <p>Implementamos modelo integrado de economia circular baseado em 3 pilares: (1) Unidade de compostagem in-house com valorização 
+                de resíduos orgânicos, (2) Rede de parcerias estratégicas para comercialização de recicláveis com preço spot otimizado, e (3) 
+                Programa de simbiose industrial com 4 empresas da região. Investimento total de CAPEX R$ 280k + OPEX incremental de R$ 45k/ano.</p>
+                </div>
+                
+                <div class="case-metrics">
+                    <div class="case-metric">
+                        <div class="case-metric-value">R$ 380k</div>
+                        <div class="case-metric-label">Economia Anual</div>
+                    </div>
+                    
+                    <div class="case-metric">
+                        <div class="case-metric-value">65%</div>
+                        <div class="case-metric-label">Redução de Resíduos</div>
+                    </div>
+                    
+                    <div class="case-metric">
+                        <div class="case-metric-value">R$ 120k</div>
+                        <div class="case-metric-label">Receita com Subprodutos</div>
+                    </div>
+                    
+                    <div class="case-metric">
+                        <div class="case-metric-value">18 meses</div>
+                        <div class="case-metric-label">Payback do Projeto</div>
+                    </div>
+                    
+                    <div class="case-metric">
+                        <div class="case-metric-value">1º lugar</div>
+                        <div class="case-metric-label">Prêmio Sustentabilidade</div>
+                    </div>
+                    
+                    <div class="case-metric">
+                        <div class="case-metric-value">95%</div>
+                        <div class="case-metric-label">Engajamento Funcionários</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" style="background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Transforme sua Gestão Ambiental em Vantagem Competitiva</h2>
+                <p>Agende uma consultoria estratégica e descubra como gerar valor através da sustentabilidade.</p>
+                
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 1rem; margin: 2rem 0; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    <h3 style="color: #fbbf24; margin-bottom: 1rem;">💼 Consultoria Estratégica</h3>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 1rem;">
+                        <span style="font-size: 2.5rem; font-weight: 800;">Sob Consulta</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem;">Investimento personalizado baseado no escopo e complexidade do projeto</p>
+                    <div style="font-size: 0.9rem; opacity: 0.9;">
+                        <p>✓ Diagnóstico estratégico completo</p>
+                        <p>✓ Business case detalhado</p>
+                        <p>✓ Implementação assistida</p>
+                        <p>✓ ROI garantido em contrato</p>
+                    </div>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="#contato" class="btn btn-primary btn-large">
+                        <i class="fas fa-handshake"></i>
+                        Agendar Consultoria
+                    </a>
+                    <a href="mailto:olokun.ambiental@gmail.com" class="btn btn-secondary btn-large">
+                        <i class="fas fa-phone"></i>
+                        Falar com Consultor
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <span class="section-subtitle">Agende sua Consultoria</span>
+                    <h2 class="section-title">Comece sua Transformação</h2>
+                    <p>Preencha o formulário com informações sobre sua empresa e receba uma proposta de consultoria estratégica personalizada.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-chart-line" style="color: #7c3aed;"></i>
+                            <div>
+                                <h4>Diagnóstico Gratuito</h4>
+                                <span>Primeira reunião sem custo</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fas fa-handshake" style="color: #7c3aed;"></i>
+                            <div>
+                                <h4>ROI Garantido</h4>
+                                <span>Retorno garantido em contrato</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fas fa-clock" style="color: #7c3aed;"></i>
+                            <div>
+                                <h4>Resposta Rápida</h4>
+                                <span>Proposta em até 48h</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="consultoriaForm">
+                        <div class="form-group">
+                            <label for="nome">Nome Completo *</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cargo">Cargo/Função *</label>
+                            <input type="text" id="cargo" name="cargo" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="empresa">Empresa *</label>
+                            <input type="text" id="empresa" name="empresa" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">E-mail *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="telefone">Telefone</label>
+                                <input type="tel" id="telefone" name="telefone">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="setor">Setor de Atividade *</label>
+                                <select id="setor" name="setor" required>
+                                    <option value="">Selecione</option>
+                                    <option value="industria">Indústria</option>
+                                    <option value="saude">Saúde</option>
+                                    <option value="construcao">Construção</option>
+                                    <option value="comercio">Comércio</option>
+                                    <option value="servicos">Serviços</option>
+                                    <option value="agronegocio">Agronegócio</option>
+                                    <option value="tecnologia">Tecnologia</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="porte">Porte da Empresa</label>
+                                <select id="porte" name="porte">
+                                    <option value="">Selecione</option>
+                                    <option value="micro">Micro (até 19 funcionários)</option>
+                                    <option value="pequena">Pequena (20-99 funcionários)</option>
+                                    <option value="media">Média (100-499 funcionários)</option>
+                                    <option value="grande">Grande (500+ funcionários)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="faturamento">Faturamento Anual (Opcional)</label>
+                            <select id="faturamento" name="faturamento">
+                                <option value="">Selecione</option>
+                                <option value="ate-360k">Até R$ 360 mil</option>
+                                <option value="360k-4.8mi">R$ 360 mil a R$ 4,8 milhões</option>
+                                <option value="4.8mi-300mi">R$ 4,8 milhões a R$ 300 milhões</option>
+                                <option value="acima-300mi">Acima de R$ 300 milhões</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="objetivos">Principais Objetivos *</label>
+                            <select id="objetivos" name="objetivos" required multiple style="height: auto;">
+                                <option value="reducao-custos">Redução de custos operacionais</option>
+                                <option value="compliance">Conformidade legal/ambiental</option>
+                                <option value="esg">Melhoria de rating ESG</option>
+                                <option value="inovacao">Inovação sustentável</option>
+                                <option value="marca">Fortalecimento da marca</option>
+                                <option value="novos-mercados">Acesso a novos mercados</option>
+                                <option value="gestao-riscos">Gestão de riscos</option>
+                            </select>
+                            <small style="color: var(--text-muted);">Segure Ctrl para selecionar múltiplas opções</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="desafios">Principais Desafios Atuais</label>
+                            <textarea id="desafios" name="desafios" rows="3" placeholder="Descreva os principais desafios que sua empresa enfrenta na gestão ambiental..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="timeline">Timeline do Projeto</label>
+                            <select id="timeline" name="timeline">
+                                <option value="">Selecione</option>
+                                <option value="imediato">Imediato (1-3 meses)</option>
+                                <option value="curto-prazo">Curto prazo (3-6 meses)</option>
+                                <option value="medio-prazo">Médio prazo (6-12 meses)</option>
+                                <option value="longo-prazo">Longo prazo (mais de 12 meses)</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-handshake"></i>
+                            Solicitar Consultoria Estratégica
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Olokun</h3>
+                    <p>Gestão Ambiental Inteligente</p>
+                    <p class="footer-tagline">Transformando desafios ambientais em oportunidades de negócio.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Serviços</h4>
+                    <a href="pgrs.html">PGRS Inteligente</a>
+                    <a href="capacitacao.html">Capacitação</a>
+                    <a href="consultoria.html">Consultoria</a>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Empresa</h4>
+                    <a href="index.html#sobre">Sobre Nós</a>
+                    <a href="index.html#beneficios">Benefícios</a>
+                    <a href="index.html#contato">Contato</a>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <a href="mailto:olokun.ambiental@gmail.com">olokun.ambiental@gmail.com</a>
+                    <a href="https://olokun.webnode.com/" target="_blank">olokun.webnode.com</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Olokun Gestão Ambiental. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+        // Filter matrix by pilar
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const matrizRows = document.querySelectorAll('#matrizBody tr');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active state
+                filterBtns.forEach(b => {
+                    b.classList.remove('active');
+                    b.style.background = 'white';
+                    b.style.color = '#7c3aed';
+                });
+                btn.classList.add('active');
+                btn.style.background = '#7c3aed';
+                btn.style.color = 'white';
+                
+                // Filter rows
+                const filter = btn.dataset.filter;
+                matrizRows.forEach(row => {
+                    if (filter === 'all' || row.dataset.pilar === filter) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Download matrix as CSV
+        document.getElementById('downloadMatriz').addEventListener('click', () => {
+            const csvContent = [
+                ['Objetivo Estratégico', 'Ação Olokun', 'KPIs e Métricas', 'Horizonte e Owner'],
+                ['Redução de Custos Operacionais', 'Otimização de fluxos, contratos com performance, economia circular', 'Custo/ton (baseline → target); % Desvio de aterro (landfill diversion); Receita com recicláveis/mês', 'T0–T6 meses • Owner: Operações/Compras'],
+                ['Fortalecimento da Marca', 'Narrativa ESG, reporte de performance, certificações e selos', 'Score ESG (baseline → target); Alcance/engajamento de comunicação ESG; Nº de certificações/selo obtidos', 'T3–T12 meses • Owner: Mkt/RI/ESG'],
+                ['Mitigação de Riscos', 'Compliance, matriz de riscos ESG, planos de contingência', 'Nº de não-conformidades/multas; SLA de resposta a incidentes; Score de maturidade de controles', 'T0–T6 meses • Owner: Jurídico/ESG'],
+                ['Acesso a Novos Mercados', 'Adequação a critérios ESG de clientes/edital e reporte GRI', '% requisitos ESG atendidos; Nº de RFPs/licit. habilitadas; Volume de receita ESG‑linked', 'T6–T12 meses • Owner: Comercial'],
+                ['Inovação e Novas Receitas', 'Modelos circulares, P&D com parceiros e simbiose industrial', 'Nº pilotos • % conversão em rollout; Receita com subprodutos; Payback médio (meses)', 'T3–T18 meses • Owner: P&D/Operações'],
+                ['Engajamento de Stakeholders', 'Programas de engajamento e governança (comitê, ritos, KPIs)', 'Participação em ritos (%); Índice de adesão a campanhas; Score de cultura sustentável', 'T0–T9 meses • Owner: RH/ESG']
+            ].map(row => row.map(cell => `"${cell}"`).join(',')).join('\n');
+            
+            const blob = new Blob(['\uFEFF' + csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'Matriz_Alinhamento_Estrategico_Olokun.csv';
+            link.click();
+        });
+        
+        // Initialize consultoria form with specific handling
+        document.getElementById('consultoriaForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Handle multiple selections for objetivos
+            const objetivos = Array.from(document.getElementById('objetivos').selectedOptions).map(option => option.text);
+            
+            // Create specific mailto for consultoria
+            const subject = encodeURIComponent(`Solicitação Consultoria Estratégica - ${data.empresa}`);
+            const body = encodeURIComponent(`
+SOLICITAÇÃO DE CONSULTORIA ESTRATÉGICA
+
+Dados do Solicitante:
+Nome: ${data.nome}
+Cargo: ${data.cargo}
+Empresa: ${data.empresa}
+E-mail: ${data.email}
+Telefone: ${data.telefone || 'Não informado'}
+
+Informações da Empresa:
+Setor: ${data.setor}
+Porte: ${data.porte || 'Não informado'}
+Faturamento anual: ${data.faturamento || 'Não informado'}
+
+Projeto:
+Principais objetivos: ${objetivos.join(', ') || 'Não especificado'}
+Timeline: ${data.timeline || 'Não especificado'}
+
+Principais Desafios:
+${data.desafios || 'Não especificado'}
+
+---
+Solicitação enviada através do site - Página Consultoria Estratégica
+            `);
+            
+            const mailtoLink = `mailto:olokun.ambiental@gmail.com?subject=${subject}&body=${body}`;
+            window.open(mailtoLink);
+            
+            // Show success message
+            showNotification('Solicitação enviada com sucesso! Nossa equipe entrará em contato em até 48h para agendar o diagnóstico gratuito.', 'success');
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>

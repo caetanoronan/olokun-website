@@ -1,0 +1,32 @@
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Arquivos de editor
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Arquivos temporários
+*.tmp
+*.bak
+
+# Node modules (caso adicione build tools futuramente)
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Arquivos grandes (PDFs de proposta - manter apenas no local)
+Proposta_*.html
+Proposta_*.txt
+TCC_Ronan.pdf
+relatorio*.pdf
+MEMORIAL*.pdf
+
+# Manter apenas arquivos do site funcionais
+# Os PDFs técnicos podem ser adicionados a um Google Drive ou similar
