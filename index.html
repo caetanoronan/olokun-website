@@ -5,17 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Olokun - Gestão Ambiental Inteligente</title>
     <meta name="description" content="Transforme sua empresa com soluções sustentáveis. PGRS, consultoria ambiental e treinamentos especializados.">
-        <!-- Redirect to tabs homepage -->
-        <meta http-equiv="refresh" content="0; url=index-tabs.html">
-        <script>
-            // JS redirect fallback for environments that ignore meta refresh
-            (function(){
-                var target = 'index-tabs.html';
-                if (!location.pathname.endsWith(target)) {
-                    window.location.replace(target);
-                }
-            })();
-        </script>
+            <!-- Redirect to tabs homepage (skippable with ?multi=1 or ?no-redirect=1) -->
+            <script>
+                (function(){
+                    try {
+                        var params = new URLSearchParams(window.location.search);
+                        var skip = params.has('multi') || params.has('no-redirect');
+                        var target = 'index-tabs.html';
+                        if (!skip && !location.pathname.endsWith('/' + target) && !location.pathname.endsWith(target)) {
+                            window.location.replace(target);
+                        }
+                    } catch (e) {
+                        // Fallback: naive redirect when URLSearchParams is unavailable
+                        if (window.location.search.indexOf('multi=1') === -1 && window.location.search.indexOf('no-redirect=1') === -1) {
+                            window.location.replace('index-tabs.html');
+                        }
+                    }
+                })();
+            </script>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
