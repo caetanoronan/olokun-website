@@ -1,0 +1,7296 @@
+[
+  {
+    "id": "420230505000053",
+    "nome": "420230505000053",
+    "municipio": "Biguaçu",
+    "area_km2": 24.333325706888903,
+    "score": 0
+  },
+  {
+    "id": "420230510000009",
+    "nome": "420230510000009",
+    "municipio": "Biguaçu",
+    "area_km2": 25.100933689797113,
+    "score": 0
+  },
+  {
+    "id": "420540705000001",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.014825074893542,
+    "score": 0
+  },
+  {
+    "id": "420540705000002",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.039446895019254,
+    "score": 0
+  },
+  {
+    "id": "420540705000003",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.040048865567735,
+    "score": 0
+  },
+  {
+    "id": "420540705000004",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.073750857604914,
+    "score": 0
+  },
+  {
+    "id": "420540705000005",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.01436839772326,
+    "score": 0
+  },
+  {
+    "id": "420540705000006",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.015667064612388,
+    "score": 0
+  },
+  {
+    "id": "420540705000007",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.010248865441598,
+    "score": 0
+  },
+  {
+    "id": "420540705000008",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.031212376294601,
+    "score": 0
+  },
+  {
+    "id": "420540705000009",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.045825484242371,
+    "score": 0
+  },
+  {
+    "id": "420540705000010",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.01565321936831,
+    "score": 0
+  },
+  {
+    "id": "420540705000013",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.009238194095371,
+    "score": 0
+  },
+  {
+    "id": "420540705000014",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.022438732074071,
+    "score": 0
+  },
+  {
+    "id": "420540705000015",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.061283401822094,
+    "score": 0
+  },
+  {
+    "id": "420540705000016",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.005354084278043,
+    "score": 0
+  },
+  {
+    "id": "420540705000017",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.004862586669078,
+    "score": 0
+  },
+  {
+    "id": "420540705000018",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.021926962888687,
+    "score": 0
+  },
+  {
+    "id": "420540705000019",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.037583726346012,
+    "score": 0
+  },
+  {
+    "id": "420540705000020",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.020000472926456,
+    "score": 0
+  },
+  {
+    "id": "420540705000022",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.061751802662269,
+    "score": 0
+  },
+  {
+    "id": "420540705000023",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.019483622128725,
+    "score": 0
+  },
+  {
+    "id": "420540705000025",
+    "nome": "420540705000025",
+    "municipio": "Florianópolis",
+    "area_km2": 65.57175676074617,
+    "score": 0
+  },
+  {
+    "id": "420540705000026",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.090152152320339,
+    "score": 0
+  },
+  {
+    "id": "420540705000027",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.043089183480235,
+    "score": 0
+  },
+  {
+    "id": "420540705000031",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.010217298353666,
+    "score": 0
+  },
+  {
+    "id": "420540705000032",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.036084166931868,
+    "score": 0
+  },
+  {
+    "id": "420540705000034",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.041519596178932,
+    "score": 0
+  },
+  {
+    "id": "420540705000035",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.067187541660049,
+    "score": 0
+  },
+  {
+    "id": "420540705000036",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.061605598856582,
+    "score": 0
+  },
+  {
+    "id": "420540705000037",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.031192780678409,
+    "score": 0
+  },
+  {
+    "id": "420540705000038",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.053318170781079,
+    "score": 0
+  },
+  {
+    "id": "420540705000039",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.020599906757005,
+    "score": 0
+  },
+  {
+    "id": "420540705000040",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.034060169853786,
+    "score": 0
+  },
+  {
+    "id": "420540705000041",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.015767252345112,
+    "score": 0
+  },
+  {
+    "id": "420540705000042",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.015053364038257,
+    "score": 0
+  },
+  {
+    "id": "420540705000043",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.021155077994092,
+    "score": 0
+  },
+  {
+    "id": "420540705000044",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.034503974207904,
+    "score": 0
+  },
+  {
+    "id": "420540705000045",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.008635775953517,
+    "score": 0
+  },
+  {
+    "id": "420540705000046",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.019209261233385,
+    "score": 0
+  },
+  {
+    "id": "420540705000047",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.08647669396197,
+    "score": 0
+  },
+  {
+    "id": "420540705000048",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.065837584729288,
+    "score": 0
+  },
+  {
+    "id": "420540705000049",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.014595432134291,
+    "score": 0
+  },
+  {
+    "id": "420540705000050",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.021634288371604,
+    "score": 0
+  },
+  {
+    "id": "420540705000051",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.011197750837223,
+    "score": 0
+  },
+  {
+    "id": "420540705000052",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.003569208478265,
+    "score": 0
+  },
+  {
+    "id": "420540705000053",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.040781882650224,
+    "score": 0
+  },
+  {
+    "id": "420540705000054",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.034526910176037,
+    "score": 0
+  },
+  {
+    "id": "420540705000055",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.018529443405758,
+    "score": 0
+  },
+  {
+    "id": "420540705000056",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.030396329264929,
+    "score": 0
+  },
+  {
+    "id": "420540705000057",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.05798314969849,
+    "score": 0
+  },
+  {
+    "id": "420540705000058",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.298841613874352,
+    "score": 0
+  },
+  {
+    "id": "420540705000059",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.010000219749676,
+    "score": 0
+  },
+  {
+    "id": "420540705000060",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.006478461054242,
+    "score": 0
+  },
+  {
+    "id": "420540705000061",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.016333072430431,
+    "score": 0
+  },
+  {
+    "id": "420540705000062",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.005603016401382,
+    "score": 0
+  },
+  {
+    "id": "420540705000063",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.012666541990514,
+    "score": 0
+  },
+  {
+    "id": "420540705000064",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.014391735578346,
+    "score": 0
+  },
+  {
+    "id": "420540705000065",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.006498376497499,
+    "score": 0
+  },
+  {
+    "id": "420540705000066",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.012702758991177,
+    "score": 0
+  },
+  {
+    "id": "420540705000067",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.019233500927803,
+    "score": 0
+  },
+  {
+    "id": "420540705000068",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.009693873478795,
+    "score": 0
+  },
+  {
+    "id": "420540705000069",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.028310099629065,
+    "score": 0
+  },
+  {
+    "id": "420540705000070",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.092052486553886,
+    "score": 0
+  },
+  {
+    "id": "420540705000074",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.12671265237999,
+    "score": 0
+  },
+  {
+    "id": "420540705000075",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.051203298796652,
+    "score": 0
+  },
+  {
+    "id": "420540705000076",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.041663988198158,
+    "score": 0
+  },
+  {
+    "id": "420540705000077",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.088100312641034,
+    "score": 0
+  },
+  {
+    "id": "420540705000079",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.042207814493254,
+    "score": 0
+  },
+  {
+    "id": "420540705000081",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.081982911612966,
+    "score": 0
+  },
+  {
+    "id": "420540705000082",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.043194779859828,
+    "score": 0
+  },
+  {
+    "id": "420540705000083",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.041372173013163,
+    "score": 0
+  },
+  {
+    "id": "420540705000084",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.576256163367346,
+    "score": 0
+  },
+  {
+    "id": "420540705000085",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.113376449317653,
+    "score": 0
+  },
+  {
+    "id": "420540705000086",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.015665688970316,
+    "score": 0
+  },
+  {
+    "id": "420540705000087",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.035280738544333,
+    "score": 0
+  },
+  {
+    "id": "420540705000088",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.025456164932918,
+    "score": 0
+  },
+  {
+    "id": "420540705000089",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.07038948286377,
+    "score": 0
+  },
+  {
+    "id": "420540705000090",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.08764751901906,
+    "score": 0
+  },
+  {
+    "id": "420540705000092",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.017029851390398,
+    "score": 0
+  },
+  {
+    "id": "420540705000093",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.072204466837147,
+    "score": 0
+  },
+  {
+    "id": "420540705000094",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.050162932560232,
+    "score": 0
+  },
+  {
+    "id": "420540705000095",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.052642210045103,
+    "score": 0
+  },
+  {
+    "id": "420540705000096",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.076959889942367,
+    "score": 0
+  },
+  {
+    "id": "420540705000097",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.062717653128368,
+    "score": 0
+  },
+  {
+    "id": "420540705000102",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.153633506512173,
+    "score": 0
+  },
+  {
+    "id": "420540705000104",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.055967364104924,
+    "score": 0
+  },
+  {
+    "id": "420540705000107",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.114296620123633,
+    "score": 0
+  },
+  {
+    "id": "420540705000108",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.202994818988771,
+    "score": 0
+  },
+  {
+    "id": "420540705000109",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.106438353198156,
+    "score": 0
+  },
+  {
+    "id": "420540705000110",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.05881665885524,
+    "score": 0
+  },
+  {
+    "id": "420540705000111",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.150373765523903,
+    "score": 0
+  },
+  {
+    "id": "420540705000112",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.015079793876654,
+    "score": 0
+  },
+  {
+    "id": "420540705000113",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.03579375538036,
+    "score": 0
+  },
+  {
+    "id": "420540705000114",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.031918064183024,
+    "score": 0
+  },
+  {
+    "id": "420540705000115",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.161517862713755,
+    "score": 0
+  },
+  {
+    "id": "420540705000116",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.016887113987679,
+    "score": 0
+  },
+  {
+    "id": "420540705000117",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.025673250619162,
+    "score": 0
+  },
+  {
+    "id": "420540705000118",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.010798317956618,
+    "score": 0
+  },
+  {
+    "id": "420540705000119",
+    "nome": "420540705000119",
+    "municipio": "Florianópolis",
+    "area_km2": 1.554704382195324,
+    "score": 0
+  },
+  {
+    "id": "420540705000120",
+    "nome": "João Paulo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.465767336253673,
+    "score": 0
+  },
+  {
+    "id": "420540705000122",
+    "nome": "João Paulo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.403375367452545,
+    "score": 0
+  },
+  {
+    "id": "420540705000123",
+    "nome": "João Paulo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.028062175605589,
+    "score": 0
+  },
+  {
+    "id": "420540705000124",
+    "nome": "João Paulo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.264922871970562,
+    "score": 0
+  },
+  {
+    "id": "420540705000126",
+    "nome": "João Paulo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.01072969031796,
+    "score": 0
+  },
+  {
+    "id": "420540705000133",
+    "nome": "Monte Verde",
+    "municipio": "Florianópolis",
+    "area_km2": 0.07608825010128,
+    "score": 0
+  },
+  {
+    "id": "420540705000134",
+    "nome": "Monte Verde",
+    "municipio": "Florianópolis",
+    "area_km2": 0.040242807751397,
+    "score": 0
+  },
+  {
+    "id": "420540705000135",
+    "nome": "Monte Verde",
+    "municipio": "Florianópolis",
+    "area_km2": 0.102849842176309,
+    "score": 0
+  },
+  {
+    "id": "420540705000137",
+    "nome": "Monte Verde",
+    "municipio": "Florianópolis",
+    "area_km2": 0.086866848642841,
+    "score": 0
+  },
+  {
+    "id": "420540705000138",
+    "nome": "Monte Verde",
+    "municipio": "Florianópolis",
+    "area_km2": 0.507734457735763,
+    "score": 0
+  },
+  {
+    "id": "420540705000139",
+    "nome": "Monte Verde",
+    "municipio": "Florianópolis",
+    "area_km2": 0.120662674931232,
+    "score": 0
+  },
+  {
+    "id": "420540705000141",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.187840184520765,
+    "score": 0
+  },
+  {
+    "id": "420540705000142",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.342766444604968,
+    "score": 0
+  },
+  {
+    "id": "420540705000143",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.374081360070883,
+    "score": 0
+  },
+  {
+    "id": "420540705000144",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.184696360206971,
+    "score": 0
+  },
+  {
+    "id": "420540705000147",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.018661566027848,
+    "score": 0
+  },
+  {
+    "id": "420540705000148",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.009515856703809,
+    "score": 0
+  },
+  {
+    "id": "420540705000149",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.016407227294342,
+    "score": 0
+  },
+  {
+    "id": "420540705000150",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.019299810620851,
+    "score": 0
+  },
+  {
+    "id": "420540705000152",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.013635362109638,
+    "score": 0
+  },
+  {
+    "id": "420540705000153",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.053956123767233,
+    "score": 0
+  },
+  {
+    "id": "420540705000157",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.201809851433735,
+    "score": 0
+  },
+  {
+    "id": "420540705000158",
+    "nome": "Córrego Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.331485169135308,
+    "score": 0
+  },
+  {
+    "id": "420540705000159",
+    "nome": "Córrego Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.223671454182272,
+    "score": 0
+  },
+  {
+    "id": "420540705000160",
+    "nome": "Santa Mônica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.152278022963693,
+    "score": 0
+  },
+  {
+    "id": "420540705000161",
+    "nome": "Santa Mônica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.210689180568191,
+    "score": 0
+  },
+  {
+    "id": "420540705000162",
+    "nome": "Santa Mônica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.161490167180424,
+    "score": 0
+  },
+  {
+    "id": "420540705000164",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.063821015961736,
+    "score": 0
+  },
+  {
+    "id": "420540705000165",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.038360452616418,
+    "score": 0
+  },
+  {
+    "id": "420540705000166",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.046110462596221,
+    "score": 0
+  },
+  {
+    "id": "420540705000167",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.059846044097165,
+    "score": 0
+  },
+  {
+    "id": "420540705000169",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.008407198571544,
+    "score": 0
+  },
+  {
+    "id": "420540705000170",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.007767400533101,
+    "score": 0
+  },
+  {
+    "id": "420540705000171",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.038426232014319,
+    "score": 0
+  },
+  {
+    "id": "420540705000173",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.010218294816225,
+    "score": 0
+  },
+  {
+    "id": "420540705000174",
+    "nome": "Saco dos Limões",
+    "municipio": "Florianópolis",
+    "area_km2": 0.024918687447436,
+    "score": 0
+  },
+  {
+    "id": "420540705000175",
+    "nome": "Saco dos Limões",
+    "municipio": "Florianópolis",
+    "area_km2": 0.059671515137572,
+    "score": 0
+  },
+  {
+    "id": "420540705000176",
+    "nome": "Saco dos Limões",
+    "municipio": "Florianópolis",
+    "area_km2": 0.125577955596833,
+    "score": 0
+  },
+  {
+    "id": "420540705000178",
+    "nome": "Pantanal",
+    "municipio": "Florianópolis",
+    "area_km2": 0.153431093989575,
+    "score": 0
+  },
+  {
+    "id": "420540705000181",
+    "nome": "Córrego Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.070996326675121,
+    "score": 0
+  },
+  {
+    "id": "420540705000182",
+    "nome": "Córrego Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.060756928349634,
+    "score": 0
+  },
+  {
+    "id": "420540705000183",
+    "nome": "Córrego Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.067058985306592,
+    "score": 0
+  },
+  {
+    "id": "420540705000184",
+    "nome": "Córrego Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.077525061751263,
+    "score": 0
+  },
+  {
+    "id": "420540705000185",
+    "nome": "Córrego Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.040540944518405,
+    "score": 0
+  },
+  {
+    "id": "420540705000186",
+    "nome": "Córrego Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.076763264543449,
+    "score": 0
+  },
+  {
+    "id": "420540705000189",
+    "nome": "Córrego Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.409813815251367,
+    "score": 0
+  },
+  {
+    "id": "420540705000190",
+    "nome": "Córrego Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.040481176543818,
+    "score": 0
+  },
+  {
+    "id": "420540705000193",
+    "nome": "Pantanal",
+    "municipio": "Florianópolis",
+    "area_km2": 0.155604821084309,
+    "score": 0
+  },
+  {
+    "id": "420540705000195",
+    "nome": "Pantanal",
+    "municipio": "Florianópolis",
+    "area_km2": 0.083557890742045,
+    "score": 0
+  },
+  {
+    "id": "420540705000198",
+    "nome": "Costeira do Pirajubaé",
+    "municipio": "Florianópolis",
+    "area_km2": 0.096203810735134,
+    "score": 0
+  },
+  {
+    "id": "420540705000199",
+    "nome": "Costeira do Pirajubaé",
+    "municipio": "Florianópolis",
+    "area_km2": 0.143878920802331,
+    "score": 0
+  },
+  {
+    "id": "420540705000200",
+    "nome": "Costeira do Pirajubaé",
+    "municipio": "Florianópolis",
+    "area_km2": 0.175651760322575,
+    "score": 0
+  },
+  {
+    "id": "420540705000201",
+    "nome": "Costeira do Pirajubaé",
+    "municipio": "Florianópolis",
+    "area_km2": 0.073170458146938,
+    "score": 0
+  },
+  {
+    "id": "420540705000205",
+    "nome": "Costeira do Pirajubaé",
+    "municipio": "Florianópolis",
+    "area_km2": 0.697790154114282,
+    "score": 0
+  },
+  {
+    "id": "420540705000208",
+    "nome": "Saco dos Limões",
+    "municipio": "Florianópolis",
+    "area_km2": 0.211949662804607,
+    "score": 0
+  },
+  {
+    "id": "420540705000211",
+    "nome": "Saco dos Limões",
+    "municipio": "Florianópolis",
+    "area_km2": 0.044753764077647,
+    "score": 0
+  },
+  {
+    "id": "420540705000212",
+    "nome": "Saco dos Limões",
+    "municipio": "Florianópolis",
+    "area_km2": 0.082628889882054,
+    "score": 0
+  },
+  {
+    "id": "420540705000213",
+    "nome": "Saco dos Limões",
+    "municipio": "Florianópolis",
+    "area_km2": 0.11176349780742,
+    "score": 0
+  },
+  {
+    "id": "420540705000215",
+    "nome": "Saco dos Limões",
+    "municipio": "Florianópolis",
+    "area_km2": 0.170200350518238,
+    "score": 0
+  },
+  {
+    "id": "420540705000216",
+    "nome": "Saco dos Limões",
+    "municipio": "Florianópolis",
+    "area_km2": 0.159402383726265,
+    "score": 0
+  },
+  {
+    "id": "420540705000217",
+    "nome": "Saco dos Limões",
+    "municipio": "Florianópolis",
+    "area_km2": 0.087317340274124,
+    "score": 0
+  },
+  {
+    "id": "420540705000218",
+    "nome": "Saco dos Limões",
+    "municipio": "Florianópolis",
+    "area_km2": 0.350958989472324,
+    "score": 0
+  },
+  {
+    "id": "420540705000219",
+    "nome": "José Mendes",
+    "municipio": "Florianópolis",
+    "area_km2": 0.106328434599877,
+    "score": 0
+  },
+  {
+    "id": "420540705000220",
+    "nome": "José Mendes",
+    "municipio": "Florianópolis",
+    "area_km2": 0.250012329150355,
+    "score": 0
+  },
+  {
+    "id": "420540705000223",
+    "nome": "Estreito",
+    "municipio": "Florianópolis",
+    "area_km2": 0.221925109004764,
+    "score": 0
+  },
+  {
+    "id": "420540705000224",
+    "nome": "Estreito",
+    "municipio": "Florianópolis",
+    "area_km2": 0.08531265952171,
+    "score": 0
+  },
+  {
+    "id": "420540705000225",
+    "nome": "Estreito",
+    "municipio": "Florianópolis",
+    "area_km2": 0.038282061256618,
+    "score": 0
+  },
+  {
+    "id": "420540705000229",
+    "nome": "Estreito",
+    "municipio": "Florianópolis",
+    "area_km2": 0.100331831138913,
+    "score": 0
+  },
+  {
+    "id": "420540705000230",
+    "nome": "Estreito",
+    "municipio": "Florianópolis",
+    "area_km2": 0.057988797073394,
+    "score": 0
+  },
+  {
+    "id": "420540705000231",
+    "nome": "Estreito",
+    "municipio": "Florianópolis",
+    "area_km2": 0.018407621936385,
+    "score": 0
+  },
+  {
+    "id": "420540705000234",
+    "nome": "Canto",
+    "municipio": "Florianópolis",
+    "area_km2": 0.08128339307619,
+    "score": 0
+  },
+  {
+    "id": "420540705000235",
+    "nome": "Canto",
+    "municipio": "Florianópolis",
+    "area_km2": 0.036083933257825,
+    "score": 0
+  },
+  {
+    "id": "420540705000236",
+    "nome": "Canto",
+    "municipio": "Florianópolis",
+    "area_km2": 0.025868176028066,
+    "score": 0
+  },
+  {
+    "id": "420540705000237",
+    "nome": "Canto",
+    "municipio": "Florianópolis",
+    "area_km2": 0.057171890081288,
+    "score": 0
+  },
+  {
+    "id": "420540705000238",
+    "nome": "Canto",
+    "municipio": "Florianópolis",
+    "area_km2": 0.140234720912333,
+    "score": 0
+  },
+  {
+    "id": "420540705000240",
+    "nome": "Canto",
+    "municipio": "Florianópolis",
+    "area_km2": 0.065560280220922,
+    "score": 0
+  },
+  {
+    "id": "420540705000242",
+    "nome": "Balneário",
+    "municipio": "Florianópolis",
+    "area_km2": 0.087509731095929,
+    "score": 0
+  },
+  {
+    "id": "420540705000243",
+    "nome": "Balneário",
+    "municipio": "Florianópolis",
+    "area_km2": 0.108386408791269,
+    "score": 0
+  },
+  {
+    "id": "420540705000244",
+    "nome": "Balneário",
+    "municipio": "Florianópolis",
+    "area_km2": 0.070776674598264,
+    "score": 0
+  },
+  {
+    "id": "420540705000245",
+    "nome": "Balneário",
+    "municipio": "Florianópolis",
+    "area_km2": 0.127066343348521,
+    "score": 0
+  },
+  {
+    "id": "420540705000248",
+    "nome": "Balneário",
+    "municipio": "Florianópolis",
+    "area_km2": 0.086697166660729,
+    "score": 0
+  },
+  {
+    "id": "420540705000249",
+    "nome": "Balneário",
+    "municipio": "Florianópolis",
+    "area_km2": 0.085735346336924,
+    "score": 0
+  },
+  {
+    "id": "420540705000250",
+    "nome": "Jardim Atlântico",
+    "municipio": "Florianópolis",
+    "area_km2": 0.059421372656009,
+    "score": 0
+  },
+  {
+    "id": "420540705000251",
+    "nome": "Jardim Atlântico",
+    "municipio": "Florianópolis",
+    "area_km2": 0.084076358732377,
+    "score": 0
+  },
+  {
+    "id": "420540705000252",
+    "nome": "Jardim Atlântico",
+    "municipio": "Florianópolis",
+    "area_km2": 0.064835374754496,
+    "score": 0
+  },
+  {
+    "id": "420540705000254",
+    "nome": "Jardim Atlântico",
+    "municipio": "Florianópolis",
+    "area_km2": 0.078119198379912,
+    "score": 0
+  },
+  {
+    "id": "420540705000256",
+    "nome": "Jardim Atlântico",
+    "municipio": "Florianópolis",
+    "area_km2": 0.082919942202348,
+    "score": 0
+  },
+  {
+    "id": "420540705000258",
+    "nome": "Jardim Atlântico",
+    "municipio": "Florianópolis",
+    "area_km2": 0.077102234688662,
+    "score": 0
+  },
+  {
+    "id": "420540705000259",
+    "nome": "Jardim Atlântico",
+    "municipio": "Florianópolis",
+    "area_km2": 0.059894969042191,
+    "score": 0
+  },
+  {
+    "id": "420540705000260",
+    "nome": "Jardim Atlântico",
+    "municipio": "Florianópolis",
+    "area_km2": 0.063574673414844,
+    "score": 0
+  },
+  {
+    "id": "420540705000261",
+    "nome": "Jardim Atlântico",
+    "municipio": "Florianópolis",
+    "area_km2": 0.096639820428501,
+    "score": 0
+  },
+  {
+    "id": "420540705000266",
+    "nome": "Coloninha",
+    "municipio": "Florianópolis",
+    "area_km2": 0.052072357582042,
+    "score": 0
+  },
+  {
+    "id": "420540705000267",
+    "nome": "Coloninha",
+    "municipio": "Florianópolis",
+    "area_km2": 0.04933565516317,
+    "score": 0
+  },
+  {
+    "id": "420540705000268",
+    "nome": "Coloninha",
+    "municipio": "Florianópolis",
+    "area_km2": 0.135551557659283,
+    "score": 0
+  },
+  {
+    "id": "420540705000270",
+    "nome": "Coloninha",
+    "municipio": "Florianópolis",
+    "area_km2": 0.066710083309944,
+    "score": 0
+  },
+  {
+    "id": "420540705000273",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.125557635708173,
+    "score": 0
+  },
+  {
+    "id": "420540705000274",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.067796127482927,
+    "score": 0
+  },
+  {
+    "id": "420540705000276",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.074533320543769,
+    "score": 0
+  },
+  {
+    "id": "420540705000277",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.120018221542189,
+    "score": 0
+  },
+  {
+    "id": "420540705000278",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.051176170543733,
+    "score": 0
+  },
+  {
+    "id": "420540705000279",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.178460961847352,
+    "score": 0
+  },
+  {
+    "id": "420540705000282",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.067108606552454,
+    "score": 0
+  },
+  {
+    "id": "420540705000283",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.100921618592404,
+    "score": 0
+  },
+  {
+    "id": "420540705000286",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.048530523131199,
+    "score": 0
+  },
+  {
+    "id": "420540705000287",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.13227746431403,
+    "score": 0
+  },
+  {
+    "id": "420540705000288",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.188703536552652,
+    "score": 0
+  },
+  {
+    "id": "420540705000289",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.079773844384277,
+    "score": 0
+  },
+  {
+    "id": "420540705000290",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.091924116953948,
+    "score": 0
+  },
+  {
+    "id": "420540705000294",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.050321203210049,
+    "score": 0
+  },
+  {
+    "id": "420540705000295",
+    "nome": "Coqueiros",
+    "municipio": "Florianópolis",
+    "area_km2": 0.190098922483889,
+    "score": 0
+  },
+  {
+    "id": "420540705000296",
+    "nome": "Coqueiros",
+    "municipio": "Florianópolis",
+    "area_km2": 0.051860635161629,
+    "score": 0
+  },
+  {
+    "id": "420540705000297",
+    "nome": "Coqueiros",
+    "municipio": "Florianópolis",
+    "area_km2": 0.223078015760985,
+    "score": 0
+  },
+  {
+    "id": "420540705000298",
+    "nome": "Coqueiros",
+    "municipio": "Florianópolis",
+    "area_km2": 0.062766161931218,
+    "score": 0
+  },
+  {
+    "id": "420540705000302",
+    "nome": "Coqueiros",
+    "municipio": "Florianópolis",
+    "area_km2": 0.160080597638667,
+    "score": 0
+  },
+  {
+    "id": "420540705000303",
+    "nome": "Coqueiros",
+    "municipio": "Florianópolis",
+    "area_km2": 0.088387495368305,
+    "score": 0
+  },
+  {
+    "id": "420540705000304",
+    "nome": "Coqueiros",
+    "municipio": "Florianópolis",
+    "area_km2": 0.017573038995088,
+    "score": 0
+  },
+  {
+    "id": "420540705000305",
+    "nome": "Coqueiros",
+    "municipio": "Florianópolis",
+    "area_km2": 0.00871639220495,
+    "score": 0
+  },
+  {
+    "id": "420540705000307",
+    "nome": "Coqueiros",
+    "municipio": "Florianópolis",
+    "area_km2": 0.006966550103748,
+    "score": 0
+  },
+  {
+    "id": "420540705000309",
+    "nome": "Coqueiros",
+    "municipio": "Florianópolis",
+    "area_km2": 0.008363322159926,
+    "score": 0
+  },
+  {
+    "id": "420540705000310",
+    "nome": "Itaguaçu",
+    "municipio": "Florianópolis",
+    "area_km2": 0.183555902428696,
+    "score": 0
+  },
+  {
+    "id": "420540705000311",
+    "nome": "Itaguaçu",
+    "municipio": "Florianópolis",
+    "area_km2": 0.089228060850851,
+    "score": 0
+  },
+  {
+    "id": "420540705000312",
+    "nome": "Itaguaçu",
+    "municipio": "Florianópolis",
+    "area_km2": 0.200359119126646,
+    "score": 0
+  },
+  {
+    "id": "420540705000313",
+    "nome": "Bom Abrigo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.132883350390108,
+    "score": 0
+  },
+  {
+    "id": "420540705000314",
+    "nome": "Bom Abrigo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.018304262839243,
+    "score": 0
+  },
+  {
+    "id": "420540705000315",
+    "nome": "Bom Abrigo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.023534024790648,
+    "score": 0
+  },
+  {
+    "id": "420540705000319",
+    "nome": "Abraão",
+    "municipio": "Florianópolis",
+    "area_km2": 0.011863590986504,
+    "score": 0
+  },
+  {
+    "id": "420540705000320",
+    "nome": "Abraão",
+    "municipio": "Florianópolis",
+    "area_km2": 0.097279211264874,
+    "score": 0
+  },
+  {
+    "id": "420540705000321",
+    "nome": "Abraão",
+    "municipio": "Florianópolis",
+    "area_km2": 0.03995428637019,
+    "score": 0
+  },
+  {
+    "id": "420540705000323",
+    "nome": "Abraão",
+    "municipio": "Florianópolis",
+    "area_km2": 0.165772194902026,
+    "score": 0
+  },
+  {
+    "id": "420540705000324",
+    "nome": "Abraão",
+    "municipio": "Florianópolis",
+    "area_km2": 0.048715151228234,
+    "score": 0
+  },
+  {
+    "id": "420540705000326",
+    "nome": "Coqueiros",
+    "municipio": "Florianópolis",
+    "area_km2": 0.068887564838217,
+    "score": 0
+  },
+  {
+    "id": "420540705000327",
+    "nome": "Coqueiros",
+    "municipio": "Florianópolis",
+    "area_km2": 0.050888322392321,
+    "score": 0
+  },
+  {
+    "id": "420540705000329",
+    "nome": "Coqueiros",
+    "municipio": "Florianópolis",
+    "area_km2": 0.106332052717996,
+    "score": 0
+  },
+  {
+    "id": "420540705000330",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.238854522547108,
+    "score": 0
+  },
+  {
+    "id": "420540705000331",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.2339081453627,
+    "score": 0
+  },
+  {
+    "id": "420540705000334",
+    "nome": "Monte Cristo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.013200293293121,
+    "score": 0
+  },
+  {
+    "id": "420540705000335",
+    "nome": "Monte Cristo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.020389352455571,
+    "score": 0
+  },
+  {
+    "id": "420540705000336",
+    "nome": "Monte Cristo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.011798124714729,
+    "score": 0
+  },
+  {
+    "id": "420540705000337",
+    "nome": "Monte Cristo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.090429667795811,
+    "score": 0
+  },
+  {
+    "id": "420540705000338",
+    "nome": "Monte Cristo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.035027317827343,
+    "score": 0
+  },
+  {
+    "id": "420540705000339",
+    "nome": "Monte Cristo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.043820766370967,
+    "score": 0
+  },
+  {
+    "id": "420540705000340",
+    "nome": "Monte Cristo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.056773936165884,
+    "score": 0
+  },
+  {
+    "id": "420540705000341",
+    "nome": "Monte Cristo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.04566255271476,
+    "score": 0
+  },
+  {
+    "id": "420540705000342",
+    "nome": "Monte Cristo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.023062379146019,
+    "score": 0
+  },
+  {
+    "id": "420540705000344",
+    "nome": "Monte Cristo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.031110352690011,
+    "score": 0
+  },
+  {
+    "id": "420540705000345",
+    "nome": "Saco Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.022102243923306,
+    "score": 0
+  },
+  {
+    "id": "420540705000346",
+    "nome": "Coqueiros",
+    "municipio": "Florianópolis",
+    "area_km2": 0.055132100192452,
+    "score": 0
+  },
+  {
+    "id": "420540705000347",
+    "nome": "Coqueiros",
+    "municipio": "Florianópolis",
+    "area_km2": 0.018343246679318,
+    "score": 0
+  },
+  {
+    "id": "420540705000348",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.008159201227246,
+    "score": 0
+  },
+  {
+    "id": "420540705000349",
+    "nome": "Córrego Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.108019972266521,
+    "score": 0
+  },
+  {
+    "id": "420540705000350",
+    "nome": "Córrego Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.660780136269762,
+    "score": 0
+  },
+  {
+    "id": "420540705000351",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.020303674485542,
+    "score": 0
+  },
+  {
+    "id": "420540705000352",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.031840433613206,
+    "score": 0
+  },
+  {
+    "id": "420540705000353",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.008228734502852,
+    "score": 0
+  },
+  {
+    "id": "420540705000356",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.058881384596757,
+    "score": 0
+  },
+  {
+    "id": "420540705000358",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.06522431427747,
+    "score": 0
+  },
+  {
+    "id": "420540705000360",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.600491370407644,
+    "score": 0
+  },
+  {
+    "id": "420540705000363",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.600954071289033,
+    "score": 0
+  },
+  {
+    "id": "420540705000365",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.002775361932168,
+    "score": 0
+  },
+  {
+    "id": "420540705000366",
+    "nome": "Córrego Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.474858756935707,
+    "score": 0
+  },
+  {
+    "id": "420540705000367",
+    "nome": "Córrego Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.033082587505552,
+    "score": 0
+  },
+  {
+    "id": "420540705000369",
+    "nome": "Saco dos Limões",
+    "municipio": "Florianópolis",
+    "area_km2": 0.172841346551489,
+    "score": 0
+  },
+  {
+    "id": "420540705000370",
+    "nome": "Estreito",
+    "municipio": "Florianópolis",
+    "area_km2": 0.030997049994015,
+    "score": 0
+  },
+  {
+    "id": "420540705000371",
+    "nome": "Jardim Atlântico",
+    "municipio": "Florianópolis",
+    "area_km2": 0.073965606561302,
+    "score": 0
+  },
+  {
+    "id": "420540705000372",
+    "nome": "Jardim Atlântico",
+    "municipio": "Florianópolis",
+    "area_km2": 0.11509353114706,
+    "score": 0
+  },
+  {
+    "id": "420540705000373",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.022906502567772,
+    "score": 0
+  },
+  {
+    "id": "420540705000393",
+    "nome": "420540705000393",
+    "municipio": "Florianópolis",
+    "area_km2": 0.21198637737565,
+    "score": 0
+  },
+  {
+    "id": "420540705000395",
+    "nome": "Pantanal",
+    "municipio": "Florianópolis",
+    "area_km2": 0.148178944586541,
+    "score": 0
+  },
+  {
+    "id": "420540705000397",
+    "nome": "420540705000397",
+    "municipio": "Florianópolis",
+    "area_km2": 0.013687205632505,
+    "score": 0
+  },
+  {
+    "id": "420540705000401",
+    "nome": "420540705000401",
+    "municipio": "Florianópolis",
+    "area_km2": 0.389604134591015,
+    "score": 0
+  },
+  {
+    "id": "420540705000402",
+    "nome": "420540705000402",
+    "municipio": "Florianópolis",
+    "area_km2": 0.058634203471947,
+    "score": 0
+  },
+  {
+    "id": "420540705000403",
+    "nome": "420540705000403",
+    "municipio": "Florianópolis",
+    "area_km2": 0.458730792958424,
+    "score": 0
+  },
+  {
+    "id": "420540705000406",
+    "nome": "420540705000406",
+    "municipio": "Florianópolis",
+    "area_km2": 1.532364617958705,
+    "score": 0
+  },
+  {
+    "id": "420540705000407",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.383636339015056,
+    "score": 0
+  },
+  {
+    "id": "420540705000408",
+    "nome": "Pantanal",
+    "municipio": "Florianópolis",
+    "area_km2": 0.076615961443923,
+    "score": 0
+  },
+  {
+    "id": "420540705000409",
+    "nome": "Saco Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.223831239519224,
+    "score": 0
+  },
+  {
+    "id": "420540705000410",
+    "nome": "Saco Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.092162058537599,
+    "score": 0
+  },
+  {
+    "id": "420540705000411",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.508168328920817,
+    "score": 0
+  },
+  {
+    "id": "420540705000412",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.153866361932783,
+    "score": 0
+  },
+  {
+    "id": "420540705000413",
+    "nome": "Estreito",
+    "municipio": "Florianópolis",
+    "area_km2": 0.053096891725597,
+    "score": 0
+  },
+  {
+    "id": "420540705000414",
+    "nome": "Estreito",
+    "municipio": "Florianópolis",
+    "area_km2": 0.125057261013608,
+    "score": 0
+  },
+  {
+    "id": "420540705000415",
+    "nome": "Estreito",
+    "municipio": "Florianópolis",
+    "area_km2": 0.069431185945824,
+    "score": 0
+  },
+  {
+    "id": "420540705000416",
+    "nome": "Estreito",
+    "municipio": "Florianópolis",
+    "area_km2": 0.165917405773851,
+    "score": 0
+  },
+  {
+    "id": "420540705000417",
+    "nome": "Estreito",
+    "municipio": "Florianópolis",
+    "area_km2": 0.089521020112689,
+    "score": 0
+  },
+  {
+    "id": "420540705000418",
+    "nome": "Estreito",
+    "municipio": "Florianópolis",
+    "area_km2": 0.085645579379298,
+    "score": 0
+  },
+  {
+    "id": "420540705000419",
+    "nome": "Estreito",
+    "municipio": "Florianópolis",
+    "area_km2": 0.062362640046455,
+    "score": 0
+  },
+  {
+    "id": "420540705000420",
+    "nome": "Estreito",
+    "municipio": "Florianópolis",
+    "area_km2": 0.137878275572602,
+    "score": 0
+  },
+  {
+    "id": "420540705000421",
+    "nome": "Canto",
+    "municipio": "Florianópolis",
+    "area_km2": 0.03721218402532,
+    "score": 0
+  },
+  {
+    "id": "420540705000422",
+    "nome": "Canto",
+    "municipio": "Florianópolis",
+    "area_km2": 0.02355928085538,
+    "score": 0
+  },
+  {
+    "id": "420540705000423",
+    "nome": "Canto",
+    "municipio": "Florianópolis",
+    "area_km2": 0.041533116767195,
+    "score": 0
+  },
+  {
+    "id": "420540705000424",
+    "nome": "Canto",
+    "municipio": "Florianópolis",
+    "area_km2": 0.042566421880071,
+    "score": 0
+  },
+  {
+    "id": "420540705000425",
+    "nome": "Canto",
+    "municipio": "Florianópolis",
+    "area_km2": 0.057030024448421,
+    "score": 0
+  },
+  {
+    "id": "420540705000426",
+    "nome": "Canto",
+    "municipio": "Florianópolis",
+    "area_km2": 0.102962660903722,
+    "score": 0
+  },
+  {
+    "id": "420540705000427",
+    "nome": "Balneário",
+    "municipio": "Florianópolis",
+    "area_km2": 0.04155192018542,
+    "score": 0
+  },
+  {
+    "id": "420540705000428",
+    "nome": "Balneário",
+    "municipio": "Florianópolis",
+    "area_km2": 0.055531554249549,
+    "score": 0
+  },
+  {
+    "id": "420540705000429",
+    "nome": "Balneário",
+    "municipio": "Florianópolis",
+    "area_km2": 0.015373523073446,
+    "score": 0
+  },
+  {
+    "id": "420540705000430",
+    "nome": "Balneário",
+    "municipio": "Florianópolis",
+    "area_km2": 0.017873450625515,
+    "score": 0
+  },
+  {
+    "id": "420540705000431",
+    "nome": "Jardim Atlântico",
+    "municipio": "Florianópolis",
+    "area_km2": 0.037118465231538,
+    "score": 0
+  },
+  {
+    "id": "420540705000432",
+    "nome": "Jardim Atlântico",
+    "municipio": "Florianópolis",
+    "area_km2": 0.077169099417168,
+    "score": 0
+  },
+  {
+    "id": "420540705000433",
+    "nome": "Jardim Atlântico",
+    "municipio": "Florianópolis",
+    "area_km2": 0.154274129732901,
+    "score": 0
+  },
+  {
+    "id": "420540705000434",
+    "nome": "Jardim Atlântico",
+    "municipio": "Florianópolis",
+    "area_km2": 0.088639909618301,
+    "score": 0
+  },
+  {
+    "id": "420540705000435",
+    "nome": "Jardim Atlântico",
+    "municipio": "Florianópolis",
+    "area_km2": 0.075844456013163,
+    "score": 0
+  },
+  {
+    "id": "420540705000436",
+    "nome": "Jardim Atlântico",
+    "municipio": "Florianópolis",
+    "area_km2": 0.111402031965706,
+    "score": 0
+  },
+  {
+    "id": "420540705000437",
+    "nome": "Jardim Atlântico",
+    "municipio": "Florianópolis",
+    "area_km2": 0.045920925673985,
+    "score": 0
+  },
+  {
+    "id": "420540705000438",
+    "nome": "Jardim Atlântico",
+    "municipio": "Florianópolis",
+    "area_km2": 0.050906810695648,
+    "score": 0
+  },
+  {
+    "id": "420540705000439",
+    "nome": "Coloninha",
+    "municipio": "Florianópolis",
+    "area_km2": 0.037991525095913,
+    "score": 0
+  },
+  {
+    "id": "420540705000440",
+    "nome": "Coloninha",
+    "municipio": "Florianópolis",
+    "area_km2": 0.055936498405981,
+    "score": 0
+  },
+  {
+    "id": "420540705000441",
+    "nome": "Coloninha",
+    "municipio": "Florianópolis",
+    "area_km2": 0.071014618093887,
+    "score": 0
+  },
+  {
+    "id": "420540705000442",
+    "nome": "Coloninha",
+    "municipio": "Florianópolis",
+    "area_km2": 0.060332557328009,
+    "score": 0
+  },
+  {
+    "id": "420540705000443",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.157269185098777,
+    "score": 0
+  },
+  {
+    "id": "420540705000444",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.076643477774336,
+    "score": 0
+  },
+  {
+    "id": "420540705000445",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.049317824985282,
+    "score": 0
+  },
+  {
+    "id": "420540705000446",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.036902099220197,
+    "score": 0
+  },
+  {
+    "id": "420540705000447",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.058111129165806,
+    "score": 0
+  },
+  {
+    "id": "420540705000448",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.028421069274861,
+    "score": 0
+  },
+  {
+    "id": "420540705000449",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.05577946227108,
+    "score": 0
+  },
+  {
+    "id": "420540705000450",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.072353088262395,
+    "score": 0
+  },
+  {
+    "id": "420540705000451",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.025916490506402,
+    "score": 0
+  },
+  {
+    "id": "420540705000452",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.021258585489992,
+    "score": 0
+  },
+  {
+    "id": "420540705000453",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.041763896465725,
+    "score": 0
+  },
+  {
+    "id": "420540705000454",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.029572405515782,
+    "score": 0
+  },
+  {
+    "id": "420540705000455",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.036956675879569,
+    "score": 0
+  },
+  {
+    "id": "420540705000456",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.092206540941476,
+    "score": 0
+  },
+  {
+    "id": "420540705000457",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.047090090188523,
+    "score": 0
+  },
+  {
+    "id": "420540705000458",
+    "nome": "Coqueiros",
+    "municipio": "Florianópolis",
+    "area_km2": 0.037874931111633,
+    "score": 0
+  },
+  {
+    "id": "420540705000459",
+    "nome": "Coqueiros",
+    "municipio": "Florianópolis",
+    "area_km2": 0.0227965275935,
+    "score": 0
+  },
+  {
+    "id": "420540705000460",
+    "nome": "Coqueiros",
+    "municipio": "Florianópolis",
+    "area_km2": 0.05051928791752,
+    "score": 0
+  },
+  {
+    "id": "420540705000461",
+    "nome": "Coqueiros",
+    "municipio": "Florianópolis",
+    "area_km2": 0.050116113158392,
+    "score": 0
+  },
+  {
+    "id": "420540705000462",
+    "nome": "Coqueiros",
+    "municipio": "Florianópolis",
+    "area_km2": 0.039143744358419,
+    "score": 0
+  },
+  {
+    "id": "420540705000463",
+    "nome": "Coqueiros",
+    "municipio": "Florianópolis",
+    "area_km2": 0.040188039598842,
+    "score": 0
+  },
+  {
+    "id": "420540705000464",
+    "nome": "Coqueiros",
+    "municipio": "Florianópolis",
+    "area_km2": 0.045601213774957,
+    "score": 0
+  },
+  {
+    "id": "420540705000465",
+    "nome": "Coqueiros",
+    "municipio": "Florianópolis",
+    "area_km2": 0.035766231927706,
+    "score": 0
+  },
+  {
+    "id": "420540705000466",
+    "nome": "Abraão",
+    "municipio": "Florianópolis",
+    "area_km2": 0.040540340027379,
+    "score": 0
+  },
+  {
+    "id": "420540705000467",
+    "nome": "Abraão",
+    "municipio": "Florianópolis",
+    "area_km2": 0.244214412242216,
+    "score": 0
+  },
+  {
+    "id": "420540705000468",
+    "nome": "Abraão",
+    "municipio": "Florianópolis",
+    "area_km2": 0.02119495038187,
+    "score": 0
+  },
+  {
+    "id": "420540705000469",
+    "nome": "Abraão",
+    "municipio": "Florianópolis",
+    "area_km2": 0.026635277965662,
+    "score": 0
+  },
+  {
+    "id": "420540705000470",
+    "nome": "Abraão",
+    "municipio": "Florianópolis",
+    "area_km2": 0.021557757103171,
+    "score": 0
+  },
+  {
+    "id": "420540705000471",
+    "nome": "Abraão",
+    "municipio": "Florianópolis",
+    "area_km2": 0.054171499062559,
+    "score": 0
+  },
+  {
+    "id": "420540705000472",
+    "nome": "Abraão",
+    "municipio": "Florianópolis",
+    "area_km2": 0.014086596465406,
+    "score": 0
+  },
+  {
+    "id": "420540705000473",
+    "nome": "Abraão",
+    "municipio": "Florianópolis",
+    "area_km2": 0.019769054774768,
+    "score": 0
+  },
+  {
+    "id": "420540705000474",
+    "nome": "Coqueiros",
+    "municipio": "Florianópolis",
+    "area_km2": 0.048051821956805,
+    "score": 0
+  },
+  {
+    "id": "420540705000475",
+    "nome": "Coqueiros",
+    "municipio": "Florianópolis",
+    "area_km2": 0.07979261258914,
+    "score": 0
+  },
+  {
+    "id": "420540705000476",
+    "nome": "Monte Cristo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.069487499797267,
+    "score": 0
+  },
+  {
+    "id": "420540705000477",
+    "nome": "Monte Cristo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.035813893567174,
+    "score": 0
+  },
+  {
+    "id": "420540705000478",
+    "nome": "Monte Cristo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.028832484022247,
+    "score": 0
+  },
+  {
+    "id": "420540705000479",
+    "nome": "Monte Cristo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.041978622563033,
+    "score": 0
+  },
+  {
+    "id": "420540705000480",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.019003701562507,
+    "score": 0
+  },
+  {
+    "id": "420540705000481",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.010298448569488,
+    "score": 0
+  },
+  {
+    "id": "420540705000482",
+    "nome": "Estreito",
+    "municipio": "Florianópolis",
+    "area_km2": 0.165024824524977,
+    "score": 0
+  },
+  {
+    "id": "420540705000483",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.947492618027933,
+    "score": 0
+  },
+  {
+    "id": "420540705000484",
+    "nome": "José Mendes",
+    "municipio": "Florianópolis",
+    "area_km2": 0.051405688261385,
+    "score": 0
+  },
+  {
+    "id": "420540705000486",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.046845048888226,
+    "score": 0
+  },
+  {
+    "id": "420540705000487",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.210999160591636,
+    "score": 0
+  },
+  {
+    "id": "420540705000488",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.013359135235425,
+    "score": 0
+  },
+  {
+    "id": "420540705000489",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.170611237744653,
+    "score": 0
+  },
+  {
+    "id": "420540705000492",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.048443013387465,
+    "score": 0
+  },
+  {
+    "id": "420540705000493",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.133197416344185,
+    "score": 0
+  },
+  {
+    "id": "420540705000494",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.062695610766266,
+    "score": 0
+  },
+  {
+    "id": "420540705000495",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.075686772182393,
+    "score": 0
+  },
+  {
+    "id": "420540705000496",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.061940610782753,
+    "score": 0
+  },
+  {
+    "id": "420540705000497",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.087683868835748,
+    "score": 0
+  },
+  {
+    "id": "420540705000499",
+    "nome": "João Paulo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.423431980998465,
+    "score": 0
+  },
+  {
+    "id": "420540705000500",
+    "nome": "João Paulo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.121794839285243,
+    "score": 0
+  },
+  {
+    "id": "420540705000501",
+    "nome": "João Paulo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.693086662531233,
+    "score": 0
+  },
+  {
+    "id": "420540705000502",
+    "nome": "João Paulo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.106913693216345,
+    "score": 0
+  },
+  {
+    "id": "420540705000507",
+    "nome": "Monte Verde",
+    "municipio": "Florianópolis",
+    "area_km2": 0.190866495354677,
+    "score": 0
+  },
+  {
+    "id": "420540705000508",
+    "nome": "Monte Verde",
+    "municipio": "Florianópolis",
+    "area_km2": 0.232272978381461,
+    "score": 0
+  },
+  {
+    "id": "420540705000509",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.036172739431897,
+    "score": 0
+  },
+  {
+    "id": "420540705000511",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.024254366030174,
+    "score": 0
+  },
+  {
+    "id": "420540705000512",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.024894883368341,
+    "score": 0
+  },
+  {
+    "id": "420540705000513",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.25531789113608,
+    "score": 0
+  },
+  {
+    "id": "420540705000514",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.014786517618069,
+    "score": 0
+  },
+  {
+    "id": "420540705000515",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.033399909658132,
+    "score": 0
+  },
+  {
+    "id": "420540705000516",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.019534003062378,
+    "score": 0
+  },
+  {
+    "id": "420540705000517",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.013254265751361,
+    "score": 0
+  },
+  {
+    "id": "420540705000518",
+    "nome": "José Mendes",
+    "municipio": "Florianópolis",
+    "area_km2": 0.028396840206146,
+    "score": 0
+  },
+  {
+    "id": "420540705000520",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.020114235306295,
+    "score": 0
+  },
+  {
+    "id": "420540705000521",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.05754650751572,
+    "score": 0
+  },
+  {
+    "id": "420540705000522",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.016661063499016,
+    "score": 0
+  },
+  {
+    "id": "420540705000523",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.17456324037958,
+    "score": 0
+  },
+  {
+    "id": "420540705000524",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.50846402953923,
+    "score": 0
+  },
+  {
+    "id": "420540705000526",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.111660422128931,
+    "score": 0
+  },
+  {
+    "id": "420540705000527",
+    "nome": "Pantanal",
+    "municipio": "Florianópolis",
+    "area_km2": 0.03283374229222,
+    "score": 0
+  },
+  {
+    "id": "420540705000528",
+    "nome": "Pantanal",
+    "municipio": "Florianópolis",
+    "area_km2": 0.059155086711459,
+    "score": 0
+  },
+  {
+    "id": "420540705000529",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.460863233468165,
+    "score": 0
+  },
+  {
+    "id": "420540705000530",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.086614126494074,
+    "score": 0
+  },
+  {
+    "id": "420540705000531",
+    "nome": "Saco dos Limões",
+    "municipio": "Florianópolis",
+    "area_km2": 0.220159888524822,
+    "score": 0
+  },
+  {
+    "id": "420540705000532",
+    "nome": "Saco dos Limões",
+    "municipio": "Florianópolis",
+    "area_km2": 0.077285400425634,
+    "score": 0
+  },
+  {
+    "id": "420540705000533",
+    "nome": "Córrego Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.24092948489169,
+    "score": 0
+  },
+  {
+    "id": "420540705000534",
+    "nome": "Córrego Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.048087303307908,
+    "score": 0
+  },
+  {
+    "id": "420540705000535",
+    "nome": "420540705000535",
+    "municipio": "Florianópolis",
+    "area_km2": 0.358413219193816,
+    "score": 0
+  },
+  {
+    "id": "420540705000536",
+    "nome": "420540705000536",
+    "municipio": "Florianópolis",
+    "area_km2": 0.660103153415058,
+    "score": 0
+  },
+  {
+    "id": "420540705000537",
+    "nome": "420540705000537",
+    "municipio": "Florianópolis",
+    "area_km2": 1.143184287119473,
+    "score": 0
+  },
+  {
+    "id": "420540705000539",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.014011989660672,
+    "score": 0
+  },
+  {
+    "id": "420540705000540",
+    "nome": "Costeira do Pirajubaé",
+    "municipio": "Florianópolis",
+    "area_km2": 0.117234109052928,
+    "score": 0
+  },
+  {
+    "id": "420540705000541",
+    "nome": "Costeira do Pirajubaé",
+    "municipio": "Florianópolis",
+    "area_km2": 0.078171792429826,
+    "score": 0
+  },
+  {
+    "id": "420540705000542",
+    "nome": "Saco dos Limões",
+    "municipio": "Florianópolis",
+    "area_km2": 0.09095080353327,
+    "score": 0
+  },
+  {
+    "id": "420540705000543",
+    "nome": "Saco dos Limões",
+    "municipio": "Florianópolis",
+    "area_km2": 0.041841618987778,
+    "score": 0
+  },
+  {
+    "id": "420540705000544",
+    "nome": "Saco dos Limões",
+    "municipio": "Florianópolis",
+    "area_km2": 0.031388545049098,
+    "score": 0
+  },
+  {
+    "id": "420540705000545",
+    "nome": "Saco dos Limões",
+    "municipio": "Florianópolis",
+    "area_km2": 0.216540491571459,
+    "score": 0
+  },
+  {
+    "id": "420540705000547",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.054228012781566,
+    "score": 0
+  },
+  {
+    "id": "420540705000548",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.070312360911523,
+    "score": 0
+  },
+  {
+    "id": "420540705000549",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.01949164656557,
+    "score": 0
+  },
+  {
+    "id": "420540705000550",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.05236111437633,
+    "score": 0
+  },
+  {
+    "id": "420540705000551",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.034778869506761,
+    "score": 0
+  },
+  {
+    "id": "420540705000552",
+    "nome": "Saco dos Limões",
+    "municipio": "Florianópolis",
+    "area_km2": 0.070439773547937,
+    "score": 0
+  },
+  {
+    "id": "420540705000554",
+    "nome": "420540705000554",
+    "municipio": "Florianópolis",
+    "area_km2": 14.905522234538426,
+    "score": 0
+  },
+  {
+    "id": "420540705000555",
+    "nome": "420540705000555",
+    "municipio": "Florianópolis",
+    "area_km2": 3.457951441277177,
+    "score": 0
+  },
+  {
+    "id": "420540705000556",
+    "nome": "420540705000556",
+    "municipio": "Florianópolis",
+    "area_km2": 0.881724633464298,
+    "score": 0
+  },
+  {
+    "id": "420540705000557",
+    "nome": "Costeira do Pirajubaé",
+    "municipio": "Florianópolis",
+    "area_km2": 0.0730202075404,
+    "score": 0
+  },
+  {
+    "id": "420540705000558",
+    "nome": "Costeira do Pirajubaé",
+    "municipio": "Florianópolis",
+    "area_km2": 0.064637467215593,
+    "score": 0
+  },
+  {
+    "id": "420540705000559",
+    "nome": "Coqueiros",
+    "municipio": "Florianópolis",
+    "area_km2": 0.077917615076107,
+    "score": 0
+  },
+  {
+    "id": "420540705000560",
+    "nome": "Coqueiros",
+    "municipio": "Florianópolis",
+    "area_km2": 0.145859293103247,
+    "score": 0
+  },
+  {
+    "id": "420540705000561",
+    "nome": "Abraão",
+    "municipio": "Florianópolis",
+    "area_km2": 0.02625451301268,
+    "score": 0
+  },
+  {
+    "id": "420540705000562",
+    "nome": "Abraão",
+    "municipio": "Florianópolis",
+    "area_km2": 0.053484882630238,
+    "score": 0
+  },
+  {
+    "id": "420540705000563",
+    "nome": "Costeira do Pirajubaé",
+    "municipio": "Florianópolis",
+    "area_km2": 0.130879408740159,
+    "score": 0
+  },
+  {
+    "id": "420540705000564",
+    "nome": "420540705000564",
+    "municipio": "Florianópolis",
+    "area_km2": 0.666520847661411,
+    "score": 0
+  },
+  {
+    "id": "420540705000566",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.024648364586754,
+    "score": 0
+  },
+  {
+    "id": "420540705000567",
+    "nome": "Pantanal",
+    "municipio": "Florianópolis",
+    "area_km2": 0.043094242887595,
+    "score": 0
+  },
+  {
+    "id": "420540705000568",
+    "nome": "Pantanal",
+    "municipio": "Florianópolis",
+    "area_km2": 0.126150470004531,
+    "score": 0
+  },
+  {
+    "id": "420540705000569",
+    "nome": "Pantanal",
+    "municipio": "Florianópolis",
+    "area_km2": 0.085638059826536,
+    "score": 0
+  },
+  {
+    "id": "420540705000570",
+    "nome": "Pantanal",
+    "municipio": "Florianópolis",
+    "area_km2": 0.154631755797383,
+    "score": 0
+  },
+  {
+    "id": "420540705000571",
+    "nome": "Córrego Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.252675824473788,
+    "score": 0
+  },
+  {
+    "id": "420540705000572",
+    "nome": "Córrego Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.071506460115036,
+    "score": 0
+  },
+  {
+    "id": "420540705000573",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.042688379571068,
+    "score": 0
+  },
+  {
+    "id": "420540705000574",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.018210435996822,
+    "score": 0
+  },
+  {
+    "id": "420540705000576",
+    "nome": "420540705000576",
+    "municipio": "Florianópolis",
+    "area_km2": 0.949505774516151,
+    "score": 0
+  },
+  {
+    "id": "420540705000577",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.056105742012495,
+    "score": 0
+  },
+  {
+    "id": "420540705000578",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.067883972433266,
+    "score": 0
+  },
+  {
+    "id": "420540705000579",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.046311923208994,
+    "score": 0
+  },
+  {
+    "id": "420540705000580",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.030161768008039,
+    "score": 0
+  },
+  {
+    "id": "420540705000581",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.046628136760503,
+    "score": 0
+  },
+  {
+    "id": "420540705000582",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.029232904464124,
+    "score": 0
+  },
+  {
+    "id": "420540705000583",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.406590075400931,
+    "score": 0
+  },
+  {
+    "id": "420540705000584",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.074389058784763,
+    "score": 0
+  },
+  {
+    "id": "420540705000585",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.155074058761392,
+    "score": 0
+  },
+  {
+    "id": "420540705000586",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.064775297648443,
+    "score": 0
+  },
+  {
+    "id": "420540705000587",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.082944034543181,
+    "score": 0
+  },
+  {
+    "id": "420540705000588",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.018131699974111,
+    "score": 0
+  },
+  {
+    "id": "420540705000589",
+    "nome": "Jardim Atlântico",
+    "municipio": "Florianópolis",
+    "area_km2": 0.043056500480284,
+    "score": 0
+  },
+  {
+    "id": "420540705000590",
+    "nome": "Jardim Atlântico",
+    "municipio": "Florianópolis",
+    "area_km2": 0.013726146504163,
+    "score": 0
+  },
+  {
+    "id": "420540705000591",
+    "nome": "Jardim Atlântico",
+    "municipio": "Florianópolis",
+    "area_km2": 0.158255361718314,
+    "score": 0
+  },
+  {
+    "id": "420540705000592",
+    "nome": "Jardim Atlântico",
+    "municipio": "Florianópolis",
+    "area_km2": 0.09836281383583,
+    "score": 0
+  },
+  {
+    "id": "420540705000593",
+    "nome": "Monte Cristo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.024152794975251,
+    "score": 0
+  },
+  {
+    "id": "420540705000594",
+    "nome": "Monte Cristo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.004537619324579,
+    "score": 0
+  },
+  {
+    "id": "420540705000595",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.027943173012252,
+    "score": 0
+  },
+  {
+    "id": "420540705000596",
+    "nome": "Capoeiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.012833099589003,
+    "score": 0
+  },
+  {
+    "id": "420540705000597",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.036255366680163,
+    "score": 0
+  },
+  {
+    "id": "420540705000598",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.022591205058885,
+    "score": 0
+  },
+  {
+    "id": "420540705000599",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.014123002741951,
+    "score": 0
+  },
+  {
+    "id": "420540705000600",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.818921895297414,
+    "score": 0
+  },
+  {
+    "id": "420540705000601",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.000718246592449,
+    "score": 0
+  },
+  {
+    "id": "420540705000602",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.079633417376704,
+    "score": 0
+  },
+  {
+    "id": "420540705000603",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.007416756128113,
+    "score": 0
+  },
+  {
+    "id": "420540705000604",
+    "nome": "Costeira do Pirajubaé",
+    "municipio": "Florianópolis",
+    "area_km2": 0.191187403526845,
+    "score": 0
+  },
+  {
+    "id": "420540705000605",
+    "nome": "Costeira do Pirajubaé",
+    "municipio": "Florianópolis",
+    "area_km2": 0.045549708927914,
+    "score": 0
+  },
+  {
+    "id": "420540705000606",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.16092352590152,
+    "score": 0
+  },
+  {
+    "id": "420540705000607",
+    "nome": "Itacorubi",
+    "municipio": "Florianópolis",
+    "area_km2": 0.026038470189068,
+    "score": 0
+  },
+  {
+    "id": "420540705000608",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.054350197141108,
+    "score": 0
+  },
+  {
+    "id": "420540705000609",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.018757190636047,
+    "score": 0
+  },
+  {
+    "id": "420540705000610",
+    "nome": "José Mendes",
+    "municipio": "Florianópolis",
+    "area_km2": 0.034270778254604,
+    "score": 0
+  },
+  {
+    "id": "420540705000611",
+    "nome": "José Mendes",
+    "municipio": "Florianópolis",
+    "area_km2": 0.028788145331287,
+    "score": 0
+  },
+  {
+    "id": "420540705000612",
+    "nome": "José Mendes",
+    "municipio": "Florianópolis",
+    "area_km2": 0.019141427015728,
+    "score": 0
+  },
+  {
+    "id": "420540705000613",
+    "nome": "José Mendes",
+    "municipio": "Florianópolis",
+    "area_km2": 0.041076794385807,
+    "score": 0
+  },
+  {
+    "id": "420540705000614",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.008151192608299,
+    "score": 0
+  },
+  {
+    "id": "420540705000615",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.032690082981724,
+    "score": 0
+  },
+  {
+    "id": "420540705000616",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.031580795151976,
+    "score": 0
+  },
+  {
+    "id": "420540705000617",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.17956360445532,
+    "score": 0
+  },
+  {
+    "id": "420540705000618",
+    "nome": "Trindade",
+    "municipio": "Florianópolis",
+    "area_km2": 0.060707073009044,
+    "score": 0
+  },
+  {
+    "id": "420540705000619",
+    "nome": "Monte Verde",
+    "municipio": "Florianópolis",
+    "area_km2": 0.120555529430229,
+    "score": 0
+  },
+  {
+    "id": "420540705000620",
+    "nome": "Monte Verde",
+    "municipio": "Florianópolis",
+    "area_km2": 0.049851612644873,
+    "score": 0
+  },
+  {
+    "id": "420540705000621",
+    "nome": "Saco Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.303892828978205,
+    "score": 0
+  },
+  {
+    "id": "420540705000622",
+    "nome": "Saco Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.06395919916918,
+    "score": 0
+  },
+  {
+    "id": "420540705000623",
+    "nome": "Saco Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.609810307690561,
+    "score": 0
+  },
+  {
+    "id": "420540705000624",
+    "nome": "Saco Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.026213810474471,
+    "score": 0
+  },
+  {
+    "id": "420540705000625",
+    "nome": "Saco Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.230221375024655,
+    "score": 0
+  },
+  {
+    "id": "420540705000626",
+    "nome": "Saco Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.035137931957221,
+    "score": 0
+  },
+  {
+    "id": "420540705000627",
+    "nome": "Saco Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.446618958420042,
+    "score": 0
+  },
+  {
+    "id": "420540705000628",
+    "nome": "Saco Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.029490429575811,
+    "score": 0
+  },
+  {
+    "id": "420540705000629",
+    "nome": "Saco Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.059777473675113,
+    "score": 0
+  },
+  {
+    "id": "420540705000630",
+    "nome": "Saco Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.055425238773566,
+    "score": 0
+  },
+  {
+    "id": "420540705000631",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.034159826221493,
+    "score": 0
+  },
+  {
+    "id": "420540705000632",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.012892755811368,
+    "score": 0
+  },
+  {
+    "id": "420540705000633",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.028191030200729,
+    "score": 0
+  },
+  {
+    "id": "420540705000634",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.028370652126499,
+    "score": 0
+  },
+  {
+    "id": "420540705000635",
+    "nome": "Saco Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.286299272073147,
+    "score": 0
+  },
+  {
+    "id": "420540705000636",
+    "nome": "Saco Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.045443822304256,
+    "score": 0
+  },
+  {
+    "id": "420540705000637",
+    "nome": "Pantanal",
+    "municipio": "Florianópolis",
+    "area_km2": 0.139345220257902,
+    "score": 0
+  },
+  {
+    "id": "420540705000638",
+    "nome": "Pantanal",
+    "municipio": "Florianópolis",
+    "area_km2": 0.014958289602451,
+    "score": 0
+  },
+  {
+    "id": "420540705000639",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.056310109338073,
+    "score": 0
+  },
+  {
+    "id": "420540705000640",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.015891666333171,
+    "score": 0
+  },
+  {
+    "id": "420540705000641",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.054906587094763,
+    "score": 0
+  },
+  {
+    "id": "420540705000642",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.022909306331958,
+    "score": 0
+  },
+  {
+    "id": "420540705000643",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.025571508000624,
+    "score": 0
+  },
+  {
+    "id": "420540705000644",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.009854556165126,
+    "score": 0
+  },
+  {
+    "id": "420540705000645",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.032945169750704,
+    "score": 0
+  },
+  {
+    "id": "420540705000646",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.009690685613523,
+    "score": 0
+  },
+  {
+    "id": "420540705000647",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.058051627016163,
+    "score": 0
+  },
+  {
+    "id": "420540705000648",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.006409116399595,
+    "score": 0
+  },
+  {
+    "id": "420540705000649",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.327513683419906,
+    "score": 0
+  },
+  {
+    "id": "420540705000650",
+    "nome": "Agronômica",
+    "municipio": "Florianópolis",
+    "area_km2": 0.0162560324137,
+    "score": 0
+  },
+  {
+    "id": "420540705000651",
+    "nome": "Saco dos Limões",
+    "municipio": "Florianópolis",
+    "area_km2": 0.071990472471928,
+    "score": 0
+  },
+  {
+    "id": "420540705000652",
+    "nome": "Saco dos Limões",
+    "municipio": "Florianópolis",
+    "area_km2": 0.063639464772127,
+    "score": 0
+  },
+  {
+    "id": "420540705000653",
+    "nome": "Saco dos Limões",
+    "municipio": "Florianópolis",
+    "area_km2": 0.096454845245548,
+    "score": 0
+  },
+  {
+    "id": "420540705000654",
+    "nome": "Saco dos Limões",
+    "municipio": "Florianópolis",
+    "area_km2": 0.042576302051112,
+    "score": 0
+  },
+  {
+    "id": "420540705000655",
+    "nome": "Saco dos Limões",
+    "municipio": "Florianópolis",
+    "area_km2": 0.089030359842222,
+    "score": 0
+  },
+  {
+    "id": "420540705000656",
+    "nome": "Saco dos Limões",
+    "municipio": "Florianópolis",
+    "area_km2": 0.051489389192187,
+    "score": 0
+  },
+  {
+    "id": "420540705000657",
+    "nome": "Costeira do Pirajubaé",
+    "municipio": "Florianópolis",
+    "area_km2": 0.18386963814071,
+    "score": 0
+  },
+  {
+    "id": "420540705000658",
+    "nome": "Costeira do Pirajubaé",
+    "municipio": "Florianópolis",
+    "area_km2": 0.066495535504916,
+    "score": 0
+  },
+  {
+    "id": "420540705000659",
+    "nome": "Costeira do Pirajubaé",
+    "municipio": "Florianópolis",
+    "area_km2": 0.11607969202987,
+    "score": 0
+  },
+  {
+    "id": "420540705000660",
+    "nome": "Costeira do Pirajubaé",
+    "municipio": "Florianópolis",
+    "area_km2": 0.025460948099163,
+    "score": 0
+  },
+  {
+    "id": "420540705000661",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.029506544032987,
+    "score": 0
+  },
+  {
+    "id": "420540705000662",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.053720641750593,
+    "score": 0
+  },
+  {
+    "id": "420540705000663",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.017665486442869,
+    "score": 0
+  },
+  {
+    "id": "420540705000664",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.135174292480469,
+    "score": 0
+  },
+  {
+    "id": "420540705000665",
+    "nome": "Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.027366351800664,
+    "score": 0
+  },
+  {
+    "id": "420540705000666",
+    "nome": "Saco Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.791978331391934,
+    "score": 0
+  },
+  {
+    "id": "420540705000667",
+    "nome": "Saco Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.765341348191178,
+    "score": 0
+  },
+  {
+    "id": "420540708000001",
+    "nome": "Barra da Lagoa",
+    "municipio": "Florianópolis",
+    "area_km2": 0.358764210113924,
+    "score": 0
+  },
+  {
+    "id": "420540708000002",
+    "nome": "Barra da Lagoa",
+    "municipio": "Florianópolis",
+    "area_km2": 0.171199248522931,
+    "score": 0
+  },
+  {
+    "id": "420540708000003",
+    "nome": "Barra da Lagoa",
+    "municipio": "Florianópolis",
+    "area_km2": 0.200180338204456,
+    "score": 0
+  },
+  {
+    "id": "420540708000004",
+    "nome": "Barra da Lagoa",
+    "municipio": "Florianópolis",
+    "area_km2": 0.113986525564555,
+    "score": 0
+  },
+  {
+    "id": "420540708000006",
+    "nome": "Barra da Lagoa",
+    "municipio": "Florianópolis",
+    "area_km2": 0.396174143529363,
+    "score": 0
+  },
+  {
+    "id": "420540708000008",
+    "nome": "420540708000008",
+    "municipio": "Florianópolis",
+    "area_km2": 0.28265789628832,
+    "score": 0
+  },
+  {
+    "id": "420540708000009",
+    "nome": "420540708000009",
+    "municipio": "Florianópolis",
+    "area_km2": 1.846162785204348,
+    "score": 0
+  },
+  {
+    "id": "420540708000011",
+    "nome": "Barra da Lagoa",
+    "municipio": "Florianópolis",
+    "area_km2": 0.321547454489138,
+    "score": 0
+  },
+  {
+    "id": "420540708000012",
+    "nome": "Barra da Lagoa",
+    "municipio": "Florianópolis",
+    "area_km2": 0.244484645982274,
+    "score": 0
+  },
+  {
+    "id": "420540708000013",
+    "nome": "420540708000013",
+    "municipio": "Florianópolis",
+    "area_km2": 1.030415086828642,
+    "score": 0
+  },
+  {
+    "id": "420540708000014",
+    "nome": "420540708000014",
+    "municipio": "Florianópolis",
+    "area_km2": 0.313421767651791,
+    "score": 0
+  },
+  {
+    "id": "420540708000015",
+    "nome": "Barra da Lagoa",
+    "municipio": "Florianópolis",
+    "area_km2": 0.091921091702439,
+    "score": 0
+  },
+  {
+    "id": "420540708000016",
+    "nome": "Barra da Lagoa",
+    "municipio": "Florianópolis",
+    "area_km2": 0.062495063951174,
+    "score": 0
+  },
+  {
+    "id": "420540710000003",
+    "nome": "Cachoeira do Bom Jesus",
+    "municipio": "Florianópolis",
+    "area_km2": 0.221785295514867,
+    "score": 0
+  },
+  {
+    "id": "420540710000005",
+    "nome": "Cachoeira do Bom Jesus",
+    "municipio": "Florianópolis",
+    "area_km2": 0.047630644460598,
+    "score": 0
+  },
+  {
+    "id": "420540710000014",
+    "nome": "Ponta das Canas",
+    "municipio": "Florianópolis",
+    "area_km2": 0.19345288694834,
+    "score": 0
+  },
+  {
+    "id": "420540710000016",
+    "nome": "Lagoinha do Norte",
+    "municipio": "Florianópolis",
+    "area_km2": 0.464865506673949,
+    "score": 0
+  },
+  {
+    "id": "420540710000019",
+    "nome": "Vargem do Bom Jesus",
+    "municipio": "Florianópolis",
+    "area_km2": 0.068980443891881,
+    "score": 0
+  },
+  {
+    "id": "420540710000020",
+    "nome": "Vargem Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.240634225319424,
+    "score": 0
+  },
+  {
+    "id": "420540710000021",
+    "nome": "Vargem Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.404097894982233,
+    "score": 0
+  },
+  {
+    "id": "420540710000022",
+    "nome": "Vargem Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.06997328043095,
+    "score": 0
+  },
+  {
+    "id": "420540710000023",
+    "nome": "Praia Brava",
+    "municipio": "Florianópolis",
+    "area_km2": 0.360846949108147,
+    "score": 0
+  },
+  {
+    "id": "420540710000029",
+    "nome": "420540710000029",
+    "municipio": "Florianópolis",
+    "area_km2": 3.380051070247509,
+    "score": 0
+  },
+  {
+    "id": "420540710000030",
+    "nome": "420540710000030",
+    "municipio": "Florianópolis",
+    "area_km2": 0.262148928082618,
+    "score": 0
+  },
+  {
+    "id": "420540710000031",
+    "nome": "420540710000031",
+    "municipio": "Florianópolis",
+    "area_km2": 18.15011133547856,
+    "score": 0
+  },
+  {
+    "id": "420540710000032",
+    "nome": "420540710000032",
+    "municipio": "Florianópolis",
+    "area_km2": 3.509487817945718,
+    "score": 0
+  },
+  {
+    "id": "420540710000032",
+    "nome": "420540710000032",
+    "municipio": "Florianópolis",
+    "area_km2": 3.509487817945718,
+    "score": 0
+  },
+  {
+    "id": "420540710000034",
+    "nome": "Lagoinha do Norte",
+    "municipio": "Florianópolis",
+    "area_km2": 0.205606692043544,
+    "score": 0
+  },
+  {
+    "id": "420540710000035",
+    "nome": "Vargem Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.318822200699785,
+    "score": 0
+  },
+  {
+    "id": "420540710000036",
+    "nome": "Vargem Grande",
+    "municipio": "Florianópolis",
+    "area_km2": 0.331618574544215,
+    "score": 0
+  },
+  {
+    "id": "420540710000037",
+    "nome": "420540710000037",
+    "municipio": "Florianópolis",
+    "area_km2": 0.253503592863817,
+    "score": 0
+  },
+  {
+    "id": "420540710000040",
+    "nome": "420540710000040",
+    "municipio": "Florianópolis",
+    "area_km2": 0.215009654812057,
+    "score": 0
+  },
+  {
+    "id": "420540710000041",
+    "nome": "420540710000041",
+    "municipio": "Florianópolis",
+    "area_km2": 0.05298145550842,
+    "score": 0
+  },
+  {
+    "id": "420540710000042",
+    "nome": "420540710000042",
+    "municipio": "Florianópolis",
+    "area_km2": 0.149478614623049,
+    "score": 0
+  },
+  {
+    "id": "420540710000044",
+    "nome": "420540710000044",
+    "municipio": "Florianópolis",
+    "area_km2": 0.957120326046767,
+    "score": 0
+  },
+  {
+    "id": "420540710000045",
+    "nome": "Ponta das Canas",
+    "municipio": "Florianópolis",
+    "area_km2": 0.138796596153326,
+    "score": 0
+  },
+  {
+    "id": "420540710000046",
+    "nome": "Ponta das Canas",
+    "municipio": "Florianópolis",
+    "area_km2": 0.138508230192545,
+    "score": 0
+  },
+  {
+    "id": "420540710000047",
+    "nome": "Vargem do Bom Jesus",
+    "municipio": "Florianópolis",
+    "area_km2": 0.474206776327981,
+    "score": 0
+  },
+  {
+    "id": "420540710000048",
+    "nome": "Vargem do Bom Jesus",
+    "municipio": "Florianópolis",
+    "area_km2": 0.234649627302837,
+    "score": 0
+  },
+  {
+    "id": "420540710000049",
+    "nome": "Vargem do Bom Jesus",
+    "municipio": "Florianópolis",
+    "area_km2": 0.150841672239047,
+    "score": 0
+  },
+  {
+    "id": "420540710000050",
+    "nome": "Cachoeira do Bom Jesus",
+    "municipio": "Florianópolis",
+    "area_km2": 0.159063392052044,
+    "score": 0
+  },
+  {
+    "id": "420540710000051",
+    "nome": "Cachoeira do Bom Jesus",
+    "municipio": "Florianópolis",
+    "area_km2": 0.288937622893463,
+    "score": 0
+  },
+  {
+    "id": "420540710000052",
+    "nome": "Cachoeira do Bom Jesus Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.283308460909213,
+    "score": 0
+  },
+  {
+    "id": "420540710000053",
+    "nome": "Cachoeira do Bom Jesus Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.146268680629019,
+    "score": 0
+  },
+  {
+    "id": "420540710000056",
+    "nome": "Cachoeira do Bom Jesus Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.309722122150193,
+    "score": 0
+  },
+  {
+    "id": "420540710000057",
+    "nome": "Cachoeira do Bom Jesus Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.658280659715545,
+    "score": 0
+  },
+  {
+    "id": "420540710000058",
+    "nome": "420540710000058",
+    "municipio": "Florianópolis",
+    "area_km2": 0.133615256699941,
+    "score": 0
+  },
+  {
+    "id": "420540710000059",
+    "nome": "420540710000059",
+    "municipio": "Florianópolis",
+    "area_km2": 0.239116286342196,
+    "score": 0
+  },
+  {
+    "id": "420540710000060",
+    "nome": "Cachoeira do Bom Jesus",
+    "municipio": "Florianópolis",
+    "area_km2": 0.100600321653921,
+    "score": 0
+  },
+  {
+    "id": "420540710000061",
+    "nome": "Cachoeira do Bom Jesus",
+    "municipio": "Florianópolis",
+    "area_km2": 0.089284541974318,
+    "score": 0
+  },
+  {
+    "id": "420540710000062",
+    "nome": "Cachoeira do Bom Jesus",
+    "municipio": "Florianópolis",
+    "area_km2": 3.422396331815519,
+    "score": 0
+  },
+  {
+    "id": "420540710000063",
+    "nome": "Praia Brava",
+    "municipio": "Florianópolis",
+    "area_km2": 0.043167415855419,
+    "score": 0
+  },
+  {
+    "id": "420540710000064",
+    "nome": "Praia Brava",
+    "municipio": "Florianópolis",
+    "area_km2": 0.086471572230896,
+    "score": 0
+  },
+  {
+    "id": "420540710000065",
+    "nome": "Praia Brava",
+    "municipio": "Florianópolis",
+    "area_km2": 0.066247450200377,
+    "score": 0
+  },
+  {
+    "id": "420540710000066",
+    "nome": "Praia Brava",
+    "municipio": "Florianópolis",
+    "area_km2": 0.07235702195705,
+    "score": 0
+  },
+  {
+    "id": "420540710000067",
+    "nome": "Ponta das Canas",
+    "municipio": "Florianópolis",
+    "area_km2": 0.134336562837564,
+    "score": 0
+  },
+  {
+    "id": "420540710000068",
+    "nome": "Ponta das Canas",
+    "municipio": "Florianópolis",
+    "area_km2": 0.09819748776297,
+    "score": 0
+  },
+  {
+    "id": "420540710000069",
+    "nome": "Cachoeira do Bom Jesus",
+    "municipio": "Florianópolis",
+    "area_km2": 0.047065534031982,
+    "score": 0
+  },
+  {
+    "id": "420540710000070",
+    "nome": "Cachoeira do Bom Jesus",
+    "municipio": "Florianópolis",
+    "area_km2": 0.051416357024042,
+    "score": 0
+  },
+  {
+    "id": "420540710000071",
+    "nome": "Cachoeira do Bom Jesus",
+    "municipio": "Florianópolis",
+    "area_km2": 0.078782598262084,
+    "score": 0
+  },
+  {
+    "id": "420540710000072",
+    "nome": "Cachoeira do Bom Jesus",
+    "municipio": "Florianópolis",
+    "area_km2": 0.055220952422996,
+    "score": 0
+  },
+  {
+    "id": "420540710000073",
+    "nome": "Ponta das Canas",
+    "municipio": "Florianópolis",
+    "area_km2": 0.090908100656038,
+    "score": 0
+  },
+  {
+    "id": "420540710000074",
+    "nome": "Ponta das Canas",
+    "municipio": "Florianópolis",
+    "area_km2": 0.122456631557465,
+    "score": 0
+  },
+  {
+    "id": "420540710000075",
+    "nome": "Cachoeira do Bom Jesus Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.344623515359205,
+    "score": 0
+  },
+  {
+    "id": "420540710000076",
+    "nome": "Cachoeira do Bom Jesus Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.253327188436134,
+    "score": 0
+  },
+  {
+    "id": "420540710000077",
+    "nome": "Ponta das Canas",
+    "municipio": "Florianópolis",
+    "area_km2": 0.102234021948571,
+    "score": 0
+  },
+  {
+    "id": "420540710000078",
+    "nome": "Ponta das Canas",
+    "municipio": "Florianópolis",
+    "area_km2": 0.065604914023326,
+    "score": 0
+  },
+  {
+    "id": "420540710000079",
+    "nome": "Ponta das Canas",
+    "municipio": "Florianópolis",
+    "area_km2": 0.249360483274322,
+    "score": 0
+  },
+  {
+    "id": "420540710000080",
+    "nome": "Ponta das Canas",
+    "municipio": "Florianópolis",
+    "area_km2": 0.258881063518488,
+    "score": 0
+  },
+  {
+    "id": "420540710000081",
+    "nome": "Cachoeira do Bom Jesus Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.137189446257343,
+    "score": 0
+  },
+  {
+    "id": "420540710000082",
+    "nome": "Cachoeira do Bom Jesus Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.318261856096006,
+    "score": 0
+  },
+  {
+    "id": "420540710000083",
+    "nome": "420540710000083",
+    "municipio": "Florianópolis",
+    "area_km2": 2.014251033783402,
+    "score": 0
+  },
+  {
+    "id": "420540710000084",
+    "nome": "420540710000084",
+    "municipio": "Florianópolis",
+    "area_km2": 4.384155914956669,
+    "score": 0
+  },
+  {
+    "id": "420540710000085",
+    "nome": "Vargem do Bom Jesus",
+    "municipio": "Florianópolis",
+    "area_km2": 0.073632465240493,
+    "score": 0
+  },
+  {
+    "id": "420540710000086",
+    "nome": "Vargem do Bom Jesus",
+    "municipio": "Florianópolis",
+    "area_km2": 0.007298090844532,
+    "score": 0
+  },
+  {
+    "id": "420540710000087",
+    "nome": "420540710000087",
+    "municipio": "Florianópolis",
+    "area_km2": 0.088888734640067,
+    "score": 0
+  },
+  {
+    "id": "420540710000088",
+    "nome": "420540710000088",
+    "municipio": "Florianópolis",
+    "area_km2": 0.134173876711287,
+    "score": 0
+  },
+  {
+    "id": "420540710000089",
+    "nome": "Vargem do Bom Jesus",
+    "municipio": "Florianópolis",
+    "area_km2": 1.09014487653336,
+    "score": 0
+  },
+  {
+    "id": "420540710000090",
+    "nome": "Vargem do Bom Jesus",
+    "municipio": "Florianópolis",
+    "area_km2": 0.184365532138881,
+    "score": 0
+  },
+  {
+    "id": "420540710000091",
+    "nome": "420540710000091",
+    "municipio": "Florianópolis",
+    "area_km2": 0.21662527032211,
+    "score": 0
+  },
+  {
+    "id": "420540710000092",
+    "nome": "Cachoeira do Bom Jesus",
+    "municipio": "Florianópolis",
+    "area_km2": 0.124882789570407,
+    "score": 0
+  },
+  {
+    "id": "420540710000093",
+    "nome": "420540710000093",
+    "municipio": "Florianópolis",
+    "area_km2": 3.947571245283791,
+    "score": 0
+  },
+  {
+    "id": "420540712000001",
+    "nome": "Pedrita",
+    "municipio": "Florianópolis",
+    "area_km2": 0.425433312069083,
+    "score": 0
+  },
+  {
+    "id": "420540712000002",
+    "nome": "Rio Tavares do Norte",
+    "municipio": "Florianópolis",
+    "area_km2": 0.620774071869977,
+    "score": 0
+  },
+  {
+    "id": "420540712000010",
+    "nome": "Campeche Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.307078547489154,
+    "score": 0
+  },
+  {
+    "id": "420540712000017",
+    "nome": "Rio Tavares do Norte",
+    "municipio": "Florianópolis",
+    "area_km2": 0.224730576869359,
+    "score": 0
+  },
+  {
+    "id": "420540712000021",
+    "nome": "Rio Tavares Central",
+    "municipio": "Florianópolis",
+    "area_km2": 0.195418494856021,
+    "score": 0
+  },
+  {
+    "id": "420540712000023",
+    "nome": "Campeche Central",
+    "municipio": "Florianópolis",
+    "area_km2": 0.359570285334732,
+    "score": 0
+  },
+  {
+    "id": "420540712000029",
+    "nome": "420540712000029",
+    "municipio": "Florianópolis",
+    "area_km2": 8.134841668891735,
+    "score": 0
+  },
+  {
+    "id": "420540712000030",
+    "nome": "420540712000030",
+    "municipio": "Florianópolis",
+    "area_km2": 0.511208473581483,
+    "score": 0
+  },
+  {
+    "id": "420540712000032",
+    "nome": "420540712000032",
+    "municipio": "Florianópolis",
+    "area_km2": 1.895947846521271,
+    "score": 0
+  },
+  {
+    "id": "420540712000034",
+    "nome": "Campeche Norte",
+    "municipio": "Florianópolis",
+    "area_km2": 0.34766452517699,
+    "score": 0
+  },
+  {
+    "id": "420540712000035",
+    "nome": "Campeche Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.28112952429719,
+    "score": 0
+  },
+  {
+    "id": "420540712000036",
+    "nome": "Lagoa Pequena",
+    "municipio": "Florianópolis",
+    "area_km2": 0.201231992011303,
+    "score": 0
+  },
+  {
+    "id": "420540712000037",
+    "nome": "Rio Tavares Central",
+    "municipio": "Florianópolis",
+    "area_km2": 0.221042352284668,
+    "score": 0
+  },
+  {
+    "id": "420540712000038",
+    "nome": "Campeche Central",
+    "municipio": "Florianópolis",
+    "area_km2": 0.242219083790566,
+    "score": 0
+  },
+  {
+    "id": "420540712000039",
+    "nome": "Rio Tavares Central",
+    "municipio": "Florianópolis",
+    "area_km2": 0.008885708914053,
+    "score": 0
+  },
+  {
+    "id": "420540712000040",
+    "nome": "Campeche Sul",
+    "municipio": "Florianópolis",
+    "area_km2": 0.047891347390129,
+    "score": 0
+  },
+  {
+    "id": "420540712000041",
+    "nome": "Campeche Sul",
+    "municipio": "Florianópolis",
+    "area_km2": 0.082630647142766,
+    "score": 0
+  },
+  {
+    "id": "420540712000044",
+    "nome": "420540712000044",
+    "municipio": "Florianópolis",
+    "area_km2": 1.156322426357239,
+    "score": 0
+  },
+  {
+    "id": "420540712000045",
+    "nome": "Campeche Sul",
+    "municipio": "Florianópolis",
+    "area_km2": 0.095459411821364,
+    "score": 0
+  },
+  {
+    "id": "420540712000046",
+    "nome": "Campeche Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.140334067564576,
+    "score": 0
+  },
+  {
+    "id": "420540712000047",
+    "nome": "Morro das Pedras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.449926147648312,
+    "score": 0
+  },
+  {
+    "id": "420540712000048",
+    "nome": "Campeche Sul",
+    "municipio": "Florianópolis",
+    "area_km2": 0.293437175945526,
+    "score": 0
+  },
+  {
+    "id": "420540712000049",
+    "nome": "Campeche Sul",
+    "municipio": "Florianópolis",
+    "area_km2": 0.120165262663781,
+    "score": 0
+  },
+  {
+    "id": "420540712000050",
+    "nome": "Campeche Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.100344911027205,
+    "score": 0
+  },
+  {
+    "id": "420540712000051",
+    "nome": "Campeche Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.35304190777276,
+    "score": 0
+  },
+  {
+    "id": "420540712000052",
+    "nome": "Campeche Sul",
+    "municipio": "Florianópolis",
+    "area_km2": 0.142631856219648,
+    "score": 0
+  },
+  {
+    "id": "420540712000053",
+    "nome": "Campeche Sul",
+    "municipio": "Florianópolis",
+    "area_km2": 0.115025746177263,
+    "score": 0
+  },
+  {
+    "id": "420540712000055",
+    "nome": "Campeche Central",
+    "municipio": "Florianópolis",
+    "area_km2": 0.911004659826062,
+    "score": 0
+  },
+  {
+    "id": "420540712000056",
+    "nome": "Morro das Pedras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.221521090996145,
+    "score": 0
+  },
+  {
+    "id": "420540712000058",
+    "nome": "Campeche Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.300966241080241,
+    "score": 0
+  },
+  {
+    "id": "420540712000059",
+    "nome": "Campeche Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.165873901226946,
+    "score": 0
+  },
+  {
+    "id": "420540712000062",
+    "nome": "420540712000062",
+    "municipio": "Florianópolis",
+    "area_km2": 0.271633635614667,
+    "score": 0
+  },
+  {
+    "id": "420540712000063",
+    "nome": "420540712000063",
+    "municipio": "Florianópolis",
+    "area_km2": 0.205607443005639,
+    "score": 0
+  },
+  {
+    "id": "420540712000064",
+    "nome": "Rio Tavares Central",
+    "municipio": "Florianópolis",
+    "area_km2": 0.744706247920732,
+    "score": 0
+  },
+  {
+    "id": "420540712000065",
+    "nome": "Rio Tavares Central",
+    "municipio": "Florianópolis",
+    "area_km2": 0.18340226242818,
+    "score": 0
+  },
+  {
+    "id": "420540712000066",
+    "nome": "Campeche Sul",
+    "municipio": "Florianópolis",
+    "area_km2": 0.166129522665696,
+    "score": 0
+  },
+  {
+    "id": "420540712000067",
+    "nome": "Campeche Sul",
+    "municipio": "Florianópolis",
+    "area_km2": 0.118165938113157,
+    "score": 0
+  },
+  {
+    "id": "420540712000068",
+    "nome": "Lagoa Pequena",
+    "municipio": "Florianópolis",
+    "area_km2": 0.590423501983972,
+    "score": 0
+  },
+  {
+    "id": "420540712000069",
+    "nome": "Lagoa Pequena",
+    "municipio": "Florianópolis",
+    "area_km2": 0.117312911088283,
+    "score": 0
+  },
+  {
+    "id": "420540712000070",
+    "nome": "Rio Tavares Central",
+    "municipio": "Florianópolis",
+    "area_km2": 0.203571300719366,
+    "score": 0
+  },
+  {
+    "id": "420540712000071",
+    "nome": "Rio Tavares Central",
+    "municipio": "Florianópolis",
+    "area_km2": 0.231812609672792,
+    "score": 0
+  },
+  {
+    "id": "420540712000072",
+    "nome": "Campeche Norte",
+    "municipio": "Florianópolis",
+    "area_km2": 0.214665248162691,
+    "score": 0
+  },
+  {
+    "id": "420540712000073",
+    "nome": "Campeche Norte",
+    "municipio": "Florianópolis",
+    "area_km2": 0.428569727353809,
+    "score": 0
+  },
+  {
+    "id": "420540712000074",
+    "nome": "Campeche Norte",
+    "municipio": "Florianópolis",
+    "area_km2": 0.10612233745768,
+    "score": 0
+  },
+  {
+    "id": "420540712000075",
+    "nome": "Campeche Norte",
+    "municipio": "Florianópolis",
+    "area_km2": 0.142483578784211,
+    "score": 0
+  },
+  {
+    "id": "420540712000076",
+    "nome": "Morro das Pedras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.391909823930525,
+    "score": 0
+  },
+  {
+    "id": "420540712000077",
+    "nome": "Morro das Pedras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.287818620585134,
+    "score": 0
+  },
+  {
+    "id": "420540712000078",
+    "nome": "Campeche Sul",
+    "municipio": "Florianópolis",
+    "area_km2": 0.518294369187308,
+    "score": 0
+  },
+  {
+    "id": "420540712000079",
+    "nome": "Campeche Sul",
+    "municipio": "Florianópolis",
+    "area_km2": 0.197607607025411,
+    "score": 0
+  },
+  {
+    "id": "420540712000080",
+    "nome": "420540712000080",
+    "municipio": "Florianópolis",
+    "area_km2": 1.213545281765955,
+    "score": 0
+  },
+  {
+    "id": "420540712000081",
+    "nome": "Lagoa Pequena",
+    "municipio": "Florianópolis",
+    "area_km2": 0.309754976546742,
+    "score": 0
+  },
+  {
+    "id": "420540712000082",
+    "nome": "Lagoa Pequena",
+    "municipio": "Florianópolis",
+    "area_km2": 0.104342504330711,
+    "score": 0
+  },
+  {
+    "id": "420540712000083",
+    "nome": "Lagoa Pequena",
+    "municipio": "Florianópolis",
+    "area_km2": 0.070294781493274,
+    "score": 0
+  },
+  {
+    "id": "420540712000084",
+    "nome": "Campeche Norte",
+    "municipio": "Florianópolis",
+    "area_km2": 0.188298276883608,
+    "score": 0
+  },
+  {
+    "id": "420540712000085",
+    "nome": "Campeche Norte",
+    "municipio": "Florianópolis",
+    "area_km2": 0.081279778187945,
+    "score": 0
+  },
+  {
+    "id": "420540712000086",
+    "nome": "Campeche Norte",
+    "municipio": "Florianópolis",
+    "area_km2": 0.026055076253158,
+    "score": 0
+  },
+  {
+    "id": "420540712000087",
+    "nome": "Campeche Norte",
+    "municipio": "Florianópolis",
+    "area_km2": 0.104550391843562,
+    "score": 0
+  },
+  {
+    "id": "420540712000088",
+    "nome": "Campeche Norte",
+    "municipio": "Florianópolis",
+    "area_km2": 0.330715718435146,
+    "score": 0
+  },
+  {
+    "id": "420540712000089",
+    "nome": "Campeche Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.123369389507878,
+    "score": 0
+  },
+  {
+    "id": "420540712000090",
+    "nome": "Campeche Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.14274351895694,
+    "score": 0
+  },
+  {
+    "id": "420540712000092",
+    "nome": "Moenda",
+    "municipio": "Florianópolis",
+    "area_km2": 0.547806387380902,
+    "score": 0
+  },
+  {
+    "id": "420540712000093",
+    "nome": "Moenda",
+    "municipio": "Florianópolis",
+    "area_km2": 0.158620880790669,
+    "score": 0
+  },
+  {
+    "id": "420540712000094",
+    "nome": "Campeche Sul",
+    "municipio": "Florianópolis",
+    "area_km2": 0.137707337991763,
+    "score": 0
+  },
+  {
+    "id": "420540712000095",
+    "nome": "Rio Tavares do Norte",
+    "municipio": "Florianópolis",
+    "area_km2": 0.114446487760718,
+    "score": 0
+  },
+  {
+    "id": "420540712000097",
+    "nome": "Campeche Central",
+    "municipio": "Florianópolis",
+    "area_km2": 0.458665496132841,
+    "score": 0
+  },
+  {
+    "id": "420540712000098",
+    "nome": "Campeche Central",
+    "municipio": "Florianópolis",
+    "area_km2": 0.177501475884707,
+    "score": 0
+  },
+  {
+    "id": "420540712000099",
+    "nome": "Moenda",
+    "municipio": "Florianópolis",
+    "area_km2": 1.277622391788294,
+    "score": 0
+  },
+  {
+    "id": "420540712000100",
+    "nome": "Moenda",
+    "municipio": "Florianópolis",
+    "area_km2": 1.078639844106286,
+    "score": 0
+  },
+  {
+    "id": "420540712000101",
+    "nome": "Campeche Central",
+    "municipio": "Florianópolis",
+    "area_km2": 0.686887296462478,
+    "score": 0
+  },
+  {
+    "id": "420540712000102",
+    "nome": "Campeche Central",
+    "municipio": "Florianópolis",
+    "area_km2": 0.369032127727301,
+    "score": 0
+  },
+  {
+    "id": "420540712000103",
+    "nome": "Autódromo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.971700791259593,
+    "score": 0
+  },
+  {
+    "id": "420540712000104",
+    "nome": "Autódromo",
+    "municipio": "Florianópolis",
+    "area_km2": 0.630142343909129,
+    "score": 0
+  },
+  {
+    "id": "420540712000105",
+    "nome": "Campeche Central",
+    "municipio": "Florianópolis",
+    "area_km2": 0.449410212811493,
+    "score": 0
+  },
+  {
+    "id": "420540712000106",
+    "nome": "Campeche Central",
+    "municipio": "Florianópolis",
+    "area_km2": 0.324674582473937,
+    "score": 0
+  },
+  {
+    "id": "420540712000107",
+    "nome": "Rio Tavares Central",
+    "municipio": "Florianópolis",
+    "area_km2": 0.582221445456774,
+    "score": 0
+  },
+  {
+    "id": "420540712000108",
+    "nome": "Rio Tavares Central",
+    "municipio": "Florianópolis",
+    "area_km2": 0.393895940182151,
+    "score": 0
+  },
+  {
+    "id": "420540712000109",
+    "nome": "Rio Tavares do Norte",
+    "municipio": "Florianópolis",
+    "area_km2": 0.088498556050821,
+    "score": 0
+  },
+  {
+    "id": "420540712000110",
+    "nome": "Rio Tavares do Norte",
+    "municipio": "Florianópolis",
+    "area_km2": 0.062767989850217,
+    "score": 0
+  },
+  {
+    "id": "420540712000111",
+    "nome": "Morro das Pedras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.309235591000864,
+    "score": 0
+  },
+  {
+    "id": "420540715000001",
+    "nome": "Canasvieiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.082168235443246,
+    "score": 0
+  },
+  {
+    "id": "420540715000002",
+    "nome": "Canasvieiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.183180210761993,
+    "score": 0
+  },
+  {
+    "id": "420540715000003",
+    "nome": "Canasvieiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.631477041395482,
+    "score": 0
+  },
+  {
+    "id": "420540715000004",
+    "nome": "Canasvieiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.128841955835136,
+    "score": 0
+  },
+  {
+    "id": "420540715000006",
+    "nome": "Canasvieiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.127889881948459,
+    "score": 0
+  },
+  {
+    "id": "420540715000007",
+    "nome": "Canasvieiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.134680020768161,
+    "score": 0
+  },
+  {
+    "id": "420540715000008",
+    "nome": "Canasvieiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.068970774969182,
+    "score": 0
+  },
+  {
+    "id": "420540715000010",
+    "nome": "Canasvieiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.10119339518053,
+    "score": 0
+  },
+  {
+    "id": "420540715000011",
+    "nome": "Canasvieiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.064959030002199,
+    "score": 0
+  },
+  {
+    "id": "420540715000012",
+    "nome": "Canasvieiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.029280988767613,
+    "score": 0
+  },
+  {
+    "id": "420540715000013",
+    "nome": "Canasvieiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.058114142725131,
+    "score": 0
+  },
+  {
+    "id": "420540715000014",
+    "nome": "Canasvieiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.106816433522491,
+    "score": 0
+  },
+  {
+    "id": "420540715000015",
+    "nome": "Canasvieiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.148522977732786,
+    "score": 0
+  },
+  {
+    "id": "420540715000016",
+    "nome": "Canasvieiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.190843278026815,
+    "score": 0
+  },
+  {
+    "id": "420540715000017",
+    "nome": "Canasvieiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.171687192557749,
+    "score": 0
+  },
+  {
+    "id": "420540715000018",
+    "nome": "Canasvieiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.030992652430632,
+    "score": 0
+  },
+  {
+    "id": "420540715000020",
+    "nome": "Jurere Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.598253397573288,
+    "score": 0
+  },
+  {
+    "id": "420540715000021",
+    "nome": "Jurere Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.450713007070668,
+    "score": 0
+  },
+  {
+    "id": "420540715000022",
+    "nome": "Jurere Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.215825287137308,
+    "score": 0
+  },
+  {
+    "id": "420540715000023",
+    "nome": "Jurere Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.230744007189551,
+    "score": 0
+  },
+  {
+    "id": "420540715000024",
+    "nome": "Jurere Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.057996202470541,
+    "score": 0
+  },
+  {
+    "id": "420540715000026",
+    "nome": "Jurere Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.07012257323679,
+    "score": 0
+  },
+  {
+    "id": "420540715000027",
+    "nome": "Jurere Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.12600739893706,
+    "score": 0
+  },
+  {
+    "id": "420540715000028",
+    "nome": "Jurere Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.140286511764268,
+    "score": 0
+  },
+  {
+    "id": "420540715000029",
+    "nome": "Jurere Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.078925529730754,
+    "score": 0
+  },
+  {
+    "id": "420540715000031",
+    "nome": "Jurere Oeste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.073214230384108,
+    "score": 0
+  },
+  {
+    "id": "420540715000032",
+    "nome": "Jurere Oeste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.062911937025405,
+    "score": 0
+  },
+  {
+    "id": "420540715000033",
+    "nome": "Jurere Oeste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.678322757978988,
+    "score": 0
+  },
+  {
+    "id": "420540715000035",
+    "nome": "Forte",
+    "municipio": "Florianópolis",
+    "area_km2": 0.53073142403726,
+    "score": 0
+  },
+  {
+    "id": "420540715000039",
+    "nome": "Canto do Lamim",
+    "municipio": "Florianópolis",
+    "area_km2": 1.559530267414544,
+    "score": 0
+  },
+  {
+    "id": "420540715000042",
+    "nome": "420540715000042",
+    "municipio": "Florianópolis",
+    "area_km2": 2.918512614322868,
+    "score": 0
+  },
+  {
+    "id": "420540715000044",
+    "nome": "Jurere Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.576570064846444,
+    "score": 0
+  },
+  {
+    "id": "420540715000047",
+    "nome": "420540715000047",
+    "municipio": "Florianópolis",
+    "area_km2": 0.267400555263069,
+    "score": 0
+  },
+  {
+    "id": "420540715000048",
+    "nome": "Vargem de Fora",
+    "municipio": "Florianópolis",
+    "area_km2": 0.627152088222963,
+    "score": 0
+  },
+  {
+    "id": "420540715000049",
+    "nome": "Canasvieiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.049882607407361,
+    "score": 0
+  },
+  {
+    "id": "420540715000050",
+    "nome": "Canasvieiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.051779260146962,
+    "score": 0
+  },
+  {
+    "id": "420540715000051",
+    "nome": "Canasvieiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.040688306912136,
+    "score": 0
+  },
+  {
+    "id": "420540715000052",
+    "nome": "Canasvieiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.042286007557887,
+    "score": 0
+  },
+  {
+    "id": "420540715000053",
+    "nome": "Canasvieiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.080118601350994,
+    "score": 0
+  },
+  {
+    "id": "420540715000054",
+    "nome": "Vargem de Fora",
+    "municipio": "Florianópolis",
+    "area_km2": 0.522580089232332,
+    "score": 0
+  },
+  {
+    "id": "420540715000055",
+    "nome": "Daniela",
+    "municipio": "Florianópolis",
+    "area_km2": 0.721976623837462,
+    "score": 0
+  },
+  {
+    "id": "420540715000057",
+    "nome": "Daniela",
+    "municipio": "Florianópolis",
+    "area_km2": 0.53582229776484,
+    "score": 0
+  },
+  {
+    "id": "420540715000058",
+    "nome": "Jurere Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.102364984293018,
+    "score": 0
+  },
+  {
+    "id": "420540715000059",
+    "nome": "Jurere Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.171978069597534,
+    "score": 0
+  },
+  {
+    "id": "420540715000060",
+    "nome": "Jurere Oeste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.76043143653506,
+    "score": 0
+  },
+  {
+    "id": "420540715000061",
+    "nome": "Jurere Oeste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.44525477631772,
+    "score": 0
+  },
+  {
+    "id": "420540715000062",
+    "nome": "Vargem de Fora",
+    "municipio": "Florianópolis",
+    "area_km2": 0.055305581925842,
+    "score": 0
+  },
+  {
+    "id": "420540715000063",
+    "nome": "Canasvieiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.142416666829632,
+    "score": 0
+  },
+  {
+    "id": "420540715000064",
+    "nome": "Canasvieiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.100185769902244,
+    "score": 0
+  },
+  {
+    "id": "420540715000066",
+    "nome": "Canasvieiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.027235912658907,
+    "score": 0
+  },
+  {
+    "id": "420540715000067",
+    "nome": "420540715000067",
+    "municipio": "Florianópolis",
+    "area_km2": 44.20488816805504,
+    "score": 0
+  },
+  {
+    "id": "420540715000068",
+    "nome": "420540715000068",
+    "municipio": "Florianópolis",
+    "area_km2": 0.131487224895787,
+    "score": 0
+  },
+  {
+    "id": "420540715000069",
+    "nome": "Jurere Oeste",
+    "municipio": "Florianópolis",
+    "area_km2": 3.59830798468834,
+    "score": 0
+  },
+  {
+    "id": "420540715000070",
+    "nome": "Jurere Oeste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.63184926818094,
+    "score": 0
+  },
+  {
+    "id": "420540715000071",
+    "nome": "Canasvieiras",
+    "municipio": "Florianópolis",
+    "area_km2": 1.358933107476809,
+    "score": 0
+  },
+  {
+    "id": "420540715000072",
+    "nome": "Canasvieiras",
+    "municipio": "Florianópolis",
+    "area_km2": 0.456192631373555,
+    "score": 0
+  },
+  {
+    "id": "420540715000073",
+    "nome": "Jurerê",
+    "municipio": "Florianópolis",
+    "area_km2": 0.065477201099896,
+    "score": 0
+  },
+  {
+    "id": "420540715000074",
+    "nome": "Jurerê",
+    "municipio": "Florianópolis",
+    "area_km2": 7.484255965146074,
+    "score": 0
+  },
+  {
+    "id": "420540715000075",
+    "nome": "Jurerê",
+    "municipio": "Florianópolis",
+    "area_km2": 0.143986167823348,
+    "score": 0
+  },
+  {
+    "id": "420540720000001",
+    "nome": "Ingleses Sul",
+    "municipio": "Florianópolis",
+    "area_km2": 0.120217096235703,
+    "score": 0
+  },
+  {
+    "id": "420540720000002",
+    "nome": "Ingleses Sul",
+    "municipio": "Florianópolis",
+    "area_km2": 0.132413584819937,
+    "score": 0
+  },
+  {
+    "id": "420540720000004",
+    "nome": "Ingleses Sul",
+    "municipio": "Florianópolis",
+    "area_km2": 0.160625802651454,
+    "score": 0
+  },
+  {
+    "id": "420540720000006",
+    "nome": "Ingleses Sul",
+    "municipio": "Florianópolis",
+    "area_km2": 0.173562692961737,
+    "score": 0
+  },
+  {
+    "id": "420540720000008",
+    "nome": "Santinho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.096629059692346,
+    "score": 0
+  },
+  {
+    "id": "420540720000009",
+    "nome": "Santinho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.651964334842727,
+    "score": 0
+  },
+  {
+    "id": "420540720000010",
+    "nome": "Santinho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.123079100378487,
+    "score": 0
+  },
+  {
+    "id": "420540720000011",
+    "nome": "Santinho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.115799356174873,
+    "score": 0
+  },
+  {
+    "id": "420540720000012",
+    "nome": "Santinho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.112987002966924,
+    "score": 0
+  },
+  {
+    "id": "420540720000013",
+    "nome": "Santinho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.201456401364361,
+    "score": 0
+  },
+  {
+    "id": "420540720000014",
+    "nome": "Ingleses Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.161334655557253,
+    "score": 0
+  },
+  {
+    "id": "420540720000015",
+    "nome": "Ingleses Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.190378580535417,
+    "score": 0
+  },
+  {
+    "id": "420540720000020",
+    "nome": "Ingleses Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.095873001904218,
+    "score": 0
+  },
+  {
+    "id": "420540720000021",
+    "nome": "Ingleses Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.210557630059921,
+    "score": 0
+  },
+  {
+    "id": "420540720000022",
+    "nome": "Ingleses Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.258758418615377,
+    "score": 0
+  },
+  {
+    "id": "420540720000023",
+    "nome": "Ingleses Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.156500054931878,
+    "score": 0
+  },
+  {
+    "id": "420540720000024",
+    "nome": "Ingleses Norte",
+    "municipio": "Florianópolis",
+    "area_km2": 0.346938549928174,
+    "score": 0
+  },
+  {
+    "id": "420540720000025",
+    "nome": "Ingleses Norte",
+    "municipio": "Florianópolis",
+    "area_km2": 0.116103603838412,
+    "score": 0
+  },
+  {
+    "id": "420540720000026",
+    "nome": "Ingleses Norte",
+    "municipio": "Florianópolis",
+    "area_km2": 0.160963872796299,
+    "score": 0
+  },
+  {
+    "id": "420540720000027",
+    "nome": "Ingleses Norte",
+    "municipio": "Florianópolis",
+    "area_km2": 0.239534192683054,
+    "score": 0
+  },
+  {
+    "id": "420540720000043",
+    "nome": "420540720000043",
+    "municipio": "Florianópolis",
+    "area_km2": 0.103845835418511,
+    "score": 0
+  },
+  {
+    "id": "420540720000045",
+    "nome": "420540720000045",
+    "municipio": "Florianópolis",
+    "area_km2": 2.298007295770995,
+    "score": 0
+  },
+  {
+    "id": "420540720000045",
+    "nome": "420540720000045",
+    "municipio": "Florianópolis",
+    "area_km2": 2.298007295770995,
+    "score": 0
+  },
+  {
+    "id": "420540720000045",
+    "nome": "420540720000045",
+    "municipio": "Florianópolis",
+    "area_km2": 2.298007295770995,
+    "score": 0
+  },
+  {
+    "id": "420540720000045",
+    "nome": "420540720000045",
+    "municipio": "Florianópolis",
+    "area_km2": 2.298007295770995,
+    "score": 0
+  },
+  {
+    "id": "420540720000045",
+    "nome": "420540720000045",
+    "municipio": "Florianópolis",
+    "area_km2": 2.298007295770995,
+    "score": 0
+  },
+  {
+    "id": "420540720000045",
+    "nome": "420540720000045",
+    "municipio": "Florianópolis",
+    "area_km2": 2.298007295770995,
+    "score": 0
+  },
+  {
+    "id": "420540720000045",
+    "nome": "420540720000045",
+    "municipio": "Florianópolis",
+    "area_km2": 2.298007295770995,
+    "score": 0
+  },
+  {
+    "id": "420540720000046",
+    "nome": "Ingleses Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.332483321033907,
+    "score": 0
+  },
+  {
+    "id": "420540720000047",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.367188336740209,
+    "score": 0
+  },
+  {
+    "id": "420540720000049",
+    "nome": "Ingleses Sul",
+    "municipio": "Florianópolis",
+    "area_km2": 0.054080012954504,
+    "score": 0
+  },
+  {
+    "id": "420540720000050",
+    "nome": "Ingleses Sul",
+    "municipio": "Florianópolis",
+    "area_km2": 0.08641573684887,
+    "score": 0
+  },
+  {
+    "id": "420540720000051",
+    "nome": "Ingleses Sul",
+    "municipio": "Florianópolis",
+    "area_km2": 0.139297047119109,
+    "score": 0
+  },
+  {
+    "id": "420540720000052",
+    "nome": "Ingleses Sul",
+    "municipio": "Florianópolis",
+    "area_km2": 0.037920586181837,
+    "score": 0
+  },
+  {
+    "id": "420540720000053",
+    "nome": "Santinho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.076495911645361,
+    "score": 0
+  },
+  {
+    "id": "420540720000054",
+    "nome": "Santinho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.112472529184663,
+    "score": 0
+  },
+  {
+    "id": "420540720000055",
+    "nome": "Ingleses Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.115176807214969,
+    "score": 0
+  },
+  {
+    "id": "420540720000056",
+    "nome": "Ingleses Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.066033557438769,
+    "score": 0
+  },
+  {
+    "id": "420540720000057",
+    "nome": "Ingleses Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.119496035212043,
+    "score": 0
+  },
+  {
+    "id": "420540720000058",
+    "nome": "Ingleses Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.067536179244177,
+    "score": 0
+  },
+  {
+    "id": "420540720000059",
+    "nome": "Ingleses Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.288556714877223,
+    "score": 0
+  },
+  {
+    "id": "420540720000060",
+    "nome": "Ingleses Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.147199843542843,
+    "score": 0
+  },
+  {
+    "id": "420540720000061",
+    "nome": "Ingleses Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.058906411390327,
+    "score": 0
+  },
+  {
+    "id": "420540720000062",
+    "nome": "Ingleses Centro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.081381098034984,
+    "score": 0
+  },
+  {
+    "id": "420540720000063",
+    "nome": "Ingleses Norte",
+    "municipio": "Florianópolis",
+    "area_km2": 0.116868179531355,
+    "score": 0
+  },
+  {
+    "id": "420540720000064",
+    "nome": "Ingleses Norte",
+    "municipio": "Florianópolis",
+    "area_km2": 0.234834798230884,
+    "score": 0
+  },
+  {
+    "id": "420540720000065",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.090880325540284,
+    "score": 0
+  },
+  {
+    "id": "420540720000066",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.147406769801078,
+    "score": 0
+  },
+  {
+    "id": "420540720000067",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.167781042527716,
+    "score": 0
+  },
+  {
+    "id": "420540720000068",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.28093773483721,
+    "score": 0
+  },
+  {
+    "id": "420540720000070",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.087338586380363,
+    "score": 0
+  },
+  {
+    "id": "420540720000071",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.112612267796564,
+    "score": 0
+  },
+  {
+    "id": "420540720000072",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.064307379716438,
+    "score": 0
+  },
+  {
+    "id": "420540720000073",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.096379047483228,
+    "score": 0
+  },
+  {
+    "id": "420540720000074",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.114479342934756,
+    "score": 0
+  },
+  {
+    "id": "420540720000075",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.125366402421804,
+    "score": 0
+  },
+  {
+    "id": "420540720000076",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.131101685156446,
+    "score": 0
+  },
+  {
+    "id": "420540720000077",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.215563598854856,
+    "score": 0
+  },
+  {
+    "id": "420540720000078",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.145224232086191,
+    "score": 0
+  },
+  {
+    "id": "420540720000079",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.089704319157722,
+    "score": 0
+  },
+  {
+    "id": "420540720000081",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.112577098407562,
+    "score": 0
+  },
+  {
+    "id": "420540720000082",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.081873347307051,
+    "score": 0
+  },
+  {
+    "id": "420540720000083",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.10834770189691,
+    "score": 0
+  },
+  {
+    "id": "420540720000084",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.075520414879976,
+    "score": 0
+  },
+  {
+    "id": "420540720000085",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.181407567847938,
+    "score": 0
+  },
+  {
+    "id": "420540720000087",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.065032567440787,
+    "score": 0
+  },
+  {
+    "id": "420540720000088",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.047305384317285,
+    "score": 0
+  },
+  {
+    "id": "420540720000089",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.055228925637661,
+    "score": 0
+  },
+  {
+    "id": "420540720000090",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.283101002719185,
+    "score": 0
+  },
+  {
+    "id": "420540720000091",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.095753119725699,
+    "score": 0
+  },
+  {
+    "id": "420540720000092",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.237722658834181,
+    "score": 0
+  },
+  {
+    "id": "420540720000093",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.755377807020688,
+    "score": 0
+  },
+  {
+    "id": "420540720000094",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.14248416007268,
+    "score": 0
+  },
+  {
+    "id": "420540720000095",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.117965564945777,
+    "score": 0
+  },
+  {
+    "id": "420540720000096",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.103457005086557,
+    "score": 0
+  },
+  {
+    "id": "420540720000097",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.094326102186045,
+    "score": 0
+  },
+  {
+    "id": "420540720000098",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.097713809499007,
+    "score": 0
+  },
+  {
+    "id": "420540720000099",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.090554841229794,
+    "score": 0
+  },
+  {
+    "id": "420540720000100",
+    "nome": "420540720000100",
+    "municipio": "Florianópolis",
+    "area_km2": 3.947310240226324,
+    "score": 0
+  },
+  {
+    "id": "420540720000100",
+    "nome": "420540720000100",
+    "municipio": "Florianópolis",
+    "area_km2": 3.947310240226324,
+    "score": 0
+  },
+  {
+    "id": "420540720000100",
+    "nome": "420540720000100",
+    "municipio": "Florianópolis",
+    "area_km2": 3.947310240226324,
+    "score": 0
+  },
+  {
+    "id": "420540720000101",
+    "nome": "420540720000101",
+    "municipio": "Florianópolis",
+    "area_km2": 0.022016529751339,
+    "score": 0
+  },
+  {
+    "id": "420540720000102",
+    "nome": "420540720000102",
+    "municipio": "Florianópolis",
+    "area_km2": 1.434378010808566,
+    "score": 0
+  },
+  {
+    "id": "420540720000103",
+    "nome": "420540720000103",
+    "municipio": "Florianópolis",
+    "area_km2": 0.624986664065284,
+    "score": 0
+  },
+  {
+    "id": "420540720000104",
+    "nome": "420540720000104",
+    "municipio": "Florianópolis",
+    "area_km2": 0.05680913365643,
+    "score": 0
+  },
+  {
+    "id": "420540720000105",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.251420957943664,
+    "score": 0
+  },
+  {
+    "id": "420540720000106",
+    "nome": "Capivari",
+    "municipio": "Florianópolis",
+    "area_km2": 0.069349696500328,
+    "score": 0
+  },
+  {
+    "id": "420540725000001",
+    "nome": "Lagoa",
+    "municipio": "Florianópolis",
+    "area_km2": 0.091480895784094,
+    "score": 0
+  },
+  {
+    "id": "420540725000002",
+    "nome": "Lagoa",
+    "municipio": "Florianópolis",
+    "area_km2": 0.188191118814812,
+    "score": 0
+  },
+  {
+    "id": "420540725000004",
+    "nome": "Lagoa",
+    "municipio": "Florianópolis",
+    "area_km2": 0.096212472721063,
+    "score": 0
+  },
+  {
+    "id": "420540725000005",
+    "nome": "Lagoa",
+    "municipio": "Florianópolis",
+    "area_km2": 0.092662288451736,
+    "score": 0
+  },
+  {
+    "id": "420540725000006",
+    "nome": "Lagoa",
+    "municipio": "Florianópolis",
+    "area_km2": 0.483881427911079,
+    "score": 0
+  },
+  {
+    "id": "420540725000007",
+    "nome": "Lagoa",
+    "municipio": "Florianópolis",
+    "area_km2": 0.319850192938895,
+    "score": 0
+  },
+  {
+    "id": "420540725000008",
+    "nome": "Lagoa",
+    "municipio": "Florianópolis",
+    "area_km2": 0.102489339578841,
+    "score": 0
+  },
+  {
+    "id": "420540725000009",
+    "nome": "Lagoa",
+    "municipio": "Florianópolis",
+    "area_km2": 0.573082171783856,
+    "score": 0
+  },
+  {
+    "id": "420540725000010",
+    "nome": "Canto dos Araçás",
+    "municipio": "Florianópolis",
+    "area_km2": 0.246028614231154,
+    "score": 0
+  },
+  {
+    "id": "420540725000012",
+    "nome": "Porto da Lagoa",
+    "municipio": "Florianópolis",
+    "area_km2": 0.479939388808276,
+    "score": 0
+  },
+  {
+    "id": "420540725000014",
+    "nome": "Porto da Lagoa",
+    "municipio": "Florianópolis",
+    "area_km2": 0.878652896276925,
+    "score": 0
+  },
+  {
+    "id": "420540725000015",
+    "nome": "Dunas da Lagoa",
+    "municipio": "Florianópolis",
+    "area_km2": 0.155084567937093,
+    "score": 0
+  },
+  {
+    "id": "420540725000016",
+    "nome": "Retiro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.505823437498166,
+    "score": 0
+  },
+  {
+    "id": "420540725000017",
+    "nome": "Retiro",
+    "municipio": "Florianópolis",
+    "area_km2": 0.436275840031563,
+    "score": 0
+  },
+  {
+    "id": "420540725000021",
+    "nome": "420540725000021",
+    "municipio": "Florianópolis",
+    "area_km2": 1.609177087672129,
+    "score": 0
+  },
+  {
+    "id": "420540725000021",
+    "nome": "420540725000021",
+    "municipio": "Florianópolis",
+    "area_km2": 1.609177087672129,
+    "score": 0
+  },
+  {
+    "id": "420540725000021",
+    "nome": "420540725000021",
+    "municipio": "Florianópolis",
+    "area_km2": 1.609177087672129,
+    "score": 0
+  },
+  {
+    "id": "420540725000021",
+    "nome": "420540725000021",
+    "municipio": "Florianópolis",
+    "area_km2": 1.609177087672129,
+    "score": 0
+  },
+  {
+    "id": "420540725000022",
+    "nome": "420540725000022",
+    "municipio": "Florianópolis",
+    "area_km2": 5.097220592229042,
+    "score": 0
+  },
+  {
+    "id": "420540725000024",
+    "nome": "420540725000024",
+    "municipio": "Florianópolis",
+    "area_km2": 0.205324127348874,
+    "score": 0
+  },
+  {
+    "id": "420540725000025",
+    "nome": "420540725000025",
+    "municipio": "Florianópolis",
+    "area_km2": 0.062020845008236,
+    "score": 0
+  },
+  {
+    "id": "420540725000026",
+    "nome": "420540725000026",
+    "municipio": "Florianópolis",
+    "area_km2": 0.113469559417133,
+    "score": 0
+  },
+  {
+    "id": "420540725000027",
+    "nome": "420540725000027",
+    "municipio": "Florianópolis",
+    "area_km2": 0.025177299382876,
+    "score": 0
+  },
+  {
+    "id": "420540725000031",
+    "nome": "420540725000031",
+    "municipio": "Florianópolis",
+    "area_km2": 3.022601004263366,
+    "score": 0
+  },
+  {
+    "id": "420540725000032",
+    "nome": "420540725000032",
+    "municipio": "Florianópolis",
+    "area_km2": 0.260229144785006,
+    "score": 0
+  },
+  {
+    "id": "420540725000033",
+    "nome": "420540725000033",
+    "municipio": "Florianópolis",
+    "area_km2": 0.401946400320972,
+    "score": 0
+  },
+  {
+    "id": "420540725000034",
+    "nome": "420540725000034",
+    "municipio": "Florianópolis",
+    "area_km2": 0.328218305145541,
+    "score": 0
+  },
+  {
+    "id": "420540725000036",
+    "nome": "420540725000036",
+    "municipio": "Florianópolis",
+    "area_km2": 0.156108030197691,
+    "score": 0
+  },
+  {
+    "id": "420540725000037",
+    "nome": "420540725000037",
+    "municipio": "Florianópolis",
+    "area_km2": 1.671826959085965,
+    "score": 0
+  },
+  {
+    "id": "420540725000038",
+    "nome": "420540725000038",
+    "municipio": "Florianópolis",
+    "area_km2": 1.926871060174277,
+    "score": 0
+  },
+  {
+    "id": "420540725000039",
+    "nome": "420540725000039",
+    "municipio": "Florianópolis",
+    "area_km2": 17.463788110334747,
+    "score": 0
+  },
+  {
+    "id": "420540725000040",
+    "nome": "Canto da Lagoa",
+    "municipio": "Florianópolis",
+    "area_km2": 0.168487582651992,
+    "score": 0
+  },
+  {
+    "id": "420540725000041",
+    "nome": "Canto da Lagoa",
+    "municipio": "Florianópolis",
+    "area_km2": 0.448036114363441,
+    "score": 0
+  },
+  {
+    "id": "420540725000042",
+    "nome": "Praia Mole",
+    "municipio": "Florianópolis",
+    "area_km2": 0.584344525635384,
+    "score": 0
+  },
+  {
+    "id": "420540725000043",
+    "nome": "420540725000043",
+    "municipio": "Florianópolis",
+    "area_km2": 0.265093898351916,
+    "score": 0
+  },
+  {
+    "id": "420540725000044",
+    "nome": "420540725000044",
+    "municipio": "Florianópolis",
+    "area_km2": 3.541808242602431,
+    "score": 0
+  },
+  {
+    "id": "420540725000045",
+    "nome": "420540725000045",
+    "municipio": "Florianópolis",
+    "area_km2": 2.683590265443206,
+    "score": 0
+  },
+  {
+    "id": "420540725000046",
+    "nome": "420540725000046",
+    "municipio": "Florianópolis",
+    "area_km2": 0.207270266525204,
+    "score": 0
+  },
+  {
+    "id": "420540725000047",
+    "nome": "420540725000047",
+    "municipio": "Florianópolis",
+    "area_km2": 8.16036570663987,
+    "score": 0
+  },
+  {
+    "id": "420540725000048",
+    "nome": "420540725000048",
+    "municipio": "Florianópolis",
+    "area_km2": 0.774075031877103,
+    "score": 0
+  },
+  {
+    "id": "420540730000004",
+    "nome": "Pântano do Sul",
+    "municipio": "Florianópolis",
+    "area_km2": 0.397406857157052,
+    "score": 0
+  },
+  {
+    "id": "420540730000007",
+    "nome": "Açores",
+    "municipio": "Florianópolis",
+    "area_km2": 2.141102234465519,
+    "score": 0
+  },
+  {
+    "id": "420540730000009",
+    "nome": "Rio das Pacas",
+    "municipio": "Florianópolis",
+    "area_km2": 0.203715643728009,
+    "score": 0
+  },
+  {
+    "id": "420540730000013",
+    "nome": "420540730000013",
+    "municipio": "Florianópolis",
+    "area_km2": 9.148729256982506,
+    "score": 0
+  },
+  {
+    "id": "420540730000014",
+    "nome": "Pântano do Sul",
+    "municipio": "Florianópolis",
+    "area_km2": 0.083303579864798,
+    "score": 0
+  },
+  {
+    "id": "420540730000015",
+    "nome": "Pântano do Sul",
+    "municipio": "Florianópolis",
+    "area_km2": 0.216702582219937,
+    "score": 0
+  },
+  {
+    "id": "420540730000016",
+    "nome": "Armação",
+    "municipio": "Florianópolis",
+    "area_km2": 0.18683469477588,
+    "score": 0
+  },
+  {
+    "id": "420540730000017",
+    "nome": "Açores",
+    "municipio": "Florianópolis",
+    "area_km2": 0.463930383477878,
+    "score": 0
+  },
+  {
+    "id": "420540730000018",
+    "nome": "Açores",
+    "municipio": "Florianópolis",
+    "area_km2": 0.34631175040888,
+    "score": 0
+  },
+  {
+    "id": "420540730000019",
+    "nome": "Pântano do Sul",
+    "municipio": "Florianópolis",
+    "area_km2": 0.240435300965985,
+    "score": 0
+  },
+  {
+    "id": "420540730000020",
+    "nome": "Pântano do Sul",
+    "municipio": "Florianópolis",
+    "area_km2": 0.326703673173026,
+    "score": 0
+  },
+  {
+    "id": "420540730000021",
+    "nome": "Armação",
+    "municipio": "Florianópolis",
+    "area_km2": 0.1998121386572,
+    "score": 0
+  },
+  {
+    "id": "420540730000023",
+    "nome": "Armação",
+    "municipio": "Florianópolis",
+    "area_km2": 0.181783581110584,
+    "score": 0
+  },
+  {
+    "id": "420540730000024",
+    "nome": "Armação",
+    "municipio": "Florianópolis",
+    "area_km2": 0.183109068778449,
+    "score": 0
+  },
+  {
+    "id": "420540730000025",
+    "nome": "Armação",
+    "municipio": "Florianópolis",
+    "area_km2": 0.109863131825533,
+    "score": 0
+  },
+  {
+    "id": "420540730000026",
+    "nome": "Armação",
+    "municipio": "Florianópolis",
+    "area_km2": 0.154004349683788,
+    "score": 0
+  },
+  {
+    "id": "420540730000027",
+    "nome": "Pântano do Sul",
+    "municipio": "Florianópolis",
+    "area_km2": 0.20890966926865,
+    "score": 0
+  },
+  {
+    "id": "420540730000028",
+    "nome": "Pântano do Sul",
+    "municipio": "Florianópolis",
+    "area_km2": 2.437861676185544,
+    "score": 0
+  },
+  {
+    "id": "420540730000030",
+    "nome": "420540730000030",
+    "municipio": "Florianópolis",
+    "area_km2": 14.059941916831777,
+    "score": 0
+  },
+  {
+    "id": "420540730000031",
+    "nome": "420540730000031",
+    "municipio": "Florianópolis",
+    "area_km2": 5.148725539275431,
+    "score": 0
+  },
+  {
+    "id": "420540730000032",
+    "nome": "420540730000032",
+    "municipio": "Florianópolis",
+    "area_km2": 10.651737559489353,
+    "score": 0
+  },
+  {
+    "id": "420540730000033",
+    "nome": "420540730000033",
+    "municipio": "Florianópolis",
+    "area_km2": 0.120101309905554,
+    "score": 0
+  },
+  {
+    "id": "420540730000034",
+    "nome": "Armação",
+    "municipio": "Florianópolis",
+    "area_km2": 0.237422866918417,
+    "score": 0
+  },
+  {
+    "id": "420540730000035",
+    "nome": "Armação",
+    "municipio": "Florianópolis",
+    "area_km2": 0.171720709979575,
+    "score": 0
+  },
+  {
+    "id": "420540735000006",
+    "nome": "Vargem Pequena",
+    "municipio": "Florianópolis",
+    "area_km2": 0.773456591537397,
+    "score": 0
+  },
+  {
+    "id": "420540735000007",
+    "nome": "420540735000007",
+    "municipio": "Florianópolis",
+    "area_km2": 0.367838522188056,
+    "score": 0
+  },
+  {
+    "id": "420540735000009",
+    "nome": "Ratones",
+    "municipio": "Florianópolis",
+    "area_km2": 0.882604756755982,
+    "score": 0
+  },
+  {
+    "id": "420540735000010",
+    "nome": "Ratones",
+    "municipio": "Florianópolis",
+    "area_km2": 0.50799979968872,
+    "score": 0
+  },
+  {
+    "id": "420540735000012",
+    "nome": "420540735000012",
+    "municipio": "Florianópolis",
+    "area_km2": 0.600461744888313,
+    "score": 0
+  },
+  {
+    "id": "420540735000013",
+    "nome": "420540735000013",
+    "municipio": "Florianópolis",
+    "area_km2": 1.353250758259017,
+    "score": 0
+  },
+  {
+    "id": "420540735000014",
+    "nome": "Vargem Pequena",
+    "municipio": "Florianópolis",
+    "area_km2": 0.436165985727664,
+    "score": 0
+  },
+  {
+    "id": "420540735000015",
+    "nome": "420540735000015",
+    "municipio": "Florianópolis",
+    "area_km2": 5.485619998734253,
+    "score": 0
+  },
+  {
+    "id": "420540735000017",
+    "nome": "420540735000017",
+    "municipio": "Florianópolis",
+    "area_km2": 12.002199764017414,
+    "score": 0
+  },
+  {
+    "id": "420540735000018",
+    "nome": "420540735000018",
+    "municipio": "Florianópolis",
+    "area_km2": 1.102972842555194,
+    "score": 0
+  },
+  {
+    "id": "420540735000019",
+    "nome": "420540735000019",
+    "municipio": "Florianópolis",
+    "area_km2": 8.380789748580995,
+    "score": 0
+  },
+  {
+    "id": "420540735000020",
+    "nome": "420540735000020",
+    "municipio": "Florianópolis",
+    "area_km2": 0.47179471840573,
+    "score": 0
+  },
+  {
+    "id": "420540740000001",
+    "nome": "Carianos",
+    "municipio": "Florianópolis",
+    "area_km2": 0.225957206280535,
+    "score": 0
+  },
+  {
+    "id": "420540740000002",
+    "nome": "Carianos",
+    "municipio": "Florianópolis",
+    "area_km2": 0.195271189097737,
+    "score": 0
+  },
+  {
+    "id": "420540740000003",
+    "nome": "Carianos",
+    "municipio": "Florianópolis",
+    "area_km2": 0.234059887198882,
+    "score": 0
+  },
+  {
+    "id": "420540740000006",
+    "nome": "Ressacada",
+    "municipio": "Florianópolis",
+    "area_km2": 0.243033291964591,
+    "score": 0
+  },
+  {
+    "id": "420540740000007",
+    "nome": "Ressacada",
+    "municipio": "Florianópolis",
+    "area_km2": 0.256573896955887,
+    "score": 0
+  },
+  {
+    "id": "420540740000009",
+    "nome": "Base Aérea",
+    "municipio": "Florianópolis",
+    "area_km2": 6.753018242644607,
+    "score": 0
+  },
+  {
+    "id": "420540740000011",
+    "nome": "Tapera da Base",
+    "municipio": "Florianópolis",
+    "area_km2": 0.155407820180715,
+    "score": 0
+  },
+  {
+    "id": "420540740000012",
+    "nome": "Tapera da Base",
+    "municipio": "Florianópolis",
+    "area_km2": 1.029067223590731,
+    "score": 0
+  },
+  {
+    "id": "420540740000012",
+    "nome": "Tapera da Base",
+    "municipio": "Florianópolis",
+    "area_km2": 1.029067223590731,
+    "score": 0
+  },
+  {
+    "id": "420540740000012",
+    "nome": "Tapera da Base",
+    "municipio": "Florianópolis",
+    "area_km2": 1.029067223590731,
+    "score": 0
+  },
+  {
+    "id": "420540740000022",
+    "nome": "Alto Ribeirão Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.625347450248173,
+    "score": 0
+  },
+  {
+    "id": "420540740000025",
+    "nome": "Ribeirão da Ilha",
+    "municipio": "Florianópolis",
+    "area_km2": 0.499488362095412,
+    "score": 0
+  },
+  {
+    "id": "420540740000026",
+    "nome": "Ribeirão da Ilha",
+    "municipio": "Florianópolis",
+    "area_km2": 0.451753406363801,
+    "score": 0
+  },
+  {
+    "id": "420540740000027",
+    "nome": "Costeira do Ribeirão",
+    "municipio": "Florianópolis",
+    "area_km2": 0.559604165417082,
+    "score": 0
+  },
+  {
+    "id": "420540740000031",
+    "nome": "Ressacada",
+    "municipio": "Florianópolis",
+    "area_km2": 0.223265077229877,
+    "score": 0
+  },
+  {
+    "id": "420540740000032",
+    "nome": "420540740000032",
+    "municipio": "Florianópolis",
+    "area_km2": 18.16949360807514,
+    "score": 0
+  },
+  {
+    "id": "420540740000033",
+    "nome": "420540740000033",
+    "municipio": "Florianópolis",
+    "area_km2": 6.071332624950771,
+    "score": 0
+  },
+  {
+    "id": "420540740000034",
+    "nome": "420540740000034",
+    "municipio": "Florianópolis",
+    "area_km2": 58.07100126006314,
+    "score": 0
+  },
+  {
+    "id": "420540740000035",
+    "nome": "420540740000035",
+    "municipio": "Florianópolis",
+    "area_km2": 4.234859363565747,
+    "score": 0
+  },
+  {
+    "id": "420540740000035",
+    "nome": "420540740000035",
+    "municipio": "Florianópolis",
+    "area_km2": 4.234859363565747,
+    "score": 0
+  },
+  {
+    "id": "420540740000035",
+    "nome": "420540740000035",
+    "municipio": "Florianópolis",
+    "area_km2": 4.234859363565747,
+    "score": 0
+  },
+  {
+    "id": "420540740000035",
+    "nome": "420540740000035",
+    "municipio": "Florianópolis",
+    "area_km2": 4.234859363565747,
+    "score": 0
+  },
+  {
+    "id": "420540740000035",
+    "nome": "420540740000035",
+    "municipio": "Florianópolis",
+    "area_km2": 4.234859363565747,
+    "score": 0
+  },
+  {
+    "id": "420540740000035",
+    "nome": "420540740000035",
+    "municipio": "Florianópolis",
+    "area_km2": 4.234859363565747,
+    "score": 0
+  },
+  {
+    "id": "420540740000035",
+    "nome": "420540740000035",
+    "municipio": "Florianópolis",
+    "area_km2": 4.234859363565747,
+    "score": 0
+  },
+  {
+    "id": "420540740000035",
+    "nome": "420540740000035",
+    "municipio": "Florianópolis",
+    "area_km2": 4.234859363565747,
+    "score": 0
+  },
+  {
+    "id": "420540740000035",
+    "nome": "420540740000035",
+    "municipio": "Florianópolis",
+    "area_km2": 4.234859363565747,
+    "score": 0
+  },
+  {
+    "id": "420540740000035",
+    "nome": "420540740000035",
+    "municipio": "Florianópolis",
+    "area_km2": 4.234859363565747,
+    "score": 0
+  },
+  {
+    "id": "420540740000036",
+    "nome": "420540740000036",
+    "municipio": "Florianópolis",
+    "area_km2": 0.284093435694619,
+    "score": 0
+  },
+  {
+    "id": "420540740000039",
+    "nome": "Tapera",
+    "municipio": "Florianópolis",
+    "area_km2": 1.616599345300519,
+    "score": 0
+  },
+  {
+    "id": "420540740000041",
+    "nome": "Tapera da Base",
+    "municipio": "Florianópolis",
+    "area_km2": 0.081354300107584,
+    "score": 0
+  },
+  {
+    "id": "420540740000042",
+    "nome": "Tapera da Base",
+    "municipio": "Florianópolis",
+    "area_km2": 0.104921253699831,
+    "score": 0
+  },
+  {
+    "id": "420540740000043",
+    "nome": "Alto Ribeirão Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.347310086608691,
+    "score": 0
+  },
+  {
+    "id": "420540740000044",
+    "nome": "Alto Ribeirão Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.225602609167543,
+    "score": 0
+  },
+  {
+    "id": "420540740000045",
+    "nome": "Alto Ribeirão Leste",
+    "municipio": "Florianópolis",
+    "area_km2": 0.501119682963867,
+    "score": 0
+  },
+  {
+    "id": "420540740000046",
+    "nome": "Alto Ribeirão",
+    "municipio": "Florianópolis",
+    "area_km2": 0.617368806295873,
+    "score": 0
+  },
+  {
+    "id": "420540740000047",
+    "nome": "Tapera da Base",
+    "municipio": "Florianópolis",
+    "area_km2": 0.054763948426308,
+    "score": 0
+  },
+  {
+    "id": "420540740000049",
+    "nome": "Tapera da Base",
+    "municipio": "Florianópolis",
+    "area_km2": 0.107446005026525,
+    "score": 0
+  },
+  {
+    "id": "420540740000050",
+    "nome": "Tapera da Base",
+    "municipio": "Florianópolis",
+    "area_km2": 0.068704863181188,
+    "score": 0
+  },
+  {
+    "id": "420540740000051",
+    "nome": "Tapera da Base",
+    "municipio": "Florianópolis",
+    "area_km2": 0.070857454532348,
+    "score": 0
+  },
+  {
+    "id": "420540740000053",
+    "nome": "Tapera da Base",
+    "municipio": "Florianópolis",
+    "area_km2": 0.084424066980264,
+    "score": 0
+  },
+  {
+    "id": "420540740000054",
+    "nome": "Ressacada",
+    "municipio": "Florianópolis",
+    "area_km2": 0.555091508627129,
+    "score": 0
+  },
+  {
+    "id": "420540740000055",
+    "nome": "Ressacada",
+    "municipio": "Florianópolis",
+    "area_km2": 0.414813096566262,
+    "score": 0
+  },
+  {
+    "id": "420540740000056",
+    "nome": "Carianos",
+    "municipio": "Florianópolis",
+    "area_km2": 0.145388867461439,
+    "score": 0
+  },
+  {
+    "id": "420540740000057",
+    "nome": "Carianos",
+    "municipio": "Florianópolis",
+    "area_km2": 0.074862316007949,
+    "score": 0
+  },
+  {
+    "id": "420540740000058",
+    "nome": "Carianos",
+    "municipio": "Florianópolis",
+    "area_km2": 0.173942491216998,
+    "score": 0
+  },
+  {
+    "id": "420540740000059",
+    "nome": "Alto Ribeirão",
+    "municipio": "Florianópolis",
+    "area_km2": 1.453613966408852,
+    "score": 0
+  },
+  {
+    "id": "420540740000060",
+    "nome": "Alto Ribeirão",
+    "municipio": "Florianópolis",
+    "area_km2": 0.440819809132771,
+    "score": 0
+  },
+  {
+    "id": "420540740000061",
+    "nome": "Tapera da Base",
+    "municipio": "Florianópolis",
+    "area_km2": 0.062946620459707,
+    "score": 0
+  },
+  {
+    "id": "420540740000062",
+    "nome": "Caiacanga",
+    "municipio": "Florianópolis",
+    "area_km2": 0.391575235270154,
+    "score": 0
+  },
+  {
+    "id": "420540740000063",
+    "nome": "Caiacanga",
+    "municipio": "Florianópolis",
+    "area_km2": 0.453777554085831,
+    "score": 0
+  },
+  {
+    "id": "420540740000064",
+    "nome": "Carianos",
+    "municipio": "Florianópolis",
+    "area_km2": 0.135387162114071,
+    "score": 0
+  },
+  {
+    "id": "420540740000065",
+    "nome": "Alto Ribeirão",
+    "municipio": "Florianópolis",
+    "area_km2": 0.148592842328411,
+    "score": 0
+  },
+  {
+    "id": "420540740000066",
+    "nome": "420540740000066",
+    "municipio": "Florianópolis",
+    "area_km2": 4.300062509796238,
+    "score": 0
+  },
+  {
+    "id": "420540740000068",
+    "nome": "Tapera da Base",
+    "municipio": "Florianópolis",
+    "area_km2": 0.06663308383568,
+    "score": 0
+  },
+  {
+    "id": "420540740000069",
+    "nome": "Tapera da Base",
+    "municipio": "Florianópolis",
+    "area_km2": 0.052691335976426,
+    "score": 0
+  },
+  {
+    "id": "420540740000070",
+    "nome": "Morro do Peralta",
+    "municipio": "Florianópolis",
+    "area_km2": 0.242313856379632,
+    "score": 0
+  },
+  {
+    "id": "420540740000071",
+    "nome": "Morro do Peralta",
+    "municipio": "Florianópolis",
+    "area_km2": 0.190321981807858,
+    "score": 0
+  },
+  {
+    "id": "420540740000072",
+    "nome": "Tapera da Base",
+    "municipio": "Florianópolis",
+    "area_km2": 0.045258680094266,
+    "score": 0
+  },
+  {
+    "id": "420540740000073",
+    "nome": "Tapera da Base",
+    "municipio": "Florianópolis",
+    "area_km2": 0.033083280417754,
+    "score": 0
+  },
+  {
+    "id": "420540740000074",
+    "nome": "Tapera da Base",
+    "municipio": "Florianópolis",
+    "area_km2": 0.082097274674267,
+    "score": 0
+  },
+  {
+    "id": "420540740000075",
+    "nome": "Tapera da Base",
+    "municipio": "Florianópolis",
+    "area_km2": 0.020379436215521,
+    "score": 0
+  },
+  {
+    "id": "420540740000076",
+    "nome": "Caieira",
+    "municipio": "Florianópolis",
+    "area_km2": 0.427122326507623,
+    "score": 0
+  },
+  {
+    "id": "420540745000003",
+    "nome": "Recanto dos Açores",
+    "municipio": "Florianópolis",
+    "area_km2": 1.182739765781604,
+    "score": 0
+  },
+  {
+    "id": "420540745000004",
+    "nome": "Sambaqui",
+    "municipio": "Florianópolis",
+    "area_km2": 0.394953893655835,
+    "score": 0
+  },
+  {
+    "id": "420540745000005",
+    "nome": "Sambaqui",
+    "municipio": "Florianópolis",
+    "area_km2": 0.492761553565572,
+    "score": 0
+  },
+  {
+    "id": "420540745000006",
+    "nome": "Barra do Sambaqui",
+    "municipio": "Florianópolis",
+    "area_km2": 0.33825389433622,
+    "score": 0
+  },
+  {
+    "id": "420540745000007",
+    "nome": "Cacupé",
+    "municipio": "Florianópolis",
+    "area_km2": 0.829746252685526,
+    "score": 0
+  },
+  {
+    "id": "420540745000009",
+    "nome": "420540745000009",
+    "municipio": "Florianópolis",
+    "area_km2": 2.521840450011351,
+    "score": 0
+  },
+  {
+    "id": "420540745000010",
+    "nome": "420540745000010",
+    "municipio": "Florianópolis",
+    "area_km2": 2.518675109236312,
+    "score": 0
+  },
+  {
+    "id": "420540745000011",
+    "nome": "420540745000011",
+    "municipio": "Florianópolis",
+    "area_km2": 50.07577036762821,
+    "score": 0
+  },
+  {
+    "id": "420540745000012",
+    "nome": "Cacupé",
+    "municipio": "Florianópolis",
+    "area_km2": 0.495198076632873,
+    "score": 0
+  },
+  {
+    "id": "420540745000013",
+    "nome": "420540745000013",
+    "municipio": "Florianópolis",
+    "area_km2": 0.678876208948564,
+    "score": 0
+  },
+  {
+    "id": "420540745000014",
+    "nome": "Barra do Sambaqui",
+    "municipio": "Florianópolis",
+    "area_km2": 0.154762284010057,
+    "score": 0
+  },
+  {
+    "id": "420540745000015",
+    "nome": "Barra do Sambaqui",
+    "municipio": "Florianópolis",
+    "area_km2": 0.011637634856069,
+    "score": 0
+  },
+  {
+    "id": "420540745000016",
+    "nome": "Barra do Sambaqui",
+    "municipio": "Florianópolis",
+    "area_km2": 0.262599179224251,
+    "score": 0
+  },
+  {
+    "id": "420540745000017",
+    "nome": "Sambaqui",
+    "municipio": "Florianópolis",
+    "area_km2": 0.37319198195474,
+    "score": 0
+  },
+  {
+    "id": "420540745000018",
+    "nome": "Santo Antônio",
+    "municipio": "Florianópolis",
+    "area_km2": 0.556321580123594,
+    "score": 0
+  },
+  {
+    "id": "420540745000019",
+    "nome": "Santo Antônio",
+    "municipio": "Florianópolis",
+    "area_km2": 0.614838015083108,
+    "score": 0
+  },
+  {
+    "id": "420540745000020",
+    "nome": "Santo Antônio",
+    "municipio": "Florianópolis",
+    "area_km2": 0.265384682649604,
+    "score": 0
+  },
+  {
+    "id": "420540745000021",
+    "nome": "Santo Antônio",
+    "municipio": "Florianópolis",
+    "area_km2": 0.346484739025082,
+    "score": 0
+  },
+  {
+    "id": "420540745000022",
+    "nome": "420540745000022",
+    "municipio": "Florianópolis",
+    "area_km2": 2.515229918900825,
+    "score": 0
+  },
+  {
+    "id": "420540745000023",
+    "nome": "420540745000023",
+    "municipio": "Florianópolis",
+    "area_km2": 6.961796866039186,
+    "score": 0
+  },
+  {
+    "id": "420540750000008",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.661554017235851,
+    "score": 0
+  },
+  {
+    "id": "420540750000018",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 1.077257368383823,
+    "score": 0
+  },
+  {
+    "id": "420540750000019",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.296060746486952,
+    "score": 0
+  },
+  {
+    "id": "420540750000020",
+    "nome": "420540750000020",
+    "municipio": "Florianópolis",
+    "area_km2": 0.074736005296744,
+    "score": 0
+  },
+  {
+    "id": "420540750000022",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 1.135086256865928,
+    "score": 0
+  },
+  {
+    "id": "420540750000023",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.128513349648529,
+    "score": 0
+  },
+  {
+    "id": "420540750000024",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.27401864941854,
+    "score": 0
+  },
+  {
+    "id": "420540750000026",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.368729337107825,
+    "score": 0
+  },
+  {
+    "id": "420540750000027",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.141191790374386,
+    "score": 0
+  },
+  {
+    "id": "420540750000028",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.103736744199564,
+    "score": 0
+  },
+  {
+    "id": "420540750000033",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.216250806747056,
+    "score": 0
+  },
+  {
+    "id": "420540750000034",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.127862163093444,
+    "score": 0
+  },
+  {
+    "id": "420540750000035",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.163056067020126,
+    "score": 0
+  },
+  {
+    "id": "420540750000036",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.252069476680205,
+    "score": 0
+  },
+  {
+    "id": "420540750000037",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.420431295047473,
+    "score": 0
+  },
+  {
+    "id": "420540750000039",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.361984375810776,
+    "score": 0
+  },
+  {
+    "id": "420540750000040",
+    "nome": "420540750000040",
+    "municipio": "Florianópolis",
+    "area_km2": 3.308045452241389,
+    "score": 0
+  },
+  {
+    "id": "420540750000041",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.162768519786798,
+    "score": 0
+  },
+  {
+    "id": "420540750000042",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.205146496072736,
+    "score": 0
+  },
+  {
+    "id": "420540750000045",
+    "nome": "420540750000045",
+    "municipio": "Florianópolis",
+    "area_km2": 3.119193395690134,
+    "score": 0
+  },
+  {
+    "id": "420540750000046",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.131810336453147,
+    "score": 0
+  },
+  {
+    "id": "420540750000047",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.110173206594285,
+    "score": 0
+  },
+  {
+    "id": "420540750000048",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.081374710440451,
+    "score": 0
+  },
+  {
+    "id": "420540750000050",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.174481417218361,
+    "score": 0
+  },
+  {
+    "id": "420540750000051",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.250025519935613,
+    "score": 0
+  },
+  {
+    "id": "420540750000052",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.191886523737956,
+    "score": 0
+  },
+  {
+    "id": "420540750000053",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.219939864302312,
+    "score": 0
+  },
+  {
+    "id": "420540750000054",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.229355375465764,
+    "score": 0
+  },
+  {
+    "id": "420540750000055",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.46417613256444,
+    "score": 0
+  },
+  {
+    "id": "420540750000056",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.125942203769239,
+    "score": 0
+  },
+  {
+    "id": "420540750000057",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.116728563389111,
+    "score": 0
+  },
+  {
+    "id": "420540750000058",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.14847026384567,
+    "score": 0
+  },
+  {
+    "id": "420540750000059",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.153898755329374,
+    "score": 0
+  },
+  {
+    "id": "420540750000060",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.20423988597356,
+    "score": 0
+  },
+  {
+    "id": "420540750000061",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.145757463225139,
+    "score": 0
+  },
+  {
+    "id": "420540750000062",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.551170098960112,
+    "score": 0
+  },
+  {
+    "id": "420540750000063",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.415892502237305,
+    "score": 0
+  },
+  {
+    "id": "420540750000064",
+    "nome": "420540750000064",
+    "municipio": "Florianópolis",
+    "area_km2": 7.709444348384994,
+    "score": 0
+  },
+  {
+    "id": "420540750000065",
+    "nome": "420540750000065",
+    "municipio": "Florianópolis",
+    "area_km2": 2.538216052548437,
+    "score": 0
+  },
+  {
+    "id": "420540750000066",
+    "nome": "420540750000066",
+    "municipio": "Florianópolis",
+    "area_km2": 0.113540721612148,
+    "score": 0
+  },
+  {
+    "id": "420540750000067",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.170947252892129,
+    "score": 0
+  },
+  {
+    "id": "420540750000068",
+    "nome": "Rio Vermelho",
+    "municipio": "Florianópolis",
+    "area_km2": 0.091466528397072,
+    "score": 0
+  },
+  {
+    "id": "420540750000069",
+    "nome": "420540750000069",
+    "municipio": "Florianópolis",
+    "area_km2": 3.670267128134424,
+    "score": 0
+  },
+  {
+    "id": "420540750000070",
+    "nome": "420540750000070",
+    "municipio": "Florianópolis",
+    "area_km2": 0.409132447785638,
+    "score": 0
+  },
+  {
+    "id": "420540750000071",
+    "nome": "420540750000071",
+    "municipio": "Florianópolis",
+    "area_km2": 0.256243994092714,
+    "score": 0
+  },
+  {
+    "id": "420600905000023",
+    "nome": "420600905000023",
+    "municipio": "Governador Celso Ramos",
+    "area_km2": 34.11082878506575,
+    "score": 0
+  },
+  {
+    "id": "421190005000200",
+    "nome": "421190005000200",
+    "municipio": "Palhoça",
+    "area_km2": 18.84652047664004,
+    "score": 0
+  },
+  {
+    "id": "421190010000014",
+    "nome": "421190010000014",
+    "municipio": "Palhoça",
+    "area_km2": 47.66748050394434,
+    "score": 0
+  },
+  {
+    "id": "421190010000041",
+    "nome": "Ponta do Papagaio",
+    "municipio": "Palhoça",
+    "area_km2": 0.846240838797372,
+    "score": 0
+  },
+  {
+    "id": "421660205000028",
+    "nome": "Campinas",
+    "municipio": "São José",
+    "area_km2": 0.184309333827343,
+    "score": 0
+  },
+  {
+    "id": "421660205000048",
+    "nome": "Campinas",
+    "municipio": "São José",
+    "area_km2": 0.135715514437846,
+    "score": 0
+  },
+  {
+    "id": "421660205000102",
+    "nome": "Campinas",
+    "municipio": "São José",
+    "area_km2": 0.0492055279955,
+    "score": 0
+  },
+  {
+    "id": "421660210000010",
+    "nome": "Barreiros",
+    "municipio": "São José",
+    "area_km2": 0.095659175694046,
+    "score": 0
+  },
+  {
+    "id": "421660210000011",
+    "nome": "Barreiros",
+    "municipio": "São José",
+    "area_km2": 0.070570282463232,
+    "score": 0
+  },
+  {
+    "id": "421660210000127",
+    "nome": "421660210000127",
+    "municipio": "São José",
+    "area_km2": 20.43971172801802,
+    "score": 0
+  },
+  {
+    "id": "421660210000158",
+    "nome": "Barreiros",
+    "municipio": "São José",
+    "area_km2": 0.133161184821134,
+    "score": 0
+  },
+  {
+    "id": "421660210000162",
+    "nome": "Barreiros",
+    "municipio": "São José",
+    "area_km2": 0.057087532640965,
+    "score": 0
+  },
+  {
+    "id": "421660210000175",
+    "nome": "Barreiros",
+    "municipio": "São José",
+    "area_km2": 0.074763748434182,
+    "score": 0
+  }
+]
