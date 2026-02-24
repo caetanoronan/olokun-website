@@ -89,7 +89,7 @@
     }
 
     // load public
-    fetch('../data/escolas_publicas.geojson').then(function(r){return r.json()}).then(function(data){
+    fetch('data/escolas_publicas.geojson').then(function(r){return r.json()}).then(function(data){
       publicLayer = L.geoJSON(data, {
         pointToLayer: function(f,latlng){
           var mk = makeMarker(f,latlng,'#22c55e');
@@ -104,7 +104,7 @@
     }).catch(function(e){console.error('public load',e)});
 
     // load private
-    fetch('../data/escolas_privadas.geojson').then(function(r){return r.json()}).then(function(data){
+    fetch('data/escolas_privadas.geojson').then(function(r){return r.json()}).then(function(data){
       privateLayer = L.geoJSON(data, {
         pointToLayer: function(f,latlng){
           var mk = makeMarker(f,latlng,'#f97316');
