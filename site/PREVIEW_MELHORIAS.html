@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pré-visualização - Abas Olokun</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f0f4f8;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+        
+        .preview-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .preview-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .preview-header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .preview-header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            color: #1a202c;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        
+        .section-title i {
+            color: #667eea;
+            margin-right: 0.5rem;
+        }
+        
+        .tabs-example {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0;
+        }
+        
+        .tab-example {
+            padding: 1rem 1.5rem;
+            border: none;
+            background: transparent;
+            color: #4a5568;
+            cursor: pointer;
+            font-weight: 600;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -2px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-example:hover {
+            color: #667eea;
+        }
+        
+        .tab-example.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+        }
+        
+        .tab-example.popular {
+            color: #f59e0b;
+        }
+        
+        .tab-example.popular .badge {
+            background: #f59e0b;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            margin-left: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .content-example {
+            background: #f9fafb;
+            padding: 2rem;
+            border-radius: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 1rem 0;
+        }
+        
+        .item-box {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            border-left: 4px solid #667eea;
+        }
+        
+        .item-box h4 {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: #1a202c;
+            margin-bottom: 1rem;
+        }
+        
+        .item-box h4 i {
+            color: #667eea;
+        }
+        
+        .item-box ul {
+            list-style: none;
+        }
+        
+        .item-box li {
+            padding: 0.5rem 0;
+            color: #4a5568;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .item-box li::before {
+            content: '✓';
+            color: #10b981;
+            font-weight: bold;
+        }
+        
+        .feature-list {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .feature-card {
+            padding: 1.5rem;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(240, 147, 251, 0.05));
+            border-radius: 0.75rem;
+            border: 1px solid #e5e7eb;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-card i {
+            font-size: 2rem;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 0.95rem;
+            color: #1a202c;
+            font-weight: 600;
+        }
+        
+        .badge-collection {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .badge.green {
+            background: #dcfce7;
+            color: #166534;
+        }
+        
+        .badge.orange {
+            background: #fed7aa;
+            color: #92400e;
+        }
+        
+        .badge.purple {
+            background: #e9d5ff;
+            color: #6b21a8;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 1rem 0.5rem 1rem 0;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(102, 126, 234, 0.4);
+        }
+        
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .comparison-box {
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+        }
+        
+        .before {
+            background: #fee2e2;
+            border: 2px solid #fca5a5;
+        }
+        
+        .after {
+            background: #dcfce7;
+            border: 2px solid #86efac;
+        }
+        
+        .comparison-box h3 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .before h3 {
+            color: #991b1b;
+        }
+        
+        .after h3 {
+            color: #166534;
+        }
+        
+        .comparison-box ul {
+            list-style: none;
+        }
+        
+        .comparison-box li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .before li::before {
+            content: '✕';
+            color: #dc2626;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .after li::before {
+            content: '✓';
+            color: #16a34a;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison {
+                grid-template-columns: 1fr;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tab-example {
+                flex: 1;
+                justify-content: center;
+                padding: 0.75rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        <div class="preview-header">
+            <h1>✨ Pré-visualização das Melhorias</h1>
+            <p>Sistema de Abas Modernizado para Olokun</p>
+        </div>
+        
+        <!-- Comparação Antes/Depois -->
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-exchange-alt"></i> Comparação Antes vs Depois</h2>
+            <div class="comparison">
+                <div class="comparison-box before">
+                    <h3><i class="fas fa-times-circle"></i> Antes</h3>
+                    <ul>
+                        <li>3 cards lado a lado</li>
+                        <li>Informações comprimidas</li>
+                        <li>Sem organização temática</li>
+                        <li>Difícil de escanear</li>
+                        <li>Pouca interatividade</li>
+                        <li>Design básico</li>
+                    </ul>
+                </div>
+                <div class="comparison-box after">
+                    <h3><i class="fas fa-check-circle"></i> Depois</h3>
+                    <ul>
+                        <li>Sistema de abas interativo</li>
+                        <li>Informações detalhadas por aba</li>
+                        <li>4 pilares bem definidos</li>
+                        <li>Fácil de navegar</li>
+                        <li>Animations suaves</li>
+                        <li>Design moderno e profissional</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Seção de Serviços com Abas -->
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-briefcase"></i> Exemplo: Serviços com Abas</h2>
+            
+            <div class="tabs-example">
+                <button class="tab-example active">
+                    <i class="fas fa-file-alt"></i>
+                    <span>PGRS Inteligente</span>
+                </button>
+                <button class="tab-example popular">
+                    <i class="fas fa-users"></i>
+                    <span>Capacitação</span>
+                    <span class="badge">Popular</span>
+                </button>
+                <button class="tab-example">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Consultoria</span>
+                </button>
+            </div>
+            
+            <div class="content-example">
+                <h3>PGRS Inteligente 🏢</h3>
+                <p>Elaboração e implementação de Planos de Gerenciamento de Resíduos Sólidos com tecnologia avançada.</p>
+                
+                <div class="grid-2">
+                    <div class="item-box">
+                        <h4><i class="fas fa-check-circle"></i> O que Incluímos</h4>
+                        <ul>
+                            <li>Diagnóstico completo</li>
+                            <li>Documento técnico</li>
+                            <li>Conformidade legal</li>
+                            <li>Suporte contínuo</li>
+                        </ul>
+                    </div>
+                    <div class="item-box">
+                        <h4><i class="fas fa-star"></i> Benefícios</h4>
+                        <ul>
+                            <li>Redução 25-45% custos</li>
+                            <li>Conformidade garantida</li>
+                            <li>Eliminação passivos</li>
+                            <li>Imagem corporativa</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <button class="cta-button">
+                    <i class="fas fa-arrow-right"></i>
+                    Saiba Mais Sobre PGRS
+                </button>
+            </div>
+        </div>
+        
+        <!-- Seção de Benefícios com Abas -->
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-medal"></i> Exemplo: Benefícios com Abas</h2>
+            
+            <div class="tabs-example">
+                <button class="tab-example active">
+                    <i class="fas fa-coins"></i>
+                    <span>Financeiros</span>
+                </button>
+                <button class="tab-example">
+                    <i class="fas fa-cogs"></i>
+                    <span>Operacionais</span>
+                </button>
+                <button class="tab-example">
+                    <i class="fas fa-leaf"></i>
+                    <span>ESG & Marca</span>
+                </button>
+                <button class="tab-example">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Compliance</span>
+                </button>
+            </div>
+            
+            <div class="feature-list">
+                <h3>💰 Benefícios Financeiros</h3>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Redução de Custos</h3>
+                        <p>25-45% de redução em custos de destinação</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <h3>Novo Fluxo</h3>
+                        <p>Receitas através de recicláveis</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-piggy-bank"></i>
+                        <h3>Fluxo de Caixa</h3>
+                        <p>Otimização de despesas operacionais</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Recursos Técnicos -->
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Recursos Técnicos Implementados</h2>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-mouse"></i>
+                    <h3>Interatividade</h3>
+                    <p>Navegação por clique</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-keyboard"></i>
+                    <h3>Acessibilidade</h3>
+                    <p>Navegação por teclado (← →)</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Responsivo</h3>
+                    <p>Funciona em todos os dispositivos</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-magic"></i>
+                    <h3>Animações</h3>
+                    <p>Transições suaves e elegantes</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-palette"></i>
+                    <h3>Design Moderno</h3>
+                    <p>Gradientes e cores vibrantes</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-wind"></i>
+                    <h3>Performance</h3>
+                    <p>CSS e JS otimizados</p>
+                </div>
+            </div>
+            
+            <div class="feature-list" style="margin-top: 2rem;">
+                <h3>📦 Melhorias no CSS:</h3>
+                <div class="badge-collection">
+                    <span class="badge">+350 linhas CSS</span>
+                    <span class="badge green">Animações KeyFrame</span>
+                    <span class="badge orange">Media Queries</span>
+                    <span class="badge purple">Gradientes</span>
+                    <span class="badge">Hover Effects</span>
+                    <span class="badge green">Shadow Effects</span>
+                </div>
+                
+                <h3 style="margin-top: 1.5rem;">🔧 Melhorias no JavaScript:</h3>
+                <div class="badge-collection">
+                    <span class="badge">initTabs()</span>
+                    <span class="badge green">initBenefitsTabs()</span>
+                    <span class="badge orange">Event Listeners</span>
+                    <span class="badge purple">Keyboard Navigation</span>
+                    <span class="badge">ARIA Attributes</span>
+                </div>
+                
+                <h3 style="margin-top: 1.5rem;">📝 Melhorias no HTML:</h3>
+                <div class="badge-collection">
+                    <span class="badge">Semantic HTML</span>
+                    <span class="badge green">Role Attributes</span>
+                    <span class="badge orange">Aria-selected</span>
+                    <span class="badge purple">Tab Navigation</span>
+                    <span class="badge">Content IDs</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Como Usar -->
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-rocket"></i> Como Usar</h2>
+            
+            <div class="feature-list">
+                <h3>🖱️ Com Mouse</h3>
+                <p>Simplesmente clique nos botões das abas para navegar entre os conteúdos.</p>
+                
+                <h3 style="margin-top: 1.5rem;">⌨️ Com Teclado</h3>
+                <p>Use as setas esquerda ← e direita → do seu teclado para navegar entre as abas.</p>
+                
+                <h3 style="margin-top: 1.5rem;">📱 Em Mobile</h3>
+                <p>Toque nos botões das abas para trocar de conteúdo. O design se adapta automaticamente.</p>
+                
+                <h3 style="margin-top: 1.5rem;">♿ Acessibilidade</h3>
+                <p>O sistema foi construído com foco em acessibilidade, suportando leitores de tela e navegação por teclado.</p>
+            </div>
+        </div>
+        
+        <!-- Estatísticas de Melhoria -->
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-chart-bar"></i> Estatísticas de Melhoria</h2>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-layer-group"></i>
+                    <h3>7 Novas Abas</h3>
+                    <p>3 para Serviços + 4 para Benefícios</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-cube"></i>
+                    <h3>12 Novos Cards</h3>
+                    <p>Distribuídos nas categorias</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-filmstrip"></i>
+                    <h3>8 Animações</h3>
+                    <p>Efeitos suaves e elegantes</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>100% Responsivo</h3>
+                    <p>Todos os breakpoints cobertos</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Próximos Passos -->
+        <div class="section" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(240, 147, 251, 0.1)); border: 2px solid rgba(102, 126, 234, 0.2);">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> 💡 Sugestões para Futuro</h2>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-scroll"></i>
+                    <h3>Scroll Animations</h3>
+                    <p>Adicionar AOS (Animate On Scroll)</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-spinner"></i>
+                    <h3>Contadores</h3>
+                    <p>Estatísticas com animação</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Testimoniais</h3>
+                    <p>Com carrossel de abas</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-image"></i>
+                    <h3>Galeria</h3>
+                    <p>Com filtros e abas</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-moon"></i>
+                    <h3>Dark Mode</h3>
+                    <p>Tema escuro opcional</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-pie"></i>
+                    <h3>Analytics</h3>
+                    <p>Rastrear cliques nas abas</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="section" style="text-align: center; background: linear-gradient(135deg, #667eea, #764ba2); color: white;">
+            <h2 style="border: none; color: white;">✅ Tudo Pronto!</h2>
+            <p style="color: rgba(255, 255, 255, 0.9);">Abra o arquivo <strong>index.html</strong> no seu navegador e aproveite!</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: rgba(255, 255, 255, 0.8);">Versão 2.0 - Com Sistema de Abas Moderno</p>
+        </div>
+    </div>
+</body>
+</html>

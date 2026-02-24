@@ -1,0 +1,11 @@
+criterio,descricao,peso
+pop_total,População residente,0.15
+renda_media,Renda média domiciliar,0.15
+densidade_pop,Densidade populacional,0.10
+sem_saneamento,% domicílios sem saneamento,0.10
+baixa_coleta,% domicílios sem coleta regular,0.10
+dist_app,Distância a APP/manguezal,0.10
+risco_ambiental,Índice de risco ambiental,0.10
+dist_escola,Distância até escola,0.05
+dist_ong,Distância até ONG/associação,0.05
+tempo_acesso,Tempo de deslocamento,0.10
