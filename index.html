@@ -1,12 +1,12 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Dashboard — Escolas - Grande Florianópolis</title>
+  <title>Dashboard â€” Escolas - Grande FlorianÃ³polis</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <style>
-    /* Layout simples inspirado no dashboard de referência */
+    /* Layout simples inspirado no dashboard de referÃªncia */
     html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, Arial, sans-serif;background:#f8fafc}
     .container{display:flex;height:100vh;gap:12px;padding:12px}
     .sidebar{width:360px;background:#ffffff;border-radius:8px;padding:12px;box-shadow:0 6px 18px rgba(2,6,23,0.08);overflow:auto}
@@ -27,14 +27,14 @@
 <body>
   <div class="container">
     <div class="sidebar">
-      <h2>Dashboard — Escolas (Grande Florianópolis)</h2>
+      <h2>Dashboard â€” Escolas (Grande FlorianÃ³polis)</h2>
       <div class="muted">Autor: Ronan Armando Caetano</div>
       <div style="height:10px"></div>
       <div class="controls">
         <button id="zoomHome" class="btn">Centro</button>
         <button id="fitAll" class="btn">Ajustar ao conjunto</button>
         <label class="checkbox"><input type="checkbox" id="toggleHeat"> <span class="small">Heatmap</span></label>
-        <label class="checkbox"><input type="checkbox" id="showPublic" checked> <span class="small">Escolas Públicas</span></label>
+        <label class="checkbox"><input type="checkbox" id="showPublic" checked> <span class="small">Escolas PÃºblicas</span></label>
         <label class="checkbox"><input type="checkbox" id="showPrivate" checked> <span class="small">Escolas Privadas</span></label>
       </div>
 
@@ -42,14 +42,14 @@
         <div><strong>Fonte:</strong> INEP, IBGE, OpenStreetMap</div>
         <div style="height:8px"></div>
         <div><strong>Legenda:</strong></div>
-        <div style="display:flex;gap:8px;margin-top:6px;align-items:center"><div style="width:14px;height:14px;background:#22c55e;border-radius:50%"></div><div class="small">Públicas</div></div>
+        <div style="display:flex;gap:8px;margin-top:6px;align-items:center"><div style="width:14px;height:14px;background:#22c55e;border-radius:50%"></div><div class="small">PÃºblicas</div></div>
         <div style="display:flex;gap:8px;margin-top:6px;align-items:center"><div style="width:14px;height:14px;background:#f97316;border-radius:50%"></div><div class="small">Privadas</div></div>
       </div>
 
       <div style="height:12px"></div>
       <div><strong>Lista de Escolas</strong> (<span id="totalCount">0</span>)</div>
       <div style="height:8px"></div>
-      <input id="search" placeholder="Pesquisar por nome ou município" style="width:100%;padding:8px;border-radius:6px;border:1px solid #e6eefc;margin-bottom:8px">
+      <input id="search" placeholder="Pesquisar por nome ou municÃ­pio" style="width:100%;padding:8px;border-radius:6px;border:1px solid #e6eefc;margin-bottom:8px">
 
       <div style="max-height:56vh;overflow:auto">
         <table id="schoolsTable">
@@ -81,15 +81,15 @@
       var p = feature.properties || {};
       var popup = '<div style="font-family:Arial, sans-serif; font-size:13px; padding:6px">'
         + '<strong>' + (p.Escola || 'Escola') + '</strong><br>'
-        + '<span class="small">' + (p['Categoria Administrativa']||'') + ' — ' + (p['Dependência Administrativa']||'') + '</span><br>'
-        + '<span class="small">' + (p.Município||'') + '</span>'
+        + '<span class="small">' + (p['Categoria Administrativa']||'') + ' â€” ' + (p['DependÃªncia Administrativa']||'') + '</span><br>'
+        + '<span class="small">' + (p.MunicÃ­pio||'') + '</span>'
         + '</div>';
       m.bindPopup(popup);
       return m;
     }
 
     // load public
-    fetch('../data/escolas_publicas.geojson').then(function(r){return r.json()}).then(function(data){
+    fetch('data/escolas_publicas.geojson').then(function(r){return r.json()}).then(function(data){
       publicLayer = L.geoJSON(data, {
         pointToLayer: function(f,latlng){
           var mk = makeMarker(f,latlng,'#22c55e');
@@ -104,7 +104,7 @@
     }).catch(function(e){console.error('public load',e)});
 
     // load private
-    fetch('../data/escolas_privadas.geojson').then(function(r){return r.json()}).then(function(data){
+    fetch('data/escolas_privadas.geojson').then(function(r){return r.json()}).then(function(data){
       privateLayer = L.geoJSON(data, {
         pointToLayer: function(f,latlng){
           var mk = makeMarker(f,latlng,'#f97316');
@@ -130,9 +130,9 @@
       markersMap.forEach(function(item,i){
         var tr = document.createElement('tr');
         var tdName = document.createElement('td');
-        tdName.textContent = item.props.Escola || '—';
+        tdName.textContent = item.props.Escola || 'â€”';
         var tdType = document.createElement('td'); tdType.className='small';
-        tdType.textContent = (item.props['Dependência Administrativa']||item.props['Categoria Administrativa']||'');
+        tdType.textContent = (item.props['DependÃªncia Administrativa']||item.props['Categoria Administrativa']||'');
         tr.appendChild(tdName); tr.appendChild(tdType);
         tr.style.cursor='pointer';
         tr.addEventListener('click', function(){
@@ -151,7 +151,7 @@
       var rows = document.querySelectorAll('#schoolsTable tbody tr');
       rows.forEach(function(r,idx){
         var name = r.cells[0].textContent.toLowerCase();
-        var muni = markersMap[idx].props.Município ? markersMap[idx].props.Município.toLowerCase() : '';
+        var muni = markersMap[idx].props.MunicÃ­pio ? markersMap[idx].props.MunicÃ­pio.toLowerCase() : '';
         if(name.indexOf(q) !== -1 || muni.indexOf(q) !== -1){ r.style.display='table-row'; } else { r.style.display='none'; }
       });
     });
