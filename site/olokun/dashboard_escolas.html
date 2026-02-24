@@ -5,173 +5,564 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Dashboard — Escolas - Grande Florianópolis</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.bootstrap5.min.css" rel="stylesheet">
   <style>
-    /* Layout simples inspirado no dashboard de referência */
-    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, Arial, sans-serif;background:#f8fafc}
-    .container{display:flex;height:100vh;gap:12px;padding:12px}
-    .sidebar{width:360px;background:#ffffff;border-radius:8px;padding:12px;box-shadow:0 6px 18px rgba(2,6,23,0.08);overflow:auto}
-    .map-wrap{flex:1;position:relative}
-    #map{position:absolute;inset:0;border-radius:8px}
-    h2{margin:6px 0 12px 0;font-size:16px}
-    .controls{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
-    .btn{background:#1f2937;color:#fff;padding:6px 10px;border-radius:6px;text-decoration:none;cursor:pointer;font-size:13px}
-    .muted{color:#6b7280;font-size:13px}
-    table{width:100%;border-collapse:collapse;font-size:13px}
-    th,td{padding:6px 8px;border-bottom:1px solid #eef2f7;text-align:left}
-    tr:hover{background:#f1f5f9}
-    .small{font-size:12px;color:#475569}
-    .legend{margin-top:8px;font-size:13px}
-    .checkbox{display:inline-flex;align-items:center;gap:6px}
+    :root { --primary:#1f2937; --success:#16a34a; --warning:#ea580c; --info:#2563eb; }
+    html, body { height:100%; margin:0; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#f0f4f8; }
+    .navbar { background:linear-gradient(135deg, var(--primary) 0%, #374151 100%); padding:1rem; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+    .navbar-brand { font-weight:600; font-size:1.3rem; }
+    .main-container { display:flex; flex-direction:column; height:calc(100vh - 60px); }
+    .nav-tabs { border-bottom:2px solid #e5e7eb; padding:0 1rem; background:#fff; }
+    .nav-link { color:#6b7280; border:none; padding:1rem 1.5rem; font-weight:500; position:relative; }
+    .nav-link:hover { color:var(--primary); background:transparent; }
+    .nav-link.active { color:var(--primary); background:transparent; border-bottom:3px solid var(--primary); }
+    .tab-content { flex:1; overflow:auto; padding:1.5rem; background:#fff; }
+    
+    /* Aba Mapa */
+    .map-container { display:flex; height:100%; gap:1rem; }
+    .map-sidebar { width:320px; background:#f9fafb; border-radius:8px; padding:1rem; overflow:auto; box-shadow:0 2px 4px rgba(0,0,0,0.05); }
+    .map-area { flex:1; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08); }
+    #map { height:100%; width:100%; }
+    
+    /* Cards de controle */
+    .control-card { background:#fff; border-radius:8px; padding:1rem; margin-bottom:1rem; border:1px solid #e5e7eb; }
+    .control-card h6 { font-weight:600; color:var(--primary); margin-bottom:0.75rem; font-size:0.95rem; }
+    .btn-sm-custom { padding:0.5rem 0.75rem; font-size:0.875rem; border-radius:6px; cursor:pointer; border:none; transition:all 0.3s; }
+    .btn-primary-custom { background:var(--primary); color:#fff; }
+    .btn-primary-custom:hover { background:#111827; transform:translateY(-1px); box-shadow:0 2px 4px rgba(0,0,0,0.1); }
+    .control-group { display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.75rem; }
+    
+    /* Filtros */
+    .filter-section { margin-bottom:1.5rem; }
+    .form-select, .form-control { font-size:0.9rem; border:1px solid #d1d5db; border-radius:6px; }
+    .form-select:focus, .form-control:focus { border-color:var(--primary); box-shadow:0 0 0 3px rgba(31, 41, 55, 0.1); }
+    
+    /* Legenda */
+    .legend-item { display:flex; gap:0.75rem; align-items:center; margin:0.5rem 0; font-size:0.9rem; }
+    .legend-dot { width:12px; height:12px; border-radius:50%; flex-shrink:0; }
+    
+    /* Aba Resultados */
+    .results-grid { display:grid; grid-template-columns:1fr; gap:2rem; }
+    .chart-card { background:#fff; border-radius:8px; padding:1.5rem; box-shadow:0 2px 8px rgba(0,0,0,0.08); border:1px solid #e5e7eb; }
+    .chart-card h5 { font-size:1.1rem; font-weight:600; color:var(--primary); margin-bottom:1.5rem; border-bottom:2px solid #e5e7eb; padding-bottom:0.75rem; }
+    .chart-container { min-height:350px; width:100%; }
+    .chart-card.full-width { grid-column:1/-1; }
+    .results-stats { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:1rem; margin-bottom:2rem; }
+    .stat-box { background:linear-gradient(135deg, #f3f4f6 0%, #f9fafb 100%); padding:1.5rem; border-radius:8px; border-left:4px solid var(--primary); }
+    .stat-value { font-size:2rem; font-weight:700; color:var(--primary); }
+    .stat-label { font-size:0.9rem; color:#6b7280; margin-top:0.5rem; }
+    
+    /* Aba Tabela */
+    .table-container { height:100%; display:flex; flex-direction:column; }
+    .table-wrapper { flex:1; overflow:auto; border-radius:8px; border:1px solid #e5e7eb; }
+    .table { font-size:0.9rem; margin:0; }
+    .table thead { position:sticky; top:0; background:var(--primary); color:#fff; }
+    .table th { padding:0.75rem; font-weight:600; border:none; }
+    .table td { padding:0.75rem; border-color:#e5e7eb; }
+    .table tbody tr:hover { background:#f9fafb; }
+    .search-container { margin-bottom:1rem; }
+    .search-container input { border-radius:8px; border:2px solid #d1d5db; padding:0.75rem; }
+    
+    /* Responsivo */
+    @media (max-width:768px) {
+      .map-container { flex-direction:column; }
+      .map-sidebar { width:100%; }
+      .map-area { min-height:300px; }
+      .nav-tabs { padding:0; overflow-x:auto; }
+      .nav-link { padding:0.75rem 1rem; font-size:0.9rem; }
+      .results-grid { grid-template-columns:1fr; }
+      .tab-content { padding:1rem; }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="sidebar">
-      <h2>Dashboard — Escolas (Grande Florianópolis)</h2>
-      <div class="muted">Autor: Ronan Armando Caetano</div>
-      <div style="height:10px"></div>
-      <div class="controls">
-        <button id="zoomHome" class="btn">Centro</button>
-        <button id="fitAll" class="btn">Ajustar ao conjunto</button>
-        <label class="checkbox"><input type="checkbox" id="toggleHeat"> <span class="small">Heatmap</span></label>
-        <label class="checkbox"><input type="checkbox" id="showPublic" checked> <span class="small">Escolas Públicas</span></label>
-        <label class="checkbox"><input type="checkbox" id="showPrivate" checked> <span class="small">Escolas Privadas</span></label>
-      </div>
-
-      <div class="legend">
-        <div><strong>Fonte:</strong> INEP, IBGE, OpenStreetMap</div>
-        <div style="height:8px"></div>
-        <div><strong>Legenda:</strong></div>
-        <div style="display:flex;gap:8px;margin-top:6px;align-items:center"><div style="width:14px;height:14px;background:#22c55e;border-radius:50%"></div><div class="small">Públicas</div></div>
-        <div style="display:flex;gap:8px;margin-top:6px;align-items:center"><div style="width:14px;height:14px;background:#f97316;border-radius:50%"></div><div class="small">Privadas</div></div>
-      </div>
-
-      <div style="height:12px"></div>
-      <div><strong>Lista de Escolas</strong> (<span id="totalCount">0</span>)</div>
-      <div style="height:8px"></div>
-      <input id="search" placeholder="Pesquisar por nome ou município" style="width:100%;padding:8px;border-radius:6px;border:1px solid #e6eefc;margin-bottom:8px">
-
-      <div style="max-height:56vh;overflow:auto">
-        <table id="schoolsTable">
-          <thead><tr><th>Nome</th><th class="small">Tipo</th></tr></thead>
-          <tbody></tbody>
-        </table>
-      </div>
-
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-brand text-white">
+      📊 Mapeamento Estratégico — Educação Grande Florianópolis
     </div>
+  </nav>
 
-    <div class="map-wrap">
-      <div id="map"></div>
+  <!-- Main Container -->
+  <div class="main-container">
+    <!-- Tabs -->
+    <ul class="nav nav-tabs" id="mainTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="tab-mapa" data-bs-toggle="tab" data-bs-target="#pane-mapa" type="button" role="tab">🗺️ Mapa Interativo</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab-resultados" data-bs-toggle="tab" data-bs-target="#pane-resultados" type="button" role="tab">📈 Resultados</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab-tabela" data-bs-toggle="tab" data-bs-target="#pane-tabela" type="button" role="tab">📋 Escolas</button>
+      </li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content" id="mainTabContent">
+
+      <!-- ABA 1: MAPA -->
+      <div class="tab-pane fade show active" id="pane-mapa" role="tabpanel">
+        <div class="map-container">
+          <!-- Sidebar Controls -->
+          <div class="map-sidebar">
+            <h5 style="color:var(--primary);margin-bottom:1rem;">🎛️ Filtros & Controles</h5>
+            
+            <!-- Controles de Mapa -->
+            <div class="control-card">
+              <h6>Zoom</h6>
+              <div class="control-group">
+                <button class="btn-sm-custom btn-primary-custom" id="zoomHome">🏠 Centro</button>
+                <button class="btn-sm-custom btn-primary-custom" id="fitAll">🔍 Ajustar</button>
+              </div>
+            </div>
+
+            <!-- Visibilidade -->
+            <div class="control-card">
+              <h6>Visibilidade</h6>
+              <div style="display:flex;flex-direction:column;gap:0.5rem;">
+                <label style="display:flex;gap:0.5rem;align-items:center;cursor:pointer;margin:0;">
+                  <input type="checkbox" id="showPublic" checked> <span style="font-size:0.9rem;">✅ Públicas</span>
+                </label>
+                <label style="display:flex;gap:0.5rem;align-items:center;cursor:pointer;margin:0;">
+                  <input type="checkbox" id="showPrivate" checked> <span style="font-size:0.9rem;">🏢 Privadas</span>
+                </label>
+                <label style="display:flex;gap:0.5rem;align-items:center;cursor:pointer;margin:0;">
+                  <input type="checkbox" id="toggleHeat"> <span style="font-size:0.9rem;">🔥 Heatmap</span>
+                </label>
+                <label style="display:flex;gap:0.5rem;align-items:center;cursor:pointer;margin:0;">
+                  <input type="checkbox" id="showFlor" checked> <span style="font-size:0.9rem;">🏙️ Limite Florianópolis</span>
+                </label>
+                <label style="display:flex;gap:0.5rem;align-items:center;cursor:pointer;margin:0;">
+                  <input type="checkbox" id="showGrande" checked> <span style="font-size:0.9rem;">🗺️ Limites Grande Florianópolis</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Filtro de Municípios -->
+            <div class="control-card">
+              <h6>Municípios</h6>
+              <select id="municipioFilter" class="form-select form-select-sm" multiple>
+                <option value="ALL">— Todos —</option>
+              </select>
+            </div>
+
+            <!-- Legenda -->
+            <div class="control-card">
+              <h6>Legenda</h6>
+              <div class="legend-item">
+                <div class="legend-dot" style="background:#16a34a;"></div>
+                <span>Escolas Públicas</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-dot" style="background:#ea580c;"></div>
+                <span>Escolas Privadas</span>
+              </div>
+              <hr style="margin:0.75rem 0;border:none;border-top:1px solid #e5e7eb;">
+              <div style="font-size:0.8rem;color:#6b7280;margin-top:0.75rem;">
+                <strong>Total:</strong> <span id="totalCount" style="font-weight:600;color:var(--primary);">0</span> escolas<br>
+                <strong>Fonte:</strong> INEP, IBGE, OSM
+              </div>
+            </div>
+          </div>
+
+          <!-- Mapa -->
+          <div class="map-area">
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ABA 2: RESULTADOS -->
+      <div class="tab-pane fade" id="pane-resultados" role="tabpanel">
+        <!-- KPI Stats -->
+        <div class="results-stats">
+          <div class="stat-box">
+            <div class="stat-label">Total de Escolas</div>
+            <div class="stat-value" id="stat-total">0</div>
+          </div>
+          <div class="stat-box" style="border-left-color:#16a34a;">
+            <div class="stat-label">Escolas Públicas</div>
+            <div class="stat-value" id="stat-publicas" style="color:#16a34a;">0</div>
+          </div>
+          <div class="stat-box" style="border-left-color:#ea580c;">
+            <div class="stat-label">Escolas Privadas</div>
+            <div class="stat-value" id="stat-privadas" style="color:#ea580c;">0</div>
+          </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="results-grid">
+          <div class="chart-card">
+            <h5>📊 Distribuição: Públicas vs Privadas</h5>
+            <p style="font-size:0.85rem;color:#6b7280;margin:0 0 1rem 0;font-style:italic;">Compara o número total de escolas públicas e privadas na região. Ajuda a identificar qual tipo predomina.</p>
+            <div class="chart-container" id="chart-kpis"></div>
+          </div>
+
+          <div class="chart-card full-width">
+            <h5>🏙️ Top Municípios por Número de Escolas</h5>
+            <p style="font-size:0.85rem;color:#6b7280;margin:0 0 1rem 0;font-style:italic;">Ranking dos 15 municípios com maior quantidade de escolas. 💡 Clique em um município para filtrar no mapa e na tabela.</p>
+            <div class="chart-container" id="chart-munis" style="min-height:400px;"></div>
+          </div>
+
+          <div class="chart-card full-width">
+            <h5>🏛️ Distribuição por Tipo de Dependência Administrativa</h5>
+            <p style="font-size:0.85rem;color:#6b7280;margin:0 0 1rem 0;font-style:italic;">Mostra como as escolas se dividem por categoria (Federal, Estadual, Municipal, Privada). Essencial para planejamento educacional.</p>
+            <div class="chart-container" id="chart-dep" style="min-height:400px;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ABA 3: TABELA -->
+      <div class="tab-pane fade" id="pane-tabela" role="tabpanel">
+        <div class="table-container">
+          <div style="display:flex;gap:1rem;margin-bottom:1rem;flex-wrap:wrap;">
+            <div style="flex:1;min-width:250px;">
+              <input type="text" id="search" class="form-control" placeholder="🔍 Pesquisar por nome de escola...">
+            </div>
+            <div style="flex:1;min-width:250px;">
+              <select id="municipioFilterTable" class="form-select" multiple>
+                <option value="ALL">— Todos os municípios —</option>
+              </select>
+            </div>
+          </div>
+          <div class="table-wrapper">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Tipo</th>
+                  <th>Município</th>
+                </tr>
+              </thead>
+              <tbody id="schoolsTable">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
+  <!-- Scripts -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.24.0/plotly.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
   <script>
-    // Inicializar mapa
-    var map = L.map('map', { center: [-27.5954, -48.548], zoom: 11, minZoom:8, maxZoom:18 });
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap'}).addTo(map);
-
-    var publicLayer, privateLayer, heatLayer;
+    // === DATA & STATE ===
+    var map, publicLayer, privateLayer, heatLayer;
+    var florLayer, grandeLayer;
     var allPoints = [];
-    var markersMap = []; // store marker refs for table linking
+    var markersMap = [];
+    var chartsBuilt = false;
 
-    function makeMarker(feature, latlng, color){
+    // === LEAFLET MAP ===
+    function initMap(){
+      map = L.map('map', { center: [-27.5954, -48.548], zoom: 11, minZoom:8, maxZoom:18 });
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap'}).addTo(map);
+    }
+
+    function makeMarker(feature, latlng, color, type){
       var m = L.circleMarker(latlng, { radius:7, fillColor:color, color:color, weight:1, fillOpacity:0.9, interactive:true });
+      try{ m._olokun_type = type; }catch(e){}
       var p = feature.properties || {};
-      var popup = '<div style="font-family:Arial, sans-serif; font-size:13px; padding:6px">'
-        + '<strong>' + (p.Escola || 'Escola') + '</strong><br>'
-        + '<span class="small">' + (p['Categoria Administrativa']||'') + ' — ' + (p['Dependência Administrativa']||'') + '</span><br>'
-        + '<span class="small">' + (p.Município||'') + '</span>'
+      var popup = '<div style="font-family:Arial,sans-serif;font-size:13px;padding:8px;max-width:250px">'
+        + '<strong style="color:var(--primary);display:block;margin-bottom:4px;">' + (p.Escola || 'Escola') + '</strong>'
+        + '<small style="color:#6b7280;">' + (p['Categoria Administrativa']||'') + '</small><br>'
+        + '<small style="color:#6b7280;">' + (p['Dependência Administrativa']||'') + '</small><br>'
+        + '<small style="color:#2563eb;font-weight:500;">' + (p.Município||'') + '</small>'
         + '</div>';
-      m.bindPopup(popup);
+      m.bindPopup(popup, {maxWidth:280});
       return m;
     }
 
-    // load public
-    fetch('../data/escolas_publicas.geojson').then(function(r){return r.json()}).then(function(data){
+    // === LOAD DATA ===
+    initMap();
+
+    // Load boundaries
+    fetch('../data/florianopolis_limite.geojson').then(r=>r.json()).then(data=>{
+      florLayer = L.geoJSON(data, {
+        style:{color:'#ef4444',weight:2,opacity:0.6,fill:false},
+        onEachFeature:function(f,layer){ layer.bindPopup('Florianópolis'); }
+      });
+      florLayer.addTo(map);
+    }).catch(e=>console.error('Flor boundary load',e));
+
+    fetch('../data/grande_florianopolis_limites.geojson').then(r=>r.json()).then(data=>{
+      grandeLayer = L.geoJSON(data, {
+        style:{color:'#0ea5e9',weight:1.5,opacity:0.4,fill:false},
+        onEachFeature:function(f,layer){ 
+          var nome = f.properties.NM_MUN || 'Município';
+          layer.bindPopup(nome); 
+        }
+      });
+      grandeLayer.addTo(map);
+    }).catch(e=>console.error('Grande Flor boundary load',e));
+
+    fetch('../data/escolas_publicas.geojson').then(r=>r.json()).then(data=>{
       publicLayer = L.geoJSON(data, {
         pointToLayer: function(f,latlng){
-          var mk = makeMarker(f,latlng,'#22c55e');
-          markersMap.push({marker:mk,props:f.properties});
+          var mk = makeMarker(f,latlng,'#16a34a','public');
+          markersMap.push({marker:mk,props:f.properties,type:'public'});
           allPoints.push([latlng.lat, latlng.lng, 0.6]);
           return mk;
         }
       });
-      // ensure events active: add to map after binding
       publicLayer.addTo(map);
       populateTable();
-    }).catch(function(e){console.error('public load',e)});
+      maybeBuildCharts();
+    }).catch(e=>console.error('public load',e));
 
-    // load private
-    fetch('../data/escolas_privadas.geojson').then(function(r){return r.json()}).then(function(data){
+    fetch('../data/escolas_privadas.geojson').then(r=>r.json()).then(data=>{
       privateLayer = L.geoJSON(data, {
         pointToLayer: function(f,latlng){
-          var mk = makeMarker(f,latlng,'#f97316');
-          markersMap.push({marker:mk,props:f.properties});
+          var mk = makeMarker(f,latlng,'#ea580c','private');
+          markersMap.push({marker:mk,props:f.properties,type:'private'});
           allPoints.push([latlng.lat, latlng.lng, 0.6]);
           return mk;
         }
       });
       privateLayer.addTo(map);
       populateTable();
-    }).catch(function(e){console.error('private load',e)});
+      maybeBuildCharts();
+    }).catch(e=>console.error('private load',e));
 
-    // heatmap (initially off)
-    function createHeat(){
-      if(heatLayer) return;
-      heatLayer = L.heatLayer(allPoints, {radius:25, blur:20, maxZoom: 16});
-    }
-
-    // table population and interactions
+    // === TABLE & FILTERS ===
     function populateTable(){
-      var tbody = document.querySelector('#schoolsTable tbody');
+      var tbody = document.querySelector('#schoolsTable');
       tbody.innerHTML = '';
       markersMap.forEach(function(item,i){
         var tr = document.createElement('tr');
         var tdName = document.createElement('td');
         tdName.textContent = item.props.Escola || '—';
-        var tdType = document.createElement('td'); tdType.className='small';
-        tdType.textContent = (item.props['Dependência Administrativa']||item.props['Categoria Administrativa']||'');
-        tr.appendChild(tdName); tr.appendChild(tdType);
+        var tdType = document.createElement('td');
+        tdType.textContent = item.type === 'public' ? 'Pública' : 'Privada';
+        var tdMuni = document.createElement('td');
+        tdMuni.textContent = item.props.Município || item.props.Municipio || '';
+        tr.appendChild(tdName); tr.appendChild(tdType); tr.appendChild(tdMuni);
         tr.style.cursor='pointer';
         tr.addEventListener('click', function(){
-          var m = item.marker;
-          map.setView(m.getLatLng(), 16);
-          m.openPopup();
+          map.setView(item.marker.getLatLng(), 16);
+          item.marker.openPopup();
         });
         tbody.appendChild(tr);
       });
       document.getElementById('totalCount').textContent = markersMap.length;
+      populateMunicipios();
     }
 
-    // Search
+    function populateMunicipios(){
+      var sel = document.getElementById('municipioFilter');
+      var selTable = document.getElementById('municipioFilterTable');
+      var existing = new Set();
+      sel.innerHTML = '';
+      selTable.innerHTML = '';
+      markersMap.forEach(function(item){
+        var m = item.props.Município || item.props.Municipio || '';
+        if(m && !existing.has(m)) existing.add(m);
+      });
+      var sorted = Array.from(existing).sort();
+      var opt = document.createElement('option'); opt.value='ALL'; opt.textContent='— Todos —'; sel.appendChild(opt);
+      var optTable = document.createElement('option'); optTable.value='ALL'; optTable.textContent='— Todos os municípios —'; selTable.appendChild(optTable);
+      sorted.forEach(function(m){
+        var o = document.createElement('option'); o.value = m; o.textContent = m; sel.appendChild(o);
+        var oTable = document.createElement('option'); oTable.value = m; oTable.textContent = m; selTable.appendChild(oTable);
+      });
+      if(window.tsMunicipios){
+        window.tsMunicipios.destroy();
+        window.tsMunicipios = null;
+      }
+      if(window.tsMunicipiosTable){
+        window.tsMunicipiosTable.destroy();
+        window.tsMunicipiosTable = null;
+      }
+      window.tsMunicipios = new TomSelect('#municipioFilter',{plugins:['remove_button'],maxItems:null,placeholder:'Selecione municípios'});
+      window.tsMunicipiosTable = new TomSelect('#municipioFilterTable',{plugins:['remove_button'],maxItems:null,placeholder:'Selecione municípios'});
+      
+      // Adicionar listeners aos TomSelect
+      if(window.tsMunicipios) window.tsMunicipios.on('change', applyMunicipioFilter);
+      if(window.tsMunicipiosTable) window.tsMunicipiosTable.on('change', applyTableFilters);
+    }
+
+    function applyMunicipioFilter(){
+      var vals = window.tsMunicipios ? window.tsMunicipios.getValue() : [];
+      var tbody = document.querySelectorAll('#schoolsTable tbody tr');
+      markersMap.forEach(function(item,i){
+        var muni = (item.props.Município || item.props.Municipio || '');
+        var type = item.type || '';
+        var ok = (vals.length===0 || vals.indexOf('ALL')!==-1 || vals.indexOf(muni)!==-1);
+        if(type === 'public' && !document.getElementById('showPublic').checked) ok = false;
+        if(type === 'private' && !document.getElementById('showPrivate').checked) ok = false;
+        try{
+          if(ok){ if(!map.hasLayer(item.marker)) map.addLayer(item.marker); }
+          else { if(map.hasLayer(item.marker)) map.removeLayer(item.marker); }
+        }catch(e){}
+        if(tbody[i]) tbody[i].style.display = ok ? 'table-row' : 'none';
+      });
+      var visible = Array.from(document.querySelectorAll('#schoolsTable tbody tr')).filter(r=>r.style.display!=='none').length;
+      document.getElementById('totalCount').textContent = visible;
+    }
+
     document.getElementById('search').addEventListener('input', function(e){
       var q = e.target.value.toLowerCase();
       var rows = document.querySelectorAll('#schoolsTable tbody tr');
       rows.forEach(function(r,idx){
         var name = r.cells[0].textContent.toLowerCase();
-        var muni = markersMap[idx].props.Município ? markersMap[idx].props.Município.toLowerCase() : '';
+        var muni = (markersMap[idx].props.Município || markersMap[idx].props.Municipio || '').toLowerCase();
         if(name.indexOf(q) !== -1 || muni.indexOf(q) !== -1){ r.style.display='table-row'; } else { r.style.display='none'; }
       });
     });
 
-    // controls
-    document.getElementById('zoomHome').addEventListener('click', function(){ map.setView([-27.5954, -48.548], 11); });
+    function applyTableFilters(){
+      var vals = window.tsMunicipiosTable ? window.tsMunicipiosTable.getValue() : [];
+      console.log('Filtro aplicado com valores:', vals);
+      var rows = document.querySelectorAll('#schoolsTable tbody tr');
+      var visibleCount = 0;
+      markersMap.forEach(function(item,i){
+        var muni = (item.props.Município || item.props.Municipio || '');
+        var ok = (vals.length===0 || vals.indexOf('ALL')!==-1 || vals.indexOf(muni)!==-1);
+        if(rows[i]) {
+          rows[i].style.display = ok ? 'table-row' : 'none';
+          if(ok) visibleCount++;
+        }
+      });
+      console.log('Linhas visíveis:', visibleCount, 'de', markersMap.length);
+    }
+
+    document.getElementById('municipioFilter').addEventListener('change', applyMunicipioFilter);
+    document.getElementById('showPublic').addEventListener('change', applyMunicipioFilter);
+    document.getElementById('showPrivate').addEventListener('change', applyMunicipioFilter);
+    
+    document.getElementById('showFlor').addEventListener('change', function(e){
+      if(florLayer){ if(e.target.checked) map.addLayer(florLayer); else map.removeLayer(florLayer); }
+    });
+    
+    document.getElementById('showGrande').addEventListener('change', function(e){
+      if(grandeLayer){ if(e.target.checked) map.addLayer(grandeLayer); else map.removeLayer(grandeLayer); }
+    });
+
+    // === MAP CONTROLS ===
+    document.getElementById('zoomHome').addEventListener('click', function(){
+      map.setView([-27.5954, -48.548], 11);
+    });
+
     document.getElementById('fitAll').addEventListener('click', function(){
-      var g = L.featureGroup(markersMap.map(function(x){return x.marker;}));
+      var g = L.featureGroup(markersMap.map(m=>m.marker));
       if(g.getLayers().length) map.fitBounds(g.getBounds(), {padding:[20,20]});
     });
+
+    function createHeat(){
+      if(heatLayer) return;
+      heatLayer = L.heatLayer(allPoints, {radius:25, blur:20, maxZoom: 16});
+    }
 
     document.getElementById('toggleHeat').addEventListener('change', function(e){
       if(e.target.checked){ createHeat(); map.addLayer(heatLayer); } else { if(heatLayer) map.removeLayer(heatLayer); }
     });
 
-    document.getElementById('showPublic').addEventListener('change', function(e){ if(publicLayer){ if(e.target.checked) map.addLayer(publicLayer); else map.removeLayer(publicLayer);} });
-    document.getElementById('showPrivate').addEventListener('change', function(e){ if(privateLayer){ if(e.target.checked) map.addLayer(privateLayer); else map.removeLayer(privateLayer);} });
+    // === CHARTS ===
+    function maybeBuildCharts(){
+      if(chartsBuilt) return;
+      if(!publicLayer || !privateLayer) return;
+      buildCharts();
+      chartsBuilt = true;
+    }
 
-    // small safety: if layers are loaded asynchronously, update table when all loaded
-    setTimeout(function(){ populateTable(); }, 800);
+    function buildCharts(){
+      var n_pub = markersMap.filter(m=>m.type==='public').length;
+      var n_priv = markersMap.filter(m=>m.type==='private').length;
+      var total = n_pub + n_priv;
+
+      // Update KPI boxes
+      document.getElementById('stat-total').textContent = total;
+      document.getElementById('stat-publicas').textContent = n_pub;
+      document.getElementById('stat-privadas').textContent = n_priv;
+
+      // KPI Bar Chart - larger, clearer
+      Plotly.newPlot('chart-kpis',[{
+        x:['Públicas','Privadas'],
+        y:[n_pub,n_priv],
+        type:'bar',
+        marker:{color:['#16a34a','#ea580c'],},
+        text:[n_pub,n_priv],
+        textposition:'outside',
+        hovertemplate:'<b>%{x}</b><br>%{y} escolas<extra></extra>'
+      }],{
+        margin:{t:40,b:40,l:50,r:50},
+        height:300,
+        xaxis:{title:'Tipo de Escola',titlefont:{size:12}},
+        yaxis:{title:'Número de Escolas',titlefont:{size:12}},
+        plot_bgcolor:'#f9fafb',
+        paper_bgcolor:'#fff',
+        font:{family:'Segoe UI, sans-serif',size:11}
+      });
+
+      // Top Municipalities - much larger and clearer
+      var counts = {};
+      markersMap.forEach(m=>{
+        var muni = m.props.Município || m.props.Municipio || '';
+        if(muni) counts[muni]=(counts[muni]||0)+1;
+      });
+      var items = Object.entries(counts).sort((a,b)=>b[1]-a[1]).slice(0,15);
+      var labels = items.map(i=>i[0]); 
+      var vals = items.map(i=>i[1]);
+      
+      Plotly.newPlot('chart-munis', [{
+        type:'bar',
+        x:vals,
+        y:labels,
+        orientation:'h',
+        marker:{color:'rgba(37, 99, 235, 0.85)'},
+        text:vals,
+        textposition:'outside',
+        hovertemplate:'<b>%{y}</b><br>%{x} escolas<extra></extra>'
+      }], {
+        margin:{l:150,t:40,b:40,r:50},
+        height:400,
+        xaxis:{title:'Número de Escolas',titlefont:{size:12}},
+        plot_bgcolor:'#f9fafb',
+        paper_bgcolor:'#fff',
+        font:{family:'Segoe UI, sans-serif',size:11}
+      });
+
+      document.getElementById('chart-munis').on('plotly_click', function(evt){
+        var muni = evt.points[0].y;
+        if(window.tsMunicipios){ window.tsMunicipios.clear(); window.tsMunicipios.addItem(muni); }
+        applyMunicipioFilter();
+      });
+
+      // Dependency Pie - larger and clearer
+      var depCounts = {};
+      markersMap.forEach(m=>{
+        var d = m.props['Dependência Administrativa'] || m.props['Dependencia Administrativa'] || 'Desconhecido';
+        depCounts[d]=(depCounts[d]||0)+1;
+      });
+      var depLabels = Object.keys(depCounts); 
+      var depVals = depLabels.map(k=>depCounts[k]);
+      
+      Plotly.newPlot('chart-dep',[{
+        values:depVals,
+        labels:depLabels,
+        type:'pie',
+        textposition:'inside',
+        textinfo:'label+percent',
+        hovertemplate:'<b>%{label}</b><br>%{value} escolas (%{percent})<extra></extra>',
+        marker:{line:{color:'#fff',width:2}}
+      }],{
+        margin:{t:40,b:40,l:20,r:20},
+        height:400,
+        paper_bgcolor:'#fff',
+        font:{family:'Segoe UI, sans-serif',size:11}
+      });
+    }
+
+    // Timing
+    setTimeout(()=>{ populateTable(); }, 500);
   </script>
 </body>
 </html>
