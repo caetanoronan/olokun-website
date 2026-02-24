@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Geomarketing - Instituto Olokun</title>
+  <link rel="stylesheet" href="assets/olokun.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="page-header">
+    <div>
+      <h1>Dashboard Geomarketing - Instituto Olokun</h1>
+      <p>Indicadores socioeconômicos, ambientais e rede de parceiros</p>
+    </div>
+    <div class="header-actions">
+      <a class="btn" href="mapa_olokun.html">Abrir Mapa</a>
+    </div>
+  </header>
+
+  <main class="grid dashboard">
+    <section class="card">
+      <h2>Filtros</h2>
+      <div class="filters">
+        <label>
+          Escopo
+          <select id="filter-escopo">
+            <option value="floripa">Florianópolis</option>
+            <option value="grande">Grande Florianópolis</option>
+          </select>
+        </label>
+        <label>
+          Município
+          <select id="filter-municipio">
+            <option value="all">Todos</option>
+          </select>
+        </label>
+        <label>
+          Tipo de parceiro
+          <select id="filter-parceiro">
+            <option value="all">Todos</option>
+            <option value="escola">Escola</option>
+            <option value="ong">ONG</option>
+            <option value="empresa">Empresa</option>
+          </select>
+        </label>
+        <label>
+          Prioridade mínima
+          <input type="range" id="filter-score" min="0" max="100" value="0" />
+          <span id="filter-score-value">0</span>
+        </label>
+      </div>
+    </section>
+
+    <section class="card stats">
+      <div class="stat">
+        <span class="stat-title">Setores analisados</span>
+        <strong id="stat-setores">0</strong>
+      </div>
+      <div class="stat">
+        <span class="stat-title">Parceiros mapeados</span>
+        <strong id="stat-parceiros">0</strong>
+      </div>
+      <div class="stat">
+        <span class="stat-title">Score médio</span>
+        <strong id="stat-score">0</strong>
+      </div>
+      <div class="stat">
+        <span class="stat-title">Top área</span>
+        <strong id="stat-top-area">-</strong>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Distribuição de Score</h2>
+      <canvas id="chart-score"></canvas>
+    </section>
+
+    <section class="card">
+      <h2>Parceiros por Tipo</h2>
+      <canvas id="chart-parceiros"></canvas>
+    </section>
+
+    <section class="card">
+      <h2>Resumo MCDA</h2>
+      <div id="mcda-summary" class="mcda-summary"></div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <span>© 2026 Instituto Olokun • Geomarketing</span>
+  </footer>
+
+  <script src="assets/dashboard_olokun.js"></script>
+</body>
+</html>
