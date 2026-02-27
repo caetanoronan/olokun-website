@@ -239,16 +239,6 @@
       border-color: #0d6efd;
     }
 
-    /* Opacidade slider */
-    .layer-opacity-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 2px 0 6px 22px;
-    }
-    .layer-opacity-row label { font-size: .73rem; color: #6c757d; white-space: nowrap; }
-    .layer-opacity-row input[type=range] { flex: 1; height: 4px; cursor: pointer; }
-
     /* Legenda */
     .legend-item {
       display: flex;
@@ -492,10 +482,6 @@
               Escolas Públicas
             </label>
           </div>
-          <div class="layer-opacity-row">
-            <label for="opacity-pub">Opacidade</label>
-            <input id="opacity-pub" type="range" min="0" max="1" step="0.05" value="1" oninput="setOpacity('pub', this.value)" />
-          </div>
 
           <!-- Escolas Privadas -->
           <div class="layer-item">
@@ -504,10 +490,6 @@
               <div class="layer-swatch" style="background:#E53935;"></div>
               Escolas Privadas
             </label>
-          </div>
-          <div class="layer-opacity-row">
-            <label for="opacity-priv">Opacidade</label>
-            <input id="opacity-priv" type="range" min="0" max="1" step="0.05" value="1" oninput="setOpacity('priv', this.value)" />
           </div>
 
           <!-- Florianópolis -->
@@ -518,10 +500,6 @@
               Município — Florianópolis
             </label>
           </div>
-          <div class="layer-opacity-row">
-            <label for="opacity-fln">Opacidade</label>
-            <input id="opacity-fln" type="range" min="0" max="1" step="0.05" value="1" oninput="setOpacity('fln', this.value)" />
-          </div>
 
           <!-- Grande Florianópolis -->
           <div class="layer-item">
@@ -530,10 +508,6 @@
               <div class="layer-swatch polygon" style="color:#6c757d;background:rgba(108,117,125,.08);"></div>
               Grande Florianópolis
             </label>
-          </div>
-          <div class="layer-opacity-row">
-            <label for="opacity-gfl">Opacidade</label>
-            <input id="opacity-gfl" type="range" min="0" max="1" step="0.05" value="0.7" oninput="setOpacity('gfl', this.value)" />
           </div>
         </div>
 
@@ -765,7 +739,6 @@
      ESTADO DAS CAMADAS
   ═══════════════════════════════════════════════════════════════ */
   const layers  = {};   // armazena referências
-  const opacity = { pub: 1, priv: 1, fln: 1, gfl: 0.7 };
 
   // Todos os features para busca e filtro
   const allFeatures = { pub: [], priv: [] };
@@ -1003,20 +976,6 @@
     } else if (key === 'gfl') {
       if (visible && layers.gfl) map.addLayer(layers.gfl);
       else if (layers.gfl) map.removeLayer(layers.gfl);
-    }
-  }
-
-  function setOpacity(key, val) {
-    opacity[key] = parseFloat(val);
-    if (key === 'fln' && layers.fln) {
-      layers.fln.setStyle({ opacity: val, fillOpacity: 0.06 * val });
-    } else if (key === 'gfl' && layers.gfl) {
-      layers.gfl.setStyle({ opacity: val, fillOpacity: 0.06 * val });
-    } else if (key === 'pub') {
-      // clusters não têm setOpacity direto — ajustamos os ícones via CSS
-      document.querySelectorAll('.leaflet-marker-icon img').forEach(el => {
-        // só afeta marcadores públicos — heurística pelo src (apenas visual)
-      });
     }
   }
 
