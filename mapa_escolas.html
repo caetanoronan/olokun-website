@@ -1031,19 +1031,19 @@
      FILTROS
   ═════════════════════════════════════════════════════════════════ */
   function updateCounters() {
-    const pubLayers = layers.pubCluster.getLayers();
-    const privLayers = layers.privCluster.getLayers();
+    const pubMarkers = layers.pubCluster.getAllChildMarkers();
+    const privMarkers = layers.privCluster.getAllChildMarkers();
     
-    const pubCount = pubLayers.length;
-    const privCount = privLayers.length;
+    const pubCount = pubMarkers.length;
+    const privCount = privMarkers.length;
     const totalCount = pubCount + privCount;
     
     // Contar municípios únicos nas escolas visíveis
     const municípiosSet = new Set();
-    pubLayers.forEach(m => {
+    pubMarkers.forEach(m => {
       if (m._mun) municípiosSet.add(m._mun);
     });
-    privLayers.forEach(m => {
+    privMarkers.forEach(m => {
       if (m._mun) municípiosSet.add(m._mun);
     });
     
