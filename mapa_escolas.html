@@ -1031,6 +1031,11 @@
      FILTROS
   ═════════════════════════════════════════════════════════════════ */
   function updateCounters() {
+    console.log('📊 updateCounters() chamado');
+    console.log('activeDeps:', Array.from(activeDeps));
+    console.log('activeCats:', Array.from(activeCats));
+    console.log('activeMuns:', Array.from(activeMuns));
+    
     // Contar markers públicas que estão visíveis (passam no filtro)
     let pubCount = 0;
     let pubMarkers = [];
@@ -1064,6 +1069,8 @@
     privMarkers.forEach(m => {
       if (m._mun) municípiosSet.add(m._mun);
     });
+    
+    console.log('✅ Contadores:', { pubCount, privCount, totalCount, municípios: municípiosSet.size });
     
     // Atualizar contadores no HTML
     document.getElementById('cnt-publica').textContent = pubCount;
