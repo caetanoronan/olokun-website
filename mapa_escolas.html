@@ -1031,20 +1031,27 @@
      FILTROS
   ═════════════════════════════════════════════════════════════════ */
   function updateCounters() {
-    // Contar markers públicas usando eachLayer
+    // Contar markers públicas que estão visíveis (passam no filtro)
     let pubCount = 0;
     let pubMarkers = [];
-    layers.pubCluster.eachLayer(layer => {
-      pubCount++;
-      pubMarkers.push(layer);
+    allFeatures.pub.forEach(m => {
+      const passFilter = activeDeps.has(m._dep) && (activeMuns.size === 0 || activeMuns.has(m._mun));
+      if (passFilter) {
+        pubCount++;
+        pubMarkers.push(m);
+      }
     });
     
-    // Contar markers privadas usando eachLayer
+    // Contar markers privadas que estão visíveis (passam no filtro)
     let privCount = 0;
     let privMarkers = [];
-    layers.privCluster.eachLayer(layer => {
-      privCount++;
-      privMarkers.push(layer);
+    allFeatures.priv.forEach(m => {
+      const cat = m._cat || 'Não Informado';
+      const passFilter = (activeCats.has(cat) || (!['Particular','Filantrópica','Comunitária','Confessional'].includes(cat))) && (activeMuns.size === 0 || activeMuns.has(m._mun));
+      if (passFilter) {
+        privCount++;
+        privMarkers.push(m);
+      }
     });
     
     const totalCount = pubCount + privCount;
