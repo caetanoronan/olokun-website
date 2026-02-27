@@ -1030,6 +1030,30 @@
   /* ═══════════════════════════════════════════════════════════════
      FILTROS
   ═════════════════════════════════════════════════════════════════ */
+  function updateCounters() {
+    const pubLayers = layers.pubCluster.getLayers();
+    const privLayers = layers.privCluster.getLayers();
+    
+    const pubCount = pubLayers.length;
+    const privCount = privLayers.length;
+    const totalCount = pubCount + privCount;
+    
+    // Contar municípios únicos nas escolas visíveis
+    const municípiosSet = new Set();
+    pubLayers.forEach(m => {
+      if (m._mun) municípiosSet.add(m._mun);
+    });
+    privLayers.forEach(m => {
+      if (m._mun) municípiosSet.add(m._mun);
+    });
+    
+    // Atualizar contadores no HTML
+    document.getElementById('cnt-publica').textContent = pubCount;
+    document.getElementById('cnt-privada').textContent = privCount;
+    document.getElementById('cnt-mun').textContent = municípiosSet.size;
+    document.getElementById('cnt-total').textContent = totalCount;
+  }
+
   function applyFilters() {
     // Públicas
     layers.pubCluster.clearLayers();
@@ -1045,6 +1069,9 @@
       const passFilter = (activeCats.has(cat) || (!['Particular','Filantrópica','Comunitária','Confessional'].includes(cat))) && (activeMuns.size === 0 || activeMuns.has(m._mun));
       if (passFilter) layers.privCluster.addLayer(m);
     });
+    
+    // Atualizar contadores
+    updateCounters();
   }
 
   // Chips deps
