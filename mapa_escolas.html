@@ -1031,11 +1031,22 @@
      FILTROS
   ═════════════════════════════════════════════════════════════════ */
   function updateCounters() {
-    const pubMarkers = layers.pubCluster.getAllChildMarkers();
-    const privMarkers = layers.privCluster.getAllChildMarkers();
+    // Contar markers públicas usando eachLayer
+    let pubCount = 0;
+    let pubMarkers = [];
+    layers.pubCluster.eachLayer(layer => {
+      pubCount++;
+      pubMarkers.push(layer);
+    });
     
-    const pubCount = pubMarkers.length;
-    const privCount = privMarkers.length;
+    // Contar markers privadas usando eachLayer
+    let privCount = 0;
+    let privMarkers = [];
+    layers.privCluster.eachLayer(layer => {
+      privCount++;
+      privMarkers.push(layer);
+    });
+    
     const totalCount = pubCount + privCount;
     
     // Contar municípios únicos nas escolas visíveis
