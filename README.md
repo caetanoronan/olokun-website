@@ -1,0 +1,47 @@
+﻿# 🌊 Instituto Olokun — Plataforma Territorial
+
+Este repositório reúne os materiais web do Instituto Olokun para apresentação institucional, dashboard de estratégia territorial e mapa interativo.
+
+## 🔗 Acessos públicos (GitHub Pages)
+
+- Site institucional: https://caetanoronan.github.io/olokun-website/olokun/index-instituicoes-tabs.html
+- Dashboard territorial (tabs): https://caetanoronan.github.io/olokun-website/olokun/dashboard_olokun_tabs.html
+- Dashboard escolas: https://caetanoronan.github.io/olokun-website/olokun/dashboard_escolas.html
+
+## 📂 Estrutura principal
+
+- `olokun/` → arquivos publicados no GitHub Pages
+- `gh-pages-temp/` → área de trabalho e versões em edição
+- `data/` → camadas e dados geoespaciais (GeoJSON)
+- `docs/` → documentação técnica e materiais auxiliares
+- `gis/` e `dados/` → fontes e processamento geográfico
+
+## 🧭 Como rodar localmente
+
+No diretório do projeto:
+
+```bash
+python -m http.server 8000
+```
+
+Depois acesse no navegador:
+
+- http://localhost:8000/olokun/index-instituicoes-tabs.html
+- http://localhost:8000/olokun/dashboard_olokun_tabs.html
+- http://localhost:8000/olokun/dashboard_escolas.html
+
+## 🚀 Publicação
+
+O deploy está vinculado ao GitHub Pages. Para publicar alterações:
+
+1. Atualize os arquivos em `olokun/`
+2. Commit e push na branch configurada no Pages
+3. Aguarde o processamento do deploy
+
+## 📬 Contato
+
+- Email: olokun.ambiental@gmail.com
+- Local: Florianópolis, SC — Brasil
+
+---
+Projeto em evolução contínua para apoio à tomada de decisão territorial com impacto socioambiental.
