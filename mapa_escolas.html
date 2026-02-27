@@ -14,8 +14,6 @@
   <!-- Leaflet.markercluster -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-  <!-- Leaflet Fullscreen -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/3.0.0/Control.FullScreen.min.css" />
   <!-- Leaflet MiniMap -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.min.css" />
 
@@ -372,6 +370,12 @@
       box-shadow: 0 2px 8px rgba(0,0,0,.15) !important;
     }
 
+    /* ─── Leaflet Fullscreen (customizado) ──────────────────────── */
+    .leaflet-control-fullscreen a {
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>') no-repeat center !important;
+      background-size: 20px 20px !important;
+    }
+
     /* ─── Print ─────────────────────────────────────────────────── */
     @media print {
       #app-header, #sidebar-toggle { display: none !important; }
@@ -425,7 +429,7 @@
         <!-- Busca -->
         <div class="sidebar-section">
           <div class="sidebar-section-title"><i class="fa fa-search fa-xs"></i> Buscar Escola</div>
-          <input id="search-input" type="text" placeholder="Digite o nome da escola..." autocomplete="off" />
+          <input id="search-input" type="text" placeholder="Digite o nome da escola..." autocomplete="off" aria-label="Buscar escola" />
           <div id="search-results"></div>
         </div>
 
@@ -489,8 +493,8 @@
             <input class="form-check-input" type="checkbox" id="lyr-pub" checked onchange="toggleLayer('pub', this.checked)" />
           </div>
           <div class="layer-opacity-row">
-            <label>Opacidade</label>
-            <input type="range" min="0" max="1" step="0.05" value="1" oninput="setOpacity('pub', this.value)" />
+            <label for="opacity-pub">Opacidade</label>
+            <input id="opacity-pub" type="range" min="0" max="1" step="0.05" value="1" oninput="setOpacity('pub', this.value)" />
           </div>
 
           <!-- Escolas Privadas -->
@@ -502,8 +506,8 @@
             <input class="form-check-input" type="checkbox" id="lyr-priv" checked onchange="toggleLayer('priv', this.checked)" />
           </div>
           <div class="layer-opacity-row">
-            <label>Opacidade</label>
-            <input type="range" min="0" max="1" step="0.05" value="1" oninput="setOpacity('priv', this.value)" />
+            <label for="opacity-priv">Opacidade</label>
+            <input id="opacity-priv" type="range" min="0" max="1" step="0.05" value="1" oninput="setOpacity('priv', this.value)" />
           </div>
 
           <!-- Florianópolis -->
@@ -515,8 +519,8 @@
             <input class="form-check-input" type="checkbox" id="lyr-fln" checked onchange="toggleLayer('fln', this.checked)" />
           </div>
           <div class="layer-opacity-row">
-            <label>Opacidade</label>
-            <input type="range" min="0" max="1" step="0.05" value="1" oninput="setOpacity('fln', this.value)" />
+            <label for="opacity-fln">Opacidade</label>
+            <input id="opacity-fln" type="range" min="0" max="1" step="0.05" value="1" oninput="setOpacity('fln', this.value)" />
           </div>
 
           <!-- Grande Florianópolis -->
@@ -528,8 +532,8 @@
             <input class="form-check-input" type="checkbox" id="lyr-gfl" checked onchange="toggleLayer('gfl', this.checked)" />
           </div>
           <div class="layer-opacity-row">
-            <label>Opacidade</label>
-            <input type="range" min="0" max="1" step="0.05" value="0.7" oninput="setOpacity('gfl', this.value)" />
+            <label for="opacity-gfl">Opacidade</label>
+            <input id="opacity-gfl" type="range" min="0" max="1" step="0.05" value="0.7" oninput="setOpacity('gfl', this.value)" />
           </div>
         </div>
 
