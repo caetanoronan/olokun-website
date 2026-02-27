@@ -811,16 +811,11 @@
      CARREGAR DADOS
   ═══════════════════════════════════════════════════════════════ */
   async function loadAll() {
-    // Detectar se está no GitHub Pages ou localhost
-    const basePath = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-      ? '' // localhost: usa raiz
-      : '/olokun-website'; // GitHub Pages: usa /olokun-website
-    
     const paths = [
-      `${basePath}/data/escolas_publicas.geojson`,
-      `${basePath}/data/escolas_privadas.geojson`,
-      `${basePath}/data/municipio_florianopolis.geojson`,
-      `${basePath}/data/municipios_grande_florianopolis.geojson`,
+      'data/escolas_publicas.geojson',
+      'data/escolas_privadas.geojson',
+      'data/municipio_florianopolis.geojson',
+      'data/municipios_grande_florianopolis.geojson',
     ];
 
     let results;
