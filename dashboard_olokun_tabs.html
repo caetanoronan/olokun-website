@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Olokun | Geomarketing & Estratégia de Expansão</title>
+  <meta name="description" content="Dashboard interativo do Instituto Olokun - Análise de cobertura, estratégia de expansão territorial e geomarketing" />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            olokun: {
+              primary: '#006B5C',
+              secondary: '#2E7D32',
+              accent: '#FF6B35'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+  
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    :root { 
+      color-scheme: light dark;
+      --olokun-primary: #006B5C;
+      --olokun-secondary: #2E7D32;
+      --olokun-accent: #FF6B35;
+    }
+    
+    body { 
+      font-family: 'Inter', sans-serif; 
+    }
+
+    /* Glassmorphism */
+    .glass { 
+      background: rgba(255,255,255,0.8); 
+      backdrop-filter: saturate(140%) blur(12px); 
+      -webkit-backdrop-filter: saturate(140%) blur(12px); 
+    }
+    .dark .glass { 
+      background: rgba(2,6,23,0.6); 
+    }
+
+    /* Gradient Backgrounds */
+    .gradient-olokun {
+      background: linear-gradient(135deg, var(--olokun-primary) 0%, var(--olokun-secondary) 100%);
+    }
+
+    /* Tabs */
+    .tab-button { 
+      transition: all .2s ease; 
+      border-bottom: 2px solid transparent;
+    }
+    .tab-button.active { 
+      border-color: var(--olokun-primary);
+      color: var(--olokun-primary);
+      background: linear-gradient(180deg, rgba(0,107,92,.08), rgba(0,107,92,.02)); 
+      box-shadow: 0 6px 20px rgba(0,107,92,.12), inset 0 1px 0 rgba(255,255,255,.2); 
+    }
+    .dark .tab-button.active { 
+      color: rgb(134, 239, 172);
+      border-color: rgb(34, 197, 94);
+      background: linear-gradient(180deg, rgba(34,197,94,.2), rgba(2,6,23,.2)); 
+      box-shadow: 0 6px 20px rgba(34,197,94,.2), inset 0 1px 0 rgba(255,255,255,.05); 
+    }
+
+    .tab-content { 
+      display: none; 
+      animation: fadeIn 0.4s ease-in-out;
+    }
+    .tab-content.active { 
+      display: block; 
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Cards */
+    .metric-card {
+      background: white;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .dark .metric-card {
+      background: rgba(15, 23, 42, 0.8);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+    .metric-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+
+    .metric-value {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--olokun-primary), var(--olokun-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Chart Container */
+    .chart-container {
+      position: relative;
+      height: 350px;
+      background: white;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+    .dark .chart-container {
+      background: rgba(15, 23, 42, 0.8);
+    }
+
+    /* Comparison Items */
+    .comparison-positive {
+      border-left: 4px solid #22c55e;
+      background: linear-gradient(90deg, rgba(34,197,94,0.05), transparent);
+    }
+    .comparison-negative {
+      border-left: 4px solid #ef4444;
+      background: linear-gradient(90deg, rgba(239,68,68,0.05), transparent);
+    }
+    .dark .comparison-positive {
+      background: linear-gradient(90deg, rgba(34,197,94,0.15), transparent);
+    }
+    .dark .comparison-negative {
+      background: linear-gradient(90deg, rgba(239,68,68,0.15), transparent);
+    }
+
+    /* Roadmap */
+    .roadmap-badge {
+      width: 90px;
+      height: 90px;
+      background: linear-gradient(135deg, var(--olokun-primary), var(--olokun-secondary));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,107,92,0.3);
+    }
+
+    .roadmap-line {
+      position: absolute;
+      left: 45px;
+      top: 90px;
+      width: 3px;
+      height: calc(100% - 70px);
+      background: linear-gradient(180deg, var(--olokun-primary), transparent);
+    }
+
+    /* Reveal */
+    .reveal { 
+      opacity: 0; 
+      transform: translateY(20px); 
+      transition: opacity .6s ease, transform .6s ease; 
+    }
+    .reveal.show { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+
+    /* Progress Bars */
+    .progress-bar {
+      transition: width 1s ease-in-out;
+    }
+
+    /* Hero */
+    .hero-gradient {
+      background: linear-gradient(135deg, #006B5C 0%, #00897B 50%, #2E7D32 100%);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .metric-value {
+        font-size: 2rem;
+      }
+      .chart-container {
+        height: 280px;
+      }
+      .roadmap-badge {
+        width: 70px;
+        height: 70px;
+        font-size: 0.7rem;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen text-slate-800 dark:text-slate-200 bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-black">
+  
+  <!-- Background Ornaments -->
+  <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
+    <div class="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-emerald-400/15 blur-3xl dark:bg-emerald-600/20"></div>
+    <div class="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-teal-300/15 blur-3xl dark:bg-teal-500/20"></div>
+  </div>
+
+  <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+    
+    <!-- HEADER -->
+    <header class="flex flex-col md:flex-row items-center justify-between mb-8 gap-4">
+      <div class="flex items-center gap-4">
+        <div class="h-16 w-16 rounded-full gradient-olokun flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+          <i class="fas fa-map-marked-alt"></i>
+        </div>
+        <div class="text-center md:text-left">
+          <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-teal-700 via-emerald-600 to-green-600 bg-clip-text text-transparent">
+            Dashboard Olokun
+          </h1>
+          <p class="mt-1 text-sm md:text-base text-slate-600 dark:text-slate-300">
+            Geomarketing & Estratégia de Expansão Territorial
+          </p>
+        </div>
+      </div>
+      
+      <div class="flex items-center gap-3">
+        <button id="themeToggle" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-slate-300/60 dark:border-slate-700/60 hover:bg-slate-50 dark:hover:bg-slate-800 transition">
+          <svg class="w-5 h-5 dark:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 3v1m0 16v1m8-9h1M3 12H2m15.364-6.364l.707.707M5.929 18.071l-.707.707m12.142 0l.707-.707M5.929 5.929l-.707-.707M12 7a5 5 0 100 10 5 5 0 000-10z"/>
+          </svg>
+          <svg class="w-5 h-5 hidden dark:block" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M21.752 15.002A9.718 9.718 0 0112 21.75C6.615 21.75 2.25 17.385 2.25 12c0-4.105 2.52-7.62 6.111-9.047a.75.75 0 01.977.966A8.25 8.25 0 0013.5 12c0 3.298-1.897 6.147-4.656 7.512a.75.75 0 00.243 1.44A9.72 9.72 0 0021.75 15a.75.75 0 00-.001-0z"/>
+          </svg>
+          <span class="text-sm hidden md:inline">Tema</span>
+        </button>
+        <a href="../mapa_escolas.html" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg gradient-olokun text-white hover:opacity-90 transition shadow-lg">
+          <i class="fas fa-map"></i>
+          <span class="hidden md:inline">Ver Mapa</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- HERO BANNER -->
+    <div class="hero-gradient rounded-2xl shadow-2xl ring-1 ring-white/10 p-8 md:p-12 mb-8 text-white text-center relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute -top-20 -right-20 h-64 w-64 rounded-full bg-white blur-3xl"></div>
+        <div class="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-white blur-3xl"></div>
+      </div>
+      <div class="relative z-10">
+        <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Instituto Olokun</h2>
+        <p class="text-lg md:text-xl mb-6 opacity-95">Preservação e Conservação Costeira</p>
+        <div class="flex flex-wrap justify-center gap-3 md:gap-4">
+          <span class="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm border-2 border-white rounded-full font-semibold">
+            <i class="fas fa-seedling"></i> Piloto: 10-15 Escolas
+          </span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm border-2 border-white rounded-full font-semibold">
+            <i class="fas fa-flask"></i> Validação Metodológica
+          </span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm border-2 border-white rounded-full font-semibold">
+            <i class="fas fa-chart-line"></i> Crescimento Gradual
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TABS CONTAINER -->
+    <div class="glass rounded-2xl shadow-xl ring-1 ring-white/10 p-4 md:p-6">
+      
+      <!-- Tab Buttons -->
+      <div class="border-b border-slate-200/60 dark:border-slate-700/60 mb-6 overflow-x-auto">
+        <nav class="flex flex-nowrap -mb-px gap-2 md:gap-3" aria-label="Tabs">
+          <button class="tab-button whitespace-nowrap py-3 px-4 md:px-5 border-b-2 font-semibold text-sm md:text-base rounded-t-lg" data-tab="resultados">
+            <i class="fas fa-chart-line mr-2"></i>Dados do Mapa
+          </button>
+          <button class="tab-button whitespace-nowrap py-3 px-4 md:px-5 border-b-2 font-semibold text-sm md:text-base rounded-t-lg" data-tab="analise">
+            <i class="fas fa-balance-scale mr-2"></i>Análise
+          </button>
+          <button class="tab-button active whitespace-nowrap py-3 px-4 md:px-5 border-b-2 font-semibold text-sm md:text-base rounded-t-lg" data-tab="piloto">
+            <i class="fas fa-seedling mr-2"></i>Piloto MVP
+          </button>
+          <button class="tab-button whitespace-nowrap py-3 px-4 md:px-5 border-b-2 font-semibold text-sm md:text-base rounded-t-lg" data-tab="futuro">
+            <i class="fas fa-road mr-2"></i>Visão Futura
+          </button>
+        </nav>
+      </div>
+
+      <!-- Tab Contents -->
+      <div>
+        
+        <!-- PILOTO MVP -->
+        <div id="piloto" class="tab-content active">
+          <h2 class="text-2xl md:text-3xl font-bold text-slate-800 dark:text-slate-100 mb-3">
+            <i class="fas fa-seedling text-olokun-primary"></i> Piloto MVP: Começando Pequeno
+          </h2>
+          <p class="text-slate-600 dark:text-slate-300 mb-6">
+            Abordagem realista para validar metodologia antes de escalar
+          </p>
+
+          <!-- Alert Box -->
+          <div class="glass rounded-xl p-6 border-l-4 border-yellow-500 bg-yellow-50/50 dark:bg-yellow-900/20 mb-6">
+            <div class="flex items-start gap-4">
+              <div class="text-3xl text-yellow-600 dark:text-yellow-400">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-yellow-800 dark:text-yellow-300 mb-2">Filosofia: Pés no Chão</h4>
+                <p class="text-slate-700 dark:text-slate-300">
+                  Antes de pensar em 995 escolas, vamos validar a metodologia com um <strong>grupo piloto de 10-15 escolas</strong> 
+                  em Florianópolis. Foco em aprendizado, ajustes e resultados mensuráveis.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Piloto Scope -->
+          <h3 class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-4">Escopo do Piloto (3-6 meses)</h3>
+          <div class="grid md:grid-cols-3 gap-4 mb-8">
+            <div class="metric-card text-center">
+              <div class="text-sm text-slate-500 dark:text-slate-400 mb-2">Escolas Piloto</div>
+              <div class="metric-value" style="font-size: 2.2rem;">10-15</div>
+              <div class="text-xs text-slate-500 mt-1">7 públicas + 5 privadas</div>
+            </div>
+            <div class="metric-card text-center">
+              <div class="text-sm text-slate-500 dark:text-slate-400 mb-2">Professores</div>
+              <div class="metric-value" style="font-size: 2.2rem;">30-50</div>
+              <div class="text-xs text-slate-500 mt-1">Capacitados no piloto</div>
+            </div>
+            <div class="metric-card text-center">
+              <div class="text-sm text-slate-500 dark:text-slate-400 mb-2">Estudantes</div>
+              <div class="metric-value" style="font-size: 2.2rem;">~800</div>
+              <div class="text-xs text-slate-500 mt-1">Impactados inicialmente</div>
+            </div>
+          </div>
+
+          <!-- Critérios de Seleção -->
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="glass rounded-xl p-6 border border-teal-200/50 dark:border-teal-700/50">
+              <h4 class="text-lg font-bold text-teal-800 dark:text-teal-300 mb-4">
+                <i class="fas fa-check-square mr-2"></i>Critérios de Seleção das Escolas
+              </h4>
+              <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-arrow-right text-teal-600 mt-1"></i>
+                  <span><strong>Acessibilidade:</strong> Localização central em Florianópolis</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-arrow-right text-teal-600 mt-1"></i>
+                  <span><strong>Gestão engajada:</strong> Diretores receptivos à inovação</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-arrow-right text-teal-600 mt-1"></i>
+                  <span><strong>Mix de tipos:</strong> Públicas (Federal/Estadual/Municipal) + Privadas</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-arrow-right text-teal-600 mt-1"></i>
+                  <span><strong>Tamanho variado:</strong> 50-200 alunos por escola</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-arrow-right text-teal-600 mt-1"></i>
+                  <span><strong>Infraestrutura básica:</strong> Espaço para atividades e reuniões</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="glass rounded-xl p-6 border border-blue-200/50 dark:border-blue-700/50">
+              <h4 class="text-lg font-bold text-blue-800 dark:text-blue-300 mb-4">
+                <i class="fas fa-clipboard-check mr-2"></i>O que será validado no Piloto
+              </h4>
+              <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-vial text-blue-600 mt-1"></i>
+                  <span><strong>Metodologia:</strong> Eficácia das oficinas e materiais</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-vial text-blue-600 mt-1"></i>
+                  <span><strong>Engajamento:</strong> Taxa de adesão de professores e alunos</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-vial text-blue-600 mt-1"></i>
+                  <span><strong>Logística:</strong> Viabilidade operacional e custos reais</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-vial text-blue-600 mt-1"></i>
+                  <span><strong>Impacto:</strong> Mudança de comportamento mensurável</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fas fa-vial text-blue-600 mt-1"></i>
+                  <span><strong>Barreiras:</strong> Identificação de obstáculos não previstos</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Cronograma Realista -->
+          <h3 class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-4">Cronograma Detalhado do Piloto</h3>
+          <div class="space-y-3 mb-6">
+            <details class="glass rounded-lg overflow-hidden" open>
+              <summary class="cursor-pointer p-4 font-semibold text-slate-800 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                <i class="fas fa-calendar-week mr-2 text-teal-600"></i>Semanas 1-2: Preparação e Diagnóstico
+              </summary>
+              <div class="p-4 pt-0 text-sm text-slate-700 dark:text-slate-300">
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                  <li>Seleção e confirmação das 10-15 escolas piloto</li>
+                  <li>Reuniões individuais com gestores escolares</li>
+                  <li>Aplicação de questionário inicial (baseline) com professores</li>
+                  <li>Levantamento de infraestrutura e recursos disponíveis</li>
+                  <li>Formação da equipe executora (2-3 pessoas)</li>
+                </ul>
+              </div>
+            </details>
+            
+            <details class="glass rounded-lg overflow-hidden">
+              <summary class="cursor-pointer p-4 font-semibold text-slate-800 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                <i class="fas fa-calendar-week mr-2 text-teal-600"></i>Semanas 3-6: Capacitação de Professores
+              </summary>
+              <div class="p-4 pt-0 text-sm text-slate-700 dark:text-slate-300">
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                  <li>4 oficinas semanais de 3h cada (gestão de resíduos, economia circular, educação costeira)</li>
+                  <li>Entrega de kit pedagógico (cartilhas, cartazes, materiais didáticos)</li>
+                  <li>Co-criação de planos de aula adaptados à realidade local</li>
+                  <li>Formação de grupo de WhatsApp para suporte contínuo</li>
+                </ul>
+              </div>
+            </details>
+            
+            <details class="glass rounded-lg overflow-hidden">
+              <summary class="cursor-pointer p-4 font-semibold text-slate-800 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                <i class="fas fa-calendar-week mr-2 text-teal-600"></i>Semanas 7-14: Implementação nas Escolas
+              </summary>
+              <div class="p-4 pt-0 text-sm text-slate-700 dark:text-slate-300">
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                  <li>Professores aplicam atividades em sala (2-3 aulas por semana)</li>
+                  <li>Campanhas visuais nas escolas (semana do meio ambiente, etc)</li>
+                  <li>Visitas de acompanhamento quinzenais pela equipe Olokun</li>
+                  <li>Coleta de dados qualitativos (observações, fotos, relatos)</li>
+                  <li>Ajustes metodológicos em tempo real</li>
+                </ul>
+              </div>
+            </details>
+            
+            <details class="glass rounded-lg overflow-hidden">
+              <summary class="cursor-pointer p-4 font-semibold text-slate-800 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                <i class="fas fa-calendar-week mr-2 text-teal-600"></i>Semanas 15-20: Avaliação de Impacto
+              </summary>
+              <div class="p-4 pt-0 text-sm text-slate-700 dark:text-slate-300">
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                  <li>Aplicação de questionário final (endline) com professores e alunos</li>
+                  <li>Grupos focais com professores para feedback qualitativo</li>
+                  <li>Análise de mudança de comportamento (antes vs depois)</li>
+                  <li>Levantamento de custos reais e tempo investido</li>
+                  <li>Documentação de lições aprendidas e boas práticas</li>
+                </ul>
+              </div>
+            </details>
+            
+            <details class="glass rounded-lg overflow-hidden">
+              <summary class="cursor-pointer p-4 font-semibold text-slate-800 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                <i class="fas fa-calendar-week mr-2 text-teal-600"></i>Semanas 21-24: Relatório e Decisão
+              </summary>
+              <div class="p-4 pt-0 text-sm text-slate-700 dark:text-slate-300">
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                  <li>Elaboração de relatório final com indicadores quantitativos</li>
+                  <li>Apresentação de resultados para gestores e potenciais parceiros</li>
+                  <li>Decisão: Escalar, Ajustar ou Pivotar?</li>
+                  <li>Se validado: preparação de kit de replicação para Fase 2</li>
+                  <li>Se não validado: refinamento e novo ciclo piloto</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+
+          <!-- Budget Realista -->
+          <h3 class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-4">Orçamento Realista do Piloto</h3>
+          <div class="glass rounded-xl p-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-bold text-slate-800 dark:text-slate-200 mb-3">Investimento Inicial</h4>
+                <div class="space-y-2 text-sm">
+                  <div class="flex justify-between p-2 bg-slate-50 dark:bg-slate-800 rounded">
+                    <span class="text-slate-700 dark:text-slate-300">Materiais pedagógicos (kits)</span>
+                    <span class="font-semibold text-slate-800 dark:text-slate-200">R$ 3.000</span>
+                  </div>
+                  <div class="flex justify-between p-2 bg-slate-50 dark:bg-slate-800 rounded">
+                    <span class="text-slate-700 dark:text-slate-300">Oficinas de capacitação (4x)</span>
+                    <span class="font-semibold text-slate-800 dark:text-slate-200">R$ 4.000</span>
+                  </div>
+                  <div class="flex justify-between p-2 bg-slate-50 dark:bg-slate-800 rounded">
+                    <span class="text-slate-700 dark:text-slate-300">Transporte e logística</span>
+                    <span class="font-semibold text-slate-800 dark:text-slate-200">R$ 2.500</span>
+                  </div>
+                  <div class="flex justify-between p-2 bg-slate-50 dark:bg-slate-800 rounded">
+                    <span class="text-slate-700 dark:text-slate-300">Equipe executora (6 meses)</span>
+                    <span class="font-semibold text-slate-800 dark:text-slate-200">R$ 12.000</span>
+                  </div>
+                  <div class="flex justify-between p-2 bg-slate-50 dark:bg-slate-800 rounded">
+                    <span class="text-slate-700 dark:text-slate-300">Avaliação e relatório</span>
+                    <span class="font-semibold text-slate-800 dark:text-slate-200">R$ 2.500</span>
+                  </div>
+                  <div class="flex justify-between p-3 bg-teal-100 dark:bg-teal-900/30 rounded font-bold mt-2">
+                    <span class="text-teal-800 dark:text-teal-300">TOTAL PILOTO</span>
+                    <span class="text-teal-800 dark:text-teal-300">R$ 24.000</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-800 dark:text-slate-200 mb-3">Indicadores de Sucesso</h4>
+                <div class="space-y-3">
+                  <div class="p-3 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-200 dark:border-green-800">
+                    <div class="font-semibold text-green-800 dark:text-green-300 mb-1">✓ Validado</div>
+                    <p class="text-xs text-slate-700 dark:text-slate-300">≥70% de engajamento docente + mudança comportamental mensurável</p>
+                  </div>
+                  <div class="p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg border border-yellow-200 dark:border-yellow-800">
+                    <div class="font-semibold text-yellow-800 dark:text-yellow-300 mb-1">⚠ Ajustar</div>
+                    <p class="text-xs text-slate-700 dark:text-slate-300">50-70% engajamento - metodologia precisa de refinamento</p>
+                  </div>
+                  <div class="p-3 bg-red-50 dark:bg-red-900/20 rounded-lg border border-red-200 dark:border-red-800">
+                    <div class="font-semibold text-red-800 dark:text-red-300 mb-1">✗ Pivotar</div>
+                    <p class="text-xs text-slate-700 dark:text-slate-300">&lt;50% engajamento - rever abordagem ou público-alvo</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- RESULTADOS -->
+        <div id="resultados" class="tab-content">
+          <h2 class="text-2xl md:text-3xl font-bold text-slate-800 dark:text-slate-100 mb-3">
+            <i class="fas fa-chart-line text-olokun-primary"></i> Dados do Mapeamento
+          </h2>
+          <p class="text-slate-600 dark:text-slate-300 mb-6">
+            Base de dados geoespacial para priorização estratégica do piloto
+          </p>
+
+          <!-- Metrics Grid -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <div class="metric-card text-center">
+              <div class="text-sm text-slate-500 dark:text-slate-400 mb-2">Total de Escolas</div>
+              <div class="metric-value">995</div>
+              <div class="text-xs text-slate-500 mt-1">Mapeadas</div>
+            </div>
+            <div class="metric-card text-center">
+              <div class="text-sm text-slate-500 dark:text-slate-400 mb-2">Escolas Públicas</div>
+              <div class="metric-value">735</div>
+              <div class="text-xs text-slate-500 mt-1">Federal, Estadual, Municipal</div>
+            </div>
+            <div class="metric-card text-center">
+              <div class="text-sm text-slate-500 dark:text-slate-400 mb-2">Escolas Privadas</div>
+              <div class="metric-value">260</div>
+              <div class="text-xs text-slate-500 mt-1">Particular, Filantrópica</div>
+            </div>
+            <div class="metric-card text-center">
+              <div class="text-sm text-slate-500 dark:text-slate-400 mb-2">Cobertura</div>
+              <div class="metric-value">32</div>
+              <div class="text-xs text-slate-500 mt-1">Municípios</div>
+            </div>
+          </div>
+
+          <!-- Charts Row -->
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="chart-container">
+              <canvas id="schoolTypeChart"></canvas>
+            </div>
+            <div class="chart-container">
+              <canvas id="categoryChart"></canvas>
+            </div>
+          </div>
+
+          <!-- Key Insights -->
+          <div class="glass rounded-xl p-6 border border-teal-200/50 dark:border-teal-700/50">
+            <h3 class="text-xl font-bold text-teal-800 dark:text-teal-300 mb-4">
+              <i class="fas fa-lightbulb mr-2"></i>Como usar estes dados para o Piloto
+            </h3>
+            <div class="grid md:grid-cols-3 gap-4">
+              <div class="bg-white/50 dark:bg-slate-800/50 rounded-lg p-4">
+                <div class="font-semibold text-teal-700 dark:text-teal-300 mb-2">Concentração Urbana</div>
+                <p class="text-sm text-slate-600 dark:text-slate-300">73,8% em perímetro urbano → Facilita logística do piloto em Florianópolis</p>
+              </div>
+              <div class="bg-white/50 dark:bg-slate-800/50 rounded-lg p-4">
+                <div class="font-semibold text-teal-700 dark:text-teal-300 mb-2">Dominância Pública</div>
+                <p class="text-sm text-slate-600 dark:text-slate-300">73,9% públicas → Piloto deve ter pelo menos 7 públicas + 3-5 privadas</p>
+              </div>
+              <div class="bg-white/50 dark:bg-slate-800/50 rounded-lg p-4">
+                <div class="font-semibold text-teal-700 dark:text-teal-300 mb-2">Base para Escala</div>
+                <p class="text-sm text-slate-600 dark:text-slate-300">995 escolas totais → Se piloto validar, potencial de expansão claro</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ANÁLISE -->
+        <div id="analise" class="tab-content">
+          <h2 class="text-2xl md:text-3xl font-bold text-slate-800 dark:text-slate-100 mb-3">
+            <i class="fas fa-balance-scale text-olokun-primary"></i> Facilidades vs Dificuldades
+          </h2>
+          <p class="text-slate-600 dark:text-slate-300 mb-6">
+            Análise estratégica para implementação do Instituto Olokun
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            
+            <!-- Facilidades -->
+            <div class="glass rounded-xl p-6 comparison-positive">
+              <h3 class="text-xl font-bold text-green-700 dark:text-green-400 mb-4 flex items-center gap-2">
+                <i class="fas fa-check-circle"></i> Facilidades
+              </h3>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                  <i class="fas fa-check text-green-600 mt-1"></i>
+                  <span>Infraestrutura viária consolidada em Florianópolis</span>
+                </li>
+                <li class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                  <i class="fas fa-check text-green-600 mt-1"></i>
+                  <span>Acesso a redes de educação estabelecidas</span>
+                </li>
+                <li class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                  <i class="fas fa-check text-green-600 mt-1"></i>
+                  <span>Dados geoespaciais de qualidade disponíveis</span>
+                </li>
+                <li class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                  <i class="fas fa-check text-green-600 mt-1"></i>
+                  <span>Concentração de escolas em áreas urbanas</span>
+                </li>
+                <li class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                  <i class="fas fa-check text-green-600 mt-1"></i>
+                  <span>Parceiros governamentais identificados</span>
+                </li>
+                <li class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                  <i class="fas fa-check text-green-600 mt-1"></i>
+                  <span>Comunidades com histórico de mobilização</span>
+                </li>
+                <li class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                  <i class="fas fa-check text-green-600 mt-1"></i>
+                  <span>Clusters de escolas por proximidade</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Dificuldades -->
+            <div class="glass rounded-xl p-6 comparison-negative">
+              <h3 class="text-xl font-bold text-red-700 dark:text-red-400 mb-4 flex items-center gap-2">
+                <i class="fas fa-exclamation-circle"></i> Dificuldades
+              </h3>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                  <i class="fas fa-exclamation text-red-600 mt-1"></i>
+                  <span>Dispersão de escolas privadas em periferias</span>
+                </li>
+                <li class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                  <i class="fas fa-exclamation text-red-600 mt-1"></i>
+                  <span>Falta de infraestrutura em zonas rurais</span>
+                </li>
+                <li class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                  <i class="fas fa-exclamation text-red-600 mt-1"></i>
+                  <span>Limitações orçamentárias para capacitação em massa</span>
+                </li>
+                <li class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                  <i class="fas fa-exclamation text-red-600 mt-1"></i>
+                  <span>Distâncias longas entre municípios</span>
+                </li>
+                <li class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                  <i class="fas fa-exclamation text-red-600 mt-1"></i>
+                  <span>Heterogeneidade de recursos entre escolas</span>
+                </li>
+                <li class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                  <i class="fas fa-exclamation text-red-600 mt-1"></i>
+                  <span>Dados incompletos sobre áreas costeiras</span>
+                </li>
+                <li class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                  <i class="fas fa-exclamation text-red-600 mt-1"></i>
+                  <span>Resistência a iniciativas não alinhadas ao currículo</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Strategic Insight -->
+          <div class="glass rounded-xl p-6 border border-blue-200/50 dark:border-blue-700/50 bg-blue-50/30 dark:bg-blue-950/30">
+            <div class="flex items-start gap-4">
+              <div class="text-4xl text-blue-600 dark:text-blue-400">
+                <i class="fas fa-brain"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-blue-800 dark:text-blue-300 mb-2">Insight Estratégico</h4>
+                <p class="text-slate-700 dark:text-slate-300">
+                  A concentração de escolas em Florianópolis (capital) oferece oportunidade de <strong>pilotos de alto impacto</strong>, 
+                  enquanto a distribuição na Grande Florianópolis permite <strong>expansão territorial gradual e sustentável</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- VISÃO FUTURA -->
+        <div id="futuro" class="tab-content">
+          <h2 class="text-2xl md:text-3xl font-bold text-slate-800 dark:text-slate-100 mb-3">
+            <i class="fas fa-road text-olokun-primary"></i> Visão de Longo Prazo
+          </h2>
+          <p class="text-slate-600 dark:text-slate-300 mb-6">
+            Se o piloto validar a metodologia, este é o caminho de expansão gradual
+          </p>
+
+          <!-- Alert -->
+          <div class="glass rounded-xl p-6 border-l-4 border-blue-500 bg-blue-50/50 dark:bg-blue-900/20 mb-6">
+            <div class="flex items-start gap-4">
+              <div class="text-3xl text-blue-600 dark:text-blue-400">
+                <i class="fas fa-info-circle"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-blue-800 dark:text-blue-300 mb-2">⚠️ Importante</h4>
+                <p class="text-slate-700 dark:text-slate-300">
+                  Este plano de expansão só será ativado <strong>após validação bem-sucedida do piloto</strong>. 
+                  Os números e prazos podem mudar com base nas lições aprendidas.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Roadmap Timeline -->
+          <div class="space-y-8 mb-8">
+            
+            <!-- FASE 1 -->
+            <div class="relative grid md:grid-cols-12 gap-4 items-start">
+              <div class="md:col-span-2 flex justify-center md:justify-start">
+                <div class="roadmap-badge">
+                  <span>FASE 1<br/>Piloto</span>
+                </div>
+              </div>
+              <div class="roadmap-line hidden md:block"></div>
+              <div class="md:col-span-10 glass rounded-xl p-6">
+                <h3 class="text-xl font-bold text-teal-800 dark:text-teal-300 mb-3">
+                  <i class="fas fa-star mr-2"></i>Florianópolis - Expansão Inicial
+                </h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400 mb-3">Duração: 6-12 meses (após piloto)</p>
+                <p class="mb-3 text-slate-700 dark:text-slate-300">
+                  <strong>Objetivo:</strong> Replicar metodologia validada para 30-50 escolas
+                </p>
+                <p class="mb-3 text-slate-700 dark:text-slate-300">
+                  <strong>Escolas-alvo:</strong> 25 públicas + 10 privadas em bairros urbanos
+                </p>
+                <div class="bg-slate-100 dark:bg-slate-800 rounded-lg p-4 mt-4">
+                  <p class="font-semibold text-slate-800 dark:text-slate-200 mb-2">Ações principais:</p>
+                  <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                    <li class="flex items-start gap-2">
+                      <i class="fas fa-arrow-right text-teal-600 mt-1"></i>
+                      <span>Seleção de escolas-âncora com gestores empenhados</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fas fa-arrow-right text-teal-600 mt-1"></i>
+                      <span>Capacitação intensiva de professores multiplicadores</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fas fa-arrow-right text-teal-600 mt-1"></i>
+                      <span>Campanhas de conscientização costeira focadas</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fas fa-arrow-right text-teal-600 mt-1"></i>
+                      <span>Coleta de feedback e ajustes metodológicos</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="mt-4 inline-block px-4 py-2 bg-teal-100 dark:bg-teal-900/30 text-teal-800 dark:text-teal-300 rounded-full text-sm font-semibold">
+                  <i class="fas fa-bullseye mr-2"></i>KPI: 90% de adesão e engajamento inicial
+                </div>
+              </div>
+            </div>
+
+            <!-- FASE 2 -->
+            <div class="relative grid md:grid-cols-12 gap-4 items-start">
+              <div class="md:col-span-2 flex justify-center md:justify-start">
+                <div class="roadmap-badge">
+                  <span>FASE 2<br/>Escala</span>
+                </div>
+              </div>
+              <div class="md:col-span-10 glass rounded-xl p-6">
+                <h3 class="text-xl font-bold text-teal-800 dark:text-teal-300 mb-3">
+                  <i class="fas fa-chart-line mr-2"></i>Grande Florianópolis - Escala Regional
+                </h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400 mb-3">Duração: 12-24 meses</p>
+                <p class="mb-3 text-slate-700 dark:text-slate-300">
+                  <strong>Objetivo:</strong> Expandir para 100-150 escolas em municípios vizinhos
+                </p>
+                <p class="mb-3 text-slate-700 dark:text-slate-300">
+                  <strong>Escolas-alvo:</strong> 80 públicas + 30 privadas em 8-10 municípios
+                </p>
+                <div class="bg-slate-100 dark:bg-slate-800 rounded-lg p-4 mt-4">
+                  <p class="font-semibold text-slate-800 dark:text-slate-200 mb-2">Ações principais:</p>
+                  <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                    <li class="flex items-start gap-2">
+                      <i class="fas fa-arrow-right text-teal-600 mt-1"></i>
+                      <span>Replicação de metodologia validada no piloto</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fas fa-arrow-right text-teal-600 mt-1"></i>
+                      <span>Parcerias com secretarias municipais de educação</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fas fa-arrow-right text-teal-600 mt-1"></i>
+                      <span>Formação de núcleos locais de multiplicadores</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fas fa-arrow-right text-teal-600 mt-1"></i>
+                      <span>Campanhas regionais temáticas (costeiras, marinhas)</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="mt-4 inline-block px-4 py-2 bg-teal-100 dark:bg-teal-900/30 text-teal-800 dark:text-teal-300 rounded-full text-sm font-semibold">
+                  <i class="fas fa-bullseye mr-2"></i>KPI: 70% de cobertura em fase 2
+                </div>
+              </div>
+            </div>
+
+            <!-- FASE 3 -->
+            <div class="relative grid md:grid-cols-12 gap-4 items-start">
+              <div class="md:col-span-2 flex justify-center md:justify-start">
+                <div class="roadmap-badge">
+                  <span>FASE 3<br/>Consolidação</span>
+                </div>
+              </div>
+              <div class="md:col-span-10 glass rounded-xl p-6">
+                <h3 class="text-xl font-bold text-teal-800 dark:text-teal-300 mb-3">
+                  <i class="fas fa-rocket mr-2"></i>Consolidação Territorial Completa
+                </h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400 mb-3">Duração: 24-36 meses</p>
+                <p class="mb-3 text-slate-700 dark:text-slate-300">
+                  <strong>Objetivo:</strong> Integração em políticas públicas e sustentabilidade
+                </p>
+                <p class="mb-3 text-slate-700 dark:text-slate-300">
+                  <strong>Escolas-alvo:</strong> 300+ escolas (cobertura significativa da região)
+                </p>
+                <div class="bg-slate-100 dark:bg-slate-800 rounded-lg p-4 mt-4">
+                  <p class="font-semibold text-slate-800 dark:text-slate-200 mb-2">Ações principais:</p>
+                  <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                    <li class="flex items-start gap-2">
+                      <i class="fas fa-arrow-right text-teal-600 mt-1"></i>
+                      <span>Integração ao currículo oficial das redes</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fas fa-arrow-right text-teal-600 mt-1"></i>
+                      <span>Certificação de professores e multiplicadores</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fas fa-arrow-right text-teal-600 mt-1"></i>
+                      <span>Sustentabilidade financeira via parcerias público-privadas</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <i class="fas fa-arrow-right text-teal-600 mt-1"></i>
+                      <span>Monitoramento contínuo de impacto ambiental</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="mt-4 inline-block px-4 py-2 bg-teal-100 dark:bg-teal-900/30 text-teal-800 dark:text-teal-300 rounded-full text-sm font-semibold">
+                  <i class="fas fa-bullseye mr-2"></i>KPI: 95% de cobertura e impacto mensurável
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Strategic Approaches -->
+          <h3 class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-4 mt-8">Projeção de Crescimento Gradual</h3>
+          
+          <!-- Impact Chart -->
+          <div class="chart-container mb-8">
+            <canvas id="impactChart"></canvas>
+          </div>
+
+          <h3 class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-4 mt-8">Abordagens Estratégicas</h3>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="glass rounded-xl p-6 text-center">
+              <div class="text-4xl text-teal-600 dark:text-teal-400 mb-3">
+                <i class="fas fa-map-pin"></i>
+              </div>
+              <h4 class="font-bold text-lg mb-2 text-slate-800 dark:text-slate-200">Clustering Geográfico</h4>
+              <p class="text-sm text-slate-600 dark:text-slate-300">
+                Priorizar escolas em clusters urbanos para otimizar logística e impacto comunitário.
+              </p>
+            </div>
+            <div class="glass rounded-xl p-6 text-center">
+              <div class="text-4xl text-teal-600 dark:text-teal-400 mb-3">
+                <i class="fas fa-target"></i>
+              </div>
+              <h4 class="font-bold text-lg mb-2 text-slate-800 dark:text-slate-200">Seleção Estratégica</h4>
+              <p class="text-sm text-slate-600 dark:text-slate-300">
+                Focar em escolas de acesso fácil, gestão engajada e potencial de multiplicação.
+              </p>
+            </div>
+            <div class="glass rounded-xl p-6 text-center">
+              <div class="text-4xl text-teal-600 dark:text-teal-400 mb-3">
+                <i class="fas fa-link"></i>
+              </div>
+              <h4 class="font-bold text-lg mb-2 text-slate-800 dark:text-slate-200">Parcerias Locais</h4>
+              <p class="text-sm text-slate-600 dark:text-slate-300">
+                Engajar secretarias municipais, ONGs locais e associações comunitárias.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ANÁLISE (antigo Geomarketing renomeado) -->
+        <div id="geomarketing" class="tab-content" style="display:none;"></div>
+        
+        <!-- IMPACTO (REMOVIDO) -->
+        <div id="impacto" class="tab-content" style="display:none;">
+          <h2 class="text-2xl md:text-3xl font-bold text-slate-800 dark:text-slate-100 mb-3">
+            <i class="fas fa-rocket text-olokun-primary"></i> Impacto Estimado e Alcance
+          </h2>
+          <p class="text-slate-600 dark:text-slate-300 mb-6">
+            Projeção de beneficiários e crescimento ao longo das 3 fases
+          </p>
+
+          <!-- Impact Chart -->
+          <div class="chart-container mb-8">
+            <canvas id="impactChart"></canvas>
+          </div>
+
+          <!-- Beneficiaries -->
+          <h3 class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-4">Beneficiários Estimados (Fase 1-3)</h3>
+          <div class="space-y-4 mb-8">
+            <div class="glass rounded-lg p-4">
+              <div class="flex justify-between items-center mb-2">
+                <span class="font-semibold text-slate-700 dark:text-slate-300">Prof. Capacitados</span>
+                <span class="font-bold text-teal-700 dark:text-teal-400">3,500+</span>
+              </div>
+              <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-3 overflow-hidden">
+                <div class="progress-bar bg-gradient-to-r from-green-500 to-emerald-600 h-3 rounded-full" style="width: 85%;"></div>
+              </div>
+            </div>
+            <div class="glass rounded-lg p-4">
+              <div class="flex justify-between items-center mb-2">
+                <span class="font-semibold text-slate-700 dark:text-slate-300">Estudantes Alcançados</span>
+                <span class="font-bold text-teal-700 dark:text-teal-400">45,000+</span>
+              </div>
+              <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-3 overflow-hidden">
+                <div class="progress-bar bg-gradient-to-r from-blue-500 to-cyan-600 h-3 rounded-full" style="width: 92%;"></div>
+              </div>
+            </div>
+            <div class="glass rounded-lg p-4">
+              <div class="flex justify-between items-center mb-2">
+                <span class="font-semibold text-slate-700 dark:text-slate-300">Famílias Sensibilizadas</span>
+                <span class="font-bold text-teal-700 dark:text-teal-400">120,000+</span>
+              </div>
+              <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-3 overflow-hidden">
+                <div class="progress-bar bg-gradient-to-r from-yellow-500 to-orange-600 h-3 rounded-full" style="width: 78%;"></div>
+              </div>
+            </div>
+            <div class="glass rounded-lg p-4">
+              <div class="flex justify-between items-center mb-2">
+                <span class="font-semibold text-slate-700 dark:text-slate-300">Área Costeira Protegida</span>
+                <span class="font-bold text-teal-700 dark:text-teal-400">~320 km²</span>
+              </div>
+              <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-3 overflow-hidden">
+                <div class="progress-bar bg-gradient-to-r from-red-500 to-pink-600 h-3 rounded-full" style="width: 65%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- KPIs Grid -->
+          <h3 class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-4">Indicadores-Chave</h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <div class="metric-card text-center">
+              <div class="text-sm text-slate-500 dark:text-slate-400 mb-2">Tempo Total</div>
+              <div class="metric-value">24</div>
+              <div class="text-xs text-slate-500 mt-1">Meses (3 Fases)</div>
+            </div>
+            <div class="metric-card text-center">
+              <div class="text-sm text-slate-500 dark:text-slate-400 mb-2">Custo Inicial</div>
+              <div class="metric-value" style="font-size: 1.8rem;">150k</div>
+              <div class="text-xs text-slate-500 mt-1">Reais (Fase 1)</div>
+            </div>
+            <div class="metric-card text-center">
+              <div class="text-sm text-slate-500 dark:text-slate-400 mb-2">ROI Social</div>
+              <div class="metric-value">5x</div>
+              <div class="text-xs text-slate-500 mt-1">Impacto Ambiental</div>
+            </div>
+            <div class="metric-card text-center">
+              <div class="text-sm text-slate-500 dark:text-slate-400 mb-2">Taxa Replicação</div>
+              <div class="metric-value">4x</div>
+              <div class="text-xs text-slate-500 mt-1">Crescimento Mensal</div>
+            </div>
+          </div>
+
+          <!-- Next Steps -->
+          <h3 class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-4">Próximos Passos Recomendados</h3>
+          <div class="space-y-3">
+            <details class="glass rounded-lg overflow-hidden">
+              <summary class="cursor-pointer p-4 font-semibold text-slate-800 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                <i class="fas fa-calendar-check mr-2 text-teal-600"></i>MÊS 1: Constituição do Núcleo Piloto
+              </summary>
+              <div class="p-4 pt-0 text-sm text-slate-700 dark:text-slate-300">
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                  <li>Seleção de 10-15 escolas-âncora em Florianópolis (públicas e privadas)</li>
+                  <li>Reunião de kickoff com gestores escolares e professores-chave</li>
+                  <li>Diagnóstico participativo sobre conhecimento ambiental</li>
+                  <li>Design de oficinas e campanhas personalizadas</li>
+                </ul>
+              </div>
+            </details>
+            
+            <details class="glass rounded-lg overflow-hidden">
+              <summary class="cursor-pointer p-4 font-semibold text-slate-800 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                <i class="fas fa-calendar-check mr-2 text-teal-600"></i>MÊS 2-3: Implementação Piloto
+              </summary>
+              <div class="p-4 pt-0 text-sm text-slate-700 dark:text-slate-300">
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                  <li>Capacitação de 50-100 professores em gestão de resíduos</li>
+                  <li>Campanhas visuais nas escolas (pôsteres, banners)</li>
+                  <li>Primeira rodada de oficinas com alunos</li>
+                  <li>Coleta de feedback em tempo real</li>
+                </ul>
+              </div>
+            </details>
+            
+            <details class="glass rounded-lg overflow-hidden">
+              <summary class="cursor-pointer p-4 font-semibold text-slate-800 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                <i class="fas fa-calendar-check mr-2 text-teal-600"></i>MÊS 4-6: Validação e Ajustes
+              </summary>
+              <div class="p-4 pt-0 text-sm text-slate-700 dark:text-slate-300">
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                  <li>Análise de impacto e resultados qualitativos</li>
+                  <li>Identificação de lições aprendidas</li>
+                  <li>Refinamento da metodologia para replicação</li>
+                  <li>Preparação kit de expansão para Fase 2</li>
+                </ul>
+              </div>
+            </details>
+            
+            <details class="glass rounded-lg overflow-hidden">
+              <summary class="cursor-pointer p-4 font-semibold text-slate-800 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                <i class="fas fa-calendar-check mr-2 text-teal-600"></i>MÊS 7+: Escala e Consolidação
+              </summary>
+              <div class="p-4 pt-0 text-sm text-slate-700 dark:text-slate-300">
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                  <li>Expansão para 12 municípios periféricos</li>
+                  <li>Parcerias formalizadas com secretarias municipais</li>
+                  <li>Integração ao currículo das redes de ensino</li>
+                  <li>Estruturação de programa de certificação</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="mt-12 text-center text-slate-600 dark:text-slate-400 text-sm">
+      <div class="border-t border-slate-200 dark:border-slate-700 pt-6">
+        <p class="font-semibold text-lg gradient-olokun text-white inline-block px-6 py-2 rounded-full mb-2">
+          Instituto Olokun
+        </p>
+        <p>Preservação e Conservação Costeira</p>
+        <p class="mt-2 opacity-75">
+          Dashboard estratégico: Piloto de 10-15 escolas para validação metodológica
+        </p>
+        <p class="mt-1 text-xs opacity-60">
+          Base: Análise geoespacial de 995 escolas em Grande Florianópolis/SC
+        </p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 600,
+      offset: 50,
+      once: true
+    });
+
+    // Tab System
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const targetTab = button.getAttribute('data-tab');
+        
+        // Remove active from all
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+        
+        // Add active to clicked
+        button.classList.add('active');
+        const targetContent = document.getElementById(targetTab);
+        if (targetContent) {
+          targetContent.classList.add('active');
+          // Reinit charts if needed
+          if (targetTab === 'resultados') {
+            initResultCharts();
+          } else if (targetTab === 'futuro') {
+            initImpactChart();
+          }
+        }
+        
+        // Scroll to top smoothly
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+
+    // Dark mode toggle
+    const themeBtn = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      html.classList.add('dark');
+    }
+
+    themeBtn?.addEventListener('click', () => {
+      const isDark = html.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+
+    // Reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { 
+        if (e.isIntersecting) e.target.classList.add('show'); 
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // CHARTS
+    let schoolTypeChartInstance = null;
+    let categoryChartInstance = null;
+    let impactChartInstance = null;
+
+    function initResultCharts() {
+      // School Type Chart
+      const ctx1 = document.getElementById('schoolTypeChart');
+      if (ctx1) {
+        if (schoolTypeChartInstance) schoolTypeChartInstance.destroy();
+        schoolTypeChartInstance = new Chart(ctx1.getContext('2d'), {
+          type: 'doughnut',
+          data: {
+            labels: ['Públicas', 'Privadas'],
+            datasets: [{
+              data: [735, 260],
+              backgroundColor: ['#2E7D32', '#FF6B35'],
+              borderColor: ['#1b5e20', '#d84315'],
+              borderWidth: 2
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { 
+                position: 'bottom', 
+                labels: { font: { size: 13, weight: 'bold' } } 
+              },
+              title: { 
+                display: true, 
+                text: 'Distribuição: Públicas vs Privadas', 
+                font: { size: 15, weight: 'bold' } 
+              }
+            }
+          }
+        });
+      }
+
+      // Category Chart
+      const ctx2 = document.getElementById('categoryChart');
+      if (ctx2) {
+        if (categoryChartInstance) categoryChartInstance.destroy();
+        categoryChartInstance = new Chart(ctx2.getContext('2d'), {
+          type: 'bar',
+          data: {
+            labels: ['Federal', 'Estadual', 'Municipal', 'Particular', 'Filantrópica', 'Comunitária'],
+            datasets: [{
+              label: 'Quantidade',
+              data: [45, 180, 510, 145, 85, 30],
+              backgroundColor: ['#6A1B9A', '#1565C0', '#00838F', '#E53935', '#E65100', '#2E7D32'],
+              borderRadius: 6
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            indexAxis: 'y',
+            plugins: {
+              legend: { display: false },
+              title: { 
+                display: true, 
+                text: 'Escolas por Categoria', 
+                font: { size: 15, weight: 'bold' } 
+              }
+            },
+            scales: {
+              x: { beginAtZero: true }
+            }
+          }
+        });
+      }
+    }
+
+    function initImpactChart() {
+      const ctx3 = document.getElementById('impactChart');
+      if (ctx3) {
+        if (impactChartInstance) impactChartInstance.destroy();
+        impactChartInstance = new Chart(ctx3.getContext('2d'), {
+          type: 'line',
+          data: {
+            labels: ['Piloto', 'Mês 6', 'Mês 12', 'Mês 18', 'Mês 24', 'Mês 36'],
+            datasets: [
+              {
+                label: 'Escolas Alcançadas',
+                data: [12, 35, 80, 150, 220, 300],
+                borderColor: '#006B5C',
+                backgroundColor: 'rgba(0, 107, 92, 0.1)',
+                tension: 0.4,
+                fill: true,
+                pointRadius: 5,
+                pointBackgroundColor: '#006B5C'
+              },
+              {
+                label: 'Professores Capacitados',
+                data: [40, 120, 280, 520, 760, 1000],
+                borderColor: '#FF6B35',
+                backgroundColor: 'rgba(255, 107, 53, 0.1)',
+                tension: 0.4,
+                fill: true,
+                pointRadius: 5,
+                pointBackgroundColor: '#FF6B35'
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { 
+                position: 'bottom', 
+                labels: { font: { size: 12, weight: 'bold' } } 
+              },
+              title: { 
+                display: true, 
+                text: 'Projeção de Crescimento Gradual (Após Piloto Validado)', 
+                font: { size: 15, weight: 'bold' } 
+              }
+            },
+            scales: {
+              y: { beginAtZero: true }
+            }
+          }
+        });
+      }
+    }
+
+    // Initialize charts on load
+    document.addEventListener('DOMContentLoaded', () => {
+      // Don't init any charts automatically - they will load when tabs are clicked
+      // First tab (Piloto MVP) has no charts
+    });
+  </script>
+</body>
+</html>
