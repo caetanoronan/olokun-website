@@ -93,6 +93,32 @@ olokun-website/
 
 ---
 
+## 🌿 Higiene de Branches (Padrão Oficial)
+
+Para evitar divergências futuras, o fluxo oficial do projeto passa a ser:
+
+- `master` → branch canônica de desenvolvimento e documentação (README visível no GitHub)
+- `gh-pages` → branch de publicação do GitHub Pages
+
+Branches antigas (`main`, `ghpages`, `gh-pages-clean`) foram descontinuadas na rotina diária.
+
+### Fluxo recomendado
+
+1. Edite e commit em `master`
+2. Sincronize `gh-pages` a partir de `master`
+3. Faça push das duas branches
+
+### Observação de segurança
+
+Backups de estado foram preservados nas branches:
+
+- `backup/master-2026-03-01`
+- `backup/main-2026-03-01`
+- `backup/ghpages-2026-03-01`
+- `backup/gh-pages-2026-03-01`
+
+---
+
 ## 🧭 Como Rodar Localmente
 
 ### Pré-requisitos
