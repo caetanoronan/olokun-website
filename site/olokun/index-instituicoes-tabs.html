@@ -44,6 +44,45 @@
         </div>
       </div>
       <div class="flex items-center gap-2">
+        <label for="languageSelect" class="sr-only">Idioma</label>
+        <div class="relative group">
+          <button class="flex items-center gap-2 px-3 py-2 rounded-lg border border-slate-300/60 dark:border-slate-700/60 bg-white/80 dark:bg-slate-900/80 text-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition" id="languageBtn">
+            <svg width="20" height="14" viewBox="0 0 20 14" class="rounded">
+              <rect width="20" height="14" fill="#009c3b"/>
+              <polygon points="10,0 0,14 20,14" fill="#ffcc00"/>
+              <path d="M5,5 Q10,8 15,5 Q10,10 5,5" fill="#002776"/>
+            </svg>
+            <span>PT</span>
+          </button>
+          <div class="hidden absolute right-0 mt-1 w-32 bg-white dark:bg-slate-800 border border-slate-300/60 dark:border-slate-700/60 rounded-lg shadow-lg z-50 group-hover:block">
+            <button onclick="window.location.href='index-instituicoes-tabs.html'" class="w-full flex items-center gap-2 px-4 py-2 text-sm hover:bg-slate-100 dark:hover:bg-slate-700 rounded-t-lg transition">
+              <svg width="20" height="14" viewBox="0 0 20 14" class="rounded">
+                <rect width="20" height="14" fill="#009c3b"/>
+                <polygon points="10,0 0,14 20,14" fill="#ffcc00"/>
+                <path d="M5,5 Q10,8 15,5 Q10,10 5,5" fill="#002776"/>
+              </svg>
+              <span>Portugués</span>
+            </button>
+            <button onclick="window.location.href='index-instituicoes-tabs.en.html'" class="w-full flex items-center gap-2 px-4 py-2 text-sm hover:bg-slate-100 dark:hover:bg-slate-700 transition">
+              <svg width="20" height="14" viewBox="0 0 20 14" class="rounded">
+                <rect width="20" height="14" fill="#012169"/>
+                <path d="M0,0 L20,14 M20,0 L0,14" stroke="white" stroke-width="2"/>
+                <path d="M0,0 L20,14 M20,0 L0,14" stroke="#c8102e" stroke-width="1.2" stroke-dasharray="3,2"/>
+                <rect x="8" y="0" width="4" height="14" fill="#c8102e"/>
+                <rect x="0" y="5" width="20" height="4" fill="#c8102e"/>
+              </svg>
+              <span>English</span>
+            </button>
+            <button onclick="window.location.href='index-instituicoes-tabs.es.html'" class="w-full flex items-center gap-2 px-4 py-2 text-sm hover:bg-slate-100 dark:hover:bg-slate-700 rounded-b-lg transition">
+              <svg width="20" height="14" viewBox="0 0 20 14" class="rounded">
+                <rect width="20" height="5" fill="#c60b1e"/>
+                <rect y="5" width="20" height="4" fill="#ffc400"/>
+                <rect y="9" width="20" height="5" fill="#c60b1e"/>
+              </svg>
+              <span>Español</span>
+            </button>
+          </div>
+        </div>
         <button id="themeToggle" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-slate-300/60 dark:border-slate-700/60 hover:bg-slate-50 dark:hover:bg-slate-800 transition">
           <i class="fa-regular fa-sun dark:hidden"></i>
           <i class="fa-regular fa-moon hidden dark:inline-block"></i>
@@ -81,7 +120,7 @@
           <button class="tab-button whitespace-nowrap py-2.5 px-3 md:px-4 border-b-2 font-medium text-sm md:text-base rounded-t-lg" data-tab="sobre">Sobre o Programa</button>
           <button class="tab-button whitespace-nowrap py-2.5 px-3 md:px-4 border-b-2 font-medium text-sm md:text-base rounded-t-lg" data-tab="projetos">Projetos</button>
           <button class="tab-button whitespace-nowrap py-2.5 px-3 md:px-4 border-b-2 font-medium text-sm md:text-base rounded-t-lg" data-tab="produtos">Produtos & Serviços</button>
-          <button class="tab-button whitespace-nowrap py-2.5 px-3 md:px-4 border-b-2 font-medium text-sm md:text-base rounded-t-lg" data-tab="instituicoes">Para instituições</button>
+          <button class="tab-button whitespace-nowrap py-2.5 px-3 md:px-4 border-b-2 font-medium text-sm md:text-base rounded-t-lg" data-tab="instituicoes">Para Instituições</button>
           <button class="tab-button whitespace-nowrap py-2.5 px-3 md:px-4 border-b-2 font-medium text-sm md:text-base rounded-t-lg" data-tab="contato">Contato</button>
         </nav>
       </div>
@@ -90,14 +129,14 @@
         <div id="apresentacao" class="tab-content active">
           <h3 class="text-2xl font-bold mb-4">Instituto Olokun</h3>
           <div class="p-4 rounded-xl bg-cyan-50/60 dark:bg-cyan-950/30 border border-cyan-200/60 dark:border-cyan-500/20 mb-6 italic text-slate-700 dark:text-slate-300">
-            <p><strong>Olokun</strong>, o <em>"Deus da profundeza do mar"</em> em Iorubá, nos convida a uma jornada além das superfícies. Como as águas que guardam segredos nas suas profundezas, nossa missão é mergulhar nos desafios ambientais — explorando raízes, descobrindo padràes, gerando Soluções que transformam territórios e comunidades.</p>
+            <p><strong>Olokun</strong>, o <em>"Deus da profundeza do mar"</em> em iorubá, nos convida a uma jornada além das superfícies. Como as águas que guardam segredos em suas profundezas, nossa missão é mergulhar nos desafios ambientais — explorando raízes, descobrindo padrões e gerando soluções que transformam territórios e comunidades.</p>
           </div>
-          <p class="mb-4 text-slate-700 dark:text-slate-300">Somos uma organização dedicada à <strong>preservação e conservação costeira</strong>, com foco em educação ambiental territorialmente ancorada e Soluções orientadas por dados.</p>
+          <p class="mb-4 text-slate-700 dark:text-slate-300">Somos uma organização dedicada à <strong>preservação e conservação costeira</strong>, com foco em educação ambiental territorialmente ancorada e soluções orientadas por dados.</p>
           <p class="mb-6 text-slate-700 dark:text-slate-300">Trabalhamos com <strong>escolas, ONGs, prefeituras e instituições públicas</strong> para implementar projetos de impacto social e ambiental mensurável.</p>
           <div class="grid md:grid-cols-3 gap-4 mb-6">
             <article class="p-4 rounded-xl border border-emerald-200/60 dark:border-emerald-500/20 bg-emerald-50/60 dark:bg-emerald-950/20">
               <h4 class="font-semibold text-emerald-800 dark:text-emerald-300"><i class="fas fa-map mr-2"></i>Territorial</h4>
-              <p class="text-sm text-slate-600 dark:text-slate-300">Entendemos os contextos locais e usamos dados geoespaciais para priorizar açàes.</p>
+              <p class="text-sm text-slate-600 dark:text-slate-300">Entendemos os contextos locais e usamos dados geoespaciais para priorizar ações.</p>
             </article>
             <article class="p-4 rounded-xl border border-cyan-200/60 dark:border-cyan-500/20 bg-cyan-50/60 dark:bg-cyan-950/20">
               <h4 class="font-semibold text-cyan-800 dark:text-cyan-300"><i class="fas fa-graduation-cap mr-2"></i>Educador</h4>
@@ -123,10 +162,10 @@
           <div class="grid md:grid-cols-3 gap-4">
             <article class="p-4 rounded-xl border border-emerald-200/60 dark:border-emerald-500/20 bg-emerald-50/60 dark:bg-emerald-950/20">
               <h4 class="font-semibold text-emerald-800 dark:text-emerald-300">Base em Dados</h4>
-              <p class="text-sm text-slate-600 dark:text-slate-300">Mapeamento geoespacial para priorizar territórios e Públicos com maior potencial de impacto.</p>
+              <p class="text-sm text-slate-600 dark:text-slate-300">Mapeamento geoespacial para priorizar territórios e públicos com maior potencial de impacto.</p>
             </article>
             <article class="p-4 rounded-xl border border-cyan-200/60 dark:border-cyan-500/20 bg-cyan-50/60 dark:bg-cyan-950/20">
-              <h4 class="font-semibold text-cyan-800 dark:text-cyan-300">implementação Gradual</h4>
+              <h4 class="font-semibold text-cyan-800 dark:text-cyan-300">Implementação Gradual</h4>
               <p class="text-sm text-slate-600 dark:text-slate-300">Projetos começam em pequena escala com metas mensuráveis e validação de resultados antes da expansão.</p>
             </article>
             <article class="p-4 rounded-xl border border-violet-200/60 dark:border-violet-500/20 bg-violet-50/60 dark:bg-violet-950/20">
@@ -140,25 +179,25 @@
           <h3 class="text-2xl font-bold mb-4">Projetos que podemos implantar</h3>
           <div class="grid md:grid-cols-2 gap-5">
             <div class="glass border rounded-xl p-4 ring-1 ring-white/10">
-              <h4 class="font-semibold text-emerald-700 dark:text-emerald-300 mb-2"><i class="fas fa-school mr-2"></i>educação Ambiental Escolar</h4>
+              <h4 class="font-semibold text-emerald-700 dark:text-emerald-300 mb-2"><i class="fas fa-school mr-2"></i>Educação Ambiental Escolar</h4>
               <p class="text-sm mb-2 text-slate-700 dark:text-slate-300">Trilhas pedagógicas para escolas públicas e privadas com oficinas, campanhas e indicadores de adesão.</p>
               <ul class="list-disc list-inside text-sm space-y-1 text-slate-600 dark:text-slate-300">
-                <li>formação de professores multiplicadores</li>
+                <li>Formação de professores multiplicadores</li>
                 <li>Materiais didáticos adaptados por faixa etária</li>
                 <li>Avaliação de mudança de comportamento</li>
               </ul>
             </div>
             <div class="glass border rounded-xl p-4 ring-1 ring-white/10">
-              <h4 class="font-semibold text-emerald-700 dark:text-emerald-300 mb-2"><i class="fas fa-map-location-dot mr-2"></i>análise Territorial Estratégica</h4>
-              <p class="text-sm mb-2 text-slate-700 dark:text-slate-300">Uso de mapas e dados para definir onde começar, quais Públicos priorizar e como escalar com efici├¬ncia.</p>
+              <h4 class="font-semibold text-emerald-700 dark:text-emerald-300 mb-2"><i class="fas fa-map-location-dot mr-2"></i>Análise Territorial Estratégica</h4>
+              <p class="text-sm mb-2 text-slate-700 dark:text-slate-300">Uso de mapas e dados para definir onde começar, quais públicos priorizar e como escalar com eficiência.</p>
               <ul class="list-disc list-inside text-sm space-y-1 text-slate-600 dark:text-slate-300">
                 <li>Priorização territorial por critérios objetivos</li>
-                <li>análise de cobertura e gaps de atendimento</li>
+                <li>Análise de cobertura e gaps de atendimento</li>
                 <li>Roteiro de expansão por fases</li>
               </ul>
             </div>
             <div class="glass border rounded-xl p-4 ring-1 ring-white/10">
-              <h4 class="font-semibold text-emerald-700 dark:text-emerald-300 mb-2"><i class="fas fa-recycle mr-2"></i>Gestão de Resíduos em instituições</h4>
+              <h4 class="font-semibold text-emerald-700 dark:text-emerald-300 mb-2"><i class="fas fa-recycle mr-2"></i>Gestão de Resíduos em Instituições</h4>
               <p class="text-sm mb-2 text-slate-700 dark:text-slate-300">Desenho e implementação de rotinas práticas para segregação, coleta e educação continuada.</p>
               <ul class="list-disc list-inside text-sm space-y-1 text-slate-600 dark:text-slate-300">
                 <li>Diagnóstico inicial e plano operacional</li>
@@ -167,10 +206,10 @@
               </ul>
             </div>
             <div class="glass border rounded-xl p-4 ring-1 ring-white/10">
-              <h4 class="font-semibold text-emerald-700 dark:text-emerald-300 mb-2"><i class="fas fa-water mr-2"></i>conservação Costeira Comunitária</h4>
+              <h4 class="font-semibold text-emerald-700 dark:text-emerald-300 mb-2"><i class="fas fa-water mr-2"></i>Conservação Costeira Comunitária</h4>
               <p class="text-sm mb-2 text-slate-700 dark:text-slate-300">Projetos educativos e mobilização local para conservação de ambientes costeiros sensíveis.</p>
               <ul class="list-disc list-inside text-sm space-y-1 text-slate-600 dark:text-slate-300">
-                <li>Açàes com escolas e lideranças locais</li>
+                <li>Ações com escolas e lideranças locais</li>
                 <li>Campanhas de sensibilização</li>
                 <li>Indicadores de participação social</li>
               </ul>
@@ -179,7 +218,7 @@
         </div>
 
         <div id="produtos" class="tab-content">
-          <h3 class="text-2xl font-bold mb-4">Produtos e serviços ofertados</h3>
+          <h3 class="text-2xl font-bold mb-4">Produtos e Serviços Ofertados</h3>
           <div class="overflow-x-auto">
             <table class="min-w-full glass border border-slate-200/60 dark:border-slate-700/60 rounded-lg">
               <thead class="bg-slate-100/60 dark:bg-slate-800/60">
@@ -213,13 +252,13 @@
                   <td class="py-3 px-4 font-medium">Monitoramento de Impacto</td>
                   <td class="py-3 px-4">Painel de acompanhamento com indicadores e relatórios periódicos</td>
                   <td class="py-3 px-4">Contínuo</td>
-                  <td class="py-3 px-4">instituições com programa ativo</td>
+                  <td class="py-3 px-4">Instituições com programa ativo</td>
                 </tr>
                 <tr>
                   <td class="py-3 px-4 font-medium">Plano de Expansão</td>
                   <td class="py-3 px-4">Roadmap territorial para escala</td>
                   <td class="py-3 px-4">4 a 8 semanas</td>
-                  <td class="py-3 px-4">instituições após validação do piloto</td>
+                  <td class="py-3 px-4">Instituições após validação do piloto</td>
                 </tr>
               </tbody>
             </table>
@@ -264,7 +303,7 @@
     </div>
 
     <footer class="text-center text-gray-500 text-sm mt-8">
-      <p>© 2026 Instituto Olokun ÔÇó Portfólio institucional em abas</p>
+      <p>© 2026 Instituto Olokun</p>
     </footer>
   </div>
 
@@ -299,6 +338,20 @@
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Language selector dropdown toggle
+    const languageBtn = document.getElementById('languageBtn');
+    const languageDropdown = languageBtn?.nextElementSibling;
+    if (languageBtn && languageDropdown) {
+      languageBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        languageDropdown.classList.toggle('hidden');
+      });
+      document.addEventListener('click', () => {
+        languageDropdown.classList.add('hidden');
+      });
+      languageDropdown.addEventListener('click', (e) => e.stopPropagation());
+    }
   </script>
 </body>
 </html>

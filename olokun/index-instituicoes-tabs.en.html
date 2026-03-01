@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Olokun | Soluções para Instituições</title>
-  <meta name="description" content="Projetos e produtos do Instituto Olokun para escolas, instituições públicas, ONGs e parceiros territoriais." />
+  <title>Olokun | Solutions for Institutions</title>
+  <meta name="description" content="Olokun Institute projects and products for schools, public institutions, NGOs, and territorial partners." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -40,19 +40,21 @@
         </div>
         <div class="text-center md:text-left">
           <h1 class="text-2xl md:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-emerald-700 via-teal-500 to-cyan-500 bg-clip-text text-transparent">Instituto Olokun</h1>
-          <p class="mt-1 text-sm md:text-base text-slate-600 dark:text-slate-300">Projetos e produtos para instituições com impacto socioambiental mensurável.</p>
+          <p class="mt-1 text-sm md:text-base text-slate-600 dark:text-slate-300">Projects and products for institutions with measurable socio-environmental impact.</p>
         </div>
       </div>
       <div class="flex items-center gap-2">
-        <label for="languageSelect" class="sr-only">Idioma</label>
+        <label for="languageSelect" class="sr-only">Language</label>
         <div class="relative group">
           <button class="flex items-center gap-2 px-3 py-2 rounded-lg border border-slate-300/60 dark:border-slate-700/60 bg-white/80 dark:bg-slate-900/80 text-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition" id="languageBtn">
             <svg width="20" height="14" viewBox="0 0 20 14" class="rounded">
-              <rect width="20" height="14" fill="#009c3b"/>
-              <polygon points="10,0 0,14 20,14" fill="#ffcc00"/>
-              <path d="M5,5 Q10,8 15,5 Q10,10 5,5" fill="#002776"/>
+              <rect width="20" height="14" fill="#012169"/>
+              <path d="M0,0 L20,14 M20,0 L0,14" stroke="white" stroke-width="2"/>
+              <path d="M0,0 L20,14 M20,0 L0,14" stroke="#c8102e" stroke-width="1.2" stroke-dasharray="3,2"/>
+              <rect x="8" y="0" width="4" height="14" fill="#c8102e"/>
+              <rect x="0" y="5" width="20" height="4" fill="#c8102e"/>
             </svg>
-            <span>PT</span>
+            <span>EN</span>
           </button>
           <div class="hidden absolute right-0 mt-1 w-32 bg-white dark:bg-slate-800 border border-slate-300/60 dark:border-slate-700/60 rounded-lg shadow-lg z-50 group-hover:block">
             <button onclick="window.location.href='index-instituicoes-tabs.html'" class="w-full flex items-center gap-2 px-4 py-2 text-sm hover:bg-slate-100 dark:hover:bg-slate-700 rounded-t-lg transition">
@@ -86,16 +88,16 @@
         <button id="themeToggle" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-slate-300/60 dark:border-slate-700/60 hover:bg-slate-50 dark:hover:bg-slate-800 transition">
           <i class="fa-regular fa-sun dark:hidden"></i>
           <i class="fa-regular fa-moon hidden dark:inline-block"></i>
-          <span class="text-sm">Tema</span>
+          <span class="text-sm">Theme</span>
         </button>
         <a href="../dashboard_olokun_tabs.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-cyan-600 text-white hover:bg-cyan-700 transition text-sm">
           <i class="fas fa-chart-bar"></i> Dashboard
         </a>
         <a href="../mapa_escolas.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 transition text-sm">
-          <i class="fas fa-map"></i> Ver Mapa
+          <i class="fas fa-map"></i> View Map
         </a>
         <a href="https://caetanoronan.github.io/olokun-website/olokun/mapa_resultados.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 transition text-sm" target="_blank" rel="noopener noreferrer">
-          <i class="fas fa-map-marked-alt"></i> Mapa de Resultados
+          <i class="fas fa-map-marked-alt"></i> Results Map
         </a>
       </div>
     </header>
@@ -103,12 +105,12 @@
     <section class="glass rounded-2xl shadow-xl ring-1 ring-white/10 p-5 md:p-7 mb-6 reveal">
       <div class="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <h2 class="text-xl md:text-2xl font-bold">Projetos de Impacto Socioambiental</h2>
-          <p class="text-slate-600 dark:text-slate-300 text-sm mt-1">Soluções completas para conservação costeira e educação ambiental em instituições de ensino e territórios vulneráveis.</p>
+          <h2 class="text-xl md:text-2xl font-bold">Socio-Environmental Impact Projects</h2>
+          <p class="text-slate-600 dark:text-slate-300 text-sm mt-1">End-to-end solutions for coastal conservation and environmental education in schools and vulnerable territories.</p>
         </div>
         <div class="flex flex-wrap gap-2">
-          <span class="pill bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300"><i class="fas fa-check-circle"></i> Resultados Mensuráveis</span>
-          <span class="pill bg-cyan-100 text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-300"><i class="fas fa-handshake"></i> Parcerias Estratégicas</span>
+          <span class="pill bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300"><i class="fas fa-check-circle"></i> Measurable Results</span>
+          <span class="pill bg-cyan-100 text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-300"><i class="fas fa-handshake"></i> Strategic Partnerships</span>
         </div>
       </div>
     </section>
@@ -116,12 +118,12 @@
     <div class="glass rounded-2xl shadow-xl ring-1 ring-white/10 p-4 md:p-6 reveal">
       <div class="border-b border-slate-200/60 dark:border-slate-700/60 mb-6 overflow-x-auto">
         <nav class="flex flex-nowrap -mb-px gap-2 md:gap-3" aria-label="Tabs">
-          <button class="tab-button active whitespace-nowrap py-2.5 px-3 md:px-4 border-b-2 font-medium text-sm md:text-base rounded-t-lg" data-tab="apresentacao">Apresentação</button>
-          <button class="tab-button whitespace-nowrap py-2.5 px-3 md:px-4 border-b-2 font-medium text-sm md:text-base rounded-t-lg" data-tab="sobre">Sobre o Programa</button>
-          <button class="tab-button whitespace-nowrap py-2.5 px-3 md:px-4 border-b-2 font-medium text-sm md:text-base rounded-t-lg" data-tab="projetos">Projetos</button>
-          <button class="tab-button whitespace-nowrap py-2.5 px-3 md:px-4 border-b-2 font-medium text-sm md:text-base rounded-t-lg" data-tab="produtos">Produtos & Serviços</button>
-          <button class="tab-button whitespace-nowrap py-2.5 px-3 md:px-4 border-b-2 font-medium text-sm md:text-base rounded-t-lg" data-tab="instituicoes">Para Instituições</button>
-          <button class="tab-button whitespace-nowrap py-2.5 px-3 md:px-4 border-b-2 font-medium text-sm md:text-base rounded-t-lg" data-tab="contato">Contato</button>
+          <button class="tab-button active whitespace-nowrap py-2.5 px-3 md:px-4 border-b-2 font-medium text-sm md:text-base rounded-t-lg" data-tab="apresentacao">Presentation</button>
+          <button class="tab-button whitespace-nowrap py-2.5 px-3 md:px-4 border-b-2 font-medium text-sm md:text-base rounded-t-lg" data-tab="sobre">About the Program</button>
+          <button class="tab-button whitespace-nowrap py-2.5 px-3 md:px-4 border-b-2 font-medium text-sm md:text-base rounded-t-lg" data-tab="projetos">Projects</button>
+          <button class="tab-button whitespace-nowrap py-2.5 px-3 md:px-4 border-b-2 font-medium text-sm md:text-base rounded-t-lg" data-tab="produtos">Products & Services</button>
+          <button class="tab-button whitespace-nowrap py-2.5 px-3 md:px-4 border-b-2 font-medium text-sm md:text-base rounded-t-lg" data-tab="instituicoes">For Institutions</button>
+          <button class="tab-button whitespace-nowrap py-2.5 px-3 md:px-4 border-b-2 font-medium text-sm md:text-base rounded-t-lg" data-tab="contato">Contact</button>
         </nav>
       </div>
 
@@ -129,181 +131,181 @@
         <div id="apresentacao" class="tab-content active">
           <h3 class="text-2xl font-bold mb-4">Instituto Olokun</h3>
           <div class="p-4 rounded-xl bg-cyan-50/60 dark:bg-cyan-950/30 border border-cyan-200/60 dark:border-cyan-500/20 mb-6 italic text-slate-700 dark:text-slate-300">
-            <p><strong>Olokun</strong>, o <em>"Deus da profundeza do mar"</em> em iorubá, nos convida a uma jornada além das superfícies. Como as águas que guardam segredos em suas profundezas, nossa missão é mergulhar nos desafios ambientais — explorando raízes, descobrindo padrões e gerando soluções que transformam territórios e comunidades.</p>
+            <p><strong>Olokun</strong>, the <em>"God of the depths of the sea"</em> in Yoruba, invites us on a journey beyond the surface. Like waters that hold secrets in their depths, our mission is to dive into environmental challenges — exploring root causes, identifying patterns, and creating solutions that transform territories and communities.</p>
           </div>
-          <p class="mb-4 text-slate-700 dark:text-slate-300">Somos uma organização dedicada à <strong>preservação e conservação costeira</strong>, com foco em educação ambiental territorialmente ancorada e soluções orientadas por dados.</p>
-          <p class="mb-6 text-slate-700 dark:text-slate-300">Trabalhamos com <strong>escolas, ONGs, prefeituras e instituições públicas</strong> para implementar projetos de impacto social e ambiental mensurável.</p>
+          <p class="mb-4 text-slate-700 dark:text-slate-300">We are an organization dedicated to <strong>coastal preservation and conservation</strong>, focused on place-based environmental education and data-driven solutions.</p>
+          <p class="mb-6 text-slate-700 dark:text-slate-300">We work with <strong>schools, NGOs, city governments, and public institutions</strong> to implement projects with measurable social and environmental impact.</p>
           <div class="grid md:grid-cols-3 gap-4 mb-6">
             <article class="p-4 rounded-xl border border-emerald-200/60 dark:border-emerald-500/20 bg-emerald-50/60 dark:bg-emerald-950/20">
               <h4 class="font-semibold text-emerald-800 dark:text-emerald-300"><i class="fas fa-map mr-2"></i>Territorial</h4>
-              <p class="text-sm text-slate-600 dark:text-slate-300">Entendemos os contextos locais e usamos dados geoespaciais para priorizar ações.</p>
+              <p class="text-sm text-slate-600 dark:text-slate-300">We understand local contexts and use geospatial data to prioritize actions.</p>
             </article>
             <article class="p-4 rounded-xl border border-cyan-200/60 dark:border-cyan-500/20 bg-cyan-50/60 dark:bg-cyan-950/20">
-              <h4 class="font-semibold text-cyan-800 dark:text-cyan-300"><i class="fas fa-graduation-cap mr-2"></i>Educador</h4>
-              <p class="text-sm text-slate-600 dark:text-slate-300">Apostamos em formação de educadores e engajamento comunitário como base para mudança.</p>
+              <h4 class="font-semibold text-cyan-800 dark:text-cyan-300"><i class="fas fa-graduation-cap mr-2"></i>Educational</h4>
+              <p class="text-sm text-slate-600 dark:text-slate-300">We invest in educator training and community engagement as the foundation for change.</p>
             </article>
             <article class="p-4 rounded-xl border border-violet-200/60 dark:border-violet-500/20 bg-violet-50/60 dark:bg-violet-950/20">
-              <h4 class="font-semibold text-violet-800 dark:text-violet-300"><i class="fas fa-chart-line mr-2"></i>Evidencial</h4>
-              <p class="text-sm text-slate-600 dark:text-slate-300">Medimos resultados e validamos metodologias antes de qualquer escala.</p>
+              <h4 class="font-semibold text-violet-800 dark:text-violet-300"><i class="fas fa-chart-line mr-2"></i>Evidence-Based</h4>
+              <p class="text-sm text-slate-600 dark:text-slate-300">We measure outcomes and validate methods before any scale-up.</p>
             </article>
           </div>
           <div class="my-8 rounded-xl overflow-hidden shadow-lg">
             <iframe width="100%" height="484" src="https://www.youtube.com/embed/U0O5pwrzDmg" title="Transformação: A Natureza, O Lixo e O Novo Hábito" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: block; margin: 0 auto;"></iframe>
           </div>
           <div class="p-5 rounded-xl bg-emerald-50/40 dark:bg-emerald-950/30 border border-emerald-200/40 dark:border-emerald-500/20">
-            <p class="text-slate-700 dark:text-slate-300"><strong>Nossa aposta:</strong> começar pequeno, validar metodologia com rigor, escalar com segurança técnica e financeira.</p>
+            <p class="text-slate-700 dark:text-slate-300"><strong>Our approach:</strong> start small, validate methodology rigorously, and scale with technical and financial safety.</p>
           </div>
         </div>
 
         <div id="sobre" class="tab-content">
-          <h3 class="text-2xl font-bold mb-4">Soluções Olokun para Escolas, ONGs e Poder Público</h3>
-          <p class="mb-3 text-slate-700 dark:text-slate-300">O Instituto Olokun atua com foco em <strong>preservação e conservação costeira</strong>, combinando educação ambiental, análise territorial e implementação orientada por dados.</p>
-          <p class="mb-6 text-slate-700 dark:text-slate-300">A proposta é começar pequeno, validar metodologia e escalar com segurança técnica e financeira.</p>
+          <h3 class="text-2xl font-bold mb-4">Olokun Solutions for Schools, NGOs, and the Public Sector</h3>
+          <p class="mb-3 text-slate-700 dark:text-slate-300">Olokun Institute focuses on <strong>coastal preservation and conservation</strong>, combining environmental education, territorial analysis, and data-driven implementation.</p>
+          <p class="mb-6 text-slate-700 dark:text-slate-300">Our proposal is to start small, validate methodology, and scale with technical and financial safety.</p>
           <div class="grid md:grid-cols-3 gap-4">
             <article class="p-4 rounded-xl border border-emerald-200/60 dark:border-emerald-500/20 bg-emerald-50/60 dark:bg-emerald-950/20">
-              <h4 class="font-semibold text-emerald-800 dark:text-emerald-300">Base em Dados</h4>
-              <p class="text-sm text-slate-600 dark:text-slate-300">Mapeamento geoespacial para priorizar territórios e públicos com maior potencial de impacto.</p>
+              <h4 class="font-semibold text-emerald-800 dark:text-emerald-300">Data-Driven Foundation</h4>
+              <p class="text-sm text-slate-600 dark:text-slate-300">Geospatial mapping to prioritize territories and audiences with the highest impact potential.</p>
             </article>
             <article class="p-4 rounded-xl border border-cyan-200/60 dark:border-cyan-500/20 bg-cyan-50/60 dark:bg-cyan-950/20">
-              <h4 class="font-semibold text-cyan-800 dark:text-cyan-300">Implementação Gradual</h4>
-              <p class="text-sm text-slate-600 dark:text-slate-300">Projetos começam em pequena escala com metas mensuráveis e validação de resultados antes da expansão.</p>
+              <h4 class="font-semibold text-cyan-800 dark:text-cyan-300">Gradual Implementation</h4>
+              <p class="text-sm text-slate-600 dark:text-slate-300">Projects start on a small scale with measurable goals and results validation before expansion.</p>
             </article>
             <article class="p-4 rounded-xl border border-violet-200/60 dark:border-violet-500/20 bg-violet-50/60 dark:bg-violet-950/20">
-              <h4 class="font-semibold text-violet-800 dark:text-violet-300">Resultado Aplicado</h4>
-              <p class="text-sm text-slate-600 dark:text-slate-300">Projetos com foco em engajamento comunitário, capacitação e continuidade operacional.</p>
+              <h4 class="font-semibold text-violet-800 dark:text-violet-300">Applied Results</h4>
+              <p class="text-sm text-slate-600 dark:text-slate-300">Projects focused on community engagement, capacity building, and operational continuity.</p>
             </article>
           </div>
         </div>
 
         <div id="projetos" class="tab-content">
-          <h3 class="text-2xl font-bold mb-4">Projetos que podemos implantar</h3>
+          <h3 class="text-2xl font-bold mb-4">Projects We Can Implement</h3>
           <div class="grid md:grid-cols-2 gap-5">
             <div class="glass border rounded-xl p-4 ring-1 ring-white/10">
-              <h4 class="font-semibold text-emerald-700 dark:text-emerald-300 mb-2"><i class="fas fa-school mr-2"></i>Educação Ambiental Escolar</h4>
-              <p class="text-sm mb-2 text-slate-700 dark:text-slate-300">Trilhas pedagógicas para escolas públicas e privadas com oficinas, campanhas e indicadores de adesão.</p>
+              <h4 class="font-semibold text-emerald-700 dark:text-emerald-300 mb-2"><i class="fas fa-school mr-2"></i>School Environmental Education</h4>
+              <p class="text-sm mb-2 text-slate-700 dark:text-slate-300">Learning pathways for public and private schools with workshops, campaigns, and participation indicators.</p>
               <ul class="list-disc list-inside text-sm space-y-1 text-slate-600 dark:text-slate-300">
-                <li>Formação de professores multiplicadores</li>
-                <li>Materiais didáticos adaptados por faixa etária</li>
-                <li>Avaliação de mudança de comportamento</li>
+                <li>Training of multiplier teachers</li>
+                <li>Teaching materials adapted by age group</li>
+                <li>Behavior change assessment</li>
               </ul>
             </div>
             <div class="glass border rounded-xl p-4 ring-1 ring-white/10">
-              <h4 class="font-semibold text-emerald-700 dark:text-emerald-300 mb-2"><i class="fas fa-map-location-dot mr-2"></i>Análise Territorial Estratégica</h4>
-              <p class="text-sm mb-2 text-slate-700 dark:text-slate-300">Uso de mapas e dados para definir onde começar, quais públicos priorizar e como escalar com eficiência.</p>
+              <h4 class="font-semibold text-emerald-700 dark:text-emerald-300 mb-2"><i class="fas fa-map-location-dot mr-2"></i>Strategic Territorial Analysis</h4>
+              <p class="text-sm mb-2 text-slate-700 dark:text-slate-300">Use of maps and data to define where to start, which audiences to prioritize, and how to scale efficiently.</p>
               <ul class="list-disc list-inside text-sm space-y-1 text-slate-600 dark:text-slate-300">
-                <li>Priorização territorial por critérios objetivos</li>
-                <li>Análise de cobertura e gaps de atendimento</li>
-                <li>Roteiro de expansão por fases</li>
+                <li>Territorial prioritization based on objective criteria</li>
+                <li>Coverage analysis and service gaps</li>
+                <li>Phased expansion roadmap</li>
               </ul>
             </div>
             <div class="glass border rounded-xl p-4 ring-1 ring-white/10">
-              <h4 class="font-semibold text-emerald-700 dark:text-emerald-300 mb-2"><i class="fas fa-recycle mr-2"></i>Gestão de Resíduos em Instituições</h4>
-              <p class="text-sm mb-2 text-slate-700 dark:text-slate-300">Desenho e implementação de rotinas práticas para segregação, coleta e educação continuada.</p>
+              <h4 class="font-semibold text-emerald-700 dark:text-emerald-300 mb-2"><i class="fas fa-recycle mr-2"></i>Waste Management in Institutions</h4>
+              <p class="text-sm mb-2 text-slate-700 dark:text-slate-300">Design and implementation of practical routines for segregation, collection, and ongoing education.</p>
               <ul class="list-disc list-inside text-sm space-y-1 text-slate-600 dark:text-slate-300">
-                <li>Diagnóstico inicial e plano operacional</li>
-                <li>Treinamento de equipes</li>
-                <li>Indicadores de desempenho ambiental</li>
+                <li>Initial diagnosis and operational plan</li>
+                <li>Team training</li>
+                <li>Environmental performance indicators</li>
               </ul>
             </div>
             <div class="glass border rounded-xl p-4 ring-1 ring-white/10">
-              <h4 class="font-semibold text-emerald-700 dark:text-emerald-300 mb-2"><i class="fas fa-water mr-2"></i>Conservação Costeira Comunitária</h4>
-              <p class="text-sm mb-2 text-slate-700 dark:text-slate-300">Projetos educativos e mobilização local para conservação de ambientes costeiros sensíveis.</p>
+              <h4 class="font-semibold text-emerald-700 dark:text-emerald-300 mb-2"><i class="fas fa-water mr-2"></i>Community Coastal Conservation</h4>
+              <p class="text-sm mb-2 text-slate-700 dark:text-slate-300">Educational projects and local mobilization for conserving sensitive coastal environments.</p>
               <ul class="list-disc list-inside text-sm space-y-1 text-slate-600 dark:text-slate-300">
-                <li>Ações com escolas e lideranças locais</li>
-                <li>Campanhas de sensibilização</li>
-                <li>Indicadores de participação social</li>
+                <li>Actions with schools and local leadership</li>
+                <li>Awareness campaigns</li>
+                <li>Social participation indicators</li>
               </ul>
             </div>
           </div>
         </div>
 
         <div id="produtos" class="tab-content">
-          <h3 class="text-2xl font-bold mb-4">Produtos e Serviços Ofertados</h3>
+          <h3 class="text-2xl font-bold mb-4">Products and Services Offered</h3>
           <div class="overflow-x-auto">
             <table class="min-w-full glass border border-slate-200/60 dark:border-slate-700/60 rounded-lg">
               <thead class="bg-slate-100/60 dark:bg-slate-800/60">
                 <tr>
-                  <th class="py-3 px-4 text-left text-xs font-semibold uppercase tracking-wider">Produto</th>
-                  <th class="py-3 px-4 text-left text-xs font-semibold uppercase tracking-wider">Entregável principal</th>
-                  <th class="py-3 px-4 text-left text-xs font-semibold uppercase tracking-wider">Prazo sugerido</th>
-                  <th class="py-3 px-4 text-left text-xs font-semibold uppercase tracking-wider">Perfil da instituição</th>
+                  <th class="py-3 px-4 text-left text-xs font-semibold uppercase tracking-wider">Product</th>
+                  <th class="py-3 px-4 text-left text-xs font-semibold uppercase tracking-wider">Main deliverable</th>
+                  <th class="py-3 px-4 text-left text-xs font-semibold uppercase tracking-wider">Suggested timeline</th>
+                  <th class="py-3 px-4 text-left text-xs font-semibold uppercase tracking-wider">Institution profile</th>
                 </tr>
               </thead>
               <tbody class="divide-y divide-slate-200/60 dark:divide-slate-700/60 text-sm">
                 <tr>
-                  <td class="py-3 px-4 font-medium">Diagnóstico Territorial</td>
-                  <td class="py-3 px-4">Mapa + relatório de priorização por território</td>
-                  <td class="py-3 px-4">2 a 4 semanas</td>
-                  <td class="py-3 px-4">Prefeituras, secretarias, ONGs</td>
+                  <td class="py-3 px-4 font-medium">Territorial Diagnosis</td>
+                  <td class="py-3 px-4">Map + prioritization report by territory</td>
+                  <td class="py-3 px-4">2 to 4 weeks</td>
+                  <td class="py-3 px-4">City governments, departments, NGOs</td>
                 </tr>
                 <tr>
-                  <td class="py-3 px-4 font-medium">Projeto Piloto</td>
-                  <td class="py-3 px-4">Plano, execução, métricas e relatório de validação</td>
-                  <td class="py-3 px-4">3 a 6 meses</td>
-                  <td class="py-3 px-4">Redes escolares e projetos locais</td>
+                  <td class="py-3 px-4 font-medium">Pilot Project</td>
+                  <td class="py-3 px-4">Plan, execution, metrics, and validation report</td>
+                  <td class="py-3 px-4">3 to 6 months</td>
+                  <td class="py-3 px-4">School networks and local projects</td>
                 </tr>
                 <tr>
-                  <td class="py-3 px-4 font-medium">Capacitação técnica</td>
-                  <td class="py-3 px-4">Oficinas + material + trilha de formação</td>
-                  <td class="py-3 px-4">1 a 3 meses</td>
-                  <td class="py-3 px-4">Escolas e equipes institucionais</td>
+                  <td class="py-3 px-4 font-medium">Technical Capacity Building</td>
+                  <td class="py-3 px-4">Workshops + materials + training pathway</td>
+                  <td class="py-3 px-4">1 to 3 months</td>
+                  <td class="py-3 px-4">Schools and institutional teams</td>
                 </tr>
                 <tr>
-                  <td class="py-3 px-4 font-medium">Monitoramento de Impacto</td>
-                  <td class="py-3 px-4">Painel de acompanhamento com indicadores e relatórios periódicos</td>
-                  <td class="py-3 px-4">Contínuo</td>
-                  <td class="py-3 px-4">Instituições com programa ativo</td>
+                  <td class="py-3 px-4 font-medium">Impact Monitoring</td>
+                  <td class="py-3 px-4">Monitoring dashboard with indicators and periodic reports</td>
+                  <td class="py-3 px-4">Continuous</td>
+                  <td class="py-3 px-4">Institutions with active programs</td>
                 </tr>
                 <tr>
-                  <td class="py-3 px-4 font-medium">Plano de Expansão</td>
-                  <td class="py-3 px-4">Roadmap territorial para escala</td>
-                  <td class="py-3 px-4">4 a 8 semanas</td>
-                  <td class="py-3 px-4">Instituições após validação do piloto</td>
+                  <td class="py-3 px-4 font-medium">Expansion Plan</td>
+                  <td class="py-3 px-4">Territorial roadmap for scale-up</td>
+                  <td class="py-3 px-4">4 to 8 weeks</td>
+                  <td class="py-3 px-4">Institutions after pilot validation</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <p class="text-xs text-slate-500 dark:text-slate-400 mt-3">Escopo, prazo e investimento são ajustados conforme diagnóstico inicial.</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-3">Scope, timeline, and investment are adjusted according to the initial diagnosis.</p>
         </div>
 
         <div id="instituicoes" class="tab-content">
-          <h3 class="text-2xl font-bold mb-4">Como atendemos cada tipo de instituição</h3>
+          <h3 class="text-2xl font-bold mb-4">How We Serve Each Type of Institution</h3>
           <div class="grid md:grid-cols-2 gap-5">
             <div class="p-4 rounded-xl border border-sky-200/60 dark:border-sky-400/20 bg-sky-50/60 dark:bg-sky-950/20">
-              <h4 class="font-semibold text-sky-800 dark:text-sky-300 mb-2"><i class="fas fa-building-columns mr-2"></i>Poder Público</h4>
-              <p class="text-sm text-slate-700 dark:text-slate-300">Foco em escala, governança, prestação de contas e integração com políticas públicas.</p>
+              <h4 class="font-semibold text-sky-800 dark:text-sky-300 mb-2"><i class="fas fa-building-columns mr-2"></i>Public Sector</h4>
+              <p class="text-sm text-slate-700 dark:text-slate-300">Focus on scale, governance, accountability, and integration with public policies.</p>
             </div>
             <div class="p-4 rounded-xl border border-emerald-200/60 dark:border-emerald-400/20 bg-emerald-50/60 dark:bg-emerald-950/20">
-              <h4 class="font-semibold text-emerald-800 dark:text-emerald-300 mb-2"><i class="fas fa-school mr-2"></i>Escolas e Redes Educacionais</h4>
-              <p class="text-sm text-slate-700 dark:text-slate-300">Foco em trilha pedagógica, formação docente e engajamento dos estudantes.</p>
+              <h4 class="font-semibold text-emerald-800 dark:text-emerald-300 mb-2"><i class="fas fa-school mr-2"></i>Schools and Education Networks</h4>
+              <p class="text-sm text-slate-700 dark:text-slate-300">Focus on learning pathways, teacher training, and student engagement.</p>
             </div>
             <div class="p-4 rounded-xl border border-violet-200/60 dark:border-violet-400/20 bg-violet-50/60 dark:bg-violet-950/20">
-              <h4 class="font-semibold text-violet-800 dark:text-violet-300 mb-2"><i class="fas fa-hands-helping mr-2"></i>ONGs e Coletivos</h4>
-              <p class="text-sm text-slate-700 dark:text-slate-300">Foco em mobilização social, territorialização e monitoramento participativo.</p>
+              <h4 class="font-semibold text-violet-800 dark:text-violet-300 mb-2"><i class="fas fa-hands-helping mr-2"></i>NGOs and Collectives</h4>
+              <p class="text-sm text-slate-700 dark:text-slate-300">Focus on social mobilization, territorial engagement, and participatory monitoring.</p>
             </div>
             <div class="p-4 rounded-xl border border-amber-200/60 dark:border-amber-400/20 bg-amber-50/60 dark:bg-amber-950/20">
-              <h4 class="font-semibold text-amber-800 dark:text-amber-300 mb-2"><i class="fas fa-handshake mr-2"></i>Parceiros Privados</h4>
-              <p class="text-sm text-slate-700 dark:text-slate-300">Foco em impacto ESG, visibilidade institucional e cofinanciamento de iniciativas.</p>
+              <h4 class="font-semibold text-amber-800 dark:text-amber-300 mb-2"><i class="fas fa-handshake mr-2"></i>Private Partners</h4>
+              <p class="text-sm text-slate-700 dark:text-slate-300">Focus on ESG impact, institutional visibility, and co-financing of initiatives.</p>
             </div>
           </div>
         </div>
 
         <div id="contato" class="tab-content">
-          <h3 class="text-2xl font-bold mb-4">Vamos estruturar seu projeto piloto?</h3>
-          <p class="text-slate-700 dark:text-slate-300 mb-5">Entre em contato para definirmos escopo, cronograma e produtos ideais para sua instituição.</p>
+          <h3 class="text-2xl font-bold mb-4">Shall we structure your pilot project?</h3>
+          <p class="text-slate-700 dark:text-slate-300 mb-5">Get in touch so we can define the ideal scope, timeline, and products for your institution.</p>
           <div class="space-y-3 text-sm">
             <div class="flex items-center gap-3"><i class="fas fa-envelope text-emerald-600"></i><a class="hover:underline text-emerald-700 dark:text-emerald-300" href="mailto:olokun.ambiental@gmail.com">olokun.ambiental@gmail.com</a></div>
             <div class="flex items-center gap-3"><i class="fas fa-globe text-emerald-600"></i><a class="hover:underline text-emerald-700 dark:text-emerald-300" href="https://olokun.webnode.com/" target="_blank">olokun.webnode.com</a></div>
           </div>
-          <a href="mailto:olokun.ambiental@gmail.com?subject=Interesse%20em%20projeto%20institucional%20Olokun" class="mt-5 inline-flex items-center gap-2 bg-emerald-600 text-white font-semibold py-2 px-5 rounded-lg hover:bg-emerald-700 transition">
-            <i class="fas fa-paper-plane"></i> Solicitar proposta institucional
+          <a href="mailto:olokun.ambiental@gmail.com?subject=Interest%20in%20Olokun%20institutional%20project" class="mt-5 inline-flex items-center gap-2 bg-emerald-600 text-white font-semibold py-2 px-5 rounded-lg hover:bg-emerald-700 transition">
+            <i class="fas fa-paper-plane"></i> Request Institutional Proposal
           </a>
         </div>
       </div>
     </div>
 
     <footer class="text-center text-gray-500 text-sm mt-8">
-      <p>© 2026 Instituto Olokun</p>
+      <p>© 2026 Olokun Institute</p>
     </footer>
   </div>
 
