@@ -1,47 +1,43 @@
-# ?? Instituto Olokun ó Plataforma Territorial
+# üåä Instituto Olokun ‚Äî Plataforma Territorial
 
-Este repositÛrio re˙ne os materiais web do Instituto Olokun para apresentaÁ„o institucional, dashboard de estratÈgia territorial, mapa de resultados e mapas interativos de escolas.
+Este reposit√≥rio re√∫ne os materiais web do Instituto Olokun para apresenta√ß√£o institucional, dashboard de estrat√©gia territorial, mapa de resultados e mapas interativos de escolas.
 
-## ?? Sobre o Projeto
+## üéØ Sobre o Projeto
 
-O Instituto Olokun È uma organizaÁ„o dedicada ‡ **preservaÁ„o e conservaÁ„o costeira** com foco em educaÁ„o ambiental territorialmente ancorada e soluÁıes orientadas por dados. Este projeto implementa uma plataforma web integrada para:
+O Instituto Olokun √© uma organiza√ß√£o dedicada √† **preserva√ß√£o e conserva√ß√£o costeira**, com foco em educa√ß√£o ambiental territorialmente ancorada e solu√ß√µes orientadas por dados.
 
-- ?? **Dashboard territorial** com indicadores de alinhamento estratÈgico
-- ??? **Mapas interativos** de escolas, cobertura de serviÁos e resultados
-- ?? **ApresentaÁ„o institucional** com abas tem·ticas para diferentes p˙blicos
-- ?? **VisualizaÁ„o de dados** geoespaciais em tempo real
+A plataforma integra:
+
+- üìä **Dashboard territorial** com indicadores de alinhamento estrat√©gico
+- üó∫Ô∏è **Mapas interativos** de escolas, cobertura de servi√ßos e resultados
+- üèõÔ∏è **Apresenta√ß√£o institucional** com abas tem√°ticas para diferentes p√∫blicos
+- üìà **Visualiza√ß√£o geoespacial** para apoio √† decis√£o
 
 ---
 
-## ?? Acessos P˙blicos (GitHub Pages)
+## üîó Acessos P√∫blicos (GitHub Pages)
 
-### ?? ApresentaÁ„o Institucional (MultilÌngue)
+### üåç Apresenta√ß√£o Institucional (Multil√≠ngue)
 
 Com seletor de idiomas e modo escuro/claro:
 
 | Idioma | URL |
 |--------|-----|
-| ???? PortuguÍs | https://caetanoronan.github.io/olokun-website/olokun/index-instituicoes-tabs.html |
-| ???? English | https://caetanoronan.github.io/olokun-website/olokun/index-instituicoes-tabs.en.html |
-| ???? EspaÒol | https://caetanoronan.github.io/olokun-website/olokun/index-instituicoes-tabs.es.html |
+| üáßüá∑ Portugu√™s | https://caetanoronan.github.io/olokun-website/olokun/index-instituicoes-tabs.html |
+| üá¨üáß English | https://caetanoronan.github.io/olokun-website/olokun/index-instituicoes-tabs.en.html |
+| üá™üá∏ Espa√±ol | https://caetanoronan.github.io/olokun-website/olokun/index-instituicoes-tabs.es.html |
 
-**Conte˙do:** 6 abas tem·ticas ó ApresentaÁ„o, Sobre o Programa, Projetos, Produtos & ServiÁos, Para InstituiÁıes, Contato
+**Conte√∫do:** 6 abas ‚Äî Apresenta√ß√£o, Sobre o Programa, Projetos, Produtos & Servi√ßos, Para Institui√ß√µes e Contato.
 
-### ?? Dashboard Territorial (MultilÌngue)
-
-Indicadores de alinhamento estratÈgico e cobertura de escolas com:
-- Seletor de idiomas (PT/EN/ES)
-- 4 abas: Dados do Mapa, An·lise, Piloto MVP, Vis„o Futura
-- Gr·ficos interativos com Chart.js
-- Modo escuro/claro com dark mode toggle
+### üìä Dashboard Territorial (Multil√≠ngue)
 
 | Idioma | URL |
 |--------|-----|
-| ???? PortuguÍs | https://caetanoronan.github.io/olokun-website/olokun/dashboard_olokun_tabs.html |
-| ???? English | https://caetanoronan.github.io/olokun-website/olokun/dashboard_olokun_tabs.en.html |
-| ???? EspaÒol | https://caetanoronan.github.io/olokun-website/olokun/dashboard_olokun_tabs.es.html |
+| üáßüá∑ Portugu√™s | https://caetanoronan.github.io/olokun-website/olokun/dashboard_olokun_tabs.html |
+| üá¨üáß English | https://caetanoronan.github.io/olokun-website/olokun/dashboard_olokun_tabs.en.html |
+| üá™üá∏ Espa√±ol | https://caetanoronan.github.io/olokun-website/olokun/dashboard_olokun_tabs.es.html |
 
-### ??? Outros Dashboards e Mapas
+### üó∫Ô∏è Outros Dashboards e Mapas
 
 - **Dashboard Escolas:** https://caetanoronan.github.io/olokun-website/olokun/dashboard_escolas.html
 - **Mapa de Resultados:** https://caetanoronan.github.io/olokun-website/olokun/mapa_resultados.html
@@ -49,338 +45,121 @@ Indicadores de alinhamento estratÈgico e cobertura de escolas com:
 
 ---
 
-## ?? Estrutura do Projeto
+## üì¢ Banner Informativo de Funcionalidades
 
-```
+A apresenta√ß√£o institucional possui um banner de boas-vindas (dismiss√≠vel) para orientar novos visitantes.
+
+Funcionalidades destacadas:
+
+1. üåê **Idioma** (PT/EN/ES)
+2. üåô **Tema** (claro/escuro)
+3. üìä **Dashboard**
+4. üó∫Ô∏è **Ver Mapa**
+5. üìç **Mapa de Resultados**
+
+Arquivos com banner:
+
+- `olokun/index-instituicoes-tabs.html`
+- `olokun/index-instituicoes-tabs.en.html`
+- `olokun/index-instituicoes-tabs.es.html`
+- `olokun/index-instituicoes-tabs.original.html`
+
+---
+
+## üìÇ Estrutura do Projeto
+
+```text
 olokun-website/
-+-- README.md                                    # Este arquivo
-+-- olokun/                                      # ?? Pasta publicada no GitHub Pages
-¶   +-- index-instituicoes-tabs.html            # ApresentaÁ„o institucional PT
-¶   +-- index-instituicoes-tabs.en.html         # ApresentaÁ„o institucional EN
-¶   +-- index-instituicoes-tabs.es.html         # ApresentaÁ„o institucional ES
-¶   +-- index-instituicoes-tabs.original.html   # Backup (PT original)
-¶   ¶
-¶   +-- dashboard_olokun_tabs.html              # Dashboard territorial PT
-¶   +-- dashboard_olokun_tabs.en.html           # Dashboard territorial EN
-¶   +-- dashboard_olokun_tabs.es.html           # Dashboard territorial ES
-¶   +-- dashboard_olokun_tabs.original.html     # Backup (PT original)
-¶   ¶
-¶   +-- dashboard_escolas.html                  # Dashboard de escolas
-¶   +-- mapa_resultados.html                    # Mapa de resultados
-¶   +-- mapa_olokun.html                        # Mapa alternativo
-¶   +-- assets/                                  # Recursos (CSS, JS, imagens)
-¶
-+-- dados/                                       # ?? Dados brutos e metadados
-¶   +-- brutos/                                  # Dados originais (CSVs, shapefiles)
-¶   +-- processados/                             # GPKGs, GÈoJSONs processados
-¶   +-- metadados/                               # Dicion·rios de vari·veis, checklists
-¶   +-- templates/                               # Templates de importaÁ„o
-¶
-+-- gis/                                         # ??? Dados geoespaciais
-¶   +-- Residuos_solidos_Olokun/                 # Camadas SIG especÌficas
-¶
-+-- docs/                                        # ?? DocumentaÁ„o tÈcnica
-¶   +-- GUIA_DE_USO.md                          # Guide para usu·rios finais
-¶   +-- RESUMO_EXECUTIVO.md                     # Resumo do projeto
-¶   +-- TRANSFORMACAO_PARA_ONG.md               # Guia de transformaÁ„o operacional
-¶   +-- [outros arquivos auxiliares]
-¶
-+-- gh-pages-temp/                               # ?? ¡rea de trabalho (ramo gh-pages)
-¶   +-- [versıes em ediÁ„o]
-¶
-+-- site/                                        # ?? Backup/sincronia com master
-¶   +-- olokun/                                  # CÛpia dos arquivos publicados
-¶   +-- [estrutura similar a /olokun]
-¶
-+-- midia/                                       # ?? VÌdeos, imagens e recursos de mÌdia
+‚îú‚îÄ‚îÄ README.md
+‚îú‚îÄ‚îÄ olokun/
+‚îÇ   ‚îú‚îÄ‚îÄ index-instituicoes-tabs.html
+‚îÇ   ‚îú‚îÄ‚îÄ index-instituicoes-tabs.en.html
+‚îÇ   ‚îú‚îÄ‚îÄ index-instituicoes-tabs.es.html
+‚îÇ   ‚îú‚îÄ‚îÄ index-instituicoes-tabs.original.html
+‚îÇ   ‚îú‚îÄ‚îÄ dashboard_olokun_tabs.html
+‚îÇ   ‚îú‚îÄ‚îÄ dashboard_olokun_tabs.en.html
+‚îÇ   ‚îú‚îÄ‚îÄ dashboard_olokun_tabs.es.html
+‚îÇ   ‚îú‚îÄ‚îÄ dashboard_olokun_tabs.original.html
+‚îÇ   ‚îú‚îÄ‚îÄ dashboard_escolas.html
+‚îÇ   ‚îú‚îÄ‚îÄ mapa_resultados.html
+‚îÇ   ‚îî‚îÄ‚îÄ mapa_olokun.html
+‚îú‚îÄ‚îÄ dados/
+‚îú‚îÄ‚îÄ gis/
+‚îú‚îÄ‚îÄ docs/
+‚îú‚îÄ‚îÄ gh-pages-temp/
+‚îú‚îÄ‚îÄ site/
+‚îî‚îÄ‚îÄ midia/
 ```
 
 ---
 
-## ?? Processo de Desenvolvimento e Deploy
+## üß≠ Como Rodar Localmente
 
-### Branches do RepositÛrio
+### Pr√©-requisitos
 
-| Branch | FunÁ„o | Deploy | Usado para |
-|--------|--------|--------|-----------|
-| `ghpages` | Production | ? Ativo (GitHub Pages) | PublicaÁ„o ao vivo |
-| `master` | Backup | ?? Secund·rio | SincronizaÁ„o de arquivos |
-| `gh-pages` | Desenvolvimento | ? Inativo | HistÛrico de commits |
-| `gh-pages-temp` | Workspace | ? N„o publicado | Testes locais |
-
-> **Importante:** GitHub Pages est· configurado para servir da branch **`ghpages`**. Qualquer mudanÁa feita nessa branch È publicada automaticamente em ~1-2 minutos.
-
-### Fluxo de Trabalho: Adicionar um Novo Link
-
-Exemplo: adicionar link para `mapa_resultados.html` na apresentaÁ„o institucional.
-
-#### Passo 1: Localizar o arquivo
-```bash
-# O arquivo est· em /olokun/index-instituicoes-tabs.html
-ls olokun/index-instituicoes-tabs.html
-```
-
-#### Passo 2: Editar localmente
-Abra `olokun/index-instituicoes-tabs.html` e encontre o header com os botıes de navegaÁ„o:
-
-```html
-<div class="flex items-center gap-2">
-  <a href="../dashboard_olokun_tabs.html" ...>Dashboard</a>
-  <a href="../mapa_escolas.html" ...>Ver Mapa</a>
-  <!-- Adicione aqui o novo link -->
-  <a href="https://caetanoronan.github.io/olokun-website/olokun/mapa_resultados.html" 
-     class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 transition text-sm" 
-     target="_blank" rel="noopener noreferrer">
-    <i class="fas fa-map-marked-alt"></i> Mapa de Resultados
-  </a>
-</div>
-```
-
-#### Passo 3: Testar localmente
-```bash
-python -m http.server 8000
-# Acesse http://localhost:8000/olokun/index-instituicoes-tabs.html
-```
-
-#### Passo 4: Sincronizar para ambas as pastas
-Para garantir deployment correto, copie para:
-- `gh-pages-temp/olokun/`
-- `site/olokun/`
-
-```bash
-Copy-Item "olokun/index-instituicoes-tabs.html" "gh-pages-temp/olokun/"
-Copy-Item "olokun/index-instituicoes-tabs.html" "site/olokun/"
-```
-
-#### Passo 5: Fazer commit na branch de produÁ„o
-```bash
-# Certifique-se de estar na branch ghpages
-git checkout ghpages
-git add olokun/index-instituicoes-tabs.html
-git commit -m "feat: adicionar link para mapa_resultados na apresentaÁ„o"
-git push origin ghpages
-```
-
-#### Passo 6: Aguardar e validar
-- GitHub Pages far· rebuild automaticamente (1-2 minutos)
-- Limpe cache do navegador: **Ctrl+Shift+R**
-- Acesse: https://caetanoronan.github.io/olokun-website/olokun/index-instituicoes-tabs.html
-- Verifique se o novo link aparece
-
----
-
-## ?? Como Rodar Localmente
-
-### PrÈ-requisitos
 - Python 3.7+
 - Git
 
 ### Passos
 
-1. **Clone o repositÛrio**
 ```bash
 git clone https://github.com/caetanoronan/olokun-website.git
 cd olokun-website
-```
-
-2. **Inicie servidor HTTP local**
-```bash
 python -m http.server 8000
 ```
 
-3. **Acesse no navegador**
+Acesse:
 
-| P·gina | URL |
-|--------|-----|
-| ApresentaÁ„o Institucional | http://localhost:8000/olokun/index-instituicoes-tabs.html |
-| Dashboard Territorial | http://localhost:8000/olokun/dashboard_olokun_tabs.html |
-| Dashboard Escolas | http://localhost:8000/olokun/dashboard_escolas.html |
-| Mapa de Resultados | http://localhost:8000/olokun/mapa_resultados.html |
-| Mapa de Escolas | http://localhost:8000/mapa_escolas.html |
+- http://localhost:8000/olokun/index-instituicoes-tabs.html
+- http://localhost:8000/olokun/dashboard_olokun_tabs.html
+- http://localhost:8000/olokun/mapa_resultados.html
 
 ---
 
-## ?? Tecnologias Utilizadas
+## üõ†Ô∏è Tecnologias Utilizadas
 
 ### Frontend
-- **HTML5 / CSS3** ó Markup e estilizaÁ„o
-- **Tailwind CSS** ó Framework de utility-first CSS
-- **JavaScript Vanilla** ó Interatividade sem dependÍncias pesadas
-- **Chart.js 4.4.0** ó VisualizaÁ„o de gr·ficos (doughnut, bar, line)
-- **AOS 2.3.1** ó Scroll animations para apresentaÁ„o visual
-- **Leaflet.js** ó Mapas interativos
-- **Font Awesome 6.5.1** ó Õcones SVG
-- **Cluster Markers** ó Plugin para agrupamento de pontos
 
-### Funcionalidades Especiais
-- **Seletor de Idiomas** ó Suporte multilÌngue (PT/EN/ES) com URLs din‚micas
-- **Dark Mode Toggle** ó Tema claro/escuro persistente via localStorage
-- **Geomarketing Dashboard** ó Indicadores de cobertura territorial e estratÈgia
-- **Responsive Design** ó Funciona em desktop, tablet e mobile
+- HTML5 / CSS3
+- Tailwind CSS
+- JavaScript Vanilla
+- Chart.js 4.4.0
+- AOS 2.3.1
+- Leaflet.js
+- Font Awesome 6.5.1
 
 ### Dados
-- **GeoJSON** ó Formato para dados geoespaciais
-- **CSV** ó TabulaÁ„o de dados estruturados
-- **GeoPackage (.gpkg)** ó Banco de dados geoespacial (QGIS)
 
-### Deployment
-- **GitHub Pages** ó Hospedagem est·tica da branch `ghpages`
-- **Git** ó Controle de vers„o
+- GeoJSON
+- CSV
+- GeoPackage (.gpkg)
 
----
+### Deploy
 
-## ?? Guia de EdiÁ„o
-
-### ?? Seletor de Idiomas MultilÌngue
-
-Tanto a **ApresentaÁ„o Institucional** quanto o **Dashboard Territorial** incluem:
-
-- **Bot„o de seleÁ„o de idioma** no header (com flags ???? ???? ????)
-- **Dropdown com links diretos** para cada vers„o de idioma
-- **SincronizaÁ„o autom·tica** entre as versıes
-- **Dark mode toggle** que funciona em todos os idiomas
-
-**Como usar:**
-1. Clique no bot„o de idioma (flag) no canto superior direito
-2. Selecione o idioma desejado
-3. A p·gina carrega a vers„o traduzida automaticamente
-
-**Arquivos envolvidos:**
-- `index-instituicoes-tabs.html` (PT), `.en.html` (EN), `.es.html` (ES)
-- `dashboard_olokun_tabs.html` (PT), `.en.html` (EN), `.es.html` (ES)
-- Cada vers„o tem seu prÛprio backup `.original.html`
-
-### ?? Banner Informativo de Funcionalidades
-
-Adicionado ‡ **ApresentaÁ„o Institucional** para orientar novos visitantes:
-
-**O que È?**
-Um banner colorido no topo da p·gina que lista as 5 funcionalidades principais disponÌveis no site:
-1. ?? **Idioma** ó Selector de PT/EN/ES
-2. ?? **Tema** ó Dark/Light mode toggle
-3. ?? **Dashboard** ó Acesso aos indicadores territoriais
-4. ??? **Ver Mapa** ó Mapa interativo de escolas
-5. ?? **Mapa de Resultados** ó VisualizaÁ„o de resultados
-
-**Visual:**
-- Gradiente esmeralda ? ciano
-- Efeito pulse (piscada) para chamar atenÁ„o
-- Bot„o "X" para fechar (dismissÌvel)
-- Suporta dark/light mode
-- Responsivo em mobile/tablet/desktop
-
-**ImplementaÁ„o tÈcnica:**
-- ID do banner: `id="infoBank"`
-- Acionado com JavaScript: `onclick="document.getElementById('infoBank').style.display='none'"`
-- Totalmente multilÌngue (PT/EN/ES)
-
-**Arquivos com o banner:**
-- `index-instituicoes-tabs.html` (PT)
-- `index-instituicoes-tabs.en.html` (EN)
-- `index-instituicoes-tabs.es.html` (ES)
-- `index-instituicoes-tabs.original.html` (Backup com banner)
-
-**Como customizar:**
-Se desejar alterar o conte˙do do banner, procure por `<div id="infoBank">` no arquivo HTML e edite o texto dentro de `<h3>` e `<ul>`.
-
-### Editar ApresentaÁ„o Institucional
-
-Arquivo: `olokun/index-instituicoes-tabs.html`
-
-**Estrutura de abas:**
-```html
-<!-- Botıes de abas -->
-<nav class="flex flex-nowrap -mb-px gap-2">
-  <button class="tab-button" data-tab="apresentacao">ApresentaÁ„o</button>
-  <button class="tab-button" data-tab="sobre">Sobre o Programa</button>
-  <!-- ... mais botıes ... -->
-</nav>
-
-<!-- Conte˙do das abas -->
-<div id="apresentacao" class="tab-content active">
-  <!-- Conte˙do aqui -->
-</div>
-```
-
-**Adicionando nova aba:**
-1. Adicione um bot„o `<button>` com `data-tab="seu-nome"`
-2. Crie uma `<div>` com `id="seu-nome"` na seÁ„o de conte˙do
-3. A classe `.tab-content` È ativada automaticamente via JavaScript
-
-### Adicionar Novo Mapa
-
-1. Prepare seus dados em GeoJSON
-2. Crie novo arquivo HTML em `olokun/`
-3. Importe Leaflet CSS/JS:
-```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-```
-4. Inicialize mapa:
-```javascript
-const map = L.map('map-container').setView([-27.5969, -48.5440], 11);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-```
-5. Adicione camadas GeoJSON
-6. Publique em `olokun/` ? commit ? push em `ghpages`
+- GitHub Pages
+- Git
 
 ---
 
-## ?? Troubleshooting
+## üìö Documenta√ß√£o Adicional
 
-### Problema: Link n„o aparece apÛs push
-
-**Causas comuns:**
-- ? Push feito em branch errada (n„o È `ghpages`)
-- ? Cache do navegador (use Ctrl+Shift+R)
-- ? Arquivo travado ou conflito de merge
-
-**SoluÁ„o:**
-```bash
-git checkout ghpages
-git log -1 --oneline  # Verifique se est· em ghpages
-git push origin ghpages
-```
-
-### Problema: Arquivo n„o sincroniza entre pastas
-
-As pastas `olokun/`, `gh-pages-temp/olokun/` e `site/olokun/` precisam estar sempre sÌncronas. Se editar em uma, copie para as outras:
-
-```bash
-Copy-Item "olokun/arquivo.html" "gh-pages-temp/olokun/" -Force
-Copy-Item "olokun/arquivo.html" "site/olokun/" -Force
-```
-
-### Problema: Mapa n„o carrega dados
-
-1. Verifique se o arquivo GeoJSON est· acessÌvel
-2. Abra console do navegador (F12) para ver erros
-3. Confirme URL relativa/absoluta est· correta
-4. Valide GeoJSON em http://geojson.io
+- [Guia de Uso](docs/GUIA_DE_USO.md)
+- [Resumo Executivo](docs/RESUMO_EXECUTIVO.md)
+- [Dicion√°rio de Vari√°veis](dados/metadados/DICIONARIO_VARIAVEIS.md)
+- [Matriz de Alinhamento](dados/Matriz_Alinhamento_Estrategico_Olokun.csv)
 
 ---
 
-## ?? DocumentaÁ„o Adicional
-
-- [Guia de Uso](docs/GUIA_DE_USO.md) ó Manual completo para usu·rios finais
-- [Resumo Executivo](docs/RESUMO_EXECUTIVO.md) ó Vis„o geral do projeto
-- [Dicion·rio de Vari·veis](dados/metadados/DICIONARIO_VARIAVEIS.md) ó DefiniÁ„o dos indicadores
-- [Matriz de Alinhamento](dados/Matriz_Alinhamento_Estrategico_Olokun.csv) ó Matriz ESG e indicadores
-
----
-
-## ?? Contato
+## üì¨ Contato
 
 - **Email:** olokun.ambiental@gmail.com
-- **Local:** FlorianÛpolis, SC ó Brasil
+- **Local:** Florian√≥polis, SC ‚Äî Brasil
 - **GitHub:** https://github.com/caetanoronan/olokun-website
 
 ---
 
-## ?? LicenÁa
+## üìÑ Licen√ßa
 
-Projeto em evoluÁ„o contÌnua para apoio ‡ tomada de decis„o territorial com impacto socioambiental.
+Projeto em evolu√ß√£o cont√≠nua para apoio √† tomada de decis√£o territorial com impacto socioambiental.
 
-**⁄ltima atualizaÁ„o:** MarÁo de 2026 (Dashboard multilÌngue, p·ginas institucional PT/EN/ES, banner informativo de funcionalidades)
-
-<!-- Trigger: 2026-03-01 Banner Informativo -->
+**√öltima atualiza√ß√£o:** Mar√ßo de 2026 (README recodificado em UTF-8 e conte√∫do multil√≠ngue atualizado)
