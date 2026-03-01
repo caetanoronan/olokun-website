@@ -15,15 +15,37 @@ O Instituto Olokun é uma organização dedicada à **preservação e conservaç
 
 ## 🔗 Acessos Públicos (GitHub Pages)
 
-**Apresentação Institucional:**
-- URL: https://caetanoronan.github.io/olokun-website/olokun/index-instituicoes-tabs.html
-- Contém 6 abas: Apresentação, Sobre o Programa, Projetos, Produtos & Serviços, Para Instituições, Contato
+### 🌍 Apresentação Institucional (Multilíngue)
 
-**Dashboards e Mapas:**
-- Dashboard Territorial: https://caetanoronan.github.io/olokun-website/olokun/dashboard_olokun_tabs.html
-- Dashboard Escolas: https://caetanoronan.github.io/olokun-website/olokun/dashboard_escolas.html
-- Mapa de Resultados: https://caetanoronan.github.io/olokun-website/olokun/mapa_resultados.html
-- Mapa de Escolas: https://caetanoronan.github.io/olokun-website/mapa_escolas.html
+Com seletor de idiomas e modo escuro/claro:
+
+| Idioma | URL |
+|--------|-----|
+| 🇧🇷 Português | https://caetanoronan.github.io/olokun-website/olokun/index-instituicoes-tabs.html |
+| 🇬🇧 English | https://caetanoronan.github.io/olokun-website/olokun/index-instituicoes-tabs.en.html |
+| 🇪🇸 Español | https://caetanoronan.github.io/olokun-website/olokun/index-instituicoes-tabs.es.html |
+
+**Conteúdo:** 6 abas temáticas — Apresentação, Sobre o Programa, Projetos, Produtos & Serviços, Para Instituições, Contato
+
+### 📊 Dashboard Territorial (Multilíngue)
+
+Indicadores de alinhamento estratégico e cobertura de escolas com:
+- Seletor de idiomas (PT/EN/ES)
+- 4 abas: Dados do Mapa, Análise, Piloto MVP, Visão Futura
+- Gráficos interativos com Chart.js
+- Modo escuro/claro com dark mode toggle
+
+| Idioma | URL |
+|--------|-----|
+| 🇧🇷 Português | https://caetanoronan.github.io/olokun-website/olokun/dashboard_olokun_tabs.html |
+| 🇬🇧 English | https://caetanoronan.github.io/olokun-website/olokun/dashboard_olokun_tabs.en.html |
+| 🇪🇸 Español | https://caetanoronan.github.io/olokun-website/olokun/dashboard_olokun_tabs.es.html |
+
+### 🗺️ Outros Dashboards e Mapas
+
+- **Dashboard Escolas:** https://caetanoronan.github.io/olokun-website/olokun/dashboard_escolas.html
+- **Mapa de Resultados:** https://caetanoronan.github.io/olokun-website/olokun/mapa_resultados.html
+- **Mapa de Escolas:** https://caetanoronan.github.io/olokun-website/mapa_escolas.html
 
 ---
 
@@ -31,38 +53,46 @@ O Instituto Olokun é uma organização dedicada à **preservação e conservaç
 
 ```
 olokun-website/
-├── README.md                          # Este arquivo
-├── olokun/                            # 📦 Pasta publicada no GitHub Pages
-│   ├── index-instituicoes-tabs.html  # Apresentação institucional (6 abas)
-│   ├── dashboard_olokun_tabs.html    # Dashboard com indicadores estratégicos
-│   ├── dashboard_escolas.html        # Dashboard com dados das escolas
-│   ├── mapa_resultados.html          # Mapa interativo de resultados
-│   ├── mapa_olokun.html              # Mapa alternativo
-│   └── assets/                        # Recursos (CSS, JS, imagens)
+├── README.md                                    # Este arquivo
+├── olokun/                                      # 📦 Pasta publicada no GitHub Pages
+│   ├── index-instituicoes-tabs.html            # Apresentação institucional PT
+│   ├── index-instituicoes-tabs.en.html         # Apresentação institucional EN
+│   ├── index-instituicoes-tabs.es.html         # Apresentação institucional ES
+│   ├── index-instituicoes-tabs.original.html   # Backup (PT original)
+│   │
+│   ├── dashboard_olokun_tabs.html              # Dashboard territorial PT
+│   ├── dashboard_olokun_tabs.en.html           # Dashboard territorial EN
+│   ├── dashboard_olokun_tabs.es.html           # Dashboard territorial ES
+│   ├── dashboard_olokun_tabs.original.html     # Backup (PT original)
+│   │
+│   ├── dashboard_escolas.html                  # Dashboard de escolas
+│   ├── mapa_resultados.html                    # Mapa de resultados
+│   ├── mapa_olokun.html                        # Mapa alternativo
+│   └── assets/                                  # Recursos (CSS, JS, imagens)
 │
-├── dados/                             # 📊 Dados brutos e metadados
-│   ├── brutos/                        # Dados originais (CSVs, shapefiles)
-│   ├── processados/                   # GPKGs, GéoJSONs processados
-│   ├── metadados/                     # Dicionários de variáveis, checklists
-│   └── templates/                     # Templates de importação
+├── dados/                                       # 📊 Dados brutos e metadados
+│   ├── brutos/                                  # Dados originais (CSVs, shapefiles)
+│   ├── processados/                             # GPKGs, GéoJSONs processados
+│   ├── metadados/                               # Dicionários de variáveis, checklists
+│   └── templates/                               # Templates de importação
 │
-├── gis/                               # 🗺️ Dados geoespaciais
-│   └── Residuos_solidos_Olokun/       # Camadas SIG específicas
+├── gis/                                         # 🗺️ Dados geoespaciais
+│   └── Residuos_solidos_Olokun/                 # Camadas SIG específicas
 │
-├── docs/                              # 📚 Documentação técnica
-│   ├── GUIA_DE_USO.md                # Guide para usuários finais
-│   ├── RESUMO_EXECUTIVO.md           # Resumo do projeto
-│   ├── TRANSFORMACAO_PARA_ONG.md     # Guia de transformação operacional
+├── docs/                                        # 📚 Documentação técnica
+│   ├── GUIA_DE_USO.md                          # Guide para usuários finais
+│   ├── RESUMO_EXECUTIVO.md                     # Resumo do projeto
+│   ├── TRANSFORMACAO_PARA_ONG.md               # Guia de transformação operacional
 │   └── [outros arquivos auxiliares]
 │
-├── gh-pages-temp/                     # 🔄 Área de trabalho (ramo gh-pages)
+├── gh-pages-temp/                               # 🔄 Área de trabalho (ramo gh-pages)
 │   └── [versões em edição]
 │
-├── site/                              # 📁 Backup/sincronia com master
-│   ├── olokun/                        # Cópia dos arquivos publicados
+├── site/                                        # 📁 Backup/sincronia com master
+│   ├── olokun/                                  # Cópia dos arquivos publicados
 │   └── [estrutura similar a /olokun]
 │
-└── midia/                             # 🎥 Vídeos, imagens e recursos de mídia
+└── midia/                                       # 🎥 Vídeos, imagens e recursos de mídia
 ```
 
 ---
@@ -176,8 +206,17 @@ python -m http.server 8000
 - **HTML5 / CSS3** — Markup e estilização
 - **Tailwind CSS** — Framework de utility-first CSS
 - **JavaScript Vanilla** — Interatividade sem dependências pesadas
+- **Chart.js 4.4.0** — Visualização de gráficos (doughnut, bar, line)
+- **AOS 2.3.1** — Scroll animations para apresentação visual
 - **Leaflet.js** — Mapas interativos
+- **Font Awesome 6.5.1** — Ícones SVG
 - **Cluster Markers** — Plugin para agrupamento de pontos
+
+### Funcionalidades Especiais
+- **Seletor de Idiomas** — Suporte multilíngue (PT/EN/ES) com URLs dinâmicas
+- **Dark Mode Toggle** — Tema claro/escuro persistente via localStorage
+- **Geomarketing Dashboard** — Indicadores de cobertura territorial e estratégia
+- **Responsive Design** — Funciona em desktop, tablet e mobile
 
 ### Dados
 - **GeoJSON** — Formato para dados geoespaciais
@@ -191,6 +230,25 @@ python -m http.server 8000
 ---
 
 ## ✏️ Guia de Edição
+
+### 🌍 Seletor de Idiomas Multilíngue
+
+Tanto a **Apresentação Institucional** quanto o **Dashboard Territorial** incluem:
+
+- **Botão de seleção de idioma** no header (com flags 🇧🇷 🇬🇧 🇪🇸)
+- **Dropdown com links diretos** para cada versão de idioma
+- **Sincronização automática** entre as versões
+- **Dark mode toggle** que funciona em todos os idiomas
+
+**Como usar:**
+1. Clique no botão de idioma (flag) no canto superior direito
+2. Selecione o idioma desejado
+3. A página carrega a versão traduzida automaticamente
+
+**Arquivos envolvidos:**
+- `index-instituicoes-tabs.html` (PT), `.en.html` (EN), `.es.html` (ES)
+- `dashboard_olokun_tabs.html` (PT), `.en.html` (EN), `.es.html` (ES)
+- Cada versão tem seu próprio backup `.original.html`
 
 ### Editar Apresentação Institucional
 
@@ -290,6 +348,6 @@ Copy-Item "olokun/arquivo.html" "site/olokun/" -Force
 
 Projeto em evolução contínua para apoio à tomada de decisão territorial com impacto socioambiental.
 
-**Última atualização:** Fevereiro de 2026
+**Última atualização:** Março de 2026 (Dashboard multilíngue e páginas institucional em PT/EN/ES)
 
-<!-- Trigger: 2026-03-01 113903 -->
+<!-- Trigger: 2026-03-01 -->
