@@ -250,6 +250,39 @@ Tanto a **Apresentação Institucional** quanto o **Dashboard Territorial** incl
 - `dashboard_olokun_tabs.html` (PT), `.en.html` (EN), `.es.html` (ES)
 - Cada versão tem seu próprio backup `.original.html`
 
+### 📢 Banner Informativo de Funcionalidades
+
+Adicionado à **Apresentação Institucional** para orientar novos visitantes:
+
+**O que é?**
+Um banner colorido no topo da página que lista as 5 funcionalidades principais disponíveis no site:
+1. 🌐 **Idioma** — Selector de PT/EN/ES
+2. 🌙 **Tema** — Dark/Light mode toggle
+3. 📊 **Dashboard** — Acesso aos indicadores territoriais
+4. 🗺️ **Ver Mapa** — Mapa interativo de escolas
+5. 📍 **Mapa de Resultados** — Visualização de resultados
+
+**Visual:**
+- Gradiente esmeralda → ciano
+- Efeito pulse (piscada) para chamar atenção
+- Botão "X" para fechar (dismissível)
+- Suporta dark/light mode
+- Responsivo em mobile/tablet/desktop
+
+**Implementação técnica:**
+- ID do banner: `id="infoBank"`
+- Acionado com JavaScript: `onclick="document.getElementById('infoBank').style.display='none'"`
+- Totalmente multilíngue (PT/EN/ES)
+
+**Arquivos com o banner:**
+- `index-instituicoes-tabs.html` (PT)
+- `index-instituicoes-tabs.en.html` (EN)
+- `index-instituicoes-tabs.es.html` (ES)
+- `index-instituicoes-tabs.original.html` (Backup com banner)
+
+**Como customizar:**
+Se desejar alterar o conteúdo do banner, procure por `<div id="infoBank">` no arquivo HTML e edite o texto dentro de `<h3>` e `<ul>`.
+
 ### Editar Apresentação Institucional
 
 Arquivo: `olokun/index-instituicoes-tabs.html`
@@ -348,6 +381,6 @@ Copy-Item "olokun/arquivo.html" "site/olokun/" -Force
 
 Projeto em evolução contínua para apoio à tomada de decisão territorial com impacto socioambiental.
 
-**Última atualização:** Março de 2026 (Dashboard multilíngue e páginas institucional em PT/EN/ES)
+**Última atualização:** Março de 2026 (Dashboard multilíngue, páginas institucional PT/EN/ES, banner informativo de funcionalidades)
 
-<!-- Trigger: 2026-03-01 -->
+<!-- Trigger: 2026-03-01 Banner Informativo -->
