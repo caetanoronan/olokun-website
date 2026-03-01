@@ -30,3 +30,4 @@ MEMORIAL*.pdf
 
 # Manter apenas arquivos do site funcionais
 # Os PDFs técnicos podem ser adicionados a um Google Drive ou similar
+gh-pages-temp/
