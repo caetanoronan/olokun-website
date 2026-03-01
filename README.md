@@ -291,3 +291,5 @@ Copy-Item "olokun/arquivo.html" "site/olokun/" -Force
 Projeto em evolução contínua para apoio à tomada de decisão territorial com impacto socioambiental.
 
 **Última atualização:** Fevereiro de 2026
+
+<!-- Trigger: 2026-03-01 113903 -->
