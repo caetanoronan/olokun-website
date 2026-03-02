@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prompt Avançado — Tradução Multilíngue HTML</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --primary: #0f766e;
+      --primary-2: #0284c7;
+      --soft: #ecfeff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, Segoe UI, Arial, sans-serif;
+      line-height: 1.5;
+      transition: background .25s ease, color .25s ease;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      color: #fff;
+      padding: 28px 32px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 30px;
+      font-weight: 800;
+    }
+
+    .hero p {
+      margin: 8px 0 0;
+      opacity: 0.95;
+      font-size: 15px;
+    }
+
+    .content {
+      padding: 26px 32px 34px;
+    }
+
+    h2 {
+      margin: 24px 0 10px;
+      font-size: 20px;
+      color: #0b5f58;
+      border-left: 4px solid var(--primary);
+      padding-left: 10px;
+    }
+
+    h3 {
+      margin: 14px 0 8px;
+      font-size: 15px;
+      color: #0f172a;
+    }
+
+    p, li {
+      font-size: 14px;
+    }
+
+    ul, ol {
+      margin: 8px 0 12px 20px;
+      padding: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #fff;
+      padding: 12px;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      color: #0b5f58;
+      background: #ccfbf1;
+      border: 1px solid #99f6e4;
+      border-radius: 999px;
+      padding: 3px 9px;
+      margin: 0 6px 6px 0;
+      font-weight: 700;
+    }
+
+    .prompt-box {
+      margin-top: 10px;
+      border: 1px solid #bae6fd;
+      border-radius: 10px;
+      background: var(--soft);
+      padding: 14px;
+      position: relative;
+    }
+
+    pre {
+      margin: 0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-size: 13px;
+      line-height: 1.45;
+      font-family: Consolas, Menlo, Monaco, monospace;
+      color: #0f172a;
+    }
+
+    .btn {
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      background: #fff;
+      padding: 8px 12px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all .2s ease;
+    }
+
+    .btn:hover {
+      background: #f8fafc;
+    }
+
+    .actions {
+      margin: 10px 0 0;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      padding: 12px;
+      border: 1px dashed #94a3b8;
+      border-radius: 8px;
+      background: #f8fafc;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .top-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .theme-toggle {
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      background: #fff;
+      padding: 8px 12px;
+      font-size: 13px;
+      cursor: pointer;
+      color: #0f766e;
+      font-weight: 700;
+    }
+
+    .dark {
+      --bg: #0b1220;
+      --card: #0f172a;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --line: #334155;
+      --soft: #0b1a2e;
+    }
+
+    .dark .container,
+    .dark .card,
+    .dark .btn,
+    .dark .theme-toggle {
+      background: #0f172a;
+      border-color: #334155;
+      color: #e5e7eb;
+    }
+
+    .dark .btn:hover,
+    .dark .theme-toggle:hover {
+      background: #111827;
+    }
+
+    .dark h2,
+    .dark h3,
+    .dark .tag,
+    .dark pre {
+      color: #cbd5e1;
+    }
+
+    .dark .prompt-box,
+    .dark .footer-note {
+      background: #111827;
+      border-color: #334155;
+      color: #94a3b8;
+    }
+
+    @media print {
+      body { background: #fff; padding: 0; }
+      .container { border: none; box-shadow: none; border-radius: 0; }
+      .hero { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .actions, .top-actions { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <h1>Prompt Avançado — Tradução Multilíngue de HTML</h1>
+      <p>Guia rápido para traduzir páginas com segurança, sem quebrar layout, scripts, links e funcionalidades.</p>
+    </section>
+
+    <section class="content">
+      <div class="top-actions">
+        <a class="btn" href="mini_curso_traducao_capa_indice.html">🏠 Capa</a>
+        <a class="btn" href="prompt_avancado_traducao_multilingue.html">📘 Módulo 1</a>
+        <a class="btn" href="prompt_avancado_traducao_multilingue_aula_completa.html">🎓 Módulo 2</a>
+        <button class="theme-toggle" id="themeToggle" type="button">🌙 Dark Mode</button>
+      </div>
+
+      <h2>0) Leitura por nível</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>👶 Leigo</h3>
+          <p>Leia as seções 1, 2 e 5. Elas já permitem traduzir com segurança e evitar erros graves.</p>
+        </div>
+        <div class="card">
+          <h3>🛠️ Intermediário</h3>
+          <p>Leia tudo e use o prompt completo da seção 4 com checklist obrigatório.</p>
+        </div>
+        <div class="card">
+          <h3>🚀 Avançado</h3>
+          <p>Use este guia como padrão de time, mantendo terminologia fixa e validação técnica contínua.</p>
+        </div>
+      </div>
+
+      <h2>1) Quando usar este prompt</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Casos ideais</h3>
+          <ul>
+            <li>Páginas institucionais com muito texto.</li>
+            <li>Dashboards com tabs, gráficos e botões.</li>
+            <li>Arquivos com seletor de idioma e dark mode.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Objetivo principal</h3>
+          <ul>
+            <li>Traduzir conteúdo textual sem alterar estrutura técnica.</li>
+            <li>Garantir consistência terminológica PT/EN/ES.</li>
+            <li>Evitar erros de UTF-8 e regressões visuais.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>2) Regras operacionais obrigatórias</h2>
+      <div class="card">
+        <span class="tag">Preservar DOM</span>
+        <span class="tag">Não alterar JS</span>
+        <span class="tag">Não quebrar UTF-8</span>
+        <span class="tag">Sem novas seções</span>
+        <span class="tag">Links corretos</span>
+        <ol>
+          <li>Manter exatamente a mesma estrutura HTML (tags, classes, ids, ordem).</li>
+          <li>Traduzir somente conteúdo visível e metadados textuais (title, description, labels, botões).</li>
+          <li>Não renomear funções JS, variáveis, caminhos de assets ou arquivos de dados.</li>
+          <li>Não criar/remover seções; apenas traduzir e ajustar texto.</li>
+          <li>Garantir acentuação correta e codificação UTF-8.</li>
+          <li>Se houver seletor de idioma, atualizar links para versões `.html`, `.en.html`, `.es.html`.</li>
+          <li>Preservar semântica de acessibilidade (aria-label, alt, titles informativos).</li>
+        </ol>
+      </div>
+
+      <h2>3) Glossário de termos (consistência + explicação simples)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Termo</th>
+            <th>Explicação simples</th>
+            <th>PT / EN / ES</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Idioma</td>
+            <td>Opção para trocar a língua da página.</td>
+            <td>Idioma / Language / Idioma</td>
+          </tr>
+          <tr>
+            <td>Tema</td>
+            <td>Modo visual claro ou escuro.</td>
+            <td>Tema / Theme / Tema</td>
+          </tr>
+          <tr>
+            <td>Dashboard</td>
+            <td>Painel com indicadores e gráficos.</td>
+            <td>Dashboard / Dashboard / Panel de Control</td>
+          </tr>
+          <tr>
+            <td>Ver Mapa</td>
+            <td>Ação para abrir o mapa interativo.</td>
+            <td>Ver Mapa / View Map / Ver Mapa</td>
+          </tr>
+          <tr>
+            <td>Mapa de Resultados</td>
+            <td>Mapa com resultados das ações/projetos.</td>
+            <td>Mapa de Resultados / Results Map / Mapa de Resultados</td>
+          </tr>
+          <tr>
+            <td>DOM</td>
+            <td>Estrutura HTML da página (não deve ser quebrada).</td>
+            <td>Mesmo termo técnico</td>
+          </tr>
+          <tr>
+            <td>UTF-8</td>
+            <td>Codificação que mantém acentos corretos.</td>
+            <td>Mesmo termo técnico</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>4) Prompt avançado (copiar e usar)</h2>
+      <div class="prompt-box">
+        <pre id="promptText">Tarefa: traduzir um arquivo HTML para três idiomas (PT/EN/ES) mantendo 100% da estrutura original.
+
+Objetivo:
+- Gerar versões:
+  1) arquivo.html (PT)
+  2) arquivo.en.html (EN)
+  3) arquivo.es.html (ES)
+- Preservar layout, classes CSS, IDs, scripts JS, links, atributos e ordem dos elementos.
+- Traduzir apenas textos visíveis e metadados textuais (title, meta description, headings, labels, botões, parágrafos).
+
+Restrições técnicas obrigatórias:
+1) Não remover nem criar seções novas.
+2) Não alterar nomes de funções JavaScript, variáveis, chaves ou paths de assets.
+3) Não alterar URLs de dados (GeoJSON, CSV, APIs, etc.), exceto links de idioma entre .html/.en.html/.es.html.
+4) Não quebrar UTF-8 (acentuação e caracteres especiais).
+5) Manter comportamento de dark mode, tabs, gráficos e dropdowns.
+6) Preservar atributos de acessibilidade (aria-label, alt, title) traduzindo quando for texto de interface.
+
+Terminologia padrão:
+- PT: Idioma | Tema | Dashboard | Ver Mapa | Mapa de Resultados
+- EN: Language | Theme | Dashboard | View Map | Results Map
+- ES: Idioma | Tema | Panel de Control | Ver Mapa | Mapa de Resultados
+
+Processo esperado:
+- Etapa 1: Ler o HTML e mapear blocos textuais traduzíveis.
+- Etapa 2: Traduzir cada bloco por idioma sem mexer na lógica/estrutura.
+- Etapa 3: Revisar consistência terminológica e links entre idiomas.
+- Etapa 4: Validar sintaxe, UTF-8 e funcionamento (tabs, tema, botões, gráficos).
+
+Saída obrigatória:
+- Entregar os 3 arquivos traduzidos.
+- Incluir checklist final:
+  [ ] Estrutura HTML preservada
+  [ ] Scripts intactos
+  [ ] Links de idioma corretos
+  [ ] UTF-8 sem caracteres corrompidos
+  [ ] Terminologia consistente
+  [ ] Interface funcional (tema/tabs/gráficos)
+
+Observação:
+Se houver ambiguidade de tradução, manter linguagem institucional, clara e objetiva, sem alterar o tom do texto original.</pre>
+      </div>
+
+      <div class="actions">
+        <button class="btn" onclick="copyPrompt()">Copiar Prompt</button>
+        <button class="btn" onclick="window.print()">Imprimir / Salvar PDF</button>
+      </div>
+
+      <h2>5) Checklist de validação pós-tradução</h2>
+      <div class="card">
+        <ul>
+          <li>Conferir visual em desktop e mobile.</li>
+          <li>Testar troca de idioma (links e arquivo destino).</li>
+          <li>Validar dark/light mode.</li>
+          <li>Verificar tabs, accordion, botões e gráficos.</li>
+          <li>Checar texto com acentos e símbolos especiais.</li>
+          <li>Executar revisão ortográfica final em cada idioma.</li>
+        </ul>
+      </div>
+
+      <p class="footer-note">
+        Dica prática: sempre mantenha um backup <strong>.original.html</strong> antes de iniciar a tradução e faça validação visual após cada versão gerada.
+      </p>
+    </section>
+  </main>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const root = document.body;
+
+    function setTheme(mode) {
+      const isDark = mode === 'dark';
+      root.classList.toggle('dark', isDark);
+      themeToggle.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+      localStorage.setItem('trainingTheme', isDark ? 'dark' : 'light');
+    }
+
+    const savedTheme = localStorage.getItem('trainingTheme') || 'light';
+    setTheme(savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const next = root.classList.contains('dark') ? 'light' : 'dark';
+      setTheme(next);
+    });
+
+    function copyPrompt() {
+      const text = document.getElementById('promptText').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Prompt copiado com sucesso!');
+      }).catch(() => {
+        alert('Não foi possível copiar automaticamente. Selecione e copie manualmente.');
+      });
+    }
+  </script>
+</body>
+</html>

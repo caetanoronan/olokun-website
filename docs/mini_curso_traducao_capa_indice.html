@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini-Curso | Tradução Multilíngue HTML</title>
+  <style>
+    :root {
+      --bg: #f3f7fb;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --line: #e2e8f0;
+      --primary: #0f766e;
+      --secondary: #0284c7;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, Segoe UI, Arial, sans-serif;
+      background: radial-gradient(circle at top left, #e0f2fe 0%, #f3f7fb 45%, #f8fafc 100%);
+      color: var(--text);
+      padding: 24px;
+      transition: background .25s ease, color .25s ease;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.08);
+    }
+
+    .hero {
+      padding: 34px 34px 26px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: .2px;
+    }
+
+    .hero p {
+      margin: 10px 0 0;
+      font-size: 15px;
+      opacity: .95;
+      max-width: 760px;
+    }
+
+    .content {
+      padding: 28px 34px 34px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 20px;
+      color: #0b5f58;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      margin: 0 0 18px;
+      font-size: 14px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px;
+      background: #fff;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      color: #0f172a;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 14px;
+      color: #334155;
+    }
+
+    .tag {
+      display: inline-block;
+      margin: 0 6px 10px 0;
+      padding: 4px 10px;
+      border: 1px solid #a7f3d0;
+      background: #ecfdf5;
+      color: #065f46;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .buttons {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: all .2s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: #0f766e;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #0b5f58;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: #fff;
+      color: #0f766e;
+      border-color: #99f6e4;
+    }
+
+    .btn-outline:hover {
+      background: #f0fdfa;
+      transform: translateY(-1px);
+    }
+
+    .list {
+      margin: 12px 0 0 18px;
+      padding: 0;
+      color: #334155;
+      font-size: 14px;
+    }
+
+    .footer {
+      margin-top: 20px;
+      border-top: 1px dashed #cbd5e1;
+      padding-top: 10px;
+      color: #64748b;
+      font-size: 12px;
+    }
+
+    .top-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .theme-toggle {
+      border: 1px solid #99f6e4;
+      background: #ecfeff;
+      color: #0f766e;
+      font-weight: 700;
+      border-radius: 10px;
+      padding: 10px 14px;
+      cursor: pointer;
+    }
+
+    .dark {
+      --bg: #0b1220;
+      --card: #0f172a;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --line: #334155;
+      background: radial-gradient(circle at top left, #0f172a 0%, #0b1220 50%, #020617 100%);
+    }
+
+    .dark .container,
+    .dark .card {
+      background: #0f172a;
+      border-color: #334155;
+    }
+
+    .dark .card h3,
+    .dark .card p,
+    .dark .subtitle,
+    .dark .list,
+    .dark .footer {
+      color: #cbd5e1;
+    }
+
+    .dark .btn-outline {
+      background: #0b1220;
+      color: #99f6e4;
+      border-color: #134e4a;
+    }
+
+    .dark .btn-outline:hover {
+      background: #111827;
+    }
+
+    .dark .theme-toggle {
+      background: #111827;
+      border-color: #134e4a;
+      color: #99f6e4;
+    }
+
+    @media print {
+      body { background: #fff; padding: 0; }
+      .container { border: none; box-shadow: none; border-radius: 0; }
+      .hero { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .buttons, .top-actions { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <h1>Mini-Curso: Tradução Multilíngue de HTML</h1>
+      <p>Material prático para traduzir páginas com qualidade profissional, preservando layout, scripts, acessibilidade e estabilidade de deploy.</p>
+    </header>
+
+    <section class="content">
+      <div class="top-actions">
+        <a class="btn btn-outline" href="mini_curso_traducao_capa_indice.html">🏠 Capa</a>
+        <a class="btn btn-outline" href="prompt_avancado_traducao_multilingue.html">📘 Módulo 1</a>
+        <a class="btn btn-outline" href="prompt_avancado_traducao_multilingue_aula_completa.html">🎓 Módulo 2</a>
+        <button class="theme-toggle" id="themeToggle" type="button">🌙 Dark Mode</button>
+      </div>
+
+      <h2>Capa + Índice</h2>
+      <p class="subtitle">Selecione a trilha de estudo abaixo. Recomendado: começar no Guia Rápido e depois avançar para a Aula Completa.</p>
+
+      <span class="tag">PT / EN / ES</span>
+      <span class="tag">Prompt Avançado</span>
+      <span class="tag">Checklist de QA</span>
+      <span class="tag">Pronto para PDF</span>
+
+      <div class="grid">
+        <article class="card">
+          <h3>📘 Página 1 — Guia Rápido</h3>
+          <p>Ideal para iniciantes e revisão rápida: regras essenciais, glossário e prompt pronto para uso.</p>
+          <div class="buttons">
+            <a class="btn btn-primary" href="prompt_avancado_traducao_multilingue.html">Abrir Guia Rápido</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>🎓 Página 2 — Aula Completa</h3>
+          <p>Ideal para nível intermediário e avançado: metodologia completa, exemplos práticos e validação profissional.</p>
+          <div class="buttons">
+            <a class="btn btn-primary" href="prompt_avancado_traducao_multilingue_aula_completa.html">Abrir Aula Completa</a>
+          </div>
+        </article>
+      </div>
+
+      <h2 style="margin-top:22px;">Para quem é este pacote</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>👶 Leigo (iniciante)</h3>
+          <p>Foque no Módulo 1 para entender o que traduzir, o que não traduzir e como evitar erros comuns.</p>
+        </article>
+        <article class="card">
+          <h3>🛠️ Intermediário</h3>
+          <p>Use os dois módulos: aplique o prompt e execute o checklist técnico de validação antes do deploy.</p>
+        </article>
+        <article class="card">
+          <h3>🚀 Avançado</h3>
+          <p>Padronize terminologia, valide acessibilidade e use o fluxo completo com QA e homologação.</p>
+        </article>
+      </div>
+
+      <h2 style="margin-top:22px;">Como usar este mini-curso</h2>
+      <ol class="list">
+        <li>Leia a Página 1 para absorver as regras críticas.</li>
+        <li>Aplique o prompt no arquivo alvo.</li>
+        <li>Use a Página 2 como checklist técnico de qualidade.</li>
+        <li>Faça validação visual + funcional antes do deploy.</li>
+      </ol>
+
+      <h2 style="margin-top:22px;">Glossário Essencial (resumo)</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>DOM</h3>
+          <p>Estrutura da página HTML. Não deve ser alterada durante a tradução.</p>
+        </article>
+        <article class="card">
+          <h3>UTF-8</h3>
+          <p>Codificação que mantém acentos e caracteres especiais corretos.</p>
+        </article>
+        <article class="card">
+          <h3>Deploy</h3>
+          <p>Publicação da versão final no ambiente online.</p>
+        </article>
+      </div>
+
+      <div class="buttons">
+        <a class="btn btn-outline" href="prompt_avancado_traducao_multilingue.html">Ir para Página 1</a>
+        <a class="btn btn-outline" href="prompt_avancado_traducao_multilingue_aula_completa.html">Ir para Página 2</a>
+        <a class="btn btn-outline" href="#" onclick="window.print(); return false;">Imprimir / Salvar PDF</a>
+      </div>
+
+      <p class="footer">Documento de apoio — Instituto Olokun • atualizado em 02/03/2026</p>
+    </section>
+  </main>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const root = document.body;
+
+    function setTheme(mode) {
+      const isDark = mode === 'dark';
+      root.classList.toggle('dark', isDark);
+      themeToggle.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+      localStorage.setItem('trainingTheme', isDark ? 'dark' : 'light');
+    }
+
+    const savedTheme = localStorage.getItem('trainingTheme') || 'light';
+    setTheme(savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const next = root.classList.contains('dark') ? 'light' : 'dark';
+      setTheme(next);
+    });
+  </script>
+</body>
+</html>
